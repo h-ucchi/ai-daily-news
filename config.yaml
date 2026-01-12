@@ -4,57 +4,33 @@
 x:
   # 1日あたりの取得上限
   limits:
-    accounts: 200  # アカウント監視由来
-    search: 120    # 検索由来
-    total: 320     # 合計
+    accounts: 100  # アカウント監視由来（200→100に削減）
+    search: 50     # 検索由来（120→50に削減）
+    total: 150     # 合計（320→150に削減）
 
-  # 監視対象アカウント（50〜100推奨）
+  # 監視対象アカウント（主要なAI企業のみに絞る）
   accounts:
     - openai
     - anthropicai
     - GoogleDeepMind
     - MetaAI
-    - StabilityAI
-    - MistralAI
-    - CohereAI
     - huggingface
     - LangChainAI
-    - LlamaIndex
-    - weights_biases
-    - FastDotAI
-    - _philschmid
-    - _akhaliq
-    - hardmaru
     - karpathy
     - ylecun
-    - goodfellow_ian
-    - jeffdean
-    - demishassabis
     # 以下、追加したいアカウントを記載
     # - example_account
 
-  # 検索キーワード（20推奨）
+  # 検索キーワード（重要なものに絞る）
   keywords:
-    - "MCP"
     - "Claude API"
     - "GPT-4"
+    - "GPT-5"
     - "Gemini"
-    - "LLM"
-    - "RAG"
-    - "Langchain"
-    - "Vector database"
-    - "Embedding"
-    - "Fine-tuning"
-    - "Prompt engineering"
+    - "o1"
+    - "o3"
     - "AI agent"
-    - "Function calling"
-    - "Anthropic"
-    - "OpenAI API"
-    - "Stable Diffusion"
-    - "Midjourney"
-    - "Hugging Face"
-    - "Transformers"
-    - "RLHF"
+    - "MCP"
 
 # RSS監視対象（公式ブログ）
 rss:
@@ -81,12 +57,12 @@ github:
 
 # Slackレポート設定
 slack:
-  # セクションごとの表示上限
+  # セクションごとの表示上限（見やすく調整）
   limits:
-    top: 5
-    provider_official: 10
-    github_updates: 10
-    x_signals: 20
+    top: 3              # 5→3に削減（本当に重要なもののみ）
+    provider_official: 5  # 10→5に削減
+    github_updates: 5     # 10→5に削減
+    x_signals: 10         # 20→10に削減
 
   # 重要度スコアリング設定
   scoring:
