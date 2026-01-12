@@ -1,0 +1,16 @@
+# Python依存パッケージ
+
+# X (Twitter) API
+requests>=2.31.0
+
+# RSS解析
+feedparser>=6.0.10
+
+# YAML設定ファイル読み込み
+PyYAML>=6.0.1
+
+# 日付処理
+python-dateutil>=2.8.2
+
+# GitHub API（オプション: requestsでも可）
+PyGithub>=2.1.1
