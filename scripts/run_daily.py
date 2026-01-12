@@ -469,6 +469,13 @@ class SlackReporter:
             stats_text += "⚠️  *X API上限到達により一部取得を打ち切り*"
         blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": stats_text}})
 
+        # X投稿素案を生成
+        x_post_draft = self._generate_x_post_draft(top_items, provider_items, github_items)
+        if x_post_draft:
+            blocks.append({"type": "divider"})
+            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*🐦 X投稿素案*"}})
+            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"```{x_post_draft}```"}})
+
         # 送信
         payload = {"blocks": blocks}
         response = requests.post(self.webhook_url, json=payload)
@@ -478,6 +485,43 @@ class SlackReporter:
         else:
             print(f"❌ Slack投稿失敗: {response.status_code} {response.text}")
             raise Exception("Slack投稿に失敗しました")
+
+    def _generate_x_post_draft(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item]) -> str:
+        """X投稿素案を生成"""
+        today = datetime.now().strftime('%Y/%m/%d')
+        lines = [f"📊 AI Daily Report - {today}", ""]
+
+        # 主要ニュースをピックアップ
+        highlights = []
+
+        # RSS（公式発表）を優先
+        for item in provider_items[:2]:
+            feed_name = item.metadata.get("feed_name", "")
+            highlights.append(f"🔹 {feed_name}: {item.title}")
+
+        # GitHub重要リリース
+        for item in github_items[:2]:
+            repo = item.metadata.get("repo", "")
+            tag = item.metadata.get("tag", "")
+            highlights.append(f"🔹 {repo} {tag} リリース")
+
+        # トップハイライト
+        for item in top_items[:2]:
+            if item.source == "rss" or item.source == "github":
+                continue  # 既に追加済み
+            title = item.title[:80] + "..." if len(item.title) > 80 else item.title
+            highlights.append(f"🔹 {title}")
+
+        # ハイライトを追加
+        if highlights:
+            lines.extend(highlights[:4])  # 最大4件
+            lines.append("")
+
+        # フッター
+        lines.append("詳細はSlackをチェック👀")
+        lines.append("#AI #MachineLearning #LLM")
+
+        return "\n".join(lines)
 
 
 def main():

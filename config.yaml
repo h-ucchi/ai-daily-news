@@ -21,16 +21,15 @@ x:
     # 以下、追加したいアカウントを記載
     # - example_account
 
-  # 検索キーワード（重要なものに絞る）
+  # 検索キーワード（誤検知を防ぐため具体的に）
   keywords:
     - "Claude API"
-    - "GPT-4"
-    - "GPT-5"
-    - "Gemini"
-    - "o1"
-    - "o3"
-    - "AI agent"
-    - "MCP"
+    - "GPT-4 Turbo"
+    - "OpenAI o1"
+    - "Google Gemini"
+    - "Anthropic"
+    - "LangChain release"
+    - "Model Context Protocol"
 
 # RSS監視対象（公式ブログ）
 rss:
