@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2010716354115239939"
+      "since_id": "2010809512903557339"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,16 +47,19 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2010704876205150716"
+      "since_id": "2010801533898920222"
     },
     "Google Gemini": {
-      "since_id": "2010717304758079906"
+      "since_id": "2010811383626252460"
     },
     "Anthropic": {
-      "since_id": "2010717294444589155"
+      "since_id": "2010811242714448292"
     },
     "Model Context Protocol": {
-      "since_id": "2010715801884770614"
+      "since_id": "2010802195550388427"
+    },
+    "GPT-4 Turbo": {
+      "since_id": "2010731458764103966"
     }
   },
   "rss": {
@@ -64,7 +67,7 @@
   },
   "github": {
     "anthropics/claude-code": {
-      "tag": "v2.1.4"
+      "tag": "v2.1.5"
     },
     "langchain-ai/langchain": {
       "tag": "langchain-core==0.3.82"
@@ -80,7 +83,7 @@
     }
   },
   "meta": {
-    "last_run_at": "2026-01-12T14:15:53.506940+00:00",
+    "last_run_at": "2026-01-12T20:29:43.052807+00:00",
     "version": "1.0.0"
   }
 }
