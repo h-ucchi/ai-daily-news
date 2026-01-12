@@ -1,10 +1,65 @@
 {
   "x_accounts": {},
-  "x_keywords": {},
-  "rss": {},
-  "github": {},
+  "x_keywords": {
+    "MCP": {
+      "since_id": "2010712737706553544"
+    },
+    "Claude API": {
+      "since_id": "2010712568625774997"
+    },
+    "GPT-4": {
+      "since_id": "2010712001320976435"
+    },
+    "Gemini": {
+      "since_id": "2010712751493284080"
+    },
+    "LLM": {
+      "since_id": "2010712742651699511"
+    },
+    "RAG": {
+      "since_id": "2010712698183410050"
+    },
+    "Langchain": {
+      "since_id": "2010708297150501254"
+    },
+    "Vector database": {
+      "since_id": "2010711320597766474"
+    },
+    "Embedding": {
+      "since_id": "2010712502724698361"
+    },
+    "Fine-tuning": {
+      "since_id": "2010712700918325280"
+    },
+    "Prompt engineering": {
+      "since_id": "2010712716650905713"
+    },
+    "AI agent": {
+      "since_id": "2010712746736623618"
+    }
+  },
+  "rss": {
+    "https://openai.com/blog/rss.xml": "2026-01-09T11:00:00+00:00"
+  },
+  "github": {
+    "anthropics/claude-code": {
+      "tag": "v2.1.4"
+    },
+    "langchain-ai/langchain": {
+      "tag": "langchain-core==0.3.82"
+    },
+    "openai/openai-python": {
+      "tag": "v2.15.0"
+    },
+    "run-llama/llama_index": {
+      "tag": "v0.14.12"
+    },
+    "huggingface/transformers": {
+      "tag": "v4.57.3"
+    }
+  },
   "meta": {
-    "last_run_at": null,
+    "last_run_at": "2026-01-12T13:57:47.644840+00:00",
     "version": "1.0.0"
   }
 }
