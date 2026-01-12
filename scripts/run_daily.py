@@ -487,41 +487,86 @@ class SlackReporter:
             raise Exception("Slack投稿に失敗しました")
 
     def _generate_x_post_draft(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item]) -> str:
-        """X投稿素案を生成"""
+        """X投稿素案を生成（記事ごとに個別投稿を作成）"""
+        drafts = []
         today = datetime.now().strftime('%Y/%m/%d')
-        lines = [f"📊 AI Daily Report - {today}", ""]
 
-        # 主要ニュースをピックアップ
-        highlights = []
-
-        # RSS（公式発表）を優先
-        for item in provider_items[:2]:
+        # RSS（公式発表）を優先的に投稿素案作成
+        for idx, item in enumerate(provider_items[:3], 1):
             feed_name = item.metadata.get("feed_name", "")
-            highlights.append(f"🔹 {feed_name}: {item.title}")
+            post = self._create_single_post(
+                title=item.title,
+                url=item.url,
+                source_type="公式発表",
+                source_name=feed_name,
+                date=today
+            )
+            drafts.append(f"【投稿案 {idx}】\n{post}")
 
         # GitHub重要リリース
-        for item in github_items[:2]:
+        for idx, item in enumerate(github_items[:2], len(drafts) + 1):
             repo = item.metadata.get("repo", "")
             tag = item.metadata.get("tag", "")
-            highlights.append(f"🔹 {repo} {tag} リリース")
+            post = self._create_single_post(
+                title=f"{repo} {tag} リリース",
+                url=item.url,
+                source_type="GitHub Release",
+                source_name=repo,
+                date=today
+            )
+            drafts.append(f"【投稿案 {idx}】\n{post}")
 
-        # トップハイライト
-        for item in top_items[:2]:
-            if item.source == "rss" or item.source == "github":
+        # トップハイライトから追加
+        for idx, item in enumerate(top_items[:2], len(drafts) + 1):
+            if item.source in ["rss", "github"]:
                 continue  # 既に追加済み
-            title = item.title[:80] + "..." if len(item.title) > 80 else item.title
-            highlights.append(f"🔹 {title}")
 
-        # ハイライトを追加
-        if highlights:
-            lines.extend(highlights[:4])  # 最大4件
-            lines.append("")
+            source_name = item.metadata.get("username", "") or item.metadata.get("keyword", "")
+            post = self._create_single_post(
+                title=item.title,
+                url=item.url,
+                source_type="X注目投稿",
+                source_name=source_name,
+                date=today
+            )
+            drafts.append(f"【投稿案 {idx}】\n{post}")
 
-        # フッター
-        lines.append("詳細はSlackをチェック👀")
-        lines.append("#AI #MachineLearning #LLM")
+        return "\n\n" + ("-" * 50) + "\n\n".join(drafts) if drafts else ""
+
+    def _create_single_post(self, title: str, url: str, source_type: str, source_name: str, date: str) -> str:
+        """個別のX投稿を生成"""
+        # タイトルから重要なポイントを抽出（簡易要約）
+        summary = self._extract_summary(title, source_type)
+
+        lines = [
+            f"📌 {date} AI速報",
+            "",
+            f"【{source_type}】{source_name}",
+            "",
+            f"✅ {summary}",
+            "",
+            f"🔗 {url}",
+            "",
+            "#AI #LLM #MachineLearning #GenerativeAI"
+        ]
 
         return "\n".join(lines)
+
+    def _extract_summary(self, title: str, source_type: str) -> str:
+        """タイトルから要約を生成（簡易版）"""
+        # 文字数制限
+        if len(title) > 120:
+            title = title[:120] + "..."
+
+        # ソースタイプに応じたプレフィックス
+        if source_type == "公式発表":
+            summary = f"{title}\n\n💡 重要な公式アナウンスです。最新機能や方針変更をチェックしましょう。"
+        elif source_type == "GitHub Release":
+            summary = f"{title}\n\n💡 新バージョンがリリースされました。変更点を確認して導入を検討しましょう。"
+        else:
+            summary = f"{title}\n\n💡 コミュニティで注目されている話題です。"
+
+        return summary
 
 
 def main():
