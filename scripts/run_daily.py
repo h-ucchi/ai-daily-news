@@ -163,10 +163,18 @@ class DataCollector:
 
     # 優先度の高いRSSフィード（重要ベンダーの最新ニュースを漏らさないため）
     PRIORITY_FEEDS = {
+        # 公式ブログ
         "https://www.anthropic.com/news/rss.xml": 1000,  # Anthropic最優先
         "https://openai.com/blog/rss.xml": 1000,          # OpenAI最優先
         "https://github.blog/feed/": 800,                 # GitHub Blog
         "https://code.visualstudio.com/updates/feed.xml": 800,  # VSCode Updates
+
+        # GitHub Releases Atom Feed
+        "https://github.com/anthropics/claude-code/releases.atom": 1000,  # Claude Code最優先
+        "https://github.com/langchain-ai/langchain/releases.atom": 800,   # LangChain
+        "https://github.com/openai/openai-python/releases.atom": 800,     # OpenAI Python SDK
+        "https://github.com/run-llama/llama_index/releases.atom": 600,    # LlamaIndex
+        "https://github.com/huggingface/transformers/releases.atom": 600, # Transformers
     }
 
     def __init__(self, config: Dict, state: StateManager, x_client: XAPIClient):
@@ -192,11 +200,8 @@ class DataCollector:
         self._collect_x_accounts()
         self._collect_x_search()
 
-        # RSS
+        # RSS（GitHub Releases Atom Feedを含む）
         self._collect_rss()
-
-        # GitHub
-        self._collect_github()
 
         # 重複排除
         self._deduplicate()
@@ -342,46 +347,6 @@ class DataCollector:
                     self.state.set_rss_last_published(feed_url, published_dt.isoformat())
 
         self.stats["rss_fetched"] = fetched
-
-    def _collect_github(self):
-        """GitHub Releases収集"""
-        repos = self.config["github"]["repositories"]
-        fetched = 0
-
-        print(f"🐙 GitHub Releases: {len(repos)} リポジトリ")
-
-        github_token = os.environ.get("GITHUB_TOKEN")
-        headers = {"Authorization": f"token {github_token}"} if github_token else {}
-
-        for repo in repos:
-            url = f"https://api.github.com/repos/{repo}/releases/latest"
-            response = requests.get(url, headers=headers)
-
-            if response.status_code != 200:
-                continue
-
-            release = response.json()
-            tag = release["tag_name"]
-            last_tag = self.state.get_github_last_tag(repo)
-
-            # 同じtagの場合はスキップ
-            if last_tag == tag:
-                continue
-
-            self.state.set_github_last_tag(repo, tag)
-
-            item = Item(
-                source="github",
-                title=f"{repo} {tag}: {release['name']}",
-                url=release["html_url"],
-                published_at=release["published_at"],
-                score=self.config["slack"]["scoring"]["github_bonus"],
-                metadata={"repo": repo, "tag": tag}
-            )
-            self.items.append(item)
-            fetched += 1
-
-        self.stats["github_fetched"] = fetched
 
     def _calculate_engagement_score(self, tweet: Dict) -> int:
         """エンゲージメントスコア計算"""

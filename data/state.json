@@ -64,24 +64,12 @@
   },
   "rss": {
     "https://openai.com/blog/rss.xml": "2026-01-09T11:00:00+00:00",
-    "https://www.anthropic.com/news/rss.xml": "2026-01-09T00:00:00+00:00"
-  },
-  "github": {
-    "anthropics/claude-code": {
-      "tag": "v2.1.6"
-    },
-    "langchain-ai/langchain": {
-      "tag": "langchain-core==0.3.83"
-    },
-    "openai/openai-python": {
-      "tag": "v2.15.0"
-    },
-    "run-llama/llama_index": {
-      "tag": "v0.14.12"
-    },
-    "huggingface/transformers": {
-      "tag": "v4.57.3"
-    }
+    "https://www.anthropic.com/news/rss.xml": "2026-01-09T00:00:00+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-09T00:00:00+00:00",
+    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-09T00:00:00+00:00",
+    "https://github.com/openai/openai-python/releases.atom": "2026-01-09T00:00:00+00:00",
+    "https://github.com/run-llama/llama_index/releases.atom": "2026-01-09T00:00:00+00:00",
+    "https://github.com/huggingface/transformers/releases.atom": "2026-01-09T00:00:00+00:00"
   },
   "meta": {
     "last_run_at": "2026-01-13T09:24:45.458594+00:00",
