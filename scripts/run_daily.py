@@ -406,7 +406,7 @@ class SlackReporter:
         })
 
         # X投稿素案を生成（個別のブロックとして追加）
-        draft_blocks = self._generate_x_post_draft_blocks(top_items, provider_items, github_items)
+        draft_blocks = self._generate_x_post_draft_blocks(top_items, provider_items, github_items, sorted_items)
         blocks.extend(draft_blocks)
 
         # 送信
@@ -466,7 +466,7 @@ class SlackReporter:
 
         return "\n\n" + ("-" * 50) + "\n\n".join(drafts) if drafts else ""
 
-    def _generate_x_post_draft_blocks(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item]) -> List[Dict]:
+    def _generate_x_post_draft_blocks(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item], all_items: List[Item]) -> List[Dict]:
         """X投稿素案をSlack Blocksとして生成（各投稿を個別ブロックに）"""
         blocks = []
         seen_urls = set()
@@ -501,7 +501,8 @@ class SlackReporter:
                 blocks.append({"type": "divider"})
 
         # X由来のアイテムを確実に含める（新規追加）
-        x_items = [i for i in top_items if i.source in ["x_account", "x_search"]]
+        # 重要: top_items ではなく all_items から抽出（top_items は3件しかないため）
+        x_items = [i for i in all_items if i.source in ["x_account", "x_search"]]
         for item in x_items[:2]:  # X由来を最大2件追加
             if item.url in seen_urls:
                 continue
