@@ -348,6 +348,60 @@ class DataCollector:
 
         self.stats["rss_fetched"] = fetched
 
+    def _select_diverse_provider_items(self, sorted_items: List[Item], limit: int) -> List[Item]:
+        """
+        優先度の高いフィードから最新記事を1件ずつバランスよく選択
+
+        Args:
+            sorted_items: スコア順にソート済みのアイテムリスト
+            limit: 選択する最大件数
+
+        Returns:
+            バランスよく選択されたRSSアイテムのリスト
+        """
+        from collections import defaultdict
+
+        # RSSアイテムのみ抽出
+        rss_items = [i for i in sorted_items if i.source == "rss"]
+
+        # フィード別にグループ化
+        feed_groups = defaultdict(list)
+        for item in rss_items:
+            feed_url = item.metadata.get("feed_url", "")
+            if feed_url:
+                feed_groups[feed_url].append(item)
+
+        # 優先順位順にソート（PRIORITY_FEEDS の定義順）
+        priority_order = list(self.PRIORITY_FEEDS.keys())
+        sorted_feed_urls = sorted(
+            feed_groups.keys(),
+            key=lambda url: priority_order.index(url) if url in priority_order else 9999
+        )
+
+        # ラウンドロビン方式で選択（各フィードから1件ずつ）
+        selected = []
+        round_num = 0
+
+        while len(selected) < limit:
+            added_this_round = False
+
+            for feed_url in sorted_feed_urls:
+                if len(selected) >= limit:
+                    break
+
+                items = feed_groups[feed_url]
+                if round_num < len(items):
+                    selected.append(items[round_num])
+                    added_this_round = True
+
+            # 全フィードから選択し終えた
+            if not added_this_round:
+                break
+
+            round_num += 1
+
+        return selected[:limit]
+
     def _calculate_engagement_score(self, tweet: Dict) -> int:
         """エンゲージメントスコア計算"""
         metrics = tweet.get("public_metrics", {})
@@ -378,11 +432,81 @@ class DataCollector:
 class SlackReporter:
     """Slackレポート生成・投稿"""
 
+    # DataCollectorのPRIORITY_FEEDSと同じ定義
+    PRIORITY_FEEDS = {
+        # 公式ブログ
+        "https://www.anthropic.com/news/rss.xml": 1000,
+        "https://openai.com/blog/rss.xml": 1000,
+        "https://github.blog/feed/": 800,
+        "https://code.visualstudio.com/updates/feed.xml": 800,
+
+        # GitHub Releases Atom Feed
+        "https://github.com/anthropics/claude-code/releases.atom": 1000,
+        "https://github.com/langchain-ai/langchain/releases.atom": 800,
+        "https://github.com/openai/openai-python/releases.atom": 800,
+        "https://github.com/run-llama/llama_index/releases.atom": 600,
+        "https://github.com/huggingface/transformers/releases.atom": 600,
+    }
+
     def __init__(self, webhook_url: str, config: Dict, items: List[Item], stats: Dict):
         self.webhook_url = webhook_url
         self.config = config
         self.items = items
         self.stats = stats
+
+    def _select_diverse_provider_items(self, sorted_items: List[Item], limit: int) -> List[Item]:
+        """
+        優先度の高いフィードから最新記事を1件ずつバランスよく選択
+
+        Args:
+            sorted_items: スコア順にソート済みのアイテムリスト
+            limit: 選択する最大件数
+
+        Returns:
+            バランスよく選択されたRSSアイテムのリスト
+        """
+        from collections import defaultdict
+
+        # RSSアイテムのみ抽出
+        rss_items = [i for i in sorted_items if i.source == "rss"]
+
+        # フィード別にグループ化
+        feed_groups = defaultdict(list)
+        for item in rss_items:
+            feed_url = item.metadata.get("feed_url", "")
+            if feed_url:
+                feed_groups[feed_url].append(item)
+
+        # 優先順位順にソート（PRIORITY_FEEDS の定義順）
+        priority_order = list(self.PRIORITY_FEEDS.keys())
+        sorted_feed_urls = sorted(
+            feed_groups.keys(),
+            key=lambda url: priority_order.index(url) if url in priority_order else 9999
+        )
+
+        # ラウンドロビン方式で選択（各フィードから1件ずつ）
+        selected = []
+        round_num = 0
+
+        while len(selected) < limit:
+            added_this_round = False
+
+            for feed_url in sorted_feed_urls:
+                if len(selected) >= limit:
+                    break
+
+                items = feed_groups[feed_url]
+                if round_num < len(items):
+                    selected.append(items[round_num])
+                    added_this_round = True
+
+            # 全フィードから選択し終えた
+            if not added_this_round:
+                break
+
+            round_num += 1
+
+        return selected[:limit]
 
     def send(self):
         """レポートを生成してSlackに投稿"""
@@ -393,7 +517,7 @@ class SlackReporter:
 
         # セクション分け
         top_items = sorted_items[:self.config["slack"]["limits"]["top"]]
-        provider_items = [i for i in sorted_items if i.source == "rss"][:self.config["slack"]["limits"]["provider_official"]]
+        provider_items = self._select_diverse_provider_items(sorted_items, self.config["slack"]["limits"]["provider_official"])
         github_items = [i for i in sorted_items if i.source == "github"][:self.config["slack"]["limits"]["github_updates"]]
 
         # Slack Blocks構築
