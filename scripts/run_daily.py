@@ -405,10 +405,9 @@ class SlackReporter:
             "text": {"type": "plain_text", "text": f"🐦 X投稿素案 - {datetime.now().strftime('%Y-%m-%d')}"}
         })
 
-        # X投稿素案を生成
-        x_post_draft = self._generate_x_post_draft(top_items, provider_items, github_items)
-        if x_post_draft:
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"```{x_post_draft}```"}})
+        # X投稿素案を生成（個別のブロックとして追加）
+        draft_blocks = self._generate_x_post_draft_blocks(top_items, provider_items, github_items)
+        blocks.extend(draft_blocks)
 
         # 送信
         payload = {"blocks": blocks}
@@ -466,6 +465,67 @@ class SlackReporter:
             drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
 
         return "\n\n" + ("-" * 50) + "\n\n".join(drafts) if drafts else ""
+
+    def _generate_x_post_draft_blocks(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item]) -> List[Dict]:
+        """X投稿素案をSlack Blocksとして生成（各投稿を個別ブロックに）"""
+        blocks = []
+        seen_urls = set()
+        today = datetime.now().strftime('%Y/%m/%d')
+        draft_count = 0
+
+        # RSS（公式発表）を優先的に投稿素案作成
+        for item in provider_items[:7]:
+            if item.url in seen_urls:
+                continue
+            seen_urls.add(item.url)
+            draft_count += 1
+
+            feed_name = item.metadata.get("feed_name", "")
+            post = self._create_single_post(
+                title=item.title,
+                url=item.url,
+                source_type="公式発表",
+                source_name=feed_name,
+                date=today,
+                item=item
+            )
+
+            # 各投稿を個別のsectionブロックに（3000文字制限回避）
+            blocks.append({
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"```【投稿案 {draft_count}】\n{post}```"}
+            })
+
+            # 区切り線を追加（最後以外）
+            if draft_count < 7:
+                blocks.append({"type": "divider"})
+
+        # トップハイライトから追加
+        for item in top_items[:1]:
+            if item.url in seen_urls:
+                continue
+            if item.source in ["rss", "github"]:
+                continue
+
+            seen_urls.add(item.url)
+            draft_count += 1
+
+            source_name = item.metadata.get("username", "") or item.metadata.get("keyword", "")
+            post = self._create_single_post(
+                title=item.title,
+                url=item.url,
+                source_type="X注目投稿",
+                source_name=source_name,
+                date=today,
+                item=item
+            )
+
+            blocks.append({
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"```【投稿案 {draft_count}】\n{post}```"}
+            })
+
+        return blocks
 
     def _create_single_post(self, title: str, url: str, source_type: str, source_name: str, date: str, item: Item) -> str:
         """個別のX投稿を生成"""
