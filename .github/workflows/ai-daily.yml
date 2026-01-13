@@ -1,9 +1,9 @@
 name: AI Daily Report
 
 on:
-  # 毎日JST 5:00（UTC 20:00）に実行
+  # 毎日JST 7:00（UTC 22:00）に実行
   schedule:
-    - cron: '0 20 * * *'
+    - cron: '0 22 * * *'
 
   # 手動実行も可能
   workflow_dispatch:

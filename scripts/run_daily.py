@@ -448,8 +448,8 @@ class SlackReporter:
         seen_urls = set()  # URL重複チェック用
         today = datetime.now().strftime('%Y/%m/%d')
 
-        # RSS（公式発表）を優先的に投稿素案作成
-        for item in provider_items[:3]:
+        # RSS（公式発表）を優先的に投稿素案作成（Anthropicなどの重要な公式発表を確実に含める）
+        for item in provider_items[:5]:
             if item.url in seen_urls:
                 continue
             seen_urls.add(item.url)
@@ -465,8 +465,8 @@ class SlackReporter:
             )
             drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
 
-        # GitHub重要リリース
-        for item in github_items[:2]:
+        # GitHub重要リリース（RSSを優先するため1件に削減）
+        for item in github_items[:1]:
             if item.url in seen_urls:
                 continue
             seen_urls.add(item.url)
@@ -507,6 +507,10 @@ class SlackReporter:
 
     def _create_single_post(self, title: str, url: str, source_type: str, source_name: str, date: str, item: Item) -> str:
         """個別のX投稿を生成"""
+        # TwitterのURLをx.comに変換
+        if "twitter.com" in url:
+            url = url.replace("twitter.com", "x.com")
+
         # Claude API でサマライズ生成（Phase 1: タイトルベース）
         summary = self._generate_summary_with_claude(title, url, source_type)
 
