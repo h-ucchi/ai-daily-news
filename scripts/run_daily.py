@@ -417,7 +417,6 @@ class SlackReporter:
         top_items = sorted_items[:self.config["slack"]["limits"]["top"]]
         provider_items = [i for i in sorted_items if i.source == "rss"][:self.config["slack"]["limits"]["provider_official"]]
         github_items = [i for i in sorted_items if i.source == "github"][:self.config["slack"]["limits"]["github_updates"]]
-        x_items = [i for i in sorted_items if i.source in ["x_account", "x_search"]][:self.config["slack"]["limits"]["x_signals"]]
 
         # Slack Blocks構築
         blocks = []
@@ -425,55 +424,12 @@ class SlackReporter:
         # ヘッダー
         blocks.append({
             "type": "header",
-            "text": {"type": "plain_text", "text": f"📊 AI Daily Report - {datetime.now().strftime('%Y-%m-%d')}"}
+            "text": {"type": "plain_text", "text": f"🐦 X投稿素案 - {datetime.now().strftime('%Y-%m-%d')}"}
         })
-
-        # Top
-        if top_items:
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*🔥 Top Highlights*"}})
-            for item in top_items:
-                blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"• <{item.url}|{item.title}>"}})
-
-        # Provider Official
-        if provider_items:
-            blocks.append({"type": "divider"})
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*📰 Provider Official / RSS*"}})
-            for item in provider_items:
-                blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"• <{item.url}|{item.title}>"}})
-
-        # GitHub Updates
-        if github_items:
-            blocks.append({"type": "divider"})
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*🐙 GitHub Updates*"}})
-            for item in github_items:
-                blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"• <{item.url}|{item.title}>"}})
-
-        # X Signals
-        if x_items:
-            blocks.append({"type": "divider"})
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*📱 X (Twitter) Signals*"}})
-            for item in x_items[:10]:  # 最大10件表示
-                blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"• <{item.url}|{item.title}>"}})
-
-        # Stats
-        blocks.append({"type": "divider"})
-        stats_text = (
-            f"*📈 Stats*\n"
-            f"• X取得数: {self.stats['x_total_fetched']} 件 "
-            f"(アカウント: {self.stats['x_accounts_fetched']}, 検索: {self.stats['x_search_fetched']})\n"
-            f"• RSS: {self.stats['rss_fetched']} 件\n"
-            f"• GitHub: {self.stats['github_fetched']} 件\n"
-            f"• 重複除外: {self.stats['duplicates_removed']} 件\n"
-        )
-        if self.stats['x_limit_reached']:
-            stats_text += "⚠️  *X API上限到達により一部取得を打ち切り*"
-        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": stats_text}})
 
         # X投稿素案を生成
         x_post_draft = self._generate_x_post_draft(top_items, provider_items, github_items)
         if x_post_draft:
-            blocks.append({"type": "divider"})
-            blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*🐦 X投稿素案*"}})
             blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"```{x_post_draft}```"}})
 
         # 送信
@@ -554,13 +510,7 @@ class SlackReporter:
         # Claude API でサマライズ生成（Phase 1: タイトルベース）
         summary = self._generate_summary_with_claude(title, url, source_type)
 
-        lines = [
-            summary,
-            "",
-            "#AI #LLM #MachineLearning #GenerativeAI"
-        ]
-
-        return "\n".join(lines)
+        return summary
 
     def _generate_summary_with_claude(self, title: str, url: str, source_type: str) -> str:
         """Claude API で高度なサマライズを生成"""
@@ -583,6 +533,8 @@ class SlackReporter:
 - 対象読者: AIトレンドを追うビジネスパーソン・エンジニア
 - トーン: 示唆に富む、実用的、簡潔
 - 注意: タイトルのみから推測して要約してください
+- 重要: URLの前に絵文字(🔗)は付けないでください
+- 重要: ハッシュタグは不要です
 
 【記事タイトル】
 {title}
@@ -594,17 +546,21 @@ class SlackReporter:
 【キャッチコピー】
 
 ■ 1. セクション名
-  ▸ 1.1 サブセクション
     • ポイント1
     • ポイント2
 
 ■ 2. セクション名
-  ▸ 2.1 サブセクション
     • ポイント3
 
 💡 まとめの一言
 
-🔗 {url}"""
+{url}
+
+【フォーマット注意事項】
+- セクション内のサブセクション（▸ 1.1 のような記法）は、サブセクションが1つのみの場合は省略してください
+- 例: ■ 1. リリース概要 の下に1つしかサブセクションがない場合は、▸ 1.1 基本情報 ではなく直接 • ポイント で記載
+- URLの前に🔗絵文字は絶対に付けないでください
+- ハッシュタグは不要です"""
 
             message = client.messages.create(
                 model="claude-sonnet-4-5-20250929",
