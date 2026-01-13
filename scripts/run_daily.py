@@ -489,22 +489,32 @@ class SlackReporter:
     def _generate_x_post_draft(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item]) -> str:
         """X投稿素案を生成（記事ごとに個別投稿を作成）"""
         drafts = []
+        seen_urls = set()  # URL重複チェック用
         today = datetime.now().strftime('%Y/%m/%d')
 
         # RSS（公式発表）を優先的に投稿素案作成
-        for idx, item in enumerate(provider_items[:3], 1):
+        for item in provider_items[:3]:
+            if item.url in seen_urls:
+                continue
+            seen_urls.add(item.url)
+
             feed_name = item.metadata.get("feed_name", "")
             post = self._create_single_post(
                 title=item.title,
                 url=item.url,
                 source_type="公式発表",
                 source_name=feed_name,
-                date=today
+                date=today,
+                item=item
             )
-            drafts.append(f"【投稿案 {idx}】\n{post}")
+            drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
 
         # GitHub重要リリース
-        for idx, item in enumerate(github_items[:2], len(drafts) + 1):
+        for item in github_items[:2]:
+            if item.url in seen_urls:
+                continue
+            seen_urls.add(item.url)
+
             repo = item.metadata.get("repo", "")
             tag = item.metadata.get("tag", "")
             post = self._create_single_post(
@@ -512,14 +522,19 @@ class SlackReporter:
                 url=item.url,
                 source_type="GitHub Release",
                 source_name=repo,
-                date=today
+                date=today,
+                item=item
             )
-            drafts.append(f"【投稿案 {idx}】\n{post}")
+            drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
 
         # トップハイライトから追加
-        for idx, item in enumerate(top_items[:2], len(drafts) + 1):
+        for item in top_items[:2]:
+            if item.url in seen_urls:
+                continue
             if item.source in ["rss", "github"]:
                 continue  # 既に追加済み
+
+            seen_urls.add(item.url)
 
             source_name = item.metadata.get("username", "") or item.metadata.get("keyword", "")
             post = self._create_single_post(
@@ -527,46 +542,108 @@ class SlackReporter:
                 url=item.url,
                 source_type="X注目投稿",
                 source_name=source_name,
-                date=today
+                date=today,
+                item=item
             )
-            drafts.append(f"【投稿案 {idx}】\n{post}")
+            drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
 
         return "\n\n" + ("-" * 50) + "\n\n".join(drafts) if drafts else ""
 
-    def _create_single_post(self, title: str, url: str, source_type: str, source_name: str, date: str) -> str:
+    def _create_single_post(self, title: str, url: str, source_type: str, source_name: str, date: str, item: Item) -> str:
         """個別のX投稿を生成"""
-        # タイトルから重要なポイントを抽出（簡易要約）
-        summary = self._extract_summary(title, source_type)
+        # Claude API でサマライズ生成（Phase 1: タイトルベース）
+        summary = self._generate_summary_with_claude(title, url, source_type)
 
         lines = [
-            f"📌 {date} AI速報",
-            "",
-            f"【{source_type}】{source_name}",
-            "",
-            f"✅ {summary}",
-            "",
-            f"🔗 {url}",
+            summary,
             "",
             "#AI #LLM #MachineLearning #GenerativeAI"
         ]
 
         return "\n".join(lines)
 
-    def _extract_summary(self, title: str, source_type: str) -> str:
-        """タイトルから要約を生成（簡易版）"""
-        # 文字数制限
-        if len(title) > 120:
-            title = title[:120] + "..."
+    def _generate_summary_with_claude(self, title: str, url: str, source_type: str) -> str:
+        """Claude API で高度なサマライズを生成"""
+        try:
+            import anthropic
 
-        # ソースタイプに応じたプレフィックス
+            api_key = os.environ.get("ANTHROPIC_API_KEY")
+            if not api_key:
+                print("⚠️  ANTHROPIC_API_KEY が設定されていません。簡易要約にフォールバックします。")
+                return self._generate_simple_summary(title, source_type, url)
+
+            client = anthropic.Anthropic(api_key=api_key)
+
+            # プロンプト設計
+            prompt = f"""以下のAI関連記事のタイトルから、X（Twitter）投稿用に要約してください。
+
+【要件】
+- 文字数: 400-600文字程度
+- 構造: キャッチコピー + 章立て箇条書き（■ と ▸ を使用）
+- 対象読者: AIトレンドを追うビジネスパーソン・エンジニア
+- トーン: 示唆に富む、実用的、簡潔
+- 注意: タイトルのみから推測して要約してください
+
+【記事タイトル】
+{title}
+
+【ソースタイプ】
+{source_type}
+
+【出力フォーマット例】
+【キャッチコピー】
+
+■ 1. セクション名
+  ▸ 1.1 サブセクション
+    • ポイント1
+    • ポイント2
+
+■ 2. セクション名
+  ▸ 2.1 サブセクション
+    • ポイント3
+
+💡 まとめの一言
+
+🔗 {url}"""
+
+            message = client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=1024,
+                messages=[{
+                    "role": "user",
+                    "content": prompt
+                }]
+            )
+
+            return message.content[0].text
+
+        except Exception as e:
+            print(f"⚠️ Claude API エラー: {e}")
+            # フォールバック: 簡易要約
+            return self._generate_simple_summary(title, source_type, url)
+
+    def _generate_simple_summary(self, title: str, source_type: str, url: str) -> str:
+        """フォールバック用の簡易要約"""
         if source_type == "公式発表":
-            summary = f"{title}\n\n💡 重要な公式アナウンスです。最新機能や方針変更をチェックしましょう。"
+            emoji = "🚀"
+            comment = "重要な公式アナウンスです"
         elif source_type == "GitHub Release":
-            summary = f"{title}\n\n💡 新バージョンがリリースされました。変更点を確認して導入を検討しましょう。"
+            emoji = "📦"
+            comment = "新バージョンがリリースされました"
         else:
-            summary = f"{title}\n\n💡 コミュニティで注目されている話題です。"
+            emoji = "💡"
+            comment = "注目の話題です"
 
-        return summary
+        # 簡潔な形式
+        lines = [
+            f"【{emoji} {title[:60]}{'...' if len(title) > 60 else ''}】",
+            "",
+            f"💡 {comment}。詳細をチェックしましょう。",
+            "",
+            f"🔗 {url}"
+        ]
+
+        return "\n".join(lines)
 
 
 def main():

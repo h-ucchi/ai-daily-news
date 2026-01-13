@@ -14,3 +14,6 @@ python-dateutil>=2.8.2
 
 # GitHub API（オプション: requestsでも可）
 PyGithub>=2.1.1
+
+# Claude API（X投稿素案生成用）
+anthropic>=0.34.0
