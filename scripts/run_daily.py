@@ -161,6 +161,14 @@ class XAPIClient:
 class DataCollector:
     """データ収集オーケストレーター"""
 
+    # 優先度の高いRSSフィード（重要ベンダーの最新ニュースを漏らさないため）
+    PRIORITY_FEEDS = {
+        "https://www.anthropic.com/news/rss.xml": 1000,  # Anthropic最優先
+        "https://openai.com/blog/rss.xml": 1000,          # OpenAI最優先
+        "https://github.blog/feed/": 800,                 # GitHub Blog
+        "https://code.visualstudio.com/updates/feed.xml": 800,  # VSCode Updates
+    }
+
     def __init__(self, config: Dict, state: StateManager, x_client: XAPIClient):
         self.config = config
         self.state = state
@@ -309,13 +317,18 @@ class DataCollector:
                 if last_published and published_iso <= last_published:
                     continue
 
+                # スコアリング: 基本スコア + 優先度ボーナス
+                base_score = self.config["slack"]["scoring"]["rss_bonus"]  # 500
+                priority_bonus = self.PRIORITY_FEEDS.get(feed_url, 0)
+                final_score = base_score + priority_bonus
+
                 item = Item(
                     source="rss",
                     title=entry.title,
                     url=entry.link,
                     published_at=published_iso,
-                    score=self.config["slack"]["scoring"]["rss_bonus"],
-                    metadata={"feed_name": feed_name}
+                    score=final_score,  # 重要フィード: Anthropic/OpenAI=1500点、GitHub/VSCode=1300点、その他=500点
+                    metadata={"feed_name": feed_name, "feed_url": feed_url}
                 )
                 self.items.append(item)
                 fetched += 1
@@ -449,7 +462,7 @@ class SlackReporter:
         today = datetime.now().strftime('%Y/%m/%d')
 
         # RSS（公式発表）を優先的に投稿素案作成（Anthropicなどの重要な公式発表を確実に含める）
-        for item in provider_items[:5]:
+        for item in provider_items[:7]:  # 5→7に増加
             if item.url in seen_urls:
                 continue
             seen_urls.add(item.url)
@@ -465,26 +478,10 @@ class SlackReporter:
             )
             drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
 
-        # GitHub重要リリース（RSSを優先するため1件に削減）
-        for item in github_items[:1]:
-            if item.url in seen_urls:
-                continue
-            seen_urls.add(item.url)
+        # GitHub Releaseは削除（RSSで取得するため不要）
 
-            repo = item.metadata.get("repo", "")
-            tag = item.metadata.get("tag", "")
-            post = self._create_single_post(
-                title=f"{repo} {tag} リリース",
-                url=item.url,
-                source_type="GitHub Release",
-                source_name=repo,
-                date=today,
-                item=item
-            )
-            drafts.append(f"【投稿案 {len(drafts) + 1}】\n{post}")
-
-        # トップハイライトから追加
-        for item in top_items[:2]:
+        # トップハイライトから追加（2→1に削減）
+        for item in top_items[:1]:
             if item.url in seen_urls:
                 continue
             if item.source in ["rss", "github"]:
@@ -517,7 +514,7 @@ class SlackReporter:
         return summary
 
     def _generate_summary_with_claude(self, title: str, url: str, source_type: str) -> str:
-        """Claude API で高度なサマライズを生成"""
+        """Claude API で高品質なX投稿スレッドを生成"""
         try:
             import anthropic
 
@@ -528,17 +525,19 @@ class SlackReporter:
 
             client = anthropic.Anthropic(api_key=api_key)
 
-            # プロンプト設計
-            prompt = f"""以下のAI関連記事のタイトルから、X（Twitter）投稿用に要約してください。
+            # システムプロンプト（全リクエスト共通）
+            system_prompt = """あなたはAI業界のトレンドを追うX（Twitter）アカウントの投稿作成者です。
+読者はAIに関心のあるビジネスパーソンやエンジニアです。
 
-【要件】
-- 文字数: 400-600文字程度
-- 構造: キャッチコピー + 章立て箇条書き（■ と ▸ を使用）
-- 対象読者: AIトレンドを追うビジネスパーソン・エンジニア
-- トーン: 示唆に富む、実用的、簡潔
-- 注意: タイトルのみから推測して要約してください
-- 重要: URLの前に絵文字(🔗)は付けないでください
-- 重要: ハッシュタグは不要です
+【重要な原則】
+- 具体的で実用的な情報を提供する
+- 読者が「自分も使ってみたい」と思える内容にする
+- 抽象的な表現（「革新的」「画期的」）は避け、何ができるかを明示する
+- 絵文字は最小限に抑える
+- スレッド形式（1/, 2/, 3/）で構造化する"""
+
+            # ユーザープロンプト
+            user_prompt = f"""以下のAI関連ニュースについて、X投稿スレッドの素案を作成してください。
 
 【記事タイトル】
 {title}
@@ -546,32 +545,51 @@ class SlackReporter:
 【ソースタイプ】
 {source_type}
 
-【出力フォーマット例】
-【キャッチコピー】
+【出力フォーマット】
 
-■ 1. セクション名
-    • ポイント1
-    • ポイント2
+【速報】または【注目】企業名、「製品/機能名」を発表/リリース
 
-■ 2. セクション名
-    • ポイント3
-
-💡 まとめの一言
+[2-3文で核心を要約。何が新しいのか、なぜ重要なのかを明確に]
 
 {url}
 
-【フォーマット注意事項】
-- セクション内のサブセクション（▸ 1.1 のような記法）は、サブセクションが1つのみの場合は省略してください
-- 例: ■ 1. リリース概要 の下に1つしかサブセクションがない場合は、▸ 1.1 基本情報 ではなく直接 • ポイント で記載
-- URLの前に🔗絵文字は絶対に付けないでください
-- ハッシュタグは不要です"""
+1/ [セクション名]
+
+・具体的な機能や特徴1
+・具体的な機能や特徴2
+・具体的な機能や特徴3
+
+[このセクションの補足説明を一文で]
+
+2/ [セクション名]
+
+・具体的な機能や特徴4
+・具体的な機能や特徴5
+
+[このセクションの補足説明を一文で]
+
+3/ [利用方法・対象者]
+
+・対象ユーザー: [具体的に]
+・提供開始: [いつから]
+・今後の予定: [あれば]
+
+【重要な制約】
+- 各セクションの箇条書きは3-5項目
+- 箇条書きには「・」（中黒）のみ使用
+- ■、▸、💡、🔗 などの装飾記号は不要
+- URLは冒頭の要約の直後に配置
+- スレッド番号（1/, 2/, 3/）で構造化
+- 全体で600-800文字程度（Xスレッドとして適切な長さ）
+- タイトルから推測して具体的に記述してください"""
 
             message = client.messages.create(
                 model="claude-sonnet-4-5-20250929",
-                max_tokens=1024,
+                max_tokens=1500,  # 800文字要求なので余裕を持たせる
+                system=system_prompt,  # システムプロンプト追加
                 messages=[{
                     "role": "user",
-                    "content": prompt
+                    "content": user_prompt
                 }]
             )
 

@@ -38,6 +38,12 @@ rss:
       name: "OpenAI Blog"
     - url: "https://www.anthropic.com/news/rss.xml"
       name: "Anthropic News"
+    - url: "https://github.blog/feed/"
+      name: "GitHub Blog"
+    - url: "https://code.visualstudio.com/updates/feed.xml"
+      name: "VSCode Updates"
+    - url: "https://ai.googleblog.com/feeds/posts/default"
+      name: "Google AI Blog"
     # 以下、追加したいRSSフィードを記載
     # - url: "https://example.com/feed.xml"
     #   name: "Example Blog"
