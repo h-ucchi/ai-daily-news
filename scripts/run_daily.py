@@ -473,8 +473,8 @@ class SlackReporter:
         today = datetime.now().strftime('%Y/%m/%d')
         draft_count = 0
 
-        # RSS（公式発表）を優先的に投稿素案作成
-        for item in provider_items[:7]:
+        # RSS（公式発表）を5件に削減（7→5）
+        for item in provider_items[:5]:
             if item.url in seen_urls:
                 continue
             seen_urls.add(item.url)
@@ -500,13 +500,11 @@ class SlackReporter:
             if draft_count < 7:
                 blocks.append({"type": "divider"})
 
-        # トップハイライトから追加
-        for item in top_items[:1]:
+        # X由来のアイテムを確実に含める（新規追加）
+        x_items = [i for i in top_items if i.source in ["x_account", "x_search"]]
+        for item in x_items[:2]:  # X由来を最大2件追加
             if item.url in seen_urls:
                 continue
-            if item.source in ["rss", "github"]:
-                continue
-
             seen_urls.add(item.url)
             draft_count += 1
 
@@ -524,6 +522,10 @@ class SlackReporter:
                 "type": "section",
                 "text": {"type": "mrkdwn", "text": f"```【投稿案 {draft_count}】\n{post}```"}
             })
+
+            # 区切り線を追加（最後以外）
+            if draft_count < 7:
+                blocks.append({"type": "divider"})
 
         return blocks
 
