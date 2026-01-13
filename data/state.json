@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2011005531918684643"
+      "since_id": "2011074150513750160"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,32 +47,33 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2011005282046881989"
+      "since_id": "2011067401463554292"
     },
     "Google Gemini": {
-      "since_id": "2011006347341676646"
+      "since_id": "2011074274035896531"
     },
     "Anthropic": {
-      "since_id": "2011006347362316631"
+      "since_id": "2011074283360174357"
     },
     "Model Context Protocol": {
-      "since_id": "2011003723858784730"
+      "since_id": "2011069258609147943"
     },
     "GPT-4 Turbo": {
-      "since_id": "2010959555099050393"
+      "since_id": "2011038052769001652"
     }
   },
   "rss": {
     "https://openai.com/blog/rss.xml": "2026-01-09T11:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2026-01-09T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-09T00:00:00+00:00",
-    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-09T00:00:00+00:00",
-    "https://github.com/openai/openai-python/releases.atom": "2026-01-09T00:00:00+00:00",
-    "https://github.com/run-llama/llama_index/releases.atom": "2026-01-09T00:00:00+00:00",
-    "https://github.com/huggingface/transformers/releases.atom": "2026-01-09T00:00:00+00:00"
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-13T02:26:03+00:00",
+    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-13T01:19:43+00:00",
+    "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
+    "https://github.com/run-llama/llama_index/releases.atom": "2025-12-30T01:07:03+00:00",
+    "https://github.com/huggingface/transformers/releases.atom": "2026-01-13T13:29:13+00:00",
+    "https://github.blog/feed/": "2026-01-12T17:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-13T09:24:45.458594+00:00",
+    "last_run_at": "2026-01-13T13:55:30.300743+00:00",
     "version": "1.0.0"
   }
 }
