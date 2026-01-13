@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2011085001459450343"
+      "since_id": "2011090480063537542"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,35 +47,35 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2011067401463554292"
+      "since_id": "2011086910060724395"
     },
     "Google Gemini": {
-      "since_id": "2011085386089730375"
+      "since_id": "2011090533872202194"
     },
     "Anthropic": {
-      "since_id": "2011085386030928091"
+      "since_id": "2011090517434777940"
     },
     "Model Context Protocol": {
-      "since_id": "2011085146624311347"
+      "since_id": "2011089411635626445"
     },
     "GPT-4 Turbo": {
       "since_id": "2011038052769001652"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2020-01-01T00:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-09T11:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2020-01-01T00:00:00+00:00",
-    "https://github.blog/feed/": "2020-01-01T00:00:00+00:00",
+    "https://github.blog/feed/": "2026-01-12T17:00:00+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2020-01-01T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2020-01-01T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2020-01-01T00:00:00+00:00",
-    "https://github.com/langchain-ai/langchain/releases.atom": "2020-01-01T00:00:00+00:00",
-    "https://github.com/openai/openai-python/releases.atom": "2020-01-01T00:00:00+00:00",
-    "https://github.com/run-llama/llama_index/releases.atom": "2020-01-01T00:00:00+00:00",
-    "https://github.com/huggingface/transformers/releases.atom": "2020-01-01T00:00:00+00:00"
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-13T02:26:03+00:00",
+    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-13T01:19:43+00:00",
+    "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
+    "https://github.com/run-llama/llama_index/releases.atom": "2025-12-30T01:07:03+00:00",
+    "https://github.com/huggingface/transformers/releases.atom": "2026-01-13T13:29:13+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-13T14:39:02.609604+00:00",
+    "last_run_at": "2026-01-13T15:00:16.857456+00:00",
     "version": "1.0.0"
   }
 }
