@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2011563508098613362"
+      "since_id": "2011926370234802535"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,35 +47,36 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2011539636037001628"
+      "since_id": "2011873091312341416"
     },
     "Google Gemini": {
-      "since_id": "2011564114276204968"
+      "since_id": "2011926358738227401"
     },
     "Anthropic": {
-      "since_id": "2011564095410225660"
+      "since_id": "2011926401071661191"
     },
     "Model Context Protocol": {
-      "since_id": "2011561049796067507"
+      "since_id": "2011924492864336006"
     },
     "GPT-4 Turbo": {
-      "since_id": "2011492478252134898"
+      "since_id": "2011857814675738955"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-14T14:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-15T07:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2020-01-01T00:00:00+00:00",
-    "https://github.blog/feed/": "2026-01-14T22:06:49+00:00",
+    "https://github.blog/feed/": "2026-01-15T21:31:10+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2020-01-01T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2020-01-01T00:00:00+00:00",
     "https://github.com/anthropics/claude-code/releases.atom": "2026-01-14T00:04:17+00:00",
     "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-14T19:35:44+00:00",
     "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
     "https://github.com/run-llama/llama_index/releases.atom": "2025-12-30T01:07:03+00:00",
-    "https://github.com/huggingface/transformers/releases.atom": "2026-01-14T16:42:09+00:00"
+    "https://github.com/huggingface/transformers/releases.atom": "2026-01-14T16:42:09+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-15T20:01:40+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-14T22:21:58.182613+00:00",
+    "last_run_at": "2026-01-15T22:21:44.925334+00:00",
     "version": "1.0.0"
   }
 }
