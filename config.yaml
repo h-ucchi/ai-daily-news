@@ -48,6 +48,8 @@ rss:
     # GitHub Releases Atom Feed
     - url: "https://github.com/anthropics/claude-code/releases.atom"
       name: "Claude Code Releases"
+    - url: "https://github.blog/changelog/label/copilot/feed/"
+      name: "GitHub Copilot Changelog"
     - url: "https://github.com/langchain-ai/langchain/releases.atom"
       name: "LangChain Releases"
     - url: "https://github.com/openai/openai-python/releases.atom"
@@ -60,6 +62,15 @@ rss:
     # - url: "https://example.com/feed.xml"
     #   name: "Example Blog"
 
+  # 必ず含めるフィード（当日に更新があれば必ず投稿案を作成）
+  must_include_feeds:
+    - url: "https://github.com/anthropics/claude-code/releases.atom"
+      name: "Claude Code"
+      max_items: 3  # 1日に複数リリースがあった場合の上限
+    - url: "https://github.blog/changelog/label/copilot/feed/"
+      name: "GitHub Copilot"
+      max_items: 3
+
 # GitHub監視はRSS Atom Feedで実施（上記のGitHub Releases Atom Feed参照）
 
 # Slackレポート設定
@@ -70,6 +81,16 @@ slack:
     provider_official: 5  # 10→5に削減
     github_updates: 5     # 10→5に削減
     x_signals: 10         # 20→10に削減
+    practical: 7          # 実用的情報専用枠（新規追加）
+
+  # カテゴリ表示設定
+  category_display:
+    enabled: true
+    emoji:
+      PRACTICAL: "⚡"       # 実用的情報
+      TECHNICAL: "🔬"       # 技術詳細
+      GENERAL: "📢"         # 一般発表
+      MARKETING: "📣"       # マーケティング
 
   # 重要度スコアリング設定
   scoring:
@@ -81,3 +102,109 @@ slack:
     official_bonus: 1000
     rss_bonus: 500
     github_bonus: 300
+
+# ターゲットオーディエンス設定
+target_audience:
+  name: "生成AI活用に積極的なWebエンジニア"
+  description: "AIツール・ライブラリを実際のプロダクト開発に活用しているエンジニア"
+  interests:
+    - "ツール・ライブラリのリリース情報"
+    - "API仕様の変更・新機能"
+    - "統合・連携の実装パターン"
+    - "エージェント開発のベストプラクティス"
+  priority_sources:
+    - "claude-code/releases.atom"
+    - "changelog/label/copilot/feed/"
+    - "anthropic.com/news/rss.xml"
+    - "langchain/releases.atom"
+    - "github.blog/feed/"
+
+# コンテンツフィルタリング設定
+content_filtering:
+  enabled: true
+
+  # Claude API分類設定（Phase 2で有効化）
+  classification:
+    enabled: false  # Phase 1ではキーワードのみ使用
+    threshold_score: 800  # この点数以上のみClaude API分類
+    batch_size: 10
+    cache_ttl: 86400  # 24時間
+    max_api_calls_per_run: 5
+
+  # カテゴリ別スコアボーナス
+  category_bonuses:
+    PRACTICAL: 700      # 実用的情報全般
+    TECHNICAL: 400      # 技術詳細
+    GENERAL: 0          # 一般発表（既存の優先度ボーナス維持）
+    MARKETING: -300     # マーケティング的内容
+
+  # キーワードパターン（実用的情報を広くカバー）
+  keywords:
+    tool_release:
+      - "release"
+      - "リリース"
+      - "v1.0"
+      - "version"
+      - "new feature"
+      - "新機能"
+      - "update"
+      - "アップデート"
+      - "launched"
+      - "available"
+    api_change:
+      - "API"
+      - "endpoint"
+      - "parameter"
+      - "パラメータ"
+      - "breaking change"
+      - "deprecated"
+      - "specification"
+      - "仕様"
+    implementation:
+      - "実装"
+      - "implementation"
+      - "how to"
+      - "tutorial"
+      - "guide"
+      - "設計"
+      - "architecture"
+      - "pattern"
+      - "example"
+      - "サンプル"
+      - "コード例"
+    integration:
+      - "integration"
+      - "統合"
+      - "連携"
+      - "combined"
+      - "workflow"
+      - "pipeline"
+      - "と組み合わせ"
+    use_case:
+      - "use case"
+      - "事例"
+      - "case study"
+      - "活用例"
+      - "実践"
+      - "プロダクション"
+      - "best practice"
+    technical:
+      - "deep dive"
+      - "詳細"
+      - "analysis"
+      - "比較"
+      - "benchmark"
+      - "performance"
+    marketing:
+      - "革新的"
+      - "画期的"
+      - "breakthrough"
+      - "revolutionary"
+      - "game-changing"
+
+  # ソース別重み付け
+  source_multipliers:
+    github: 1.2
+    rss: 1.0
+    x_account: 0.9
+    x_search: 0.8

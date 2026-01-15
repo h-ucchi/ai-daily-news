@@ -14,6 +14,7 @@ from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, asdict
 from collections import defaultdict
 import time
+from content_classifier import ContentClassifier, ClassificationResult
 
 
 @dataclass
@@ -169,8 +170,9 @@ class DataCollector:
         "https://github.blog/feed/": 800,                 # GitHub Blog
         "https://code.visualstudio.com/updates/feed.xml": 800,  # VSCode Updates
 
-        # GitHub Releases Atom Feed
-        "https://github.com/anthropics/claude-code/releases.atom": 1000,  # Claude Code最優先
+        # GitHub Releases Atom Feed（必須フィードはmust_include_feedsで管理）
+        "https://github.com/anthropics/claude-code/releases.atom": 800,  # 必須フィードに移行
+        "https://github.blog/changelog/label/copilot/feed/": 800,        # 必須フィードに移行
         "https://github.com/langchain-ai/langchain/releases.atom": 800,   # LangChain
         "https://github.com/openai/openai-python/releases.atom": 800,     # OpenAI Python SDK
         "https://github.com/run-llama/llama_index/releases.atom": 600,    # LlamaIndex
@@ -191,6 +193,11 @@ class DataCollector:
             "github_fetched": 0,
             "duplicates_removed": 0
         }
+        # コンテンツ分類器の初期化
+        if self.config.get("content_filtering", {}).get("enabled"):
+            self.classifier = ContentClassifier(config)
+        else:
+            self.classifier = None
 
     def collect_all(self):
         """全データソースから収集"""
@@ -202,6 +209,11 @@ class DataCollector:
 
         # RSS（GitHub Releases Atom Feedを含む）
         self._collect_rss()
+
+        # 必須フィード（当日の更新があれば必ず含める）
+        must_include_items = self._collect_must_include_feeds()
+        self.items.extend(must_include_items)
+        self.stats["must_include_fetched"] = len(must_include_items)
 
         # 重複排除
         self._deduplicate()
@@ -240,13 +252,27 @@ class DataCollector:
                 if fetched >= limit:
                     break
 
+                # カテゴリ分類とスコア調整
+                initial_score = self._calculate_engagement_score(tweet)
+                category = "UNKNOWN"
+                if self.classifier:
+                    classification = self.classifier.classify_by_keywords(tweet["text"])
+                    category = classification.category
+                    final_score = self.classifier.calculate_final_score(initial_score, category, "x_account")
+                else:
+                    final_score = initial_score
+
                 item = Item(
                     source="x_account",
                     title=tweet["text"][:100],
                     url=f"https://twitter.com/{username}/status/{tweet['id']}",
                     published_at=tweet["created_at"],
-                    score=self._calculate_engagement_score(tweet),
-                    metadata={"username": username, "tweet": tweet}
+                    score=final_score,
+                    metadata={
+                        "username": username,
+                        "tweet": tweet,
+                        "category": category
+                    }
                 )
                 self.items.append(item)
                 fetched += 1
@@ -282,13 +308,27 @@ class DataCollector:
                 if fetched >= limit:
                     break
 
+                # カテゴリ分類とスコア調整
+                initial_score = self._calculate_engagement_score(tweet)
+                category = "UNKNOWN"
+                if self.classifier:
+                    classification = self.classifier.classify_by_keywords(tweet["text"])
+                    category = classification.category
+                    final_score = self.classifier.calculate_final_score(initial_score, category, "x_search")
+                else:
+                    final_score = initial_score
+
                 item = Item(
                     source="x_search",
                     title=tweet["text"][:100],
                     url=f"https://twitter.com/i/web/status/{tweet['id']}",
                     published_at=tweet["created_at"],
-                    score=self._calculate_engagement_score(tweet),
-                    metadata={"keyword": keyword, "tweet": tweet}
+                    score=final_score,
+                    metadata={
+                        "keyword": keyword,
+                        "tweet": tweet,
+                        "category": category
+                    }
                 )
                 self.items.append(item)
                 fetched += 1
@@ -325,15 +365,29 @@ class DataCollector:
                 # スコアリング: 基本スコア + 優先度ボーナス
                 base_score = self.config["slack"]["scoring"]["rss_bonus"]  # 500
                 priority_bonus = self.PRIORITY_FEEDS.get(feed_url, 0)
-                final_score = base_score + priority_bonus
+                initial_score = base_score + priority_bonus
+
+                # カテゴリ分類とスコア調整
+                category = "UNKNOWN"
+                if self.classifier:
+                    description = entry.get("summary", "")
+                    classification = self.classifier.classify_by_keywords(entry.title, description)
+                    category = classification.category
+                    final_score = self.classifier.calculate_final_score(initial_score, category, "rss")
+                else:
+                    final_score = initial_score
 
                 item = Item(
                     source="rss",
                     title=entry.title,
                     url=entry.link,
                     published_at=published_iso,
-                    score=final_score,  # 重要フィード: Anthropic/OpenAI=1500点、GitHub/VSCode=1300点、その他=500点
-                    metadata={"feed_name": feed_name, "feed_url": feed_url}
+                    score=final_score,  # 重要フィード + カテゴリボーナス
+                    metadata={
+                        "feed_name": feed_name,
+                        "feed_url": feed_url,
+                        "category": category
+                    }
                 )
                 self.items.append(item)
                 fetched += 1
@@ -347,6 +401,68 @@ class DataCollector:
                     self.state.set_rss_last_published(feed_url, published_dt.isoformat())
 
         self.stats["rss_fetched"] = fetched
+
+    def _collect_must_include_feeds(self) -> List[Item]:
+        """必ず含めるフィードから当日の更新を取得"""
+        must_include_config = self.config.get("rss", {}).get("must_include_feeds", [])
+        must_include_items = []
+
+        if not must_include_config:
+            return must_include_items
+
+        print(f"⭐ 必須フィード収集: {len(must_include_config)} フィード")
+
+        # 当日の日付（UTCで00:00:00）
+        today = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+
+        for feed_config in must_include_config:
+            feed_url = feed_config["url"]
+            feed_name = feed_config["name"]
+            max_items = feed_config.get("max_items", 3)
+
+            feed = feedparser.parse(feed_url)
+            count = 0
+
+            for entry in feed.entries:
+                if count >= max_items:
+                    break
+
+                published = entry.get("published_parsed") or entry.get("updated_parsed")
+                if not published:
+                    continue
+
+                published_dt = datetime(*published[:6], tzinfo=timezone.utc)
+                published_iso = published_dt.isoformat()
+
+                # 当日の更新のみ（00:00:00以降）
+                if published_dt < today:
+                    continue
+
+                # カテゴリ分類
+                category = "PRACTICAL"  # 必須フィードはデフォルトでPRACTICAL
+                if self.classifier:
+                    description = entry.get("summary", "")
+                    classification = self.classifier.classify_by_keywords(entry.title, description)
+                    category = classification.category
+
+                item = Item(
+                    source="must_include",
+                    title=entry.title,
+                    url=entry.link,
+                    published_at=published_iso,
+                    score=9999,  # 最高スコア（必ず含まれるようにするため）
+                    metadata={
+                        "feed_name": feed_name,
+                        "feed_url": feed_url,
+                        "category": category,
+                        "must_include": True
+                    }
+                )
+                must_include_items.append(item)
+                count += 1
+                print(f"  ✓ {feed_name}: {entry.title[:50]}...")
+
+        return must_include_items
 
     def _select_diverse_provider_items(self, sorted_items: List[Item], limit: int) -> List[Item]:
         """
@@ -440,8 +556,9 @@ class SlackReporter:
         "https://github.blog/feed/": 800,
         "https://code.visualstudio.com/updates/feed.xml": 800,
 
-        # GitHub Releases Atom Feed
-        "https://github.com/anthropics/claude-code/releases.atom": 1000,
+        # GitHub Releases Atom Feed（必須フィードはmust_include_feedsで管理）
+        "https://github.com/anthropics/claude-code/releases.atom": 800,
+        "https://github.blog/changelog/label/copilot/feed/": 800,
         "https://github.com/langchain-ai/langchain/releases.atom": 800,
         "https://github.com/openai/openai-python/releases.atom": 800,
         "https://github.com/run-llama/llama_index/releases.atom": 600,
@@ -597,6 +714,58 @@ class SlackReporter:
         today = datetime.now().strftime('%Y/%m/%d')
         draft_count = 0
 
+        # 【必見の更新】セクション
+        must_include_items = [i for i in all_items if i.metadata.get("must_include")]
+        must_include_config = self.config.get("rss", {}).get("must_include_feeds", [])
+
+        if must_include_config:
+            blocks.append({"type": "divider"})
+            blocks.append({
+                "type": "header",
+                "text": {"type": "plain_text", "text": "⭐ 必見の更新"}
+            })
+
+            if must_include_items:
+                # 必須フィードごとにグループ化
+                from collections import defaultdict
+                grouped = defaultdict(list)
+                for item in must_include_items:
+                    feed_name = item.metadata.get("feed_name", "Unknown")
+                    grouped[feed_name].append(item)
+
+                # 各フィードの更新を表示
+                for feed_name, items in grouped.items():
+                    for item in items:
+                        seen_urls.add(item.url)
+                        draft_count += 1
+
+                        post = self._create_single_post(
+                            title=item.title,
+                            url=item.url,
+                            source_type="必見の更新",
+                            source_name=feed_name,
+                            date=today,
+                            item=item
+                        )
+
+                        blocks.append({
+                            "type": "section",
+                            "text": {"type": "mrkdwn", "text": f"*【投稿案 {draft_count}】{feed_name}*"}
+                        })
+                        blocks.append({
+                            "type": "section",
+                            "text": {"type": "mrkdwn", "text": f"```{post}```"}
+                        })
+                        blocks.append({"type": "divider"})
+            else:
+                # 更新がない場合
+                feed_names = [f["name"] for f in must_include_config]
+                blocks.append({
+                    "type": "section",
+                    "text": {"type": "mrkdwn", "text": f"📭 本日の更新なし\n対象: {', '.join(feed_names)}"}
+                })
+                blocks.append({"type": "divider"})
+
         # RSS（公式発表）を5件に削減（7→5）
         for item in provider_items[:5]:
             if item.url in seen_urls:
@@ -660,12 +829,15 @@ class SlackReporter:
         if "twitter.com" in url:
             url = url.replace("twitter.com", "x.com")
 
-        # Claude API でサマライズ生成（Phase 1: タイトルベース）
-        summary = self._generate_summary_with_claude(title, url, source_type)
+        # カテゴリ情報を取得
+        category = item.metadata.get("category", "UNKNOWN")
+
+        # Claude API でサマライズ生成
+        summary = self._generate_summary_with_claude(title, url, source_type, category)
 
         return summary
 
-    def _generate_summary_with_claude(self, title: str, url: str, source_type: str) -> str:
+    def _generate_summary_with_claude(self, title: str, url: str, source_type: str, category: str = "UNKNOWN") -> str:
         """Claude API で高品質なX投稿スレッドを生成"""
         try:
             import anthropic
@@ -677,9 +849,23 @@ class SlackReporter:
 
             client = anthropic.Anthropic(api_key=api_key)
 
+            # ターゲット情報を取得
+            target = self.config.get("target_audience", {})
+            target_name = target.get("name", "AIに関心のあるビジネスパーソンやエンジニア")
+
+            # カテゴリ別のフォーカス
+            category_focus = {
+                "PRACTICAL": "実装方法、具体的な機能、使い方、統合パターン、実践的なTipsを重視してください。",
+                "TECHNICAL": "技術的な仕組み、比較分析、詳細な解説を重視してください。",
+                "GENERAL": "新機能の概要、利用開始時期、対象ユーザーを重視してください。"
+            }.get(category, "")
+
             # システムプロンプト（全リクエスト共通）
-            system_prompt = """あなたはAI業界のトレンドを追うX（Twitter）アカウントの投稿作成者です。
-読者はAIに関心のあるビジネスパーソンやエンジニアです。
+            system_prompt = f"""あなたはAI業界のトレンドを追うX（Twitter）アカウントの投稿作成者です。
+読者は{target_name}です。
+
+【記事カテゴリ】{category}
+{category_focus}
 
 【重要な原則】
 - 具体的で実用的な情報を提供する
