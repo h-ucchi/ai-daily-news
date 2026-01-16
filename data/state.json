@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2011926370234802535"
+      "since_id": "2012288429556646275"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,36 +47,39 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2011873091312341416"
+      "since_id": "2012272796991148407"
     },
     "Google Gemini": {
-      "since_id": "2011926358738227401"
+      "since_id": "2012288613740904506"
     },
     "Anthropic": {
-      "since_id": "2011926401071661191"
+      "since_id": "2012288596204532019"
     },
     "Model Context Protocol": {
-      "since_id": "2011924492864336006"
+      "since_id": "2012279745065394456"
     },
     "GPT-4 Turbo": {
-      "since_id": "2011857814675738955"
+      "since_id": "2012134968995246179"
+    },
+    "LangChain release": {
+      "since_id": "2012220823231172939"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-15T07:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-16T12:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2020-01-01T00:00:00+00:00",
     "https://github.blog/feed/": "2026-01-15T21:31:10+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2020-01-01T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2020-01-01T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-14T00:04:17+00:00",
-    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-14T19:35:44+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-16T02:19:31+00:00",
+    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-16T19:21:38+00:00",
     "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
     "https://github.com/run-llama/llama_index/releases.atom": "2025-12-30T01:07:03+00:00",
-    "https://github.com/huggingface/transformers/releases.atom": "2026-01-14T16:42:09+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-01-15T20:01:40+00:00"
+    "https://github.com/huggingface/transformers/releases.atom": "2026-01-16T10:40:02+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-15T21:57:44+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-15T22:21:44.925334+00:00",
+    "last_run_at": "2026-01-16T22:21:02.408478+00:00",
     "version": "1.0.0"
   }
 }
