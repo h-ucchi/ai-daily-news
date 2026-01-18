@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2012650520343720079"
+      "since_id": "2013013029235920957"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,26 +47,26 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2012648039425454414"
+      "since_id": "2013000445598306695"
     },
     "Google Gemini": {
-      "since_id": "2012650591772619131"
+      "since_id": "2013013071376089093"
     },
     "Anthropic": {
-      "since_id": "2012650591772619131"
+      "since_id": "2013013029235920957"
     },
     "Model Context Protocol": {
-      "since_id": "2012650145113063516"
+      "since_id": "2013010583214293435"
     },
     "GPT-4 Turbo": {
-      "since_id": "2012520038524129581"
+      "since_id": "2012942997793497089"
     },
     "LangChain release": {
       "since_id": "2012220823231172939"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-16T12:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-18T12:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2020-01-01T00:00:00+00:00",
     "https://github.blog/feed/": "2026-01-15T21:31:10+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2020-01-01T00:00:00+00:00",
@@ -79,7 +79,7 @@
     "https://github.blog/changelog/label/copilot/feed/": "2026-01-16T23:03:03+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-17T22:19:04.548917+00:00",
+    "last_run_at": "2026-01-18T22:19:15.845394+00:00",
     "version": "1.0.0"
   }
 }
