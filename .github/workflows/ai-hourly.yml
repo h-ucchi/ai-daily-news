@@ -1,21 +1,17 @@
-name: AI Hourly Report
+name: AI Semi-Daily Report
 
 on:
-  # 毎時0分に実行（JST 7:00-21:00 = UTC 22:00-12:00）
+  # 8時と15時の2回実行（JST 8:00 = UTC 23:00, JST 15:00 = UTC 6:00）
   schedule:
-    # UTC 22:00 = JST 7:00
-    # UTC 23:00 = JST 8:00
-    # ...
-    # UTC 12:00 = JST 21:00
-    - cron: '0 22,23 * * *'      # JST 7:00, 8:00
-    - cron: '0 0-12 * * *'       # JST 9:00-21:00
+    - cron: '0 23 * * *'      # JST 8:00
+    - cron: '0 6 * * *'       # JST 15:00
 
   # 手動実行も可能
   workflow_dispatch:
 
 # 多重実行防止
 concurrency:
-  group: ai-hourly-report
+  group: ai-semi-daily-report
   cancel-in-progress: false
 
 permissions:
@@ -41,7 +37,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run hourly report script
+      - name: Run semi-daily report script
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -54,9 +50,9 @@ jobs:
         run: |
           python scripts/run_hourly.py
 
-      - name: Commit and push state and drafts update
+      - name: Commit and push state, drafts, and snapshots update
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/state_hourly.json data/drafts.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update hourly state and drafts [skip ci]" && git push)
+          git add data/state_hourly.json data/drafts.json data/snapshots/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update semi-daily state, drafts, and snapshots [skip ci]" && git push)
