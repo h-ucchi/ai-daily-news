@@ -97,14 +97,56 @@ class StateManager:
             self.state["github"][repo] = {}
         self.state["github"][repo]["tag"] = tag
 
+    def is_recently_posted(self, url: str, hours: int = 24) -> bool:
+        """過去N時間以内に投稿済みかチェック"""
+        posted_urls = self.state.get("recently_posted_urls", {})
+        cutoff = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
+
+        if url in posted_urls:
+            posted_at = posted_urls[url]
+            return posted_at > cutoff
+        return False
+
+    def mark_as_posted(self, url: str):
+        """投稿済みにマーク"""
+        if "recently_posted_urls" not in self.state:
+            self.state["recently_posted_urls"] = {}
+        self.state["recently_posted_urls"][url] = datetime.now(timezone.utc).isoformat()
+
+    def cleanup_old_posted_urls(self, hours: int = 24):
+        """古い投稿履歴をクリーンアップ"""
+        if "recently_posted_urls" not in self.state:
+            return
+
+        cutoff = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
+        posted_urls = self.state["recently_posted_urls"]
+        self.state["recently_posted_urls"] = {
+            url: posted_at
+            for url, posted_at in posted_urls.items()
+            if posted_at > cutoff
+        }
+
 
 class XAPIClient:
     """X (Twitter) API v2 クライアント"""
 
-    def __init__(self, bearer_token: str):
+    def __init__(self, bearer_token: str, oauth_credentials: Optional[Dict] = None):
+        # 読み取り用（既存）
         self.bearer_token = bearer_token
         self.base_url = "https://api.twitter.com/2"
         self.headers = {"Authorization": f"Bearer {bearer_token}"}
+
+        # 書き込み用（新規）
+        if oauth_credentials:
+            from requests_oauthlib import OAuth1Session
+            self.oauth = OAuth1Session(
+                client_key=oauth_credentials['api_key'],
+                client_secret=oauth_credentials['api_secret'],
+                resource_owner_key=oauth_credentials['access_token'],
+                resource_owner_secret=oauth_credentials['access_token_secret']
+            )
+        else:
+            self.oauth = None
 
     def get_user_id(self, username: str) -> Optional[str]:
         """ユーザー名からユーザーIDを取得"""
@@ -157,6 +199,23 @@ class XAPIClient:
             data = response.json()
             return data.get("data", [])
         return []
+
+    def post_tweet(self, text: str) -> Dict:
+        """ツイート投稿"""
+        if not self.oauth:
+            raise ValueError("OAuth credentials not configured")
+
+        url = f"{self.base_url}/tweets"
+        payload = {"text": text}
+
+        response = self.oauth.post(url, json=payload)
+
+        if response.status_code == 201:
+            return response.json()
+        else:
+            raise Exception(
+                f"Failed to post tweet: {response.status_code} {response.text}"
+            )
 
 
 class DataCollector:
@@ -903,7 +962,7 @@ class SlackReporter:
 
 【出力フォーマット】
 
-【速報】または【注目】企業名、「製品/機能名」を発表/リリース
+企業名、「製品/機能名」を発表/リリース
 
 [2-3文で核心を要約。何が新しいのか、なぜ重要なのかを明確に]
 
