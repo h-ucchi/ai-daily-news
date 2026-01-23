@@ -56,3 +56,23 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data/state_hourly.json data/drafts.json data/snapshots/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update semi-daily state, drafts, and snapshots [skip ci]" && git push)
+
+      - name: Notify failure to Slack
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "text": "⚠️ AI Semi-Daily Report failed",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*AI Semi-Daily Report 実行失敗*\n\nワークフロー: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|実行ログを確認>"
+                  }
+                }
+              ]
+            }'
