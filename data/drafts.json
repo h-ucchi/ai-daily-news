@@ -104,6 +104,36 @@
       "post_text": "tarqaAI、「iStart」の承認を獲得\n\n複数のAIモデルへのアクセスを統一するプラットフォーム「tarqaAI」が、iStartの承認を取得しました。開発者が異なるAIプロバイダーのAPIを個別に管理する手間を削減し、単一のインターフェースで複数モデルを利用できる仕組みを提供します。\n\nhttps://x.com/i/web/status/2014608636564095312\n\n💡 業界インパクト\n・複数AIモデルの統合管理により、開発時のAPI管理コストを削減\n・プロバイダー間の切り替えが容易になり、用途別の最適なモデル選択が実現\n・マルチモデル戦略の実装ハードルが下がり、AIアプリケーション開発が効率化\n\n1. 統合アクセスの仕組み\n\n・複数のAIモデルプロバイダーへの統一APIを提供\n・プロバイダーごとの認証情報や接続設定を一元管理\n・異なるモデル間での切り替えをシームレスに実行\n\n開発者は個別のSDKやAPIキーの管理から解放されます。\n\n2. iStart承認の意義\n\n・スタートアップ支援プログラムによる信頼性の担保\n・初期段階での資金・リソースサポートの獲得\n\n公的な承認により、プラットフォームの安定性と将来性が示されています。\n\n3. 利用方法・対象者\n\n・対象ユーザー: マルチモデル活用を検討する開発者、AI統合を効率化したい企業\n・提供開始: 承認取得済み（詳細は公式発表待ち）\n・今後の予定: 対応モデルの拡充が期待される",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "2d44bde0-ebb8-4766-9189-8d5da1cc5a7b",
+      "created_at": "2026-01-23T08:20:08.545430+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/23",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ddf4d132-55fc-4532-a7a8-a25a44be2c69",
+      "created_at": "2026-01-23T08:20:08.545860+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog 更新",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/23",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
