@@ -1,0 +1,109 @@
+{
+  "drafts": [
+    {
+      "id": "0e277563-8c18-4b8d-ae82-e62cf1e91961",
+      "created_at": "2026-01-23T08:12:52.472797+00:00",
+      "item": {
+        "source": "x_search",
+        "title": "ChatGPTとClaudeにAPI仕様変更に伴うコード修正の指示出しをしながら、預かった折りたたまれた大量の領収証をひたすら開くという超アナログ作業をこなした新幹線の車中。。",
+        "url": "https://twitter.com/i/web/status/2014610542854602971",
+        "published_at": "2026-01-23T08:05:57.000Z",
+        "score": 560,
+        "metadata": {
+          "keyword": "Claude API",
+          "tweet": {
+            "public_metrics": {
+              "retweet_count": 0,
+              "reply_count": 0,
+              "like_count": 1,
+              "quote_count": 0,
+              "bookmark_count": 0,
+              "impression_count": 43
+            },
+            "author_id": "100967268",
+            "edit_history_tweet_ids": [
+              "2014610542854602971"
+            ],
+            "id": "2014610542854602971",
+            "text": "ChatGPTとClaudeにAPI仕様変更に伴うコード修正の指示出しをしながら、預かった折りたたまれた大量の領収証をひたすら開くという超アナログ作業をこなした新幹線の車中。。",
+            "created_at": "2026-01-23T08:05:57.000Z"
+          },
+          "category": "PRACTICAL"
+        }
+      },
+      "post_text": "# 投稿素案\n\n個人による実践報告「ChatGPTとClaudeへのAPI仕様変更対応」を共有\n\n新幹線での移動中、ChatGPTとClaudeにAPI仕様変更に伴うコード修正を指示しながら、同時に大量の領収証を手作業で整理。AI支援と人間の作業の並行処理で、移動時間を最大限活用した実践事例です。\n\nhttps://x.com/i/web/status/2014610542854602971\n\n💡 業界インパクト\n・移動時間という制約下でもAIを活用した技術対応が可能になった\n・複数AI（ChatGPT/Claude）への並行指示出しで開発効率を向上\n・コーディング作業と物理作業の同時進行により時間効率を最大化\n\n1. API仕様変更への対応方法\n\n・ChatGPTとClaudeに並行してコード修正を指示\n・API仕様変更という技術的課題をAI支援で解決\n・移動中の限られた時間でも実装作業を完遂\n\n複数のLLMを使い分けることで、それぞれの強みを活かした開発が可能です。\n\n2. 実務での活用シーン\n\n・新幹線での移動時間を開発作業に充当\n・AIへの指示出しと領収証整理を並行処理\n・オンライン作業とオフライン作業の効率的な組み合わせ\n\n制約のある環境でも、AI支援により生産性を維持できます。\n\n3. 活用のポイント\n\n・対象ユーザー: 移動の多いエンジニア、フリーランス開発者\n・活用場面: 移動時間、待ち時間などの隙間時間\n・期待効果: 時間効率の向上、マルチタスクの実現",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3de1dc7d-ff21-47a4-a576-800aea8bcf77",
+      "created_at": "2026-01-23T08:13:10.556478+00:00",
+      "item": {
+        "source": "x_search",
+        "title": "3️⃣ الأدوات المستخدمة\n•Ollama → لتشغيل موديل محلي على الجهاز\n•Claude Code → للتعامل مع المشروع والكو",
+        "url": "https://twitter.com/i/web/status/2014609293769630026",
+        "published_at": "2026-01-23T08:00:59.000Z",
+        "score": 560,
+        "metadata": {
+          "keyword": "Claude API",
+          "tweet": {
+            "public_metrics": {
+              "retweet_count": 0,
+              "reply_count": 0,
+              "like_count": 0,
+              "quote_count": 0,
+              "bookmark_count": 0,
+              "impression_count": 15
+            },
+            "author_id": "395892219",
+            "edit_history_tweet_ids": [
+              "2014609293769630026"
+            ],
+            "id": "2014609293769630026",
+            "text": "3️⃣ الأدوات المستخدمة\n•Ollama → لتشغيل موديل محلي على الجهاز\n•Claude Code → للتعامل مع المشروع والكود\n\nبدون:\n⚠️ API Keys\n⚠️ اشتراكات\n⚠️ Limits",
+            "created_at": "2026-01-23T08:00:59.000Z"
+          },
+          "category": "PRACTICAL"
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された記事タイトルはアラビア語で記載されており、内容が「使用ツール」として「Ollama」と「Claude Code」が挙げられているのみで、具体的な製品発表やリリースの詳細が不明確です。\n\nX投稿スレッドを適切に作成するためには、以下の情報が必要です:\n\n**不足している情報:**\n- どの企業・組織による発表なのか\n- 何の製品・機能・プロジェクトに関する情報なのか\n- 発表・リリースの具体的な内容\n- 記事の本文や詳細な説明\n\n**現在判明している情報のみでは:**\n- OllamaとClaude Codeを使用したプロジェクトらしい\n- ローカルでモデルを実行する内容を含む\n\nより詳細な記事の内容、または元のXポストのURL（https://x.com/i/web/status/2014609293769630026）の内容を確認できれば、適切な投稿スレッドを作成できます。\n\n記事の全文または追加情報をご提供いただけますでしょうか?",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e02efcb1-8f17-44eb-af75-427eb106d658",
+      "created_at": "2026-01-23T08:13:40.250949+00:00",
+      "item": {
+        "source": "x_search",
+        "title": "@sudhanshusX @tarqaAI Congrats on tarqaAI's iStart approval! It's an AI platform unifying access to ",
+        "url": "https://twitter.com/i/web/status/2014608636564095312",
+        "published_at": "2026-01-23T07:58:23.000Z",
+        "score": 561,
+        "metadata": {
+          "keyword": "Claude API",
+          "tweet": {
+            "public_metrics": {
+              "retweet_count": 0,
+              "reply_count": 1,
+              "like_count": 0,
+              "quote_count": 0,
+              "bookmark_count": 0,
+              "impression_count": 8
+            },
+            "author_id": "1720665183188922368",
+            "edit_history_tweet_ids": [
+              "2014608636564095312"
+            ],
+            "id": "2014608636564095312",
+            "text": "@sudhanshusX @tarqaAI Congrats on tarqaAI's iStart approval! It's an AI platform unifying access to models like GPT-4 and Claude via one API. iStart is Rajasthan's startup initiative for funding and support. Site's down right now, so couldn't verify the list—mind sharing a screenshot or link for more",
+            "created_at": "2026-01-23T07:58:23.000Z"
+          },
+          "category": "PRACTICAL"
+        }
+      },
+      "post_text": "tarqaAI、「iStart」の承認を獲得\n\n複数のAIモデルへのアクセスを統一するプラットフォーム「tarqaAI」が、iStartの承認を取得しました。開発者が異なるAIプロバイダーのAPIを個別に管理する手間を削減し、単一のインターフェースで複数モデルを利用できる仕組みを提供します。\n\nhttps://x.com/i/web/status/2014608636564095312\n\n💡 業界インパクト\n・複数AIモデルの統合管理により、開発時のAPI管理コストを削減\n・プロバイダー間の切り替えが容易になり、用途別の最適なモデル選択が実現\n・マルチモデル戦略の実装ハードルが下がり、AIアプリケーション開発が効率化\n\n1. 統合アクセスの仕組み\n\n・複数のAIモデルプロバイダーへの統一APIを提供\n・プロバイダーごとの認証情報や接続設定を一元管理\n・異なるモデル間での切り替えをシームレスに実行\n\n開発者は個別のSDKやAPIキーの管理から解放されます。\n\n2. iStart承認の意義\n\n・スタートアップ支援プログラムによる信頼性の担保\n・初期段階での資金・リソースサポートの獲得\n\n公的な承認により、プラットフォームの安定性と将来性が示されています。\n\n3. 利用方法・対象者\n\n・対象ユーザー: マルチモデル活用を検討する開発者、AI統合を効率化したい企業\n・提供開始: 承認取得済み（詳細は公式発表待ち）\n・今後の予定: 対応モデルの拡充が期待される",
+      "status": "pending",
+      "posted_at": null
+    }
+  ]
+}
