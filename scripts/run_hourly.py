@@ -244,6 +244,9 @@ def main():
         draft_manager = DraftManager()
         validator = ContentValidator(config)  # 検証器初期化
 
+        # スキップ情報の集計用
+        skipped_items = []
+
         # 上位3件を下書きとして保存
         for item in collector.items[:3]:
             post_text = reporter._create_single_post(
@@ -258,12 +261,23 @@ def main():
             # 検証フェーズ1: 正規表現ベース
             if post_text is None:
                 print(f"⏭️  下書きスキップ（検証失敗）: {item.title[:50]}...")
+                skipped_items.append({
+                    "title": item.title,
+                    "reason": "生成失敗",
+                    "url": item.url
+                })
                 continue
 
             validation_result = validator.validate_post(post_text, item.title)
             if not validation_result.is_valid:
                 print(f"⏭️  下書きスキップ（検証失敗）: {item.title[:50]}...")
                 print(f"    理由: {validation_result.rejection_reason}")
+                skipped_items.append({
+                    "title": item.title,
+                    "reason": validation_result.rejection_reason,
+                    "issues": validation_result.detected_issues,
+                    "url": item.url
+                })
                 continue
 
             # 検証フェーズ2: Claude APIレビュー
@@ -271,6 +285,12 @@ def main():
             if not review_result.is_valid:
                 print(f"⏭️  下書きスキップ（レビュー失敗）: {item.title[:50]}...")
                 print(f"    理由: {review_result.rejection_reason}")
+                skipped_items.append({
+                    "title": item.title,
+                    "reason": review_result.rejection_reason,
+                    "issues": review_result.detected_issues if hasattr(review_result, 'detected_issues') else [],
+                    "url": item.url
+                })
                 continue
 
             draft_id = draft_manager.save_draft(asdict(item), post_text)
@@ -297,6 +317,10 @@ def main():
         # 古い履歴をクリーンアップ
         state.cleanup_old_posted_urls()
 
+        # スキップサマリーをSlackに送信
+        if skipped_items:
+            send_skip_summary_to_slack(skipped_items, slack_webhook_url)
+
         # 状態保存
         state.save()
         print("💾 状態を保存しました")
@@ -308,6 +332,71 @@ def main():
     print("=" * 60)
     print("✅ 処理完了")
     print("=" * 60)
+
+
+def send_skip_summary_to_slack(skipped_items: List[Dict], webhook_url: str):
+    """スキップされた投稿案のサマリーをSlackに送信"""
+    import requests
+
+    # 理由別に集計
+    reason_counts = {}
+    for item in skipped_items:
+        reason = item.get("reason", "不明")
+        reason_counts[reason] = reason_counts.get(reason, 0) + 1
+
+    # 理由の日本語変換
+    reason_map = {
+        "meta_message": "メタメッセージ",
+        "lawsuit": "訴訟・法的問題",
+        "political": "政治的コンテンツ",
+        "too_short": "文字数不足",
+        "生成失敗": "投稿案生成失敗",
+        "claude_review_failed": "Claude APIレビュー失敗"
+    }
+
+    # メッセージ構築
+    total = len(skipped_items)
+    reason_text = "\n".join([
+        f"• {reason_map.get(r, r)}: {c}件"
+        for r, c in reason_counts.items()
+    ])
+
+    message = {
+        "text": f"⚠️ AI Semi-Daily Report: {total}件の投稿案をスキップ",
+        "blocks": [
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"*投稿案スキップのお知らせ*\n\n合計 *{total}件* の投稿案が品質基準を満たさずスキップされました。\n\n*スキップ理由の内訳:*\n{reason_text}"
+                }
+            }
+        ]
+    }
+
+    # 詳細情報（最大3件まで）
+    if len(skipped_items) <= 3:
+        details = "\n".join([
+            f"• {item['title'][:50]}...\n  理由: {reason_map.get(item['reason'], item['reason'])}"
+            for item in skipped_items
+        ])
+        message["blocks"].append({
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"*スキップされた投稿:*\n{details}"
+            }
+        })
+
+    # Slack送信
+    try:
+        response = requests.post(webhook_url, json=message)
+        if response.status_code == 200:
+            print(f"✅ スキップサマリーをSlackに送信しました（{total}件）")
+        else:
+            print(f"⚠️  Slack送信失敗: {response.status_code}")
+    except Exception as e:
+        print(f"⚠️  Slack送信エラー: {e}")
 
 
 if __name__ == "__main__":
