@@ -21,6 +21,7 @@ from run_daily import (
     XAPIClient, StateManager, DataCollector, SlackReporter
 )
 from draft_manager import DraftManager
+from content_validator import ContentValidator
 
 
 @dataclass
@@ -181,30 +182,23 @@ def main():
         print("\n📸 ページスナップショット監視開始")
         snapshot_manager = SnapshotManager()
 
-        # 監視対象ページ
-        pages_to_monitor = [
-            {
-                "url": "https://code.claude.com/docs/",
-                "name": "Claude Code Documentation"
-            },
-            {
-                "url": "https://www.anthropic.com/research",
-                "name": "Anthropic Research"
-            },
-            {
-                "url": "https://github.blog/ai-and-ml/github-copilot/",
-                "name": "GitHub Copilot Blog"
-            }
-        ]
+        # 監視対象ページをconfig.yamlから読み込み
+        page_config = config.get("page_monitoring", {})
+        if not page_config.get("enabled", True):
+            print("📸 ページスナップショット監視は無効化されています")
+            snapshot_changes = []
+        else:
+            pages_to_monitor = page_config.get("pages", [])
+            print(f"📸 ページスナップショット監視開始: {len(pages_to_monitor)}ページ")
 
-        snapshot_changes = []
-        for page in pages_to_monitor:
-            changed_snapshot = snapshot_manager.check_for_changes(
-                page["url"],
-                page["name"]
-            )
-            if changed_snapshot:
-                snapshot_changes.append(changed_snapshot)
+            snapshot_changes = []
+            for page in pages_to_monitor:
+                changed_snapshot = snapshot_manager.check_for_changes(
+                    page["url"],
+                    page["name"]
+                )
+                if changed_snapshot:
+                    snapshot_changes.append(changed_snapshot)
 
         # スナップショット変更があればSlackに通知
         if snapshot_changes:
@@ -248,6 +242,7 @@ def main():
 
         # 下書き管理
         draft_manager = DraftManager()
+        validator = ContentValidator(config)  # 検証器初期化
 
         # 上位3件を下書きとして保存
         for item in collector.items[:3]:
@@ -259,6 +254,25 @@ def main():
                 date=datetime.now().strftime('%Y/%m/%d'),
                 item=item
             )
+
+            # 検証フェーズ1: 正規表現ベース
+            if post_text is None:
+                print(f"⏭️  下書きスキップ（検証失敗）: {item.title[:50]}...")
+                continue
+
+            validation_result = validator.validate_post(post_text, item.title)
+            if not validation_result.is_valid:
+                print(f"⏭️  下書きスキップ（検証失敗）: {item.title[:50]}...")
+                print(f"    理由: {validation_result.rejection_reason}")
+                continue
+
+            # 検証フェーズ2: Claude APIレビュー
+            review_result = validator.review_post_with_claude(post_text, item.title, item.url)
+            if not review_result.is_valid:
+                print(f"⏭️  下書きスキップ（レビュー失敗）: {item.title[:50]}...")
+                print(f"    理由: {review_result.rejection_reason}")
+                continue
+
             draft_id = draft_manager.save_draft(asdict(item), post_text)
             print(f"📝 下書き保存: {draft_id} - {item.title[:50]}...")
 

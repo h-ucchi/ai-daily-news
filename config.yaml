@@ -208,3 +208,45 @@ content_filtering:
     rss: 1.0
     x_account: 0.9
     x_search: 0.8
+
+# ページ監視設定（Semi-Daily Report用）
+page_monitoring:
+  enabled: true
+  pages:
+    # 既存
+    - url: "https://code.claude.com/docs/"
+      name: "Claude Code Documentation"
+    - url: "https://www.anthropic.com/research"
+      name: "Anthropic Research"
+    - url: "https://github.blog/ai-and-ml/github-copilot/"
+      name: "GitHub Copilot Blog"
+
+    # 新規追加
+    - url: "https://cursor.com/ja/changelog"
+      name: "Cursor Changelog"
+    - url: "https://cursor.com/ja/blog"
+      name: "Cursor Blog"
+
+# コンテンツ検証設定
+content_validation:
+  enabled: true
+
+  # メタメッセージ検出
+  meta_message_detection:
+    enabled: true
+
+  # 訴訟・法的問題フィルタリング
+  lawsuit_filtering:
+    enabled: true
+
+  # 政治的コンテンツフィルタリング
+  political_filtering:
+    enabled: true
+
+  # 最小文字数
+  min_length: 50
+
+  # Claude APIレビュー（投稿案の事実確認）
+  claude_review:
+    enabled: true
+    max_reviews_per_run: 10  # 1回あたりの上限（コスト管理）

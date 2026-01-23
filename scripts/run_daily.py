@@ -15,6 +15,7 @@ from dataclasses import dataclass, asdict
 from collections import defaultdict
 import time
 from content_classifier import ContentClassifier, ClassificationResult
+from content_validator import ContentValidator
 
 
 @dataclass
@@ -629,6 +630,8 @@ class SlackReporter:
         self.config = config
         self.items = items
         self.stats = stats
+        # 検証器の初期化
+        self.validator = ContentValidator(config)
 
     def _select_diverse_provider_items(self, sorted_items: List[Item], limit: int) -> List[Item]:
         """
@@ -807,6 +810,12 @@ class SlackReporter:
                             item=item
                         )
 
+                        # 検証失敗時はスキップ
+                        if post is None:
+                            print(f"⏭️  投稿案スキップ（検証失敗）: {item.title[:50]}...")
+                            draft_count -= 1
+                            continue
+
                         blocks.append({
                             "type": "section",
                             "text": {"type": "mrkdwn", "text": f"*【投稿案 {draft_count}】{feed_name}*"}
@@ -842,6 +851,12 @@ class SlackReporter:
                 item=item
             )
 
+            # 検証失敗時はスキップ
+            if post is None:
+                print(f"⏭️  投稿案スキップ（検証失敗）: {item.title[:50]}...")
+                draft_count -= 1
+                continue
+
             # 各投稿を個別のsectionブロックに（3000文字制限回避）
             blocks.append({
                 "type": "section",
@@ -870,6 +885,12 @@ class SlackReporter:
                 date=today,
                 item=item
             )
+
+            # 検証失敗時はスキップ
+            if post is None:
+                print(f"⏭️  投稿案スキップ（検証失敗）: {item.title[:50]}...")
+                draft_count -= 1
+                continue
 
             blocks.append({
                 "type": "section",
@@ -1015,7 +1036,27 @@ class SlackReporter:
                 }]
             )
 
-            return message.content[0].text
+            generated_text = message.content[0].text
+
+            # 検証フェーズ1: 正規表現ベース
+            validation_result = self.validator.validate_post(generated_text, title)
+
+            if not validation_result.is_valid:
+                print(f"⚠️  投稿案が検証失敗: {validation_result.rejection_reason}")
+                print(f"    タイトル: {title[:50]}...")
+                print(f"    検出問題: {validation_result.detected_issues}")
+                return None
+
+            # 検証フェーズ2: Claude APIレビュー
+            review_result = self.validator.review_post_with_claude(generated_text, title, url)
+
+            if not review_result.is_valid:
+                print(f"⚠️  投稿案がレビュー失敗: {review_result.rejection_reason}")
+                print(f"    タイトル: {title[:50]}...")
+                print(f"    検出問題: {review_result.detected_issues}")
+                return None
+
+            return generated_text
 
         except Exception as e:
             print(f"⚠️ Claude API エラー: {e}")
