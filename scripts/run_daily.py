@@ -312,20 +312,35 @@ class DataCollector:
                 if fetched >= limit:
                     break
 
+                # 言語・地域フィルタリング
+                tweet_text = tweet["text"]
+                tweet_url = f"https://twitter.com/{username}/status/{tweet['id']}"
+
+                if self.classifier:
+                    # 総合的な分類（言語・地域チェックを含む）
+                    classification = self.classifier.classify(tweet_text, "", tweet_url)
+                    category = classification.category
+
+                    # 非英語コンテンツまたは日本由来のコンテンツは除外
+                    if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
+                        print(f"  ⏭️  除外（{category}）: {tweet_text[:50]}...")
+                        continue
+                else:
+                    category = "UNKNOWN"
+
                 # カテゴリ分類とスコア調整
                 initial_score = self._calculate_engagement_score(tweet)
-                category = "UNKNOWN"
                 if self.classifier:
-                    classification = self.classifier.classify_by_keywords(tweet["text"])
-                    category = classification.category
-                    final_score = self.classifier.calculate_final_score(initial_score, category, "x_account")
+                    final_score = self.classifier.calculate_final_score(
+                        initial_score, category, "x_account"
+                    )
                 else:
                     final_score = initial_score
 
                 item = Item(
                     source="x_account",
-                    title=tweet["text"][:100],
-                    url=f"https://twitter.com/{username}/status/{tweet['id']}",
+                    title=tweet_text[:100],
+                    url=tweet_url,
                     published_at=tweet["created_at"],
                     score=final_score,
                     metadata={
@@ -368,20 +383,35 @@ class DataCollector:
                 if fetched >= limit:
                     break
 
+                # 言語・地域フィルタリング
+                tweet_text = tweet["text"]
+                tweet_url = f"https://twitter.com/i/web/status/{tweet['id']}"
+
+                if self.classifier:
+                    # 総合的な分類（言語・地域チェックを含む）
+                    classification = self.classifier.classify(tweet_text, "", tweet_url)
+                    category = classification.category
+
+                    # 非英語コンテンツまたは日本由来のコンテンツは除外
+                    if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
+                        print(f"  ⏭️  除外（{category}）: {tweet_text[:50]}...")
+                        continue
+                else:
+                    category = "UNKNOWN"
+
                 # カテゴリ分類とスコア調整
                 initial_score = self._calculate_engagement_score(tweet)
-                category = "UNKNOWN"
                 if self.classifier:
-                    classification = self.classifier.classify_by_keywords(tweet["text"])
-                    category = classification.category
-                    final_score = self.classifier.calculate_final_score(initial_score, category, "x_search")
+                    final_score = self.classifier.calculate_final_score(
+                        initial_score, category, "x_search"
+                    )
                 else:
                     final_score = initial_score
 
                 item = Item(
                     source="x_search",
-                    title=tweet["text"][:100],
-                    url=f"https://twitter.com/i/web/status/{tweet['id']}",
+                    title=tweet_text[:100],
+                    url=tweet_url,
                     published_at=tweet["created_at"],
                     score=final_score,
                     metadata={
@@ -422,18 +452,32 @@ class DataCollector:
                 if last_published and published_iso <= last_published:
                     continue
 
+                # 言語・地域フィルタリング
+                if self.classifier:
+                    description = entry.get("summary", "")
+                    url = entry.link
+
+                    # 総合的な分類（言語・地域チェックを含む）
+                    classification = self.classifier.classify(entry.title, description, url)
+                    category = classification.category
+
+                    # 非英語コンテンツまたは日本由来のコンテンツは除外
+                    if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
+                        print(f"  ⏭️  除外（{category}）: {entry.title[:50]}...")
+                        continue
+                else:
+                    category = "UNKNOWN"
+
                 # スコアリング: 基本スコア + 優先度ボーナス
                 base_score = self.config["slack"]["scoring"]["rss_bonus"]  # 500
                 priority_bonus = self.PRIORITY_FEEDS.get(feed_url, 0)
                 initial_score = base_score + priority_bonus
 
                 # カテゴリ分類とスコア調整
-                category = "UNKNOWN"
                 if self.classifier:
-                    description = entry.get("summary", "")
-                    classification = self.classifier.classify_by_keywords(entry.title, description)
-                    category = classification.category
-                    final_score = self.classifier.calculate_final_score(initial_score, category, "rss")
+                    final_score = self.classifier.calculate_final_score(
+                        initial_score, category, "rss", is_official=True
+                    )
                 else:
                     final_score = initial_score
 
@@ -498,12 +542,25 @@ class DataCollector:
                 if published_dt < today:
                     continue
 
-                # カテゴリ分類
-                category = "PRACTICAL"  # 必須フィードはデフォルトでPRACTICAL
+                # 言語・地域フィルタリング
                 if self.classifier:
                     description = entry.get("summary", "")
-                    classification = self.classifier.classify_by_keywords(entry.title, description)
+                    url = entry.link
+
+                    # 総合的な分類（言語・地域チェックを含む）
+                    classification = self.classifier.classify(entry.title, description, url)
                     category = classification.category
+
+                    # 非英語コンテンツまたは日本由来のコンテンツは除外
+                    # ただし、必須フィードなので警告のみ出力
+                    if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
+                        print(f"  ⚠️  必須フィードだが非英語/日本由来（{category}）: {entry.title[:50]}...")
+                        # 必須フィードなので除外せずに含める（スコアは低くする）
+                        category = category  # そのまま使う
+                    elif category == "PRACTICAL":
+                        category = "PRACTICAL"  # 必須フィードのPRACTICALはそのまま
+                else:
+                    category = "PRACTICAL"  # 必須フィードはデフォルトでPRACTICAL
 
                 item = Item(
                     source="must_include",

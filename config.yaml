@@ -123,6 +123,28 @@ target_audience:
 content_filtering:
   enabled: true
 
+  # 言語フィルタリング（英語コンテンツのみ）
+  language_filtering:
+    enabled: true
+    target_language: "en"           # 英語のみ
+    confidence_threshold: 0.7       # 言語検出の信頼度
+    check_title: true               # タイトルをチェック
+    check_text: true                # 本文をチェック
+    library: "langdetect"           # 使用ライブラリ
+
+  # 地域フィルタリング（日本の記事の英語版を除外）
+  region_filtering:
+    enabled: true
+    excluded_domains:
+      - ".jp"                       # 日本ドメイン
+      - ".jp/"                      # 日本ドメイン（パス付き）
+      - "qiita.com"                 # Qiita（日本の技術ブログ）
+      - "zenn.dev"                  # Zenn（日本の技術ブログ）
+      - "note.com"                  # note（日本のブログプラットフォーム）
+    excluded_url_patterns:
+      - "/ja/"                      # 日本語パス
+      - "/jp/"                      # 日本語パス
+
   # Claude API分類設定（Phase 2で有効化）
   classification:
     enabled: false  # Phase 1ではキーワードのみ使用
@@ -133,10 +155,16 @@ content_filtering:
 
   # カテゴリ別スコアボーナス
   category_bonuses:
-    PRACTICAL: 700      # 実用的情報全般
-    TECHNICAL: 400      # 技術詳細
-    GENERAL: 0          # 一般発表（既存の優先度ボーナス維持）
-    MARKETING: -300     # マーケティング的内容
+    PRACTICAL: 400              # 実用的情報（削減: 700 → 400）
+    PRACTICAL_OFFICIAL: 700     # 公式発表の実用的情報（新規）
+    TECHNICAL: 300              # 技術詳細（削減: 400 → 300）
+    GENERAL: 0                  # 一般発表
+    MARKETING: -300             # マーケティング的内容
+    EXCLUDED: -800              # 実験的プロジェクト（新規）
+    PERSONAL_USAGE: -500        # 個人利用報告（新規）
+    LOW_CREDIBILITY: -600       # 信頼性の低いソース（新規）
+    NON_ENGLISH: -900           # 非英語コンテンツ（新規）
+    JAPAN_ORIGIN: -700          # 日本の記事の英語版（新規）
 
   # キーワードパターン（実用的情報を広くカバー）
   keywords:
@@ -195,6 +223,18 @@ content_filtering:
       - "比較"
       - "benchmark"
       - "performance"
+
+    industry_insight:
+      - "industry impact"
+      - "business impact"
+      - "workflow"
+      - "productivity"
+      - "efficiency"
+      - "cost reduction"
+      - "業界への影響"
+      - "ビジネスへの影響"
+      - "生産性"
+
     marketing:
       - "革新的"
       - "画期的"
@@ -202,12 +242,58 @@ content_filtering:
       - "revolutionary"
       - "game-changing"
 
+    # === 除外パターン（新規追加） ===
+    experimental_project:
+      - "experimental"
+      - "experiment"
+      - "PoC"
+      - "proof of concept"
+      - "試作"
+      - "prototype"
+      - "pet project"
+      - "side project"
+      - "hobby"
+      - "learning"
+      - "勉強会"
+      - "ハッカソン"
+      - "hackathon"
+      - "just for fun"
+      - "playing with"
+
+    personal_usage:
+      - "使ってみた"
+      - "試してみた"
+      - "やってみた"
+      - "I tried"
+      - "I'm using"
+      - "testing it"
+      - "my setup"
+      - "my workflow"
+      - "指示出し"
+      - "新幹線"
+      - "移動中"
+
+    low_credibility:
+      - "Congrats"
+      - "heard that"
+      - "rumor"
+      - "噂"
+      - "らしい"
+      - "みたい"
+      - "っぽい"
+
   # ソース別重み付け
   source_multipliers:
     github: 1.2
     rss: 1.0
     x_account: 0.9
     x_search: 0.8
+
+  # PRACTICAL判定の厳格化設定
+  practical_scoring:
+    require_multiple_categories: true    # 複数カテゴリ必須
+    minimum_category_matches: 2          # 最低2カテゴリ
+    official_source_relaxed: true        # 公式ソースは緩和
 
 # ページ監視設定（Semi-Daily Report用）
 page_monitoring:
