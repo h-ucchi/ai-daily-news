@@ -200,10 +200,15 @@ def main():
                 if changed_snapshot:
                     snapshot_changes.append(changed_snapshot)
 
-        # スナップショット変更があればSlackに通知
-        if snapshot_changes:
-            print(f"\n🔔 {len(snapshot_changes)}件のページ変更を検出")
-            # TODO: Slack通知を実装（後ほど）
+        # 必見の更新をSlackに通知（変更あり・なし両方）
+        must_include_snapshots = [
+            snapshot for snapshot in snapshot_changes
+            if any(p.get("must_include", False) and p["url"] == snapshot.url
+                   for p in pages_to_monitor)
+        ]
+        send_snapshot_updates_to_slack(must_include_snapshots, slack_webhook_url)
+        if must_include_snapshots:
+            print(f"\n🔔 {len(must_include_snapshots)}件の必見ページ変更を検出")
 
         # 既存のデータ収集
         print("\n📊 データ収集開始")
@@ -332,6 +337,73 @@ def main():
     print("=" * 60)
     print("✅ 処理完了")
     print("=" * 60)
+
+
+def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
+    """スナップショット変更をSlackに送信（必見の更新）"""
+    import requests
+
+    message = {
+        "text": f"⭐ 必見の更新: {len(snapshots)}件のページ変更",
+        "blocks": [
+            {
+                "type": "header",
+                "text": {
+                    "type": "plain_text",
+                    "text": "⭐ 必見の更新"
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"監視対象ページに *{len(snapshots)}件* の更新がありました。"
+                }
+            }
+        ]
+    }
+
+    # 各スナップショットの詳細を追加
+    for snapshot in snapshots:
+        message["blocks"].append({
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"📝 *{snapshot.name}*\n<{snapshot.url}|変更を確認>"
+            }
+        })
+
+    # 更新なしの場合
+    if not snapshots:
+        message = {
+            "text": "📭 本日の更新なし",
+            "blocks": [
+                {
+                    "type": "header",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "⭐ 必見の更新"
+                    }
+                },
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": "📭 *本日の更新なし*\n対象: Claude Code, GitHub Copilot, Cursor"
+                    }
+                }
+            ]
+        }
+
+    # Slack送信
+    try:
+        response = requests.post(webhook_url, json=message)
+        if response.status_code == 200:
+            print(f"✅ 必見の更新をSlackに送信しました（{len(snapshots)}件）")
+        else:
+            print(f"⚠️  Slack送信失敗: {response.status_code}")
+    except Exception as e:
+        print(f"⚠️  Slack送信エラー: {e}")
 
 
 def send_skip_summary_to_slack(skipped_items: List[Dict], webhook_url: str):

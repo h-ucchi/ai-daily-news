@@ -216,16 +216,21 @@ page_monitoring:
     # 既存
     - url: "https://code.claude.com/docs/"
       name: "Claude Code Documentation"
+      must_include: false
     - url: "https://www.anthropic.com/research"
       name: "Anthropic Research"
+      must_include: false
     - url: "https://github.blog/ai-and-ml/github-copilot/"
       name: "GitHub Copilot Blog"
+      must_include: false
 
-    # 新規追加
+    # 必見の更新に含める
     - url: "https://cursor.com/ja/changelog"
       name: "Cursor Changelog"
+      must_include: true
     - url: "https://cursor.com/ja/blog"
       name: "Cursor Blog"
+      must_include: true
 
 # コンテンツ検証設定
 content_validation:
