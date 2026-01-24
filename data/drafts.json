@@ -164,6 +164,116 @@
       "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/23",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "0c4c3376-9985-491e-954a-0e11f16611f9",
+      "created_at": "2026-01-24T11:44:32.441422+00:00",
+      "item": {
+        "source": "x_search",
+        "title": "RT @SolPengHaus: Claude API re-loaded\n$PengHaus https://t.co/qd3L8ccnog",
+        "url": "https://twitter.com/i/web/status/2015027036235186192",
+        "published_at": "2026-01-24T11:40:57.000Z",
+        "score": 564,
+        "metadata": {
+          "keyword": "Claude API",
+          "tweet": {
+            "edit_history_tweet_ids": [
+              "2015027036235186192"
+            ],
+            "id": "2015027036235186192",
+            "author_id": "1787910675458641920",
+            "created_at": "2026-01-24T11:40:57.000Z",
+            "text": "RT @SolPengHaus: Claude API re-loaded\n$PengHaus https://t.co/qd3L8ccnog",
+            "public_metrics": {
+              "retweet_count": 2,
+              "reply_count": 0,
+              "like_count": 0,
+              "quote_count": 0,
+              "bookmark_count": 0,
+              "impression_count": 0
+            }
+          },
+          "category": "PRACTICAL"
+        }
+      },
+      "post_text": "申し訳ございませんが、提供されたツイート情報だけでは、記事の具体的な内容を判断することができません。\n\n提供された情報:\n- RT（リツイート）である\n- \"Claude API re-loaded\"というテキスト\n- \"$PengHaus\"というハッシュタグ/トークン名\n- 画像またはメディアへのリンク\n\nこの情報からは以下が不明です:\n- Claude APIに関する具体的な更新内容\n- 新機能や改善点\n- PengHausとの関連性\n- 技術的な詳細\n- 実装方法や利用方法\n\n**必要な情報:**\n1. ツイートに添付されている画像の内容\n2. リンク先の詳細情報\n3. 元ツイートの文脈\n4. PengHausプロジェクトの概要\n\nより具体的な投稿スレッドを作成するために、以下のいずれかをご提供いただけますでしょうか:\n- ツイートに添付されている画像のスクリーンショットまたは説明\n- リンク先の記事内容\n- より詳細な情報源",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "45810b61-ab4c-4471-912f-89731b1792dd",
+      "created_at": "2026-01-24T11:44:59.487760+00:00",
+      "item": {
+        "title": "Claude Code Documentation 更新",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Claude Code Documentationが更新されました\n\nhttps://code.claude.com/docs/\n\n2026/01/24",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b9d7984e-d4f6-4137-8147-cb8f9e659fd2",
+      "created_at": "2026-01-24T11:44:59.488414+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/24",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4b2785c5-0cac-4640-9b3c-4fbb21dd5e16",
+      "created_at": "2026-01-24T11:44:59.489005+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog 更新",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/24",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4356e2fe-c3ca-4576-82b2-354c3c0d5af1",
+      "created_at": "2026-01-24T11:44:59.489590+00:00",
+      "item": {
+        "title": "Cursor Changelog 更新",
+        "url": "https://cursor.com/ja/changelog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Cursor Changelogが更新されました\n\nhttps://cursor.com/ja/changelog\n\n2026/01/24",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "27da0a28-bbe0-4f3e-b5ae-19379b4e5408",
+      "created_at": "2026-01-24T11:44:59.490171+00:00",
+      "item": {
+        "title": "Cursor Blog 更新",
+        "url": "https://cursor.com/ja/blog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/24",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }

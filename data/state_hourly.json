@@ -2,42 +2,43 @@
   "x_accounts": {},
   "x_keywords": {
     "Claude API": {
-      "since_id": "2014617114854777082"
+      "since_id": "2015027036235186192"
     },
     "GPT-4 Turbo": {
-      "since_id": "2014356216407892181"
+      "since_id": "2014869930924024311"
     },
     "OpenAI o1": {
-      "since_id": "2014572370183487835"
+      "since_id": "2015003314409419111"
     },
     "Google Gemini": {
-      "since_id": "2014617381881213152"
+      "since_id": "2015027322538312169"
     },
     "Anthropic": {
-      "since_id": "2014617257461297456"
+      "since_id": "2015027369342300528"
     },
     "Model Context Protocol": {
-      "since_id": "2014609046662242779"
+      "since_id": "2015026413800210801"
+    },
+    "LangChain release": {
+      "since_id": "2014818283984216248"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-22T12:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-23T12:00:00+00:00",
     "https://github.blog/feed/": "2026-01-22T15:01:44+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-22T21:46:31+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-23T21:56:32+00:00",
     "https://github.blog/changelog/label/copilot/feed/": "2026-01-21T21:44:44+00:00",
-    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-16T19:21:38+00:00",
+    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-23T15:22:23+00:00",
     "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
     "https://github.com/run-llama/llama_index/releases.atom": "2026-01-21T20:44:52+00:00",
     "https://github.com/huggingface/transformers/releases.atom": "2026-01-16T10:40:02+00:00"
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-01-23T08:35:03.777651+00:00",
+    "last_run_at": "2026-01-24T11:44:59.655218+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {
-    "https://twitter.com/i/web/status/2014610542854602971": "2026-01-23T08:12:52.473048+00:00",
-    "https://twitter.com/i/web/status/2014609293769630026": "2026-01-23T08:13:10.556777+00:00",
-    "https://twitter.com/i/web/status/2014608636564095312": "2026-01-23T08:13:40.251332+00:00"
+    "https://twitter.com/i/web/status/2015027036235186192": "2026-01-24T11:44:32.441923+00:00"
   }
 }
