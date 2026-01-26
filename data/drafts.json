@@ -274,6 +274,86 @@
       "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/24",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "55bd21e5-e8a8-4642-9878-f87cd3a58374",
+      "created_at": "2026-01-26T11:13:31.170199+00:00",
+      "item": {
+        "source": "x_search",
+        "title": "RT @Shpigford: the /𝚛𝚎𝚖𝚘𝚝𝚒𝚘𝚗 skill in claude code is my new favorite ai tool.\n\ntl;dr i used claude (",
+        "url": "https://twitter.com/i/web/status/2015741457135554643",
+        "published_at": "2026-01-26T10:59:48.000Z",
+        "score": 120,
+        "metadata": {
+          "keyword": "Claude API",
+          "tweet": {
+            "public_metrics": {
+              "retweet_count": 50,
+              "reply_count": 0,
+              "like_count": 0,
+              "quote_count": 0,
+              "bookmark_count": 0,
+              "impression_count": 0
+            },
+            "author_id": "1673694737411235842",
+            "text": "RT @Shpigford: the /𝚛𝚎𝚖𝚘𝚝𝚒𝚘𝚗 skill in claude code is my new favorite ai tool.\n\ntl;dr i used claude (opus 4.5) with the @Remotion skill + th…",
+            "id": "2015741457135554643",
+            "edit_history_tweet_ids": [
+              "2015741457135554643"
+            ],
+            "created_at": "2026-01-26T10:59:48.000Z"
+          },
+          "category": "UNKNOWN"
+        }
+      },
+      "post_text": "Claude、「/remotion」スキルを提供開始\n\nClaudeのCode機能に新しい/remotionスキルが追加され、コード生成からプレビュー、動画出力までをClaude上で完結可能に。React開発者向けのプログラマブルな動画制作ワークフローを実現。\n\nhttps://x.com/i/web/status/2015741457135554643\n\n💡 業界インパクト\n・動画制作の開発ワークフローを大幅に効率化（従来の動画編集ツールが不要に）\n・Reactコンポーネントで動画を記述できるため、エンジニアが直接動画制作に参加可能\n・AIによるコード生成とプレビューの統合により、試行錯誤のサイクルを短縮\n\n1. /remotionスキルの特徴\n\n・Claude Code上でRemotionコードを直接生成・編集\n・生成したコードのリアルタイムプレビュー機能\n・完成した動画のMP4形式での出力に対応\n・React/TypeScriptベースのプログラマブルな動画制作\n\nClaudeとの対話だけで、動画の構想からコード生成、確認、出力まで一気通貫で実行できます。\n\n2. Remotionとの統合メリット\n\n・Reactの知識を活かした動画制作が可能\n・データドリブンな動画生成（APIデータ連携など）\n・バージョン管理可能なコードベースの動画アセット\n・プログラマブルなアニメーション制御\n\n従来の動画編集ツールとは異なり、エンジニアリングの手法で動画を制作できる環境を提供します。\n\n3. 利用方法・対象者\n\n・対象ユーザー: Claude Codeユーザー（React/TypeScript知識推奨）\n・提供開始: 現在利用可能\n・今後の予定: コミュニティからのフィードバックに基づく機能拡張を予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "29b2acdf-3f9d-4437-9987-52947f7d9c05",
+      "created_at": "2026-01-26T11:13:31.170833+00:00",
+      "item": {
+        "title": "Claude Code Documentation 更新",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Claude Code Documentationが更新されました\n\nhttps://code.claude.com/docs/\n\n2026/01/26",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5479e591-bdd6-4a50-862e-df434863053a",
+      "created_at": "2026-01-26T11:13:31.171620+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/26",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d769ec48-529d-44ff-a40c-9d0a6af0c577",
+      "created_at": "2026-01-26T11:13:31.172284+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog 更新",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/26",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }

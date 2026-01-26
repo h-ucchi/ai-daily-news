@@ -2,25 +2,25 @@
   "x_accounts": {},
   "x_keywords": {
     "Claude API": {
-      "since_id": "2015027036235186192"
+      "since_id": "2015744178433704056"
     },
     "GPT-4 Turbo": {
-      "since_id": "2014869930924024311"
+      "since_id": "2015723538385166610"
     },
     "OpenAI o1": {
-      "since_id": "2015003314409419111"
+      "since_id": "2015743776028069946"
     },
     "Google Gemini": {
-      "since_id": "2015027322538312169"
+      "since_id": "2015744289989689740"
     },
     "Anthropic": {
-      "since_id": "2015027369342300528"
+      "since_id": "2015744197635023207"
     },
     "Model Context Protocol": {
-      "since_id": "2015026413800210801"
+      "since_id": "2015728133853630501"
     },
     "LangChain release": {
-      "since_id": "2014818283984216248"
+      "since_id": "2015539781980008541"
     }
   },
   "rss": {
@@ -31,14 +31,14 @@
     "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-23T15:22:23+00:00",
     "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
     "https://github.com/run-llama/llama_index/releases.atom": "2026-01-21T20:44:52+00:00",
-    "https://github.com/huggingface/transformers/releases.atom": "2026-01-16T10:40:02+00:00"
+    "https://github.com/huggingface/transformers/releases.atom": "2026-01-26T10:42:16+00:00"
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-01-24T11:44:59.655218+00:00",
+    "last_run_at": "2026-01-26T11:13:31.417515+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {
-    "https://twitter.com/i/web/status/2015027036235186192": "2026-01-24T11:44:32.441923+00:00"
+    "https://twitter.com/i/web/status/2015741457135554643": "2026-01-26T11:13:31.170797+00:00"
   }
 }

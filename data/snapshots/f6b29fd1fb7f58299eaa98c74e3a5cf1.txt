@@ -1,7 +1,7 @@
 # GitHub Copilot Blog
 # URL: https://github.blog/ai-and-ml/github-copilot/
-# Timestamp: 2026-01-24T11:42:32.913070+00:00
-# Hash: 67889fac154c36440030b3b4ff3b21e3659db6dafe6613067e63d0e9ea37aa92
+# Timestamp: 2026-01-26T11:11:11.903188+00:00
+# Hash: 5216010e25cf19e48a79bed23d0ff4a0e1725cf2db90dcf9ce1451b37e9ebfba
 
 <!doctype html>
 <html lang="en-US" class="mt-0">
@@ -67,7 +67,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .is-typography-preset-h1{font-size:var(--base-size-36, 36px);font-weight:700;line-height:1.25;margin-block-end:20px;margin-block-start:0;}.is-typography-preset-h2{font-size:var(--base-size-32, 32px);font-weight:700;line-height:1.25;margin-block-end:20px;margin-block-start:40px;}.is-typography-preset-h3{font-size:var(--base-size-28, 28px);font-weight:700;line-height:1.25;margin-block-end:12px;margin-block-start:20px;}.is-typography-preset-h4{font-size:var(--base-size-24, 24px);font-weight:700;line-height:1.25;margin-block-end:12px;margin-block-start:20px;}.is-typography-preset-h5{font-size:var(--base-size-20, 20px);font-weight:700;line-height:1.25;margin-block-end:12px;margin-block-start:20px;}.is-typography-preset-h6{font-size:var(--base-size-18, 18px);font-weight:700;line-height:1.25;margin-block-end:0;margin-block-start:20px;}.is-typography-preset-display{font:var(--text-display-shorthand);}.is-typography-preset-title-large{font:var(--text-title-shorthand-large);}.is-typography-preset-title-medium{font:var(--text-title-shorthand-medium);}.is-typography-preset-title-small{font:var(--text-title-shorthand-small);}.is-typography-preset-subtitle{font:var(--text-subtitle-shorthand);}.is-typography-preset-body-large{font:var(--text-body-shorthand-large);}.is-typography-preset-body-medium{font:var(--text-body-shorthand-medium);}.is-typography-preset-body-small{font:var(--text-body-shorthand-small);}
 /*# sourceURL=github-typography-presets-inline-css */
 </style>
-<link rel='stylesheet' id='all-css-8' href='https://github.blog/_static/??/wp-content/plugins/wp-menu-image/assets/css/wmi-front-style.css,/wp-content/themes/github-2021/dist/css/site-script.css?m=1768285567' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-8' href='https://github.blog/_static/??/wp-content/plugins/wp-menu-image/assets/css/wmi-front-style.css,/wp-content/themes/github-2021/dist/css/site-script.css?m=1769421355' type='text/css' media='all' />
 <link rel="https://api.w.org/" href="https://github.blog/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://github.blog/wp-json/wp/v2/categories/3295" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://github.blog/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.9" />
 <!-- Stream WordPress user activity plugin v4.1.1 -->
@@ -1178,7 +1178,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </script>
 <div id="ghcc" style="position: sticky; bottom: 0; z-index: 99999;"></div><script src="https://ghcc.githubassets.com/ghcc.min.js" id="github_cookie_consent-js"></script>
 <script src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.js" id="github_microsoft_analytics-js"></script>
-<script type="text/javascript" src="https://github.blog/_static/??/wp-content/plugins/gh-cookie-consent-and-tracking/dist/js/cookie-consent-and-tracking.js,/wp-includes/js/dist/hooks.min.js?m=1768285566j" ></script><script src="https://github.blog/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" src="https://github.blog/_static/??/wp-content/plugins/gh-cookie-consent-and-tracking/dist/js/cookie-consent-and-tracking.js,/wp-includes/js/dist/hooks.min.js?m=1769421355j" ></script><script src="https://github.blog/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
 <script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
@@ -1186,20 +1186,20 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script type="text/javascript" src="https://github.blog/wp-includes/js/dist/url.min.js?m=1765909333g" ></script><script src="https://github.blog/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://github.blog/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "c2c53fe47d" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "cc6fa49a9b" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://github.blog/wp-admin/admin-ajax.php?action=rest-nonce";
 //# sourceURL=wp-api-fetch-js-after
 </script>
-<script type="text/javascript" src="https://github.blog/wp-content/themes/github-2021/dist/js/site-script.js?m=1768285567g" ></script><script integrity="sha256-kAnFXX7lCXF9K2o4g5q1lKyk167yRq6C4TiXWtbgvQw=" crossorigin="anonymous" src="https://analytics.githubassets.com/v1.1.0/hydro-marketing.min.js?ver=6.9" id="hydro-analytics-js"></script>
+<script type="text/javascript" src="https://github.blog/wp-content/themes/github-2021/dist/js/site-script.js?m=1769421355g" ></script><script integrity="sha256-kAnFXX7lCXF9K2o4g5q1lKyk167yRq6C4TiXWtbgvQw=" crossorigin="anonymous" src="https://analytics.githubassets.com/v1.1.0/hydro-marketing.min.js?ver=6.9" id="hydro-analytics-js"></script>
 <script id="jetpack-stats-js-before">
 _stq = window._stq || [];
 _stq.push([ "view", {"v":"ext","blog":"153214340","post":"0","tz":"-8","srv":"github.blog","arch_cat":"ai-and-ml/github-copilot","arch_results":"15","hp":"vip","j":"1:15.4"} ]);
 _stq.push([ "clickTrackerInit", "153214340", "0" ]);
 //# sourceURL=jetpack-stats-js-before
 </script>
-<script src="https://stats.wp.com/e-202604.js" id="jetpack-stats-js" defer data-wp-strategy="defer"></script>
+<script src="https://stats.wp.com/e-202605.js" id="jetpack-stats-js" defer data-wp-strategy="defer"></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://github.blog/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
 </script>
