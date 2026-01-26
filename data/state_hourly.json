@@ -2,22 +2,22 @@
   "x_accounts": {},
   "x_keywords": {
     "Claude API": {
-      "since_id": "2015744178433704056"
+      "since_id": "2015762531487514747"
     },
     "GPT-4 Turbo": {
       "since_id": "2015723538385166610"
     },
     "OpenAI o1": {
-      "since_id": "2015743776028069946"
+      "since_id": "2015756699693441276"
     },
     "Google Gemini": {
-      "since_id": "2015744289989689740"
+      "since_id": "2015764713477443767"
     },
     "Anthropic": {
-      "since_id": "2015744197635023207"
+      "since_id": "2015764675732934844"
     },
     "Model Context Protocol": {
-      "since_id": "2015728133853630501"
+      "since_id": "2015762383411749105"
     },
     "LangChain release": {
       "since_id": "2015539781980008541"
@@ -35,10 +35,11 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-01-26T11:13:31.417515+00:00",
+    "last_run_at": "2026-01-26T12:34:32.475558+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {
-    "https://twitter.com/i/web/status/2015741457135554643": "2026-01-26T11:13:31.170797+00:00"
+    "https://twitter.com/i/web/status/2015741457135554643": "2026-01-26T11:13:31.170797+00:00",
+    "https://twitter.com/i/web/status/2015762408883605809": "2026-01-26T12:34:11.228928+00:00"
   }
 }

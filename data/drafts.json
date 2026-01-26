@@ -354,6 +354,56 @@
       "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/26",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "8ad4e6cf-96c9-4e9c-b0ca-712b0993087d",
+      "created_at": "2026-01-26T12:34:11.228131+00:00",
+      "item": {
+        "source": "x_search",
+        "title": "Been using QMD (github. com/tobi/qmd) to search my Obsidian vault and PDFs with natural language.\n\nR",
+        "url": "https://twitter.com/i/web/status/2015762408883605809",
+        "published_at": "2026-01-26T12:23:03.000Z",
+        "score": 0,
+        "metadata": {
+          "keyword": "Claude API",
+          "tweet": {
+            "text": "Been using QMD (github. com/tobi/qmd) to search my Obsidian vault and PDFs with natural language.\n\nRuns locally. No API costs. No data leaving my machine.\n\nPoint it at a folder, ask questions, get answers with sources.\n\nThe real unlock: hooked it up to Claude Code. Now when I'm https://t.co/DzWbKv3zxS",
+            "public_metrics": {
+              "retweet_count": 0,
+              "reply_count": 0,
+              "like_count": 0,
+              "quote_count": 0,
+              "bookmark_count": 0,
+              "impression_count": 49
+            },
+            "created_at": "2026-01-26T12:23:03.000Z",
+            "author_id": "56778851",
+            "edit_history_tweet_ids": [
+              "2015762408883605809"
+            ],
+            "id": "2015762408883605809"
+          },
+          "category": "GENERAL"
+        }
+      },
+      "post_text": "QMD、Obsidian VaultとPDFの自然言語検索を可能に\n\nオープンソースツール「QMD」により、ObsidianのノートやPDFファイルを自然言語で検索できる環境が実現しました。従来のキーワード検索では見つけにくかった情報も、質問形式で直感的に取得可能になります。\n\nhttps://x.com/i/web/status/2015762408883605809\n\n💡 業界インパクト\n・ナレッジベース検索の効率化により、開発ドキュメントや技術資料へのアクセス時間を大幅削減\n・チーム内の知識共有システムとして活用することで、オンボーディングや技術調査の生産性向上\n・ローカル環境で動作するため、機密情報を含む社内資料も安全に検索可能\n\n1. 主な機能\n\n・Obsidian Vaultの全ノートを自然言語で横断検索\n・PDFファイルの内容も検索対象に含めることが可能\n・キーワード検索では見つけられなかった関連情報を発見\n・質問形式での検索により、必要な情報に直接アクセス\n\n従来のファイル名やタグベースの検索と異なり、内容の意味を理解した検索が実現されています。\n\n2. 技術的特徴\n\n・GitHubでオープンソースとして公開（github.com/tobi/qmd）\n・ローカル環境で動作し、外部サービスへのデータ送信不要\n・既存のObsidian環境にそのまま適用可能\n\n個人の知識管理システムやチームのドキュメント基盤として、すぐに導入できる構成です。\n\n3. 利用方法・対象者\n\n・対象ユーザー: Obsidianユーザー、PDFで技術資料を管理する開発者\n・提供開始: 現在GitHubで利用可能\n・今後の予定: コミュニティによる機能拡張が期待される",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7e7549cd-edcc-42b8-86da-793ded8351c7",
+      "created_at": "2026-01-26T12:34:32.274509+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/26",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
