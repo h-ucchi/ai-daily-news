@@ -806,24 +806,17 @@ class SlackReporter:
         return counts
 
     def _format_source_summary(self, counts: Dict[str, int]) -> str:
-        """データソース集計をフォーマット"""
+        """データソース集計をフォーマット（全ソースを常に表示）"""
         parts = []
 
-        # X投稿
-        if counts["x_posts"] > 0:
-            parts.append(f"X投稿 {counts['x_posts']}件")
+        # X投稿（常に表示）
+        parts.append(f"X投稿 {counts['x_posts']}件")
 
-        # RSS
-        if counts["rss"] > 0:
-            parts.append(f"RSS {counts['rss']}件")
+        # RSS（常に表示）
+        parts.append(f"RSS {counts['rss']}件")
 
-        # 必見の更新
-        if counts["must_include"] > 0:
-            parts.append(f"必見の更新 {counts['must_include']}件")
-
-        # 0件の場合も表示
-        if not parts:
-            return "📊 分析対象: データなし"
+        # 必見の更新（常に表示）
+        parts.append(f"必見の更新 {counts['must_include']}件")
 
         return "📊 分析対象: " + "、".join(parts)
 
@@ -1017,12 +1010,19 @@ class SlackReporter:
         # カテゴリ情報を取得
         category = item.metadata.get("category", "UNKNOWN")
 
+        # X投稿の場合は全文も取得
+        tweet_text = None
+        if item.source in ["x_account", "x_search"]:
+            tweet_text = item.metadata.get("tweet", {}).get("text", "")
+
         # Claude API でサマライズ生成
-        summary = self._generate_summary_with_claude(title, url, source_type, category)
+        summary = self._generate_summary_with_claude(
+            title, url, source_type, category, tweet_text=tweet_text
+        )
 
         return summary
 
-    def _generate_summary_with_claude(self, title: str, url: str, source_type: str, category: str = "UNKNOWN") -> str:
+    def _generate_summary_with_claude(self, title: str, url: str, source_type: str, category: str = "UNKNOWN", tweet_text: Optional[str] = None) -> str:
         """Claude API で高品質なX投稿スレッドを生成"""
         try:
             import anthropic
@@ -1077,8 +1077,22 @@ class SlackReporter:
 
 適用の目安: やや柔軟に判断し、投稿の50-60%程度に含まれることを想定してください。"""
 
-            # ユーザープロンプト
-            user_prompt = f"""以下のAI関連ニュースについて、X投稿スレッドの素案を作成してください。
+            # ユーザープロンプト（X投稿の場合は全文を含める）
+            if tweet_text:
+                user_prompt = f"""以下のX投稿について、X投稿スレッドの素案を作成してください。
+
+【X投稿全文】
+{tweet_text}
+
+【URL】
+{url}
+
+【ソースタイプ】
+{source_type}
+
+【出力フォーマット】"""
+            else:
+                user_prompt = f"""以下のAI関連ニュースについて、X投稿スレッドの素案を作成してください。
 
 【記事タイトル】
 {title}
@@ -1086,7 +1100,7 @@ class SlackReporter:
 【ソースタイプ】
 {source_type}
 
-【出力フォーマット】
+【出力フォーマット】"""
 
 企業名、「製品/機能名」を発表/リリース
 
