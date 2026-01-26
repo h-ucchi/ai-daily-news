@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2015795209993424981"
+      "since_id": "2015912335328858217"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,19 +47,19 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2015795270705950955"
+      "since_id": "2015907947390349439"
     },
     "Google Gemini": {
-      "since_id": "2015795418463170664"
+      "since_id": "2015912663055003853"
     },
     "Anthropic": {
-      "since_id": "2015795349030416665"
+      "since_id": "2015912671183270102"
     },
     "Model Context Protocol": {
-      "since_id": "2015792174835859583"
+      "since_id": "2015911323310424292"
     },
     "GPT-4 Turbo": {
-      "since_id": "2015771766640062499"
+      "since_id": "2015829368422170964"
     },
     "LangChain release": {
       "since_id": "2015539781980008541"
@@ -68,19 +68,19 @@
   "rss": {
     "https://openai.com/blog/rss.xml": "2026-01-23T12:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2026-01-19T00:00:00+00:00",
-    "https://github.blog/feed/": "2026-01-22T15:01:44+00:00",
+    "https://github.blog/feed/": "2026-01-26T18:54:49+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
     "https://github.com/anthropics/claude-code/releases.atom": "2026-01-23T21:56:32+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-01-21T21:44:44+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-26T18:18:00+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-23T16:00:00+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-12T22:41:27+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-26T19:06:25+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-23T19:34:20+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-21T15:53:12+00:00",
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-26T14:37:00.140274+00:00",
+    "last_run_at": "2026-01-26T22:22:50.404237+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
@@ -107,6 +107,7 @@
       "https://openai.com/index/cerebras-partnership"
     ],
     "https://github.blog/feed/": [
+      "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/",
       "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/",
       "https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/",
       "https://github.blog/security/ai-supported-vulnerability-triage-with-the-github-security-lab-taskflow-agent/",
@@ -115,8 +116,7 @@
       "https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/",
       "https://github.blog/news-insights/company-news/github-availability-report-december-2025/",
       "https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/",
-      "https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/",
-      "https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/"
+      "https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.19",
@@ -131,6 +131,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.6"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
+      "https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
       "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go",
       "https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli",
       "https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode",
@@ -139,8 +140,7 @@
       "https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview",
       "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install",
       "https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot",
-      "https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai",
-      "https://github.blog/changelog/2026-01-06-gemini-3-flash-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
+      "https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai"
     ],
     "https://feeds.simplecast.com/Hb_IuXOo": [
       "https://ai-a16z.simplecast.com/episodes/how-mintlify-is-rebuilding-documentation-for-coding-agents-Ff1_k4er",
@@ -165,6 +165,7 @@
       "https://ai-a16z.simplecast.com/episodes/the-trillion-dollar-ai-software-development-stack-xYS2_Aw3"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": [
+      "https://www.youtube.com/watch?v=bluAmTHoEow",
       "https://www.youtube.com/watch?v=N5yJJA0NCU0",
       "https://www.youtube.com/watch?v=UAmKyyZ-b9E",
       "https://www.youtube.com/shorts/mM9TY91FECI",
@@ -178,12 +179,12 @@
       "https://www.youtube.com/watch?v=_jjSS0qGFbI",
       "https://www.youtube.com/shorts/Fzr_ztRD9dI",
       "https://www.youtube.com/shorts/wpmlqPQQy5s",
-      "https://www.youtube.com/watch?v=XpXImenrSPI",
-      "https://www.youtube.com/watch?v=tJP6SKfo49c"
+      "https://www.youtube.com/watch?v=XpXImenrSPI"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
       "https://www.youtube.com/watch?v=mFG-4vUJ0kI",
       "https://www.youtube.com/watch?v=1XkVsE9-ZK4",
+      "https://www.youtube.com/watch?v=Wpxv-8nG8ec",
       "https://www.youtube.com/watch?v=Z3D2UmAesN4",
       "https://www.youtube.com/shorts/RXJ8zqblP5M",
       "https://www.youtube.com/watch?v=g4MTiidxp8I",
@@ -195,8 +196,7 @@
       "https://www.youtube.com/watch?v=30RRJsIHmbQ",
       "https://www.youtube.com/watch?v=rXuKh4e6gw4",
       "https://www.youtube.com/watch?v=X4birkVaLas",
-      "https://www.youtube.com/watch?v=IDyHqwyHWGw",
-      "https://www.youtube.com/watch?v=z6h7XYxQpGs"
+      "https://www.youtube.com/watch?v=IDyHqwyHWGw"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
       "https://www.youtube.com/shorts/Xui-Ecw872E",
