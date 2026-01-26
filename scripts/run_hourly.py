@@ -17,11 +17,8 @@ from typing import List, Dict, Optional
 import yaml
 
 # 既存モジュールをインポート
-from run_daily import (
-    XAPIClient, StateManager, DataCollector, SlackReporter
-)
+from run_daily import StateManager
 from draft_manager import DraftManager
-from content_validator import ContentValidator
 
 
 @dataclass
@@ -149,33 +146,13 @@ def main():
         config = yaml.safe_load(f)
 
     # 環境変数取得
-    x_bearer_token = os.environ.get("X_BEARER_TOKEN")
     slack_webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
 
-    if not x_bearer_token:
-        raise ValueError("環境変数 X_BEARER_TOKEN が設定されていません")
     if not slack_webhook_url:
         raise ValueError("環境変数 SLACK_WEBHOOK_URL が設定されていません")
 
-    # OAuth認証情報の取得（X API投稿用）
-    oauth_credentials = None
-    if all([
-        os.environ.get("X_API_KEY"),
-        os.environ.get("X_API_SECRET"),
-        os.environ.get("X_ACCESS_TOKEN"),
-        os.environ.get("X_ACCESS_TOKEN_SECRET")
-    ]):
-        oauth_credentials = {
-            "api_key": os.environ.get("X_API_KEY"),
-            "api_secret": os.environ.get("X_API_SECRET"),
-            "access_token": os.environ.get("X_ACCESS_TOKEN"),
-            "access_token_secret": os.environ.get("X_ACCESS_TOKEN_SECRET")
-        }
-
-    # クライアント初期化
-    x_client = XAPIClient(x_bearer_token, oauth_credentials)
-    state = StateManager("data/state_hourly.json")  # semi-daily専用のstate
-    collector = DataCollector(config, state, x_client)
+    # 状態管理初期化（semi-daily専用のstate）
+    state = StateManager("data/state_hourly.json")
 
     try:
         # ページスナップショット監視
@@ -210,101 +187,18 @@ def main():
         if must_include_snapshots:
             print(f"\n🔔 {len(must_include_snapshots)}件の必見ページ変更を検出")
 
-        # 既存のデータ収集
-        print("\n📊 データ収集開始")
-        collector.collect_all()
-
-        # 更新がない場合は早期終了
-        if not collector.items and not snapshot_changes:
-            print("✅ 新しいアイテムはありません")
+        # changelogのみを監視（X/RSSは収集しない）
+        if not snapshot_changes:
+            print("✅ 新しい変更はありません")
             state.save()
             return
 
-        # 重複チェック
-        new_items = []
-        for item in collector.items:
-            if not state.is_recently_posted(item.url):
-                new_items.append(item)
-            else:
-                print(f"⏭️  スキップ（24時間以内に投稿済み）: {item.url}")
-
-        if not new_items and not snapshot_changes:
-            print("✅ 新しいアイテムはありません（全て投稿済み）")
-            state.save()
-            return
-
-        collector.items = new_items
-
-        # Slackレポート送信
-        if collector.items:
-            reporter = SlackReporter(
-                slack_webhook_url,
-                config,
-                collector.items,
-                collector.stats
-            )
-            reporter.send()
+        print(f"\n📊 変更検出: {len(snapshot_changes)} 件")
 
         # 下書き管理
         draft_manager = DraftManager()
-        validator = ContentValidator(config)  # 検証器初期化
 
-        # スキップ情報の集計用
-        skipped_items = []
-
-        # 上位3件を下書きとして保存
-        for item in collector.items[:3]:
-            post_text = reporter._create_single_post(
-                title=item.title,
-                url=item.url,
-                source_type=item.source,
-                source_name=item.metadata.get("feed_name", ""),
-                date=datetime.now().strftime('%Y/%m/%d'),
-                item=item
-            )
-
-            # 検証フェーズ1: 正規表現ベース
-            if post_text is None:
-                print(f"⏭️  下書きスキップ（検証失敗）: {item.title[:50]}...")
-                skipped_items.append({
-                    "title": item.title,
-                    "reason": "生成失敗",
-                    "url": item.url
-                })
-                continue
-
-            validation_result = validator.validate_post(post_text, item.title)
-            if not validation_result.is_valid:
-                print(f"⏭️  下書きスキップ（検証失敗）: {item.title[:50]}...")
-                print(f"    理由: {validation_result.rejection_reason}")
-                skipped_items.append({
-                    "title": item.title,
-                    "reason": validation_result.rejection_reason,
-                    "issues": validation_result.detected_issues,
-                    "url": item.url
-                })
-                continue
-
-            # 検証フェーズ2: Claude APIレビュー
-            review_result = validator.review_post_with_claude(post_text, item.title, item.url)
-            if not review_result.is_valid:
-                print(f"⏭️  下書きスキップ（レビュー失敗）: {item.title[:50]}...")
-                print(f"    理由: {review_result.rejection_reason}")
-                skipped_items.append({
-                    "title": item.title,
-                    "reason": review_result.rejection_reason,
-                    "issues": review_result.detected_issues if hasattr(review_result, 'detected_issues') else [],
-                    "url": item.url
-                })
-                continue
-
-            draft_id = draft_manager.save_draft(asdict(item), post_text)
-            print(f"📝 下書き保存: {draft_id} - {item.title[:50]}...")
-
-            # 投稿済みにマーク
-            state.mark_as_posted(item.url)
-
-        # スナップショット変更も下書きとして保存
+        # スナップショット変更を下書きとして保存
         for snapshot in snapshot_changes:
             # 簡易的な投稿テキスト生成
             post_text = f"{snapshot.name}が更新されました\n\n{snapshot.url}\n\n{datetime.now().strftime('%Y/%m/%d')}"
@@ -321,10 +215,6 @@ def main():
 
         # 古い履歴をクリーンアップ
         state.cleanup_old_posted_urls()
-
-        # スキップサマリーをSlackに送信
-        if skipped_items:
-            send_skip_summary_to_slack(skipped_items, slack_webhook_url)
 
         # 状態保存
         state.save()
@@ -400,71 +290,6 @@ def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
         response = requests.post(webhook_url, json=message)
         if response.status_code == 200:
             print(f"✅ 必見の更新をSlackに送信しました（{len(snapshots)}件）")
-        else:
-            print(f"⚠️  Slack送信失敗: {response.status_code}")
-    except Exception as e:
-        print(f"⚠️  Slack送信エラー: {e}")
-
-
-def send_skip_summary_to_slack(skipped_items: List[Dict], webhook_url: str):
-    """スキップされた投稿案のサマリーをSlackに送信"""
-    import requests
-
-    # 理由別に集計
-    reason_counts = {}
-    for item in skipped_items:
-        reason = item.get("reason", "不明")
-        reason_counts[reason] = reason_counts.get(reason, 0) + 1
-
-    # 理由の日本語変換
-    reason_map = {
-        "meta_message": "メタメッセージ",
-        "lawsuit": "訴訟・法的問題",
-        "political": "政治的コンテンツ",
-        "too_short": "文字数不足",
-        "生成失敗": "投稿案生成失敗",
-        "claude_review_failed": "Claude APIレビュー失敗"
-    }
-
-    # メッセージ構築
-    total = len(skipped_items)
-    reason_text = "\n".join([
-        f"• {reason_map.get(r, r)}: {c}件"
-        for r, c in reason_counts.items()
-    ])
-
-    message = {
-        "text": f"⚠️ AI Semi-Daily Report: {total}件の投稿案をスキップ",
-        "blocks": [
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": f"*投稿案スキップのお知らせ*\n\n合計 *{total}件* の投稿案が品質基準を満たさずスキップされました。\n\n*スキップ理由の内訳:*\n{reason_text}"
-                }
-            }
-        ]
-    }
-
-    # 詳細情報（最大3件まで）
-    if len(skipped_items) <= 3:
-        details = "\n".join([
-            f"• {item['title'][:50]}...\n  理由: {reason_map.get(item['reason'], item['reason'])}"
-            for item in skipped_items
-        ])
-        message["blocks"].append({
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": f"*スキップされた投稿:*\n{details}"
-            }
-        })
-
-    # Slack送信
-    try:
-        response = requests.post(webhook_url, json=message)
-        if response.status_code == 200:
-            print(f"✅ スキップサマリーをSlackに送信しました（{total}件）")
         else:
             print(f"⚠️  Slack送信失敗: {response.status_code}")
     except Exception as e:
