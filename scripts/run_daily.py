@@ -88,6 +88,18 @@ class StateManager:
         """RSSの最終取得日時を更新"""
         self.state["rss"][feed_url] = published_at
 
+    def get_rss_article_urls(self, feed_url: str) -> Optional[List[str]]:
+        """RSSフィードの前回取得記事URLリストを取得"""
+        if "rss_articles" not in self.state:
+            self.state["rss_articles"] = {}
+        return self.state["rss_articles"].get(feed_url)
+
+    def set_rss_article_urls(self, feed_url: str, urls: List[str]):
+        """RSSフィードの記事URLリストを保存（最新20件）"""
+        if "rss_articles" not in self.state:
+            self.state["rss_articles"] = {}
+        self.state["rss_articles"][feed_url] = urls[:20]  # 最新20件のみ保存
+
     def get_github_last_tag(self, repo: str) -> Optional[str]:
         """GitHubリポジトリの最終tagを取得"""
         return self.state["github"].get(repo, {}).get("tag")
@@ -427,9 +439,19 @@ class DataCollector:
         self.stats["x_total_fetched"] += fetched
 
     def _collect_rss(self):
-        """RSS収集"""
+        """RSS収集（記事URLリスト比較方式）"""
         feeds = self.config["rss"]["feeds"]
-        fetched = 0
+
+        # 統計情報の初期化
+        rss_stats = {
+            "total_feeds": len(feeds),
+            "success_feeds": 0,
+            "failed_feeds": 0,
+            "total_entries": 0,
+            "filtered_out": 0,
+            "new_articles": 0,
+            "added": 0
+        }
 
         print(f"📰 RSS収集: {len(feeds)} フィード")
 
@@ -437,10 +459,59 @@ class DataCollector:
             feed_url = feed_config["url"]
             feed_name = feed_config["name"]
 
+            print(f"\n📡 {feed_name}")
+            print(f"   URL: {feed_url}")
+
+            # フィード取得
             feed = feedparser.parse(feed_url)
-            last_published = self.state.get_rss_last_published(feed_url)
+
+            # エラーチェック1: HTTPステータス
+            if hasattr(feed, 'status') and feed.status >= 400:
+                print(f"   ⚠️  HTTP {feed.status}: 取得失敗")
+                rss_stats["failed_feeds"] += 1
+                continue
+
+            # エラーチェック2: パースエラー
+            if hasattr(feed, 'bozo') and feed.bozo and not feed.entries:
+                print(f"   ⚠️  パース失敗: {feed.get('bozo_exception', 'Unknown error')}")
+                rss_stats["failed_feeds"] += 1
+                continue
+
+            # エラーチェック3: 記事が0件
+            if not feed.entries:
+                print(f"   ℹ️  記事0件")
+                rss_stats["failed_feeds"] += 1
+                continue
+
+            rss_stats["success_feeds"] += 1
+            rss_stats["total_entries"] += len(feed.entries)
+            print(f"   ✅ 記事取得: {len(feed.entries)}件")
+
+            # 前回取得した記事URLリストを取得
+            previous_urls = self.state.get_rss_article_urls(feed_url)
+            if previous_urls is None:
+                previous_urls = []
+                print(f"   ℹ️  初回取得（全記事を対象）")
+
+            # 今回取得した記事URLリスト
+            current_urls = [entry.link for entry in feed.entries]
+
+            # 差分（新規記事）を抽出
+            new_urls = set(current_urls) - set(previous_urls)
+
+            if new_urls:
+                print(f"   🆕 新規記事: {len(new_urls)}件")
+                rss_stats["new_articles"] += len(new_urls)
+            else:
+                print(f"   ℹ️  新規記事なし（前回と同じ内容）")
+
+            feed_added = 0
 
             for entry in feed.entries:
+                # 新規記事のみ処理
+                if entry.link not in new_urls:
+                    continue
+
                 published = entry.get("published_parsed") or entry.get("updated_parsed")
                 if not published:
                     continue
@@ -448,32 +519,26 @@ class DataCollector:
                 published_dt = datetime(*published[:6], tzinfo=timezone.utc)
                 published_iso = published_dt.isoformat()
 
-                # 新着のみ
-                if last_published and published_iso <= last_published:
-                    continue
-
                 # 言語・地域フィルタリング
                 if self.classifier:
                     description = entry.get("summary", "")
                     url = entry.link
 
-                    # 総合的な分類（言語・地域チェックを含む）
                     classification = self.classifier.classify(entry.title, description, url)
                     category = classification.category
 
-                    # 非英語コンテンツまたは日本由来のコンテンツは除外
                     if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
-                        print(f"  ⏭️  除外（{category}）: {entry.title[:50]}...")
+                        print(f"   ⏭️  除外（{category}）: {entry.title[:50]}...")
+                        rss_stats["filtered_out"] += 1
                         continue
                 else:
                     category = "UNKNOWN"
 
-                # スコアリング: 基本スコア + 優先度ボーナス
-                base_score = self.config["slack"]["scoring"]["rss_bonus"]  # 500
+                # スコアリング
+                base_score = self.config["slack"]["scoring"]["rss_bonus"]
                 priority_bonus = self.PRIORITY_FEEDS.get(feed_url, 0)
                 initial_score = base_score + priority_bonus
 
-                # カテゴリ分類とスコア調整
                 if self.classifier:
                     final_score = self.classifier.calculate_final_score(
                         initial_score, category, "rss", is_official=True
@@ -486,7 +551,7 @@ class DataCollector:
                     title=entry.title,
                     url=entry.link,
                     published_at=published_iso,
-                    score=final_score,  # 重要フィード + カテゴリボーナス
+                    score=final_score,
                     metadata={
                         "feed_name": feed_name,
                         "feed_url": feed_url,
@@ -494,9 +559,17 @@ class DataCollector:
                     }
                 )
                 self.items.append(item)
-                fetched += 1
+                feed_added += 1
+                rss_stats["added"] += 1
 
-            # 最新の published_at を保存
+            if feed_added > 0:
+                print(f"   ➕ 追加: {feed_added}件")
+
+            # 今回の記事URLリストを保存（最新20件のみ）
+            self.state.set_rss_article_urls(feed_url, current_urls)
+            print(f"   💾 記事URLリスト保存: {len(current_urls[:20])}件")
+
+            # 最新のpublished_atも保存（互換性のため）
             if feed.entries:
                 latest = max(feed.entries, key=lambda e: e.get("published_parsed") or e.get("updated_parsed"))
                 published = latest.get("published_parsed") or latest.get("updated_parsed")
@@ -504,7 +577,17 @@ class DataCollector:
                     published_dt = datetime(*published[:6], tzinfo=timezone.utc)
                     self.state.set_rss_last_published(feed_url, published_dt.isoformat())
 
-        self.stats["rss_fetched"] = fetched
+        # 統計出力
+        print(f"\n📊 RSS収集統計:")
+        print(f"   対象フィード: {rss_stats['total_feeds']}件")
+        print(f"   取得成功: {rss_stats['success_feeds']}件")
+        print(f"   取得失敗: {rss_stats['failed_feeds']}件")
+        print(f"   総記事数: {rss_stats['total_entries']}件")
+        print(f"   新規記事: {rss_stats['new_articles']}件")
+        print(f"   フィルタ除外: {rss_stats['filtered_out']}件")
+        print(f"   追加件数: {rss_stats['added']}件")
+
+        self.stats["rss_fetched"] = rss_stats["added"]
 
     def _collect_must_include_feeds(self) -> List[Item]:
         """必ず含めるフィードから当日の更新を取得"""

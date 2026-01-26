@@ -50,17 +50,25 @@ rss:
       name: "Claude Code Releases"
     - url: "https://github.blog/changelog/label/copilot/feed/"
       name: "GitHub Copilot Changelog"
-    - url: "https://github.com/langchain-ai/langchain/releases.atom"
-      name: "LangChain Releases"
-    - url: "https://github.com/openai/openai-python/releases.atom"
-      name: "OpenAI Python SDK Releases"
-    - url: "https://github.com/run-llama/llama_index/releases.atom"
-      name: "LlamaIndex Releases"
-    - url: "https://github.com/huggingface/transformers/releases.atom"
-      name: "Transformers Releases"
-    # 以下、追加したいRSSフィードを記載
-    # - url: "https://example.com/feed.xml"
-    #   name: "Example Blog"
+
+    # Podcast Feeds
+    - url: "https://feeds.simplecast.com/Hb_IuXOo"
+      name: "AI + a16z Podcast"
+
+    # YouTube Channels (RSS format)
+    - url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA"
+      name: "Anthropic YouTube"
+    - url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A"
+      name: "OpenAI YouTube"
+    - url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ"
+      name: "Tesla YouTube"
+
+    # Cursor Blog
+    - url: "https://cursor.com/blog/rss"
+      name: "Cursor Blog"
+
+    # Note: Y Combinator blog does not provide RSS feed (newsletter only)
+    # Note: Claude Code CHANGELOG requires special handling (not RSS)
 
   # 必ず含めるフィード（当日に更新があれば必ず投稿案を作成）
   must_include_feeds:

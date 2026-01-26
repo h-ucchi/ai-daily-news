@@ -67,16 +67,17 @@
   },
   "rss": {
     "https://openai.com/blog/rss.xml": "2026-01-23T12:00:00+00:00",
-    "https://www.anthropic.com/news/rss.xml": "2020-01-01T00:00:00+00:00",
+    "https://www.anthropic.com/news/rss.xml": "2026-01-19T00:00:00+00:00",
     "https://github.blog/feed/": "2026-01-22T15:01:44+00:00",
-    "https://code.visualstudio.com/updates/feed.xml": "2020-01-01T00:00:00+00:00",
-    "https://ai.googleblog.com/feeds/posts/default": "2020-01-01T00:00:00+00:00",
+    "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
+    "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
     "https://github.com/anthropics/claude-code/releases.atom": "2026-01-23T21:56:32+00:00",
-    "https://github.com/langchain-ai/langchain/releases.atom": "2026-01-23T15:22:23+00:00",
-    "https://github.com/openai/openai-python/releases.atom": "2026-01-09T22:09:31+00:00",
-    "https://github.com/run-llama/llama_index/releases.atom": "2026-01-21T20:44:52+00:00",
-    "https://github.com/huggingface/transformers/releases.atom": "2026-01-26T10:42:16+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-01-21T21:44:44+00:00"
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-21T21:44:44+00:00",
+    "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-19T00:00:00+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-19T00:00:00+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-19T00:00:00+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-19T00:00:00+00:00",
+    "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
     "last_run_at": "2026-01-26T13:04:37.274507+00:00",
