@@ -247,7 +247,7 @@ def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": f"監視対象ページに *{len(snapshots)}件* の更新がありました。"
+                    "text": f"📊 分析対象: Changelogスナップショット {len(snapshots)}件"
                 }
             }
         ]
@@ -279,7 +279,7 @@ def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "📭 *本日の更新なし*\n対象: Claude Code, GitHub Copilot, Cursor"
+                        "text": "📊 分析対象: Changelogスナップショット 0件\n\n📭 *本日の更新なし*\n対象: Claude Code, GitHub Copilot, Cursor"
                     }
                 }
             ]

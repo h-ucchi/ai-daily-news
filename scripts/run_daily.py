@@ -765,6 +765,14 @@ class SlackReporter:
             "text": {"type": "plain_text", "text": f"🐦 X投稿素案 - {datetime.now().strftime('%Y-%m-%d')}"}
         })
 
+        # 分析対象セクション
+        source_counts = self._count_sources()
+        source_summary = self._format_source_summary(source_counts)
+        blocks.append({
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": source_summary}
+        })
+
         # X投稿素案を生成（個別のブロックとして追加）
         draft_blocks = self._generate_x_post_draft_blocks(top_items, provider_items, github_items, sorted_items)
         blocks.extend(draft_blocks)
@@ -778,6 +786,46 @@ class SlackReporter:
         else:
             print(f"❌ Slack投稿失敗: {response.status_code} {response.text}")
             raise Exception("Slack投稿に失敗しました")
+
+    def _count_sources(self) -> Dict[str, int]:
+        """データソースごとのアイテム数を集計"""
+        counts = {
+            "x_posts": 0,      # X投稿（x_account + x_search）
+            "rss": 0,          # RSS
+            "must_include": 0  # 必見の更新
+        }
+
+        for item in self.items:
+            if item.source in ["x_account", "x_search"]:
+                counts["x_posts"] += 1
+            elif item.source == "rss":
+                counts["rss"] += 1
+            elif item.source == "must_include":
+                counts["must_include"] += 1
+
+        return counts
+
+    def _format_source_summary(self, counts: Dict[str, int]) -> str:
+        """データソース集計をフォーマット"""
+        parts = []
+
+        # X投稿
+        if counts["x_posts"] > 0:
+            parts.append(f"X投稿 {counts['x_posts']}件")
+
+        # RSS
+        if counts["rss"] > 0:
+            parts.append(f"RSS {counts['rss']}件")
+
+        # 必見の更新
+        if counts["must_include"] > 0:
+            parts.append(f"必見の更新 {counts['must_include']}件")
+
+        # 0件の場合も表示
+        if not parts:
+            return "📊 分析対象: データなし"
+
+        return "📊 分析対象: " + "、".join(parts)
 
     def _generate_x_post_draft(self, top_items: List[Item], provider_items: List[Item], github_items: List[Item]) -> str:
         """X投稿素案を生成（記事ごとに個別投稿を作成）"""
