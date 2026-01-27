@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2015912335328858217"
+      "since_id": "2016275268910920072"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,44 +47,47 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2015907947390349439"
+      "since_id": "2016260539476054438"
     },
     "Google Gemini": {
-      "since_id": "2015912663055003853"
+      "since_id": "2016275221435842976"
     },
     "Anthropic": {
-      "since_id": "2015912671183270102"
+      "since_id": "2016275287542059091"
     },
     "Model Context Protocol": {
-      "since_id": "2015911323310424292"
+      "since_id": "2016266436520640925"
     },
     "GPT-4 Turbo": {
-      "since_id": "2015829368422170964"
+      "since_id": "2016272638591512799"
     },
     "LangChain release": {
       "since_id": "2015539781980008541"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-23T12:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-27T06:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2026-01-19T00:00:00+00:00",
-    "https://github.blog/feed/": "2026-01-26T18:54:49+00:00",
+    "https://github.blog/feed/": "2026-01-27T17:17:28+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-23T21:56:32+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-01-26T18:18:00+00:00",
-    "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-23T16:00:00+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-27T01:35:35+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-26T21:40:50+00:00",
+    "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-27T11:00:00+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-26T19:06:25+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-23T19:34:20+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-21T15:53:12+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-27T18:00:11+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-27T19:58:40+00:00",
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-26T22:22:50.404237+00:00",
+    "last_run_at": "2026-01-27T22:23:42.308715+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
+      "https://openai.com/index/pvh-future-of-fashion",
+      "https://openai.com/index/introducing-prism",
+      "https://openai.com/index/indeed-maggie-hulce",
       "https://openai.com/index/unrolling-the-codex-agent-loop",
       "https://openai.com/index/scaling-postgresql",
       "https://openai.com/index/praktika",
@@ -100,13 +103,12 @@
       "https://openai.com/index/ai-for-self-empowerment",
       "https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence",
       "https://openai.com/index/the-truth-elon-left-out",
-      "https://openai.com/index/introducing-chatgpt-go",
       "https://openai.com/index/our-approach-to-advertising-and-expanding-access",
-      "https://openai.com/index/investing-in-merge-labs",
-      "https://openai.com/index/strengthening-the-us-ai-supply-chain",
-      "https://openai.com/index/cerebras-partnership"
+      "https://openai.com/index/introducing-chatgpt-go"
     ],
     "https://github.blog/feed/": [
+      "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/",
+      "https://github.blog/news-insights/policy-news-and-insights/help-shape-the-future-of-open-source-in-europe/",
       "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/",
       "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/",
       "https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/",
@@ -114,11 +116,10 @@
       "https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/",
       "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/",
       "https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/",
-      "https://github.blog/news-insights/company-news/github-availability-report-december-2025/",
-      "https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/",
-      "https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/"
+      "https://github.blog/news-insights/company-news/github-availability-report-december-2025/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.20",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.19",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.17",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.16",
@@ -127,10 +128,10 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.12",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.11",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.9",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.7",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.6"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.7"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
+      "https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository",
       "https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
       "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go",
       "https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli",
@@ -139,10 +140,10 @@
       "https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements",
       "https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview",
       "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install",
-      "https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot",
-      "https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai"
+      "https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot"
     ],
     "https://feeds.simplecast.com/Hb_IuXOo": [
+      "https://ai-a16z.simplecast.com/episodes/martin-casado-on-the-demand-forces-behind-ai-Fhnnsaf9",
       "https://ai-a16z.simplecast.com/episodes/how-mintlify-is-rebuilding-documentation-for-coding-agents-Ff1_k4er",
       "https://ai-a16z.simplecast.com/episodes/inferact-building-the-infrastructure-that-runs-modern-ai-huLj_36z",
       "https://ai-a16z.simplecast.com/episodes/how-should-ai-be-regulated-use-vs-development-9YvBYr3S",
@@ -161,8 +162,7 @@
       "https://ai-a16z.simplecast.com/episodes/trufflehog-creator-you-cant-have-ai-agents-without-secrets-t7dDFmLO",
       "https://ai-a16z.simplecast.com/episodes/tigris-data-ceo-on-building-your-own-datacenters-DlDdk8Ze",
       "https://ai-a16z.simplecast.com/episodes/pylon-reimagining-b2b-customer-support-FvlnyIhs",
-      "https://ai-a16z.simplecast.com/episodes/keycard-2026-is-the-year-of-agents-rFx2QSzx",
-      "https://ai-a16z.simplecast.com/episodes/the-trillion-dollar-ai-software-development-stack-xYS2_Aw3"
+      "https://ai-a16z.simplecast.com/episodes/keycard-2026-is-the-year-of-agents-rFx2QSzx"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": [
       "https://www.youtube.com/watch?v=bluAmTHoEow",
@@ -182,9 +182,10 @@
       "https://www.youtube.com/watch?v=XpXImenrSPI"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
+      "https://www.youtube.com/watch?v=xnInEsaaj9c",
+      "https://www.youtube.com/watch?v=Wpxv-8nG8ec",
       "https://www.youtube.com/watch?v=mFG-4vUJ0kI",
       "https://www.youtube.com/watch?v=1XkVsE9-ZK4",
-      "https://www.youtube.com/watch?v=Wpxv-8nG8ec",
       "https://www.youtube.com/watch?v=Z3D2UmAesN4",
       "https://www.youtube.com/shorts/RXJ8zqblP5M",
       "https://www.youtube.com/watch?v=g4MTiidxp8I",
@@ -195,10 +196,10 @@
       "https://www.youtube.com/watch?v=Aj4Wecpkee8",
       "https://www.youtube.com/watch?v=30RRJsIHmbQ",
       "https://www.youtube.com/watch?v=rXuKh4e6gw4",
-      "https://www.youtube.com/watch?v=X4birkVaLas",
-      "https://www.youtube.com/watch?v=IDyHqwyHWGw"
+      "https://www.youtube.com/watch?v=X4birkVaLas"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
+      "https://www.youtube.com/shorts/7yjMshYGkms",
       "https://www.youtube.com/shorts/Xui-Ecw872E",
       "https://www.youtube.com/shorts/xwKzJd3_drc",
       "https://www.youtube.com/watch?v=rxYTx6aj96k",
@@ -212,8 +213,7 @@
       "https://www.youtube.com/watch?v=_iytMHw6uJY",
       "https://www.youtube.com/shorts/x8c965ezpq8",
       "https://www.youtube.com/shorts/FwqPI15nPjc",
-      "https://www.youtube.com/watch?v=VGPlvmMjPtE",
-      "https://www.youtube.com/watch?v=aN0rctOAEFk"
+      "https://www.youtube.com/watch?v=VGPlvmMjPtE"
     ]
   }
 }
