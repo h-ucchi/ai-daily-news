@@ -704,6 +704,81 @@
       "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/28",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "923b61a1-8379-4c69-b309-cd508d5f3bad",
+      "created_at": "2026-01-28T23:31:31.097873+00:00",
+      "item": {
+        "title": "Claude Code Documentation 更新",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Claude Code Documentationが更新されました\n\nhttps://code.claude.com/docs/\n\n2026/01/28",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "41025de7-e5e3-4809-b149-96b23f9c3fb6",
+      "created_at": "2026-01-28T23:31:31.098849+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/28",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "dc9ade37-cff0-4e9d-b832-19c0866cc03d",
+      "created_at": "2026-01-28T23:31:31.099965+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog 更新",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/28",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "eb24424c-7577-4993-80ff-af5a98ff4a95",
+      "created_at": "2026-01-28T23:31:31.101119+00:00",
+      "item": {
+        "title": "Cursor Changelog 更新",
+        "url": "https://cursor.com/ja/changelog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Cursor Changelogが更新されました\n\nhttps://cursor.com/ja/changelog\n\n2026/01/28",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0205ec46-b213-433c-8e5b-9fb9990d4fb0",
+      "created_at": "2026-01-28T23:31:31.102206+00:00",
+      "item": {
+        "title": "Cursor Blog 更新",
+        "url": "https://cursor.com/ja/blog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/28",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
