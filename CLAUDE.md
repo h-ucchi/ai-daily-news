@@ -1,0 +1,113 @@
+# AIリサーチプロジェクト - Claude Code運用ガイド
+
+## 🎯 投稿案生成の2つのフロー
+
+このプロジェクトには「手動」と「自動」の2つの投稿案生成フローがあります。
+
+| フロー | トリガー | 実行者 | スクリプト | 出力先 |
+|--------|----------|--------|-----------|--------|
+| 手動 | ユーザーがClaude CodeでURL依頼 | Claude Code | generate_post_manual.py | チャット画面 |
+| 自動 | GitHub Actionsスケジュール | GitHub Actions | run_daily.py, run_hourly.py | Slack |
+
+---
+
+## 📱 手動フロー（ユーザー依頼時）
+
+### トリガー
+- ユーザーがClaude CodeでURLを提示して投稿案の作成を依頼
+- 例: 「https://example.com/article の投稿案作って」
+
+### 重要：Claude Codeは必ず以下を実行
+
+```bash
+python3 scripts/generate_post_manual.py <URL>
+```
+
+### 処理の流れ
+1. URLから記事を取得（requests + BeautifulSoup）
+2. Claude APIで投稿案を生成（企業発表形式）
+3. ターミナルに表示される投稿案を**チャットに貼り付ける**
+
+### 生成される投稿案の特徴
+- 企業発表形式（600-800文字）
+- セクション番号と箇条書きで構造化
+- 💡 業界インパクト（主要ポイント）を含む
+- 具体的で実践的な内容
+- 抽象的表現を避ける
+
+### 実行例
+```bash
+# MCP Apps記事
+python3 scripts/generate_post_manual.py https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/
+
+# Claude Code ドキュメント
+python3 scripts/generate_post_manual.py https://code.claude.com/docs/en/keybindings
+```
+
+### 注意事項
+- **ファイル保存はしない**。チャット画面に表示するだけ。
+- ユーザーが「投稿案作って」「サマリ作って」などと依頼した場合も同様に実行。
+- スクリプトの実行結果（`============================================================` で囲まれた部分）をそのままチャットに表示。
+
+### スクリプト仕様
+- **ファイル**: `scripts/generate_post_manual.py`
+- **依存**: requests, beautifulsoup4, anthropic
+- **環境変数**: `ANTHROPIC_API_KEY`
+
+---
+
+## 🤖 自動フロー（GitHub Actions）
+
+このセクションは**Claude Codeの実行対象外**です。GitHub Actionsが自動実行します。
+
+### 1. デイリーレポート（run_daily.py）
+
+**トリガー**: GitHub Actionsで1日1回自動実行
+
+**処理内容**:
+- X投稿、RSS、GitHubから自動収集
+- Claude APIで投稿案を生成
+- **Slackに投稿**（チャットには表示しない）
+
+**出力先**: Slack Webhook
+
+**実行者**: GitHub Actions（Claude Codeは関与しない）
+
+### 2. セミデイリーレポート（run_hourly.py）
+
+**トリガー**: GitHub Actionsで8時・15時に実行
+
+**処理内容**:
+- Webページの変更を監視
+- 変更があれば下書き保存（drafts.json）
+- 必見の更新はSlack通知
+
+**出力先**: drafts.json + Slack（必見の更新のみ）
+
+**実行者**: GitHub Actions（Claude Codeは関与しない）
+
+---
+
+## 🔍 フロー判定の基準
+
+### Claude Codeが「手動フロー」を実行すべき場合
+✅ ユーザーがURLを提示
+✅ 「投稿案作って」「サマリ作って」と依頼
+✅ チャット画面で対話中
+
+### Claude Codeが「自動フロー」に関与しない場合
+❌ GitHub Actionsによる自動実行
+❌ Slackへの投稿
+❌ 定期的なデータ収集
+
+---
+
+## 📋 まとめ
+
+| 項目 | 手動フロー | 自動フロー |
+|------|-----------|-----------|
+| 実行タイミング | ユーザー依頼時 | GitHub Actions定期実行 |
+| Claude Codeの役割 | スクリプト実行＋チャット表示 | **関与しない** |
+| スクリプト | generate_post_manual.py | run_daily.py, run_hourly.py |
+| 出力先 | チャット画面 | Slack |
+| データソース | ユーザー指定URL | X/RSS/GitHub（自動収集） |
