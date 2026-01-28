@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2016275268910920072"
+      "since_id": "2016638706070016121"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,32 +47,32 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2016260539476054438"
+      "since_id": "2016633333825097814"
     },
     "Google Gemini": {
-      "since_id": "2016275221435842976"
+      "since_id": "2016638711874855222"
     },
     "Anthropic": {
-      "since_id": "2016275287542059091"
+      "since_id": "2016638715515293699"
     },
     "Model Context Protocol": {
-      "since_id": "2016266436520640925"
+      "since_id": "2016636489535570200"
     },
     "GPT-4 Turbo": {
-      "since_id": "2016272638591512799"
+      "since_id": "2016569470383509989"
     },
     "LangChain release": {
       "since_id": "2015539781980008541"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-27T06:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-28T01:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2026-01-19T00:00:00+00:00",
-    "https://github.blog/feed/": "2026-01-27T17:17:28+00:00",
+    "https://github.blog/feed/": "2026-01-28T17:00:00+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-27T01:35:35+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-01-26T21:40:50+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-28T06:59:58+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-28T15:00:30+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-27T11:00:00+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-26T19:06:25+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-27T18:00:11+00:00",
@@ -80,13 +80,17 @@
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-27T22:23:42.308715+00:00",
+    "last_run_at": "2026-01-28T22:27:36.151433+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
+      "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
+      "https://openai.com/index/emea-youth-and-wellbeing-grant",
+      "https://openai.com/index/ai-agent-link-safety",
       "https://openai.com/index/pvh-future-of-fashion",
       "https://openai.com/index/introducing-prism",
+      "https://openai.com/index/trustbank",
       "https://openai.com/index/indeed-maggie-hulce",
       "https://openai.com/index/unrolling-the-codex-agent-loop",
       "https://openai.com/index/scaling-postgresql",
@@ -100,13 +104,11 @@
       "https://openai.com/index/cisco",
       "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai",
       "https://openai.com/index/our-approach-to-age-prediction",
-      "https://openai.com/index/ai-for-self-empowerment",
-      "https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence",
-      "https://openai.com/index/the-truth-elon-left-out",
-      "https://openai.com/index/our-approach-to-advertising-and-expanding-access",
-      "https://openai.com/index/introducing-chatgpt-go"
+      "https://openai.com/index/ai-for-self-empowerment"
     ],
     "https://github.blog/feed/": [
+      "https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/",
+      "https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/",
       "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/",
       "https://github.blog/news-insights/policy-news-and-insights/help-shape-the-future-of-open-source-in-europe/",
       "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/",
@@ -114,11 +116,11 @@
       "https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/",
       "https://github.blog/security/ai-supported-vulnerability-triage-with-the-github-security-lab-taskflow-agent/",
       "https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/",
-      "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/",
-      "https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/",
-      "https://github.blog/news-insights/company-news/github-availability-report-december-2025/"
+      "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.22",
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.21",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.20",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.19",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.17",
@@ -126,11 +128,10 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.15",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.14",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.12",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.11",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.9",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.7"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.11"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
+      "https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview",
       "https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository",
       "https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
       "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go",
@@ -139,8 +140,7 @@
       "https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview",
       "https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements",
       "https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview",
-      "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install",
-      "https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot"
+      "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install"
     ],
     "https://feeds.simplecast.com/Hb_IuXOo": [
       "https://ai-a16z.simplecast.com/episodes/martin-casado-on-the-demand-forces-behind-ai-Fhnnsaf9",
@@ -200,6 +200,7 @@
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
       "https://www.youtube.com/shorts/7yjMshYGkms",
+      "https://www.youtube.com/watch?v=oK0UZEE9GPo",
       "https://www.youtube.com/shorts/Xui-Ecw872E",
       "https://www.youtube.com/shorts/xwKzJd3_drc",
       "https://www.youtube.com/watch?v=rxYTx6aj96k",
@@ -212,8 +213,7 @@
       "https://www.youtube.com/shorts/bxLgg_FNHj8",
       "https://www.youtube.com/watch?v=_iytMHw6uJY",
       "https://www.youtube.com/shorts/x8c965ezpq8",
-      "https://www.youtube.com/shorts/FwqPI15nPjc",
-      "https://www.youtube.com/watch?v=VGPlvmMjPtE"
+      "https://www.youtube.com/shorts/FwqPI15nPjc"
     ]
   }
 }
