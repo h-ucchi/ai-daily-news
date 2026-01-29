@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2016638706070016121"
+      "since_id": "2017000749025153216"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,50 +47,52 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2016633333825097814"
+      "since_id": "2016976944475361709"
     },
     "Google Gemini": {
-      "since_id": "2016638711874855222"
+      "since_id": "2017001299234214265"
     },
     "Anthropic": {
-      "since_id": "2016638715515293699"
+      "since_id": "2017001321338196243"
     },
     "Model Context Protocol": {
-      "since_id": "2016636489535570200"
+      "since_id": "2016996169830863062"
     },
     "GPT-4 Turbo": {
-      "since_id": "2016569470383509989"
+      "since_id": "2016937075212267596"
     },
     "LangChain release": {
       "since_id": "2015539781980008541"
     }
   },
   "rss": {
-    "https://openai.com/blog/rss.xml": "2026-01-28T01:00:00+00:00",
+    "https://openai.com/blog/rss.xml": "2026-01-29T10:00:00+00:00",
     "https://www.anthropic.com/news/rss.xml": "2026-01-19T00:00:00+00:00",
     "https://github.blog/feed/": "2026-01-28T17:00:00+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-28T06:59:58+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-01-28T15:00:30+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-29T21:13:33+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-01-29T17:57:56+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-27T11:00:00+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-26T19:06:25+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-27T18:00:11+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-27T19:58:40+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-28T23:36:53+00:00",
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-28T22:27:36.151433+00:00",
+    "last_run_at": "2026-01-29T22:28:44.443384+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
-      "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
+      "https://openai.com/index/inside-our-in-house-data-agent",
+      "https://openai.com/index/retiring-gpt-4o-and-older-models",
       "https://openai.com/index/emea-youth-and-wellbeing-grant",
+      "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
       "https://openai.com/index/ai-agent-link-safety",
       "https://openai.com/index/pvh-future-of-fashion",
-      "https://openai.com/index/introducing-prism",
       "https://openai.com/index/trustbank",
+      "https://openai.com/index/introducing-prism",
       "https://openai.com/index/indeed-maggie-hulce",
       "https://openai.com/index/unrolling-the-codex-agent-loop",
       "https://openai.com/index/scaling-postgresql",
@@ -102,9 +104,7 @@
       "https://openai.com/index/horizon-1000",
       "https://openai.com/index/stargate-community",
       "https://openai.com/index/cisco",
-      "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai",
-      "https://openai.com/index/our-approach-to-age-prediction",
-      "https://openai.com/index/ai-for-self-empowerment"
+      "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai"
     ],
     "https://github.blog/feed/": [
       "https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/",
@@ -119,6 +119,8 @@
       "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.25",
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.23",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.22",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.21",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.20",
@@ -126,21 +128,19 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.17",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.16",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.15",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.14",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.12",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.11"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.14"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
+      "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview",
+      "https://github.blog/changelog/2026-01-29-closing-down-notice-of-legacy-copilot-metrics-apis",
       "https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview",
+      "https://github.blog/changelog/2026-01-28-github-mcp-server-new-projects-tools-oauth-scope-filtering-and-new-features",
       "https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository",
       "https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
       "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go",
       "https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli",
       "https://github.blog/changelog/2026-01-16-github-copilot-now-supports-opencode",
-      "https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview",
-      "https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements",
-      "https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview",
-      "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install"
+      "https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview"
     ],
     "https://feeds.simplecast.com/Hb_IuXOo": [
       "https://ai-a16z.simplecast.com/episodes/martin-casado-on-the-demand-forces-behind-ai-Fhnnsaf9",
@@ -199,8 +199,8 @@
       "https://www.youtube.com/watch?v=X4birkVaLas"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
-      "https://www.youtube.com/shorts/7yjMshYGkms",
       "https://www.youtube.com/watch?v=oK0UZEE9GPo",
+      "https://www.youtube.com/shorts/7yjMshYGkms",
       "https://www.youtube.com/shorts/Xui-Ecw872E",
       "https://www.youtube.com/shorts/xwKzJd3_drc",
       "https://www.youtube.com/watch?v=rxYTx6aj96k",
