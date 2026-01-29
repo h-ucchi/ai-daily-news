@@ -779,6 +779,66 @@
       "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/28",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "5e2a711b-2cba-4467-8a8b-aaf79232bfd7",
+      "created_at": "2026-01-29T06:42:16.882781+00:00",
+      "item": {
+        "title": "Claude Code Documentation 更新",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Claude Code Documentationが更新されました\n\nhttps://code.claude.com/docs/\n\n2026/01/29",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "075afb8e-fc23-4f55-bf38-02528ad2e43b",
+      "created_at": "2026-01-29T06:42:16.883847+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/29",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e411beeb-ac0c-4b02-b1c5-aa4dda2899e9",
+      "created_at": "2026-01-29T06:42:16.884992+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog 更新",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/29",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "86a77d6b-6d0b-47ad-a0ea-1367ae898f56",
+      "created_at": "2026-01-29T06:42:16.886160+00:00",
+      "item": {
+        "title": "Cursor Blog 更新",
+        "url": "https://cursor.com/ja/blog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/29",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
