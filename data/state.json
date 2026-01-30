@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2017000749025153216"
+      "since_id": "2017362511033782609"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,19 +47,19 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2016976944475361709"
+      "since_id": "2017349465359675625"
     },
     "Google Gemini": {
-      "since_id": "2017001299234214265"
+      "since_id": "2017362910230810778"
     },
     "Anthropic": {
-      "since_id": "2017001321338196243"
+      "since_id": "2017362934389735847"
     },
     "Model Context Protocol": {
-      "since_id": "2016996169830863062"
+      "since_id": "2017359697532080247"
     },
     "GPT-4 Turbo": {
-      "since_id": "2016937075212267596"
+      "since_id": "2017340634550464705"
     },
     "LangChain release": {
       "since_id": "2015539781980008541"
@@ -71,21 +71,22 @@
     "https://github.blog/feed/": "2026-01-28T17:00:00+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-29T21:13:33+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-30T20:38:53+00:00",
     "https://github.blog/changelog/label/copilot/feed/": "2026-01-29T17:57:56+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-27T11:00:00+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-26T19:06:25+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-30T19:09:11+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-01-27T18:00:11+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-01-28T23:36:53+00:00",
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-29T22:28:44.443384+00:00",
+    "last_run_at": "2026-01-30T22:25:40.720330+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
       "https://openai.com/index/inside-our-in-house-data-agent",
+      "https://openai.com/index/taisei",
       "https://openai.com/index/retiring-gpt-4o-and-older-models",
       "https://openai.com/index/emea-youth-and-wellbeing-grant",
       "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
@@ -99,12 +100,11 @@
       "https://openai.com/index/praktika",
       "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work",
       "https://openai.com/index/higgsfield",
-      "https://openai.com/index/edu-for-countries",
       "https://openai.com/index/how-countries-can-end-the-capability-overhang",
+      "https://openai.com/index/edu-for-countries",
       "https://openai.com/index/horizon-1000",
       "https://openai.com/index/stargate-community",
-      "https://openai.com/index/cisco",
-      "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai"
+      "https://openai.com/index/cisco"
     ],
     "https://github.blog/feed/": [
       "https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/",
@@ -119,6 +119,7 @@
       "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.27",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.25",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.23",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.22",
@@ -127,8 +128,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.19",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.17",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.16",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.15",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.14"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.15"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview",
@@ -165,6 +165,7 @@
       "https://ai-a16z.simplecast.com/episodes/keycard-2026-is-the-year-of-agents-rFx2QSzx"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": [
+      "https://www.youtube.com/shorts/kYJO0y8fVTA",
       "https://www.youtube.com/watch?v=bluAmTHoEow",
       "https://www.youtube.com/watch?v=N5yJJA0NCU0",
       "https://www.youtube.com/watch?v=UAmKyyZ-b9E",
@@ -178,8 +179,7 @@
       "https://www.youtube.com/watch?v=PLyCki2K0Lg",
       "https://www.youtube.com/watch?v=_jjSS0qGFbI",
       "https://www.youtube.com/shorts/Fzr_ztRD9dI",
-      "https://www.youtube.com/shorts/wpmlqPQQy5s",
-      "https://www.youtube.com/watch?v=XpXImenrSPI"
+      "https://www.youtube.com/shorts/wpmlqPQQy5s"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
       "https://www.youtube.com/watch?v=xnInEsaaj9c",
