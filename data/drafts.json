@@ -914,6 +914,51 @@
       "post_text": "Cursor Blogが更新されました\n\nhttps://cursor.com/ja/blog\n\n2026/01/29",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "d6366a2b-233d-497d-a403-2ce5ff764abf",
+      "created_at": "2026-01-30T06:43:45.601234+00:00",
+      "item": {
+        "title": "Claude Code Documentation 更新",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Claude Code Documentationが更新されました\n\nhttps://code.claude.com/docs/\n\n2026/01/30",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "51b470a6-0f7d-4679-84da-d8fa35c2a3c8",
+      "created_at": "2026-01-30T06:43:45.602443+00:00",
+      "item": {
+        "title": "Anthropic Research 更新",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "Anthropic Researchが更新されました\n\nhttps://www.anthropic.com/research\n\n2026/01/30",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4fb807d9-b07a-473b-a70b-18dba6987ea0",
+      "created_at": "2026-01-30T06:43:45.696338+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog 更新",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot": true
+        }
+      },
+      "post_text": "GitHub Copilot Blogが更新されました\n\nhttps://github.blog/ai-and-ml/github-copilot/\n\n2026/01/30",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
