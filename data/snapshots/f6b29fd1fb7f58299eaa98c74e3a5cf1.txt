@@ -1,7 +1,7 @@
 # GitHub Copilot Blog
 # URL: https://github.blog/ai-and-ml/github-copilot/
-# Timestamp: 2026-01-30T23:31:06.074724+00:00
-# Hash: 5fd978ceb6207534c295413ff337e8ebcf22c6de7e22e41902d3c65463f8bd2e
+# Timestamp: 2026-01-31T06:34:51.146452+00:00
+# Hash: 0832ed7d308b7c0df51f6ff5480630902831a4bb5048b4ca214d73748ee4442f
 
 <!doctype html>
 <html lang="en-US" class="mt-0">
@@ -1186,7 +1186,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script type="text/javascript" src="https://github.blog/wp-includes/js/dist/url.min.js?m=1765909333g" ></script><script src="https://github.blog/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://github.blog/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "770ebe75fa" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "70c019c8f5" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://github.blog/wp-admin/admin-ajax.php?action=rest-nonce";
