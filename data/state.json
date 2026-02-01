@@ -53,10 +53,10 @@
       "since_id": "2017977336919113939"
     },
     "Anthropic": {
-      "since_id": "2017981046038638948"
+      "since_id": "2018087383183561072"
     },
     "Model Context Protocol": {
-      "since_id": "2017979320040661164"
+      "since_id": "2018082792605892796"
     },
     "GPT-4 Turbo": {
       "since_id": "2017970494633546121"
@@ -65,16 +65,16 @@
       "since_id": "2017832631027610024"
     },
     "ralph loop": {
-      "since_id": "2017973918082986416"
+      "since_id": "2018086121029132370"
     },
     "Claude": {
-      "since_id": "2017981038249566343"
+      "since_id": "2018087414481465633"
     },
     "Claude Code": {
-      "since_id": "2017980987402010633"
+      "since_id": "2018087414481465633"
     },
     "OpenAI": {
-      "since_id": "2017981041936666714"
+      "since_id": "2018087427961700805"
     }
   },
   "rss": {
@@ -92,7 +92,7 @@
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-02-01T15:19:45.981870+00:00",
+    "last_run_at": "2026-02-01T22:22:27.697400+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
@@ -229,13 +229,13 @@
     ]
   },
   "rss_last_checked": {
-    "https://openai.com/blog/rss.xml": "2026-02-01T15:19:22.490824+00:00",
-    "https://github.blog/feed/": "2026-02-01T15:19:22.949244+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-01T15:19:23.747529+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-02-01T15:19:23.865065+00:00",
-    "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-01T15:19:24.269683+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-01T15:19:24.614116+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-01T15:19:24.989388+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-01T15:19:25.308380+00:00"
+    "https://openai.com/blog/rss.xml": "2026-02-01T22:22:03.712930+00:00",
+    "https://github.blog/feed/": "2026-02-01T22:22:04.130982+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-01T22:22:04.839090+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-02-01T22:22:04.934054+00:00",
+    "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-01T22:22:05.338196+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-01T22:22:05.427300+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-01T22:22:05.483015+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-01T22:22:05.544450+00:00"
   }
 }
