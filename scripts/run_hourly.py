@@ -486,16 +486,12 @@ def main():
         # 下書きマップを初期化
         draft_map = {}  # {url: {"id": draft_id, "post_text": post_text}}
 
-        # changelogのみを監視（X/RSSは収集しない）
-        if not snapshot_changes:
-            print("✅ 新しい変更はありません")
-            state.save()
-            return
-
-        print(f"\n📊 変更検出: {len(snapshot_changes)} 件")
-
         # 下書き管理
         draft_manager = DraftManager()
+
+        # スナップショット変更がある場合のみ処理
+        if snapshot_changes:
+            print(f"\n📊 変更検出: {len(snapshot_changes)} 件")
 
         # スナップショット変更を下書きとして保存（投稿案生成）
         for old_snapshot, new_snapshot in snapshot_changes:
@@ -672,7 +668,7 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "📊 分析対象: Changelogスナップショット 0件\n\n📭 *本日の更新なし*\n対象: Claude Code, GitHub Copilot, Cursor"
+                        "text": "📭 本日の更新なし\n・Changelogスナップショット: 0件\n・ブログ記事（15フィード）: 0件\n\n対象: Claude Code, GitHub Copilot, Cursor（Changelog） + OpenAI Blog, Anthropic News等（RSS）"
                     }
                 }
             ]
