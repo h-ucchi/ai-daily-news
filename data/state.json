@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2017724702387511457"
+      "since_id": "2017969429083312463"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -47,22 +47,22 @@
       "since_id": "2010714489683955760"
     },
     "OpenAI o1": {
-      "since_id": "2017688682589765927"
+      "since_id": "2017965673222431022"
     },
     "Google Gemini": {
-      "since_id": "2017724710331535404"
+      "since_id": "2017969474247577828"
     },
     "Anthropic": {
-      "since_id": "2017724675380388018"
+      "since_id": "2017969485114933484"
     },
     "Model Context Protocol": {
-      "since_id": "2017718553571414251"
+      "since_id": "2017963674384613569"
     },
     "GPT-4 Turbo": {
-      "since_id": "2017667028157358548"
+      "since_id": "2017923983023497385"
     },
     "LangChain release": {
-      "since_id": "2015539781980008541"
+      "since_id": "2017832631027610024"
     }
   },
   "rss": {
@@ -71,7 +71,7 @@
     "https://github.blog/feed/": "2026-01-28T17:00:00+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-30T20:38:53+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-01-31T23:37:51+00:00",
     "https://github.blog/changelog/label/copilot/feed/": "2026-01-29T17:57:56+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-01-27T11:00:00+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-01-30T19:09:11+00:00",
@@ -80,7 +80,7 @@
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-01-31T22:23:13.746563+00:00",
+    "last_run_at": "2026-02-01T14:35:51.103542+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
@@ -119,6 +119,7 @@
       "https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.29",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.27",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.25",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.23",
@@ -127,8 +128,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.20",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.19",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.17",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.16",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.15"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.16"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview",
