@@ -566,11 +566,23 @@ def main():
 
             if not post_text:
                 print(f"⚠️ 投稿案生成失敗: {new_snapshot.name} - スキップ")
+                # 失敗理由をdraft_mapに保存（NOCHANGEまたはAPI失敗）
+                draft_map[new_snapshot.url] = {
+                    "id": None,
+                    "post_text": None,
+                    "failure_reason": "NOCHANGE"
+                }
                 continue  # ★ フォールバックではなくスキップ
 
             # ★ メタメッセージ検証
             if is_meta_message(post_text):
                 print(f"⚠️ メタメッセージ検出、スキップ: {new_snapshot.name}")
+                # 失敗理由をdraft_mapに保存
+                draft_map[new_snapshot.url] = {
+                    "id": None,
+                    "post_text": None,
+                    "failure_reason": "META_MESSAGE"
+                }
                 continue
 
             # 下書き保存（正常な投稿案のみ）
@@ -588,7 +600,11 @@ def main():
                 post_text
             )
             print(f"📝 スナップショット変更を下書き保存: {draft_id}")
-            draft_map[new_snapshot.url] = {"id": draft_id, "post_text": post_text}
+            draft_map[new_snapshot.url] = {
+                "id": draft_id,
+                "post_text": post_text,
+                "failure_reason": None
+            }
 
         # RSS記事収集と投稿案生成
         print("\n📡 RSS記事収集開始")
@@ -600,6 +616,12 @@ def main():
 
             if not post_text:
                 print(f"⚠️ 投稿案生成失敗: {article['title']} - スキップ")
+                # 失敗理由をdraft_mapに保存
+                draft_map[article["url"]] = {
+                    "id": None,
+                    "post_text": None,
+                    "failure_reason": "API_FAILURE"
+                }
                 continue
 
             # 下書き保存
@@ -617,7 +639,11 @@ def main():
                 post_text
             )
             print(f"📝 RSS記事を下書き保存: {draft_id} - {article['title'][:50]}...")
-            draft_map[article["url"]] = {"id": draft_id, "post_text": post_text}
+            draft_map[article["url"]] = {
+                "id": draft_id,
+                "post_text": post_text,
+                "failure_reason": None
+            }
 
         # 必見の更新をSlackに通知（changelogとブログ記事の両方）
         must_include_snapshots = [
@@ -672,7 +698,18 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
     # 各スナップショットの詳細を追加
     for snapshot in snapshots:
         draft_info = draft_map.get(snapshot.url)
-        post_text = draft_info["post_text"] if draft_info else "投稿案生成失敗"
+
+        # 失敗理由を判定
+        if not draft_info:
+            post_text = "❌ 投稿案生成失敗（不明なエラー）"
+        elif draft_info.get("failure_reason") == "NOCHANGE":
+            post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
+        elif draft_info.get("failure_reason") == "META_MESSAGE":
+            post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
+        elif draft_info.get("failure_reason") == "API_FAILURE":
+            post_text = "❌ API呼び出し失敗"
+        else:
+            post_text = draft_info["post_text"]
 
         # ページ名 + ソースリンク
         message["blocks"].append({
@@ -698,7 +735,18 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
     # RSS記事を追加
     for article in rss_articles:
         draft_info = draft_map.get(article["url"])
-        post_text = draft_info["post_text"] if draft_info else "投稿案生成失敗"
+
+        # 失敗理由を判定
+        if not draft_info:
+            post_text = "❌ 投稿案生成失敗（不明なエラー）"
+        elif draft_info.get("failure_reason") == "NOCHANGE":
+            post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
+        elif draft_info.get("failure_reason") == "META_MESSAGE":
+            post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
+        elif draft_info.get("failure_reason") == "API_FAILURE":
+            post_text = "❌ API呼び出し失敗"
+        else:
+            post_text = draft_info["post_text"]
 
         # フィード名 + ソースリンク + 記事タイトル
         message["blocks"].append({
