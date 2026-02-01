@@ -49,6 +49,8 @@ class StateManager:
             "x_accounts": {},
             "x_keywords": {},
             "rss": {},
+            "rss_articles": {},
+            "rss_last_checked": {},
             "github": {},
             "meta": {"last_run_at": None, "version": "1.0.0"}
         }
@@ -99,6 +101,18 @@ class StateManager:
         if "rss_articles" not in self.state:
             self.state["rss_articles"] = {}
         self.state["rss_articles"][feed_url] = urls[:20]  # 最新20件のみ保存
+
+    def get_rss_last_checked(self, feed_url: str) -> Optional[str]:
+        """RSSフィードの最終確認日時を取得"""
+        if "rss_last_checked" not in self.state:
+            self.state["rss_last_checked"] = {}
+        return self.state["rss_last_checked"].get(feed_url)
+
+    def set_rss_last_checked(self, feed_url: str, checked_at: str):
+        """RSSフィードの最終確認日時を更新"""
+        if "rss_last_checked" not in self.state:
+            self.state["rss_last_checked"] = {}
+        self.state["rss_last_checked"][feed_url] = checked_at
 
     def get_github_last_tag(self, repo: str) -> Optional[str]:
         """GitHubリポジトリの最終tagを取得"""
@@ -450,6 +464,7 @@ class DataCollector:
             "total_entries": 0,
             "filtered_out": 0,
             "new_articles": 0,
+            "old_articles_filtered": 0,
             "added": 0
         }
 
@@ -505,6 +520,9 @@ class DataCollector:
             else:
                 print(f"   ℹ️  新規記事なし（前回と同じ内容）")
 
+            # 24時間前のカットオフタイムスタンプを計算
+            cutoff_time = datetime.now(timezone.utc) - timedelta(hours=24)
+
             feed_added = 0
 
             for entry in feed.entries:
@@ -518,6 +536,11 @@ class DataCollector:
 
                 published_dt = datetime(*published[:6], tzinfo=timezone.utc)
                 published_iso = published_dt.isoformat()
+
+                # 24時間以内の記事のみを対象
+                if published_dt < cutoff_time:
+                    rss_stats["old_articles_filtered"] += 1
+                    continue
 
                 # 言語・地域フィルタリング
                 if self.classifier:
@@ -569,6 +592,10 @@ class DataCollector:
             self.state.set_rss_article_urls(feed_url, current_urls)
             print(f"   💾 記事URLリスト保存: {len(current_urls[:20])}件")
 
+            # 最終確認時刻を保存
+            current_time = datetime.now(timezone.utc).isoformat()
+            self.state.set_rss_last_checked(feed_url, current_time)
+
             # 最新のpublished_atも保存（互換性のため）
             if feed.entries:
                 latest = max(feed.entries, key=lambda e: e.get("published_parsed") or e.get("updated_parsed"))
@@ -584,6 +611,7 @@ class DataCollector:
         print(f"   取得失敗: {rss_stats['failed_feeds']}件")
         print(f"   総記事数: {rss_stats['total_entries']}件")
         print(f"   新規記事: {rss_stats['new_articles']}件")
+        print(f"   古い記事除外: {rss_stats['old_articles_filtered']}件")
         print(f"   フィルタ除外: {rss_stats['filtered_out']}件")
         print(f"   追加件数: {rss_stats['added']}件")
 
@@ -831,8 +859,12 @@ class SlackReporter:
         """レポートを生成してSlackに投稿"""
         print("📤 Slackレポート生成中...")
 
-        # スコア順にソート
-        sorted_items = sorted(self.items, key=lambda x: x.score, reverse=True)
+        # 日付×スコアの複合ソート（新しい記事を優先、同じ日付ならスコア順）
+        sorted_items = sorted(
+            self.items,
+            key=lambda x: (x.published_at, x.score),
+            reverse=True
+        )
 
         # セクション分け
         top_items = sorted_items[:self.config["slack"]["limits"]["top"]]

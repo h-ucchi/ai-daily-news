@@ -30,6 +30,7 @@ x:
     - "Anthropic"
     - "LangChain release"
     - "Model Context Protocol"
+    - "ralph loop"
 
 # RSS監視対象（公式ブログ）
 rss:
@@ -347,5 +348,5 @@ content_validation:
 
   # Claude APIレビュー（投稿案の事実確認）
   claude_review:
-    enabled: true
+    enabled: false
     max_reviews_per_run: 10  # 1回あたりの上限（コスト管理）
