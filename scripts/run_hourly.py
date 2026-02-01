@@ -113,18 +113,28 @@ class SnapshotManager:
         try:
             # 新しいコンテンツを取得
             new_content = self.fetch_page_content(url)
-            new_hash = hashlib.sha256(new_content.encode()).hexdigest()
+
+            # ★ HTMLではなく、テキスト抽出後の内容をハッシュ化
+            new_text = extract_text_from_html(new_content)
+            new_text_hash = hashlib.sha256(new_text.encode()).hexdigest()
 
             # 前回のスナップショットを読み込み
             old_snapshot = self.load_snapshot(url)
 
-            # 初回または変更あり
-            if old_snapshot is None or old_snapshot.content_hash != new_hash:
+            # 前回のテキストハッシュを計算
+            if old_snapshot:
+                old_text = extract_text_from_html(old_snapshot.content)
+                old_text_hash = hashlib.sha256(old_text.encode()).hexdigest()
+            else:
+                old_text_hash = None
+
+            # 初回または変更あり（テキストハッシュで比較）
+            if old_snapshot is None or old_text_hash != new_text_hash:
                 new_snapshot = PageSnapshot(
                     url=url,
                     name=name,
-                    content_hash=new_hash,
-                    content=new_content,
+                    content_hash=new_text_hash,  # ★ テキストハッシュを保存
+                    content=new_content,  # HTMLは参照用に保存
                     timestamp=datetime.now(timezone.utc).isoformat()
                 )
                 # 前回のスナップショットを上書き（累積保存しない）
@@ -134,7 +144,7 @@ class SnapshotManager:
                     print(f"📸 初回スナップショット: {name}")
                     return None  # 初回は変更として扱わない
                 else:
-                    print(f"🔄 変更検出: {name}")
+                    print(f"🔄 テキスト内容の変更検出: {name}")
                     return (old_snapshot, new_snapshot)  # 前回と今回を返す
             else:
                 # 変更がない場合も最新のタイムスタンプで上書き
@@ -142,12 +152,12 @@ class SnapshotManager:
                 new_snapshot = PageSnapshot(
                     url=url,
                     name=name,
-                    content_hash=new_hash,
-                    content=new_content,
+                    content_hash=new_text_hash,  # ★ テキストハッシュを保存
+                    content=new_content,  # HTMLは参照用に保存
                     timestamp=datetime.now(timezone.utc).isoformat()
                 )
                 self.save_snapshot(new_snapshot)
-                print(f"✅ 変更なし: {name}")
+                print(f"   ℹ️ {name}: テキスト内容に変更なし（HTML変更のみ）")
                 return None
 
         except Exception as e:
@@ -238,6 +248,14 @@ def generate_post_from_snapshot(old_snapshot: Optional[PageSnapshot], new_snapsh
 - 前回から変更がない部分は含めないでください
 - changelogの構造（日付、バージョン番号など）を考慮して最新の変更を特定してください
 
+【変更がない場合の対応】
+- **もし前回と今回で実質的な内容が完全に同一の場合は、以下の形式で応答してください：**
+  ```
+  NOCHANGE
+  ```
+- 「変更なし」「完全に同一」などのメタメッセージは出力しないでください
+- 実質的な変更がない場合は、上記の「NOCHANGE」とだけ返してください
+
 上記フォーマットに従って投稿案を作成してください。"""
         else:
             # 初回スナップショット（前回データなし）
@@ -265,7 +283,14 @@ def generate_post_from_snapshot(old_snapshot: Optional[PageSnapshot], new_snapsh
             messages=[{"role": "user", "content": user_prompt}]
         )
 
-        return message.content[0].text
+        response_text = message.content[0].text.strip()
+
+        # ★ NOCHANGEチェック
+        if response_text == "NOCHANGE" or response_text.startswith("NOCHANGE"):
+            print(f"   ℹ️ Claude APIが変更なしと判断: {new_snapshot.name}")
+            return None  # 投稿案なし
+
+        return response_text
 
     except Exception as e:
         print(f"❌ 投稿案生成エラー: {e}")
@@ -441,6 +466,47 @@ def generate_post_from_article(article: Dict, config: Dict) -> Optional[str]:
         return None
 
 
+def is_meta_message(post_text: str) -> bool:
+    """投稿案がメタメッセージかどうかを判定
+
+    Args:
+        post_text: 生成された投稿案
+
+    Returns:
+        True: メタメッセージ（不正な内容）
+        False: 正常な投稿案
+    """
+    # メタメッセージを示すキーワード
+    meta_keywords = [
+        "完全に同一",
+        "完全に一致",
+        "変更点は見つかりませんでした",
+        "変更が見られません",
+        "変更はありません",
+        "新たに追加された変更点はありません",
+        "両者のテキスト内容が完全に一致",
+        "新規の変更点は検出されませんでした",
+        "前回のスナップショットと今回のスナップショット",  # メタ的な表現
+        "## 状況の説明",  # メタ的なセクション
+        "結論：今回の比較では"  # メタ的な結論
+    ]
+
+    # いずれかのキーワードが含まれているか
+    for keyword in meta_keywords:
+        if keyword in post_text:
+            return True
+
+    # 投稿案が短すぎる（100文字未満）
+    if len(post_text) < 100:
+        return True
+
+    # 必須セクションがない（## 概要 または ## 詳細）
+    if "## " not in post_text:
+        return True
+
+    return False
+
+
 def main():
     """メイン処理"""
     print("=" * 60)
@@ -499,11 +565,15 @@ def main():
             post_text = generate_post_from_snapshot(old_snapshot, new_snapshot, config)
 
             if not post_text:
-                print(f"⚠️ 投稿案生成失敗: {new_snapshot.name} - フォールバック使用")
-                # フォールバック: 簡易投稿案
-                post_text = f"{new_snapshot.name}が更新されました\n\n{new_snapshot.url}\n\n{datetime.now().strftime('%Y/%m/%d')}"
+                print(f"⚠️ 投稿案生成失敗: {new_snapshot.name} - スキップ")
+                continue  # ★ フォールバックではなくスキップ
 
-            # 下書き保存
+            # ★ メタメッセージ検証
+            if is_meta_message(post_text):
+                print(f"⚠️ メタメッセージ検出、スキップ: {new_snapshot.name}")
+                continue
+
+            # 下書き保存（正常な投稿案のみ）
             draft_id = draft_manager.save_draft(
                 {
                     "title": new_snapshot.name,
