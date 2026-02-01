@@ -15,6 +15,9 @@ from datetime import datetime, timezone
 from dataclasses import asdict, dataclass
 from typing import List, Dict, Optional
 import yaml
+from bs4 import BeautifulSoup
+import anthropic
+import feedparser
 
 # 既存モジュールをインポート
 from run_daily import StateManager
@@ -29,6 +32,18 @@ class PageSnapshot:
     content_hash: str
     content: str
     timestamp: str
+
+
+def extract_text_from_html(html: str) -> str:
+    """HTMLから本文テキストを抽出"""
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # 不要タグを削除
+    for tag in soup(['script', 'style', 'nav', 'footer', 'header']):
+        tag.decompose()
+
+    # 本文取得
+    return soup.get_text(separator='\n', strip=True)
 
 
 class SnapshotManager:
@@ -88,8 +103,13 @@ class SnapshotManager:
                 timestamp=timestamp
             )
 
-    def check_for_changes(self, url: str, name: str) -> Optional[PageSnapshot]:
-        """ページの変更をチェック（前回分のみ保持）"""
+    def check_for_changes(self, url: str, name: str) -> Optional[tuple]:
+        """ページの変更をチェック（前回と今回のスナップショットを返す）
+
+        Returns:
+            (old_snapshot, new_snapshot) のタプル（変更あり時）
+            None（変更なし時または初回時）
+        """
         try:
             # 新しいコンテンツを取得
             new_content = self.fetch_page_content(url)
@@ -115,7 +135,7 @@ class SnapshotManager:
                     return None  # 初回は変更として扱わない
                 else:
                     print(f"🔄 変更検出: {name}")
-                    return new_snapshot
+                    return (old_snapshot, new_snapshot)  # 前回と今回を返す
             else:
                 # 変更がない場合も最新のタイムスタンプで上書き
                 # （前回のスナップショットを最新に保つ）
@@ -133,6 +153,292 @@ class SnapshotManager:
         except Exception as e:
             print(f"❌ スナップショット取得失敗: {name} - {e}")
             return None
+
+
+def generate_post_from_snapshot(old_snapshot: Optional[PageSnapshot], new_snapshot: PageSnapshot, config: Dict) -> Optional[str]:
+    """スナップショットから投稿案を生成
+
+    Args:
+        old_snapshot: 前回のスナップショット（初回はNone）
+        new_snapshot: 今回のスナップショット
+        config: config.yaml の設定
+    """
+    try:
+        # 1. HTMLから本文を抽出（前回と今回）
+        new_text = extract_text_from_html(new_snapshot.content)
+        old_text = extract_text_from_html(old_snapshot.content) if old_snapshot else ""
+
+        # 2. Claude API初期化
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("⚠️ ANTHROPIC_API_KEY 未設定")
+            return None
+
+        client = anthropic.Anthropic(api_key=api_key)
+
+        # 3. システムプロンプト（changelog専用フォーマット）
+        system_prompt = """あなたはAI開発ツールのchangelogを分析し、X投稿案を作成する専門家です。
+読者は生成AI活用に積極的なWebエンジニアです。
+
+【重要な原則】
+- changelogの最新の重要な変更点を抽出する
+- 具体的で実用的な情報を提供する（抽象的な表現は避ける）
+- カテゴリ（新機能、改善点、バグ修正など）を明確にする
+- 技術的な詳細を省略せず、エンジニアが理解できるレベルで記載
+
+【出力フォーマット】
+## changelogの概要
+・[変更点1: 簡潔に1行で]
+・[変更点2: 簡潔に1行で]
+・[変更点3: 簡潔に1行で]
+・[変更点4: 簡潔に1行で]
+（3-5項目）
+
+## 詳細
+・新機能: [機能名と詳細な説明]
+・新機能: [機能名と詳細な説明]
+・改善点: [改善内容と詳細な説明]
+・改善点: [改善内容と詳細な説明]
+・バグ修正: [修正内容と詳細な説明]
+・対象ユーザー: [どのような開発者に有用か]
+・提供開始: [リリース時期や適用条件]
+
+{url}
+
+【カテゴリの使い分け】
+- 新機能: 新たに追加された機能（例: 新しいAPIエンドポイント、新しいUI要素）
+- 改善点: 既存機能の強化・最適化（例: パフォーマンス改善、UX改善）
+- バグ修正: 不具合の修正（例: クラッシュ修正、表示不具合の解消）
+- 破壊的変更: 互換性のない変更（該当する場合のみ）
+
+【制約】
+- 箇条書きには「・」（中黒）のみ使用
+- 全体で600-800文字程度
+- changelogにない情報は推測しない
+- カテゴリのプレフィックス（「新機能:」など）を必ず含める"""
+
+        # 4. ユーザープロンプト（差分抽出型）
+        if old_text:
+            user_prompt = f"""以下のchangelogページの前回と今回のスナップショットを比較し、**新たに追加された変更点**についてX投稿案を作成してください。
+
+【ページ名】
+{new_snapshot.name}
+
+【URL】
+{new_snapshot.url}
+
+【前回のスナップショット（抜粋）】
+{old_text[:3000]}
+
+【今回のスナップショット（抜粋）】
+{new_text[:3000]}
+
+【重要】
+- 前回のスナップショットと今回のスナップショットを比較し、**新たに追加された変更点のみ**を抽出してください
+- 前回から変更がない部分は含めないでください
+- changelogの構造（日付、バージョン番号など）を考慮して最新の変更を特定してください
+
+上記フォーマットに従って投稿案を作成してください。"""
+        else:
+            # 初回スナップショット（前回データなし）
+            user_prompt = f"""以下のchangelogページについて、X投稿案を作成してください。
+
+【ページ名】
+{new_snapshot.name}
+
+【URL】
+{new_snapshot.url}
+
+【ページ内容（抜粋）】
+{new_text[:4000]}
+
+【重要】
+このページは初回スナップショットのため、最新の重要な変更点に焦点を当てて投稿案を作成してください。
+
+上記フォーマットに従って投稿案を作成してください。"""
+
+        # 5. API呼び出し
+        message = client.messages.create(
+            model="claude-sonnet-4-5-20250929",
+            max_tokens=1500,
+            system=system_prompt,
+            messages=[{"role": "user", "content": user_prompt}]
+        )
+
+        return message.content[0].text
+
+    except Exception as e:
+        print(f"❌ 投稿案生成エラー: {e}")
+        return None
+
+
+def collect_rss_articles(config: Dict) -> List[Dict]:
+    """当日公開のRSS記事を収集
+
+    Returns:
+        [{
+            "title": "記事タイトル",
+            "url": "記事URL",
+            "feed_name": "フィード名",
+            "published_at": "ISO8601形式",
+            "description": "記事の説明"
+        }, ...]
+    """
+    articles = []
+    feeds = config.get("rss", {}).get("feeds", [])
+
+    # 今日の日付を取得（UTC）
+    today = datetime.now(timezone.utc).date()
+
+    print(f"\n📡 RSS記事収集開始: {len(feeds)}フィード")
+
+    for feed_config in feeds:
+        feed_url = feed_config["url"]
+        feed_name = feed_config["name"]
+
+        try:
+            # フィード取得
+            feed = feedparser.parse(feed_url)
+
+            # エラーチェック
+            if hasattr(feed, 'status') and feed.status >= 400:
+                print(f"   ⚠️ {feed_name}: HTTP {feed.status}")
+                continue
+
+            if not feed.entries:
+                print(f"   ℹ️ {feed_name}: 記事0件")
+                continue
+
+            # 当日公開の記事のみフィルター
+            today_articles = []
+            for entry in feed.entries:
+                published = entry.get("published_parsed") or entry.get("updated_parsed")
+                if not published:
+                    continue
+
+                published_date = datetime(*published[:6], tzinfo=timezone.utc).date()
+
+                # 当日公開の記事のみ
+                if published_date == today:
+                    article = {
+                        "title": entry.get("title", "Untitled"),
+                        "url": entry.get("link", ""),
+                        "feed_name": feed_name,
+                        "published_at": datetime(*published[:6], tzinfo=timezone.utc).isoformat(),
+                        "description": entry.get("summary", "") or entry.get("description", "")
+                    }
+                    today_articles.append(article)
+
+            if today_articles:
+                print(f"   ✅ {feed_name}: {len(today_articles)}件（当日公開）")
+                articles.extend(today_articles)
+            else:
+                print(f"   ℹ️ {feed_name}: 当日公開の記事なし")
+
+        except Exception as e:
+            print(f"   ❌ {feed_name}: {e}")
+            continue
+
+    print(f"\n📊 RSS記事収集完了: {len(articles)}件")
+    return articles
+
+
+def generate_post_from_article(article: Dict, config: Dict) -> Optional[str]:
+    """RSS記事から投稿案を生成
+
+    Args:
+        article: RSS記事情報（title, url, feed_name, description）
+        config: config.yaml の設定
+    """
+    try:
+        # 1. 記事本文を取得（HTMLから抽出）
+        headers = {"User-Agent": "Mozilla/5.0 (compatible; AIResearchBot/1.0)"}
+        response = requests.get(article["url"], headers=headers, timeout=30)
+        response.raise_for_status()
+
+        # HTMLから本文を抽出
+        content_text = extract_text_from_html(response.text)
+
+        # 2. Claude API初期化
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("⚠️ ANTHROPIC_API_KEY 未設定")
+            return None
+
+        client = anthropic.Anthropic(api_key=api_key)
+
+        # 3. システムプロンプト（ブログ記事用、changelogと同じフォーマット）
+        system_prompt = """あなたはAI開発ツールのブログ記事を分析し、X投稿案を作成する専門家です。
+読者は生成AI活用に積極的なWebエンジニアです。
+
+【重要な原則】
+- ブログ記事の重要なポイントを抽出する
+- 具体的で実用的な情報を提供する（抽象的な表現は避ける）
+- カテゴリ（新機能、改善点、ユースケースなど）を明確にする
+- 技術的な詳細を省略せず、エンジニアが理解できるレベルで記載
+
+【出力フォーマット】
+## 概要
+・[ポイント1: 簡潔に1行で]
+・[ポイント2: 簡潔に1行で]
+・[ポイント3: 簡潔に1行で]
+・[ポイント4: 簡潔に1行で]
+（3-5項目）
+
+## 詳細
+・新機能: [機能名と詳細な説明]
+・新機能: [機能名と詳細な説明]
+・ユースケース: [具体的な活用方法]
+・改善点: [改善内容と詳細な説明]
+・技術詳細: [技術的なポイント]
+・対象ユーザー: [どのような開発者に有用か]
+・提供開始: [リリース時期や利用方法]
+
+{url}
+
+【カテゴリの使い分け】
+- 新機能: 新たに発表された機能やサービス
+- ユースケース: 具体的な活用方法や事例
+- 改善点: 既存機能の強化・最適化
+- 技術詳細: アーキテクチャや実装の詳細
+- バグ修正: 不具合の修正（該当する場合のみ）
+
+【制約】
+- 箇条書きには「・」（中黒）のみ使用
+- 全体で600-800文字程度
+- 記事にない情報は推測しない
+- カテゴリのプレフィックス（「新機能:」など）を必ず含める"""
+
+        # 4. ユーザープロンプト
+        user_prompt = f"""以下のブログ記事について、X投稿案を作成してください。
+
+【記事タイトル】
+{article["title"]}
+
+【URL】
+{article["url"]}
+
+【フィード名】
+{article["feed_name"]}
+
+【記事内容（抜粋）】
+{content_text[:4000]}
+
+上記フォーマットに従って投稿案を作成してください。"""
+
+        # 5. API呼び出し
+        message = client.messages.create(
+            model="claude-sonnet-4-5-20250929",
+            max_tokens=1500,
+            system=system_prompt,
+            messages=[{"role": "user", "content": user_prompt}]
+        )
+
+        return message.content[0].text
+
+    except Exception as e:
+        print(f"❌ 投稿案生成エラー: {e}")
+        return None
 
 
 def main():
@@ -168,24 +474,17 @@ def main():
             pages_to_monitor = page_config.get("pages", [])
             print(f"📸 ページスナップショット監視開始: {len(pages_to_monitor)}ページ")
 
-            snapshot_changes = []
+            snapshot_changes = []  # [(old_snapshot, new_snapshot), ...]
             for page in pages_to_monitor:
-                changed_snapshot = snapshot_manager.check_for_changes(
+                snapshot_pair = snapshot_manager.check_for_changes(
                     page["url"],
                     page["name"]
                 )
-                if changed_snapshot:
-                    snapshot_changes.append(changed_snapshot)
+                if snapshot_pair:  # (old_snapshot, new_snapshot)
+                    snapshot_changes.append(snapshot_pair)
 
-        # 必見の更新をSlackに通知（変更あり・なし両方）
-        must_include_snapshots = [
-            snapshot for snapshot in snapshot_changes
-            if any(p.get("must_include", False) and p["url"] == snapshot.url
-                   for p in pages_to_monitor)
-        ]
-        send_snapshot_updates_to_slack(must_include_snapshots, slack_webhook_url)
-        if must_include_snapshots:
-            print(f"\n🔔 {len(must_include_snapshots)}件の必見ページ変更を検出")
+        # 下書きマップを初期化
+        draft_map = {}  # {url: {"id": draft_id, "post_text": post_text}}
 
         # changelogのみを監視（X/RSSは収集しない）
         if not snapshot_changes:
@@ -198,20 +497,71 @@ def main():
         # 下書き管理
         draft_manager = DraftManager()
 
-        # スナップショット変更を下書きとして保存
-        for snapshot in snapshot_changes:
-            # 簡易的な投稿テキスト生成
-            post_text = f"{snapshot.name}が更新されました\n\n{snapshot.url}\n\n{datetime.now().strftime('%Y/%m/%d')}"
+        # スナップショット変更を下書きとして保存（投稿案生成）
+        for old_snapshot, new_snapshot in snapshot_changes:
+            # 投稿案生成（前回と今回を渡す）
+            post_text = generate_post_from_snapshot(old_snapshot, new_snapshot, config)
+
+            if not post_text:
+                print(f"⚠️ 投稿案生成失敗: {new_snapshot.name} - フォールバック使用")
+                # フォールバック: 簡易投稿案
+                post_text = f"{new_snapshot.name}が更新されました\n\n{new_snapshot.url}\n\n{datetime.now().strftime('%Y/%m/%d')}"
+
+            # 下書き保存
             draft_id = draft_manager.save_draft(
                 {
-                    "title": f"{snapshot.name} 更新",
-                    "url": snapshot.url,
+                    "title": new_snapshot.name,
+                    "url": new_snapshot.url,
                     "source": "snapshot",
-                    "metadata": {"snapshot": True}
+                    "metadata": {
+                        "snapshot_timestamp": new_snapshot.timestamp,
+                        "content_hash": new_snapshot.content_hash,
+                        "old_hash": old_snapshot.content_hash if old_snapshot else None
+                    }
                 },
                 post_text
             )
             print(f"📝 スナップショット変更を下書き保存: {draft_id}")
+            draft_map[new_snapshot.url] = {"id": draft_id, "post_text": post_text}
+
+        # RSS記事収集と投稿案生成
+        print("\n📡 RSS記事収集開始")
+        rss_articles = collect_rss_articles(config)
+
+        for article in rss_articles:
+            # 投稿案生成
+            post_text = generate_post_from_article(article, config)
+
+            if not post_text:
+                print(f"⚠️ 投稿案生成失敗: {article['title']} - スキップ")
+                continue
+
+            # 下書き保存
+            draft_id = draft_manager.save_draft(
+                {
+                    "title": article["title"],
+                    "url": article["url"],
+                    "source": "rss",
+                    "published_at": article["published_at"],
+                    "metadata": {
+                        "feed_name": article["feed_name"],
+                        "semi_daily": True  # semi-daily由来
+                    }
+                },
+                post_text
+            )
+            print(f"📝 RSS記事を下書き保存: {draft_id} - {article['title'][:50]}...")
+            draft_map[article["url"]] = {"id": draft_id, "post_text": post_text}
+
+        # 必見の更新をSlackに通知（changelogとブログ記事の両方）
+        must_include_snapshots = [
+            new_snapshot for old_snapshot, new_snapshot in snapshot_changes
+            if any(p.get("must_include", False) and p["url"] == new_snapshot.url
+                   for p in pages_to_monitor)
+        ]
+        send_snapshot_updates_to_slack(must_include_snapshots, rss_articles, slack_webhook_url, draft_map)
+        if must_include_snapshots or rss_articles:
+            print(f"\n🔔 {len(must_include_snapshots)}件のChangelog変更 + {len(rss_articles)}件のブログ記事を検出")
 
         # 古い履歴をクリーンアップ
         state.cleanup_old_posted_urls()
@@ -229,12 +579,12 @@ def main():
     print("=" * 60)
 
 
-def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
-    """スナップショット変更をSlackに送信（必見の更新）"""
+def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_url: str, draft_map: Dict):
+    """スナップショット変更とRSS記事をSlackに送信（必見の更新）"""
     import requests
 
     message = {
-        "text": f"⭐ 必見の更新: {len(snapshots)}件のページ変更",
+        "text": f"⭐ 必見の更新: {len(snapshots) + len(rss_articles)}件",
         "blocks": [
             {
                 "type": "header",
@@ -247,7 +597,7 @@ def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": f"📊 分析対象: Changelogスナップショット {len(snapshots)}件"
+                    "text": f"📊 分析対象:\n・Changelogスナップショット {len(snapshots)}件\n・ブログ記事 {len(rss_articles)}件"
                 }
             }
         ]
@@ -255,16 +605,59 @@ def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
 
     # 各スナップショットの詳細を追加
     for snapshot in snapshots:
+        draft_info = draft_map.get(snapshot.url)
+        post_text = draft_info["post_text"] if draft_info else "投稿案生成失敗"
+
+        # ページ名 + ソースリンク
         message["blocks"].append({
             "type": "section",
             "text": {
                 "type": "mrkdwn",
-                "text": f"📝 *{snapshot.name}*\n<{snapshot.url}|変更を確認>"
+                "text": f"📝 *{snapshot.name}*\n<{snapshot.url}|ソースを確認>"
             }
         })
 
+        # 投稿案（コードブロック）
+        message["blocks"].append({
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"```\n{post_text}\n```"
+            }
+        })
+
+        # 区切り線
+        message["blocks"].append({"type": "divider"})
+
+    # RSS記事を追加
+    for article in rss_articles:
+        draft_info = draft_map.get(article["url"])
+        post_text = draft_info["post_text"] if draft_info else "投稿案生成失敗"
+
+        # フィード名 + ソースリンク + 記事タイトル
+        message["blocks"].append({
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"📝 *{article['feed_name']}*\n<{article['url']}|ソースを確認>\n_{article['title']}_"
+            }
+        })
+
+        # 投稿案（コードブロック）
+        message["blocks"].append({
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"```\n{post_text}\n```"
+            }
+        })
+
+        # 区切り線（最後の記事以外）
+        if article != rss_articles[-1]:
+            message["blocks"].append({"type": "divider"})
+
     # 更新なしの場合
-    if not snapshots:
+    if not snapshots and not rss_articles:
         message = {
             "text": "📭 本日の更新なし",
             "blocks": [
@@ -289,7 +682,7 @@ def send_snapshot_updates_to_slack(snapshots: List, webhook_url: str):
     try:
         response = requests.post(webhook_url, json=message)
         if response.status_code == 200:
-            print(f"✅ 必見の更新をSlackに送信しました（{len(snapshots)}件）")
+            print(f"✅ 必見の更新をSlackに送信しました（Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件）")
         else:
             print(f"⚠️  Slack送信失敗: {response.status_code}")
     except Exception as e:
