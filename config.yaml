@@ -8,6 +8,11 @@ x:
     search: 50     # 検索由来（120→50に削減）
     total: 150     # 合計（320→150に削減）
 
+  # フォロワー数フィルタリング
+  follower_filter:
+    enabled: true
+    min_followers: 5000  # この人数以上のアカウントのみ
+
   # 監視対象アカウント（主要なAI企業のみに絞る）
   accounts:
     - openai
@@ -23,12 +28,11 @@ x:
 
   # 検索キーワード（誤検知を防ぐため具体的に）
   keywords:
-    - "Claude API"
-    - "GPT-4 Turbo"
-    - "OpenAI o1"
-    - "Google Gemini"
+    - "Claude"
+    - "Claude Code"
+    - "OpenAI"
+    - "Gemini"
     - "Anthropic"
-    - "LangChain release"
     - "Model Context Protocol"
     - "ralph loop"
 

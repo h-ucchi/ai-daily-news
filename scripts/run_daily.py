@@ -184,13 +184,14 @@ class XAPIClient:
             return data.get("data", {}).get("id")
         return None
 
-    def get_user_tweets(self, user_id: str, since_id: Optional[str] = None, max_results: int = 10) -> List[Dict]:
-        """ユーザーのツイートを取得（新着のみ）"""
+    def get_user_tweets(self, user_id: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
+        """ユーザーのツイートを取得（新着のみ、フォロワー数情報付き）"""
         url = f"{self.base_url}/users/{user_id}/tweets"
         params = {
             "max_results": min(max_results, 100),
             "tweet.fields": "created_at,public_metrics",
-            "expansions": "author_id"
+            "expansions": "author_id",
+            "user.fields": "public_metrics"
         }
         if since_id:
             params["since_id"] = since_id
@@ -202,17 +203,20 @@ class XAPIClient:
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:
             data = response.json()
-            return data.get("data", [])
-        return []
+            tweets = data.get("data", [])
+            users = {u["id"]: u for u in data.get("includes", {}).get("users", [])}
+            return tweets, users
+        return [], {}
 
-    def search_tweets(self, query: str, since_id: Optional[str] = None, max_results: int = 10) -> List[Dict]:
-        """キーワードでツイート検索（新着のみ）"""
+    def search_tweets(self, query: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
+        """キーワードでツイート検索（新着のみ、フォロワー数情報付き）"""
         url = f"{self.base_url}/tweets/search/recent"
         params = {
             "query": query,
             "max_results": min(max_results, 100),
             "tweet.fields": "created_at,public_metrics",
-            "expansions": "author_id"
+            "expansions": "author_id",
+            "user.fields": "public_metrics"
         }
         if since_id:
             params["since_id"] = since_id
@@ -224,8 +228,10 @@ class XAPIClient:
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:
             data = response.json()
-            return data.get("data", [])
-        return []
+            tweets = data.get("data", [])
+            users = {u["id"]: u for u in data.get("includes", {}).get("users", [])}
+            return tweets, users
+        return [], {}
 
     def post_tweet(self, text: str) -> Dict:
         """ツイート投稿"""
@@ -275,6 +281,7 @@ class DataCollector:
             "x_search_fetched": 0,
             "x_total_fetched": 0,
             "x_limit_reached": False,
+            "x_followers_filtered": 0,
             "rss_fetched": 0,
             "github_fetched": 0,
             "duplicates_removed": 0
@@ -307,12 +314,19 @@ class DataCollector:
         print(f"✅ 収集完了: {len(self.items)} 件")
 
     def _collect_x_accounts(self):
-        """Xアカウントからツイート収集"""
+        """Xアカウントからツイート収集（フォロワー数フィルタリング付き）"""
         accounts = self.config["x"]["accounts"]
         limit = self.config["x"]["limits"]["accounts"]
         fetched = 0
 
+        # フォロワー数フィルタ設定
+        follower_filter = self.config["x"].get("follower_filter", {})
+        filter_enabled = follower_filter.get("enabled", False)
+        min_followers = follower_filter.get("min_followers", 0)
+
         print(f"📱 Xアカウント監視: {len(accounts)} アカウント")
+        if filter_enabled:
+            print(f"   フォロワー数フィルタ: {min_followers:,}人以上")
 
         for username in accounts:
             if fetched >= limit:
@@ -325,7 +339,7 @@ class DataCollector:
                 continue
 
             since_id = self.state.get_x_account_since_id(username)
-            tweets = self.x_client.get_user_tweets(user_id, since_id, max_results=10)
+            tweets, users = self.x_client.get_user_tweets(user_id, since_id, max_results=10)
 
             if not tweets:
                 continue
@@ -337,6 +351,18 @@ class DataCollector:
             for tweet in tweets:
                 if fetched >= limit:
                     break
+
+                # フォロワー数フィルタリング
+                if filter_enabled:
+                    author_id = tweet.get("author_id")
+                    user = users.get(author_id, {})
+                    followers_count = user.get("public_metrics", {}).get("followers_count", 0)
+
+                    if followers_count < min_followers:
+                        tweet_text_short = tweet["text"][:50]
+                        print(f"  ⏭️  除外（フォロワー数: {followers_count:,}）: {tweet_text_short}...")
+                        self.stats["x_followers_filtered"] += 1
+                        continue
 
                 # 言語・地域フィルタリング
                 tweet_text = tweet["text"]
@@ -382,12 +408,19 @@ class DataCollector:
         self.stats["x_total_fetched"] += fetched
 
     def _collect_x_search(self):
-        """Xキーワード検索"""
+        """Xキーワード検索（フォロワー数フィルタリング付き）"""
         keywords = self.config["x"]["keywords"]
         limit = self.config["x"]["limits"]["search"]
         fetched = 0
 
+        # フォロワー数フィルタ設定
+        follower_filter = self.config["x"].get("follower_filter", {})
+        filter_enabled = follower_filter.get("enabled", False)
+        min_followers = follower_filter.get("min_followers", 0)
+
         print(f"🔎 Xキーワード検索: {len(keywords)} キーワード")
+        if filter_enabled:
+            print(f"   フォロワー数フィルタ: {min_followers:,}人以上")
 
         for keyword in keywords:
             if fetched >= limit:
@@ -396,7 +429,7 @@ class DataCollector:
                 break
 
             since_id = self.state.get_x_keyword_since_id(keyword)
-            tweets = self.x_client.search_tweets(keyword, since_id, max_results=10)
+            tweets, users = self.x_client.search_tweets(keyword, since_id, max_results=10)
 
             if not tweets:
                 continue
@@ -408,6 +441,18 @@ class DataCollector:
             for tweet in tweets:
                 if fetched >= limit:
                     break
+
+                # フォロワー数フィルタリング
+                if filter_enabled:
+                    author_id = tweet.get("author_id")
+                    user = users.get(author_id, {})
+                    followers_count = user.get("public_metrics", {}).get("followers_count", 0)
+
+                    if followers_count < min_followers:
+                        tweet_text_short = tweet["text"][:50]
+                        print(f"  ⏭️  除外（フォロワー数: {followers_count:,}）: {tweet_text_short}...")
+                        self.stats["x_followers_filtered"] += 1
+                        continue
 
                 # 言語・地域フィルタリング
                 tweet_text = tweet["text"]
