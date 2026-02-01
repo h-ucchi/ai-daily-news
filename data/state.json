@@ -53,10 +53,10 @@
       "since_id": "2017977336919113939"
     },
     "Anthropic": {
-      "since_id": "2017977348868423929"
+      "since_id": "2017981046038638948"
     },
     "Model Context Protocol": {
-      "since_id": "2017976126568824936"
+      "since_id": "2017979320040661164"
     },
     "GPT-4 Turbo": {
       "since_id": "2017970494633546121"
@@ -66,6 +66,15 @@
     },
     "ralph loop": {
       "since_id": "2017973918082986416"
+    },
+    "Claude": {
+      "since_id": "2017981038249566343"
+    },
+    "Claude Code": {
+      "since_id": "2017980987402010633"
+    },
+    "OpenAI": {
+      "since_id": "2017981041936666714"
     }
   },
   "rss": {
@@ -83,7 +92,7 @@
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-02-01T15:05:02.828983+00:00",
+    "last_run_at": "2026-02-01T15:19:45.981870+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
@@ -220,13 +229,13 @@
     ]
   },
   "rss_last_checked": {
-    "https://openai.com/blog/rss.xml": "2026-02-01T15:04:43.214092+00:00",
-    "https://github.blog/feed/": "2026-02-01T15:04:43.537154+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-01T15:04:44.415745+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-02-01T15:04:44.513839+00:00",
-    "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-01T15:04:44.838555+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-01T15:04:44.924813+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-01T15:04:44.986487+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-01T15:04:45.319007+00:00"
+    "https://openai.com/blog/rss.xml": "2026-02-01T15:19:22.490824+00:00",
+    "https://github.blog/feed/": "2026-02-01T15:19:22.949244+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-01T15:19:23.747529+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-02-01T15:19:23.865065+00:00",
+    "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-01T15:19:24.269683+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-01T15:19:24.614116+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-01T15:19:24.989388+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-01T15:19:25.308380+00:00"
   }
 }
