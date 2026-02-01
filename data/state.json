@@ -5,7 +5,7 @@
       "since_id": "2010712737706553544"
     },
     "Claude API": {
-      "since_id": "2017969429083312463"
+      "since_id": "2017972656281469146"
     },
     "GPT-4": {
       "since_id": "2010714326014058498"
@@ -50,19 +50,22 @@
       "since_id": "2017965673222431022"
     },
     "Google Gemini": {
-      "since_id": "2017969474247577828"
+      "since_id": "2017972613197476321"
     },
     "Anthropic": {
-      "since_id": "2017969485114933484"
+      "since_id": "2017972640128930142"
     },
     "Model Context Protocol": {
       "since_id": "2017963674384613569"
     },
     "GPT-4 Turbo": {
-      "since_id": "2017923983023497385"
+      "since_id": "2017970494633546121"
     },
     "LangChain release": {
       "since_id": "2017832631027610024"
+    },
+    "ralph loop": {
+      "since_id": "2017950318714380735"
     }
   },
   "rss": {
@@ -80,7 +83,7 @@
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-02-01T14:35:51.103542+00:00",
+    "last_run_at": "2026-02-01T14:46:34.173810+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
@@ -215,5 +218,15 @@
       "https://www.youtube.com/watch?v=_iytMHw6uJY",
       "https://www.youtube.com/shorts/x8c965ezpq8"
     ]
+  },
+  "rss_last_checked": {
+    "https://openai.com/blog/rss.xml": "2026-02-01T14:46:01.645654+00:00",
+    "https://github.blog/feed/": "2026-02-01T14:46:02.910494+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-01T14:46:03.404778+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-02-01T14:46:03.816094+00:00",
+    "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-01T14:46:04.183433+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-01T14:46:04.253706+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-01T14:46:04.314223+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-01T14:46:04.373472+00:00"
   }
 }
