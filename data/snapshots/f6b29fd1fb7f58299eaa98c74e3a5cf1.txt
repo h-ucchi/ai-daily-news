@@ -1,6 +1,6 @@
 # GitHub Copilot Blog
 # URL: https://github.blog/ai-and-ml/github-copilot/
-# Timestamp: 2026-02-01T23:30:45.424178+00:00
+# Timestamp: 2026-02-02T06:58:56.555165+00:00
 # Hash: 783e822968d4f3ebaafea06c77d24c29dd64c5db628e7587066fb381403d30f5
 
 <!doctype html>
@@ -1186,7 +1186,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script type="text/javascript" src="https://github.blog/wp-includes/js/dist/url.min.js?m=1765909333g" ></script><script src="https://github.blog/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://github.blog/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "de35b08aad" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "f048bb7cc3" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://github.blog/wp-admin/admin-ajax.php?action=rest-nonce";
@@ -1199,7 +1199,7 @@ _stq.push([ "view", {"v":"ext","blog":"153214340","post":"0","tz":"-8","srv":"gi
 _stq.push([ "clickTrackerInit", "153214340", "0" ]);
 //# sourceURL=jetpack-stats-js-before
 </script>
-<script src="https://stats.wp.com/e-202605.js" id="jetpack-stats-js" defer data-wp-strategy="defer"></script>
+<script src="https://stats.wp.com/e-202606.js" id="jetpack-stats-js" defer data-wp-strategy="defer"></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://github.blog/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
 </script>
