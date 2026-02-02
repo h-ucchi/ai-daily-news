@@ -1224,6 +1224,91 @@
       "post_text": "前回のスナップショットと今回のスナップショットを比較した結果、**両者のテキスト内容が完全に一致**しており、新たに追加された変更点は見つかりませんでした。\n\n最新のバージョンは「2.4（2026年1月22日）」で、両方のスナップショットに同じ内容が含まれています。\n\n## 状況の説明\n\n以下の内容が両スナップショットに共通して存在します：\n- サブエージェント機能\n- スキル機能（Agent Skills）\n- 画像生成機能\n- Cursor Blame（企業プラン向け）\n- エージェントからの確認質問機能\n- 1月16日のCLI関連アップデート\n- 1月8日のモデル管理・MCP管理アップデート\n- 2.3（2025年12月22日）のバグ修正リリース\n\n**結論：今回の比較では新規の変更点が検出されませんでした。**\n\n次回の確認時に新しい更新が追加されている可能性がありますので、その際に改めて分析いたします。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "9724058f-abd7-40e5-b889-6e1cb7c154dd",
+      "created_at": "2026-02-02T23:33:54.866491+00:00",
+      "item": {
+        "title": "GitHub Copilot Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-02T23:33:44.678605+00:00",
+          "content_hash": "ce77e224abe49a167df0bbc252e5efb856516a208edaf9304ff197035861a6ef",
+          "old_hash": "783e822968d4f3ebaafea06c77d24c29dd64c5db628e7587066fb381403d30f5"
+        }
+      },
+      "post_text": "## changelogの概要\n・Featured記事に「How to maximize GitHub Copilot's agentic capabilities」が新規追加\n・エージェント機能の実装とアーキテクチャ設計に関する上級エンジニア向けガイド\n・Copilotのエージェント機能を実際のアプリケーションに組み込む手法を解説\n・記事の掲載順序が一部変更（「A cheat sheet to slash commands」がLatestセクションに移動）\n\n## 詳細\n・新機能: Featured記事「How to maximize GitHub Copilot's agentic capabilities」が追加され、上級エンジニア向けにCopilotのエージェント機能を最大限活用する方法を解説。アーキテクチャ設計と実装の具体的な手法を提供\n・改善点: コンテンツの整理として、「A cheat sheet to slash commands in GitHub Copilot CLI」がFeaturedからLatestセクションに移動し、より体系的な情報構造に改善\n・対象ユーザー: GitHub Copilotのエージェント機能を実務で活用したいシニアエンジニア、AIエージェントのアーキテクチャ設計に関心のある開発者\n・提供開始: 記事は既に公開済みで、GitHub Copilot Blogから閲覧可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "afadcd73-05f2-4920-b76c-7c2bf01a4e62",
+      "created_at": "2026-02-02T23:34:17.433089+00:00",
+      "item": {
+        "title": "How to maximize GitHub Copilot’s agentic capabilities",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/",
+        "source": "rss",
+        "published_at": "2026-02-02T17:00:00+00:00",
+        "metadata": {
+          "feed_name": "GitHub Blog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・GitHub Copilotのエージェント機能を使った、システム設計と複数ファイル横断的な開発手法の実践ガイド\n・単なるコード補完ではなく、アーキテクチャ設計や設計レビューのパートナーとして活用\n・ドメイン駆動設計、レイヤードアーキテクチャなど、複雑なシステム構築時の活用方法を解説\n・GitHub Skillsの無料演習と連携し、実践的なワークフローを段階的に学習可能\n\n## 詳細\n・新機能: GitHub Copilotのエージェントモードで、複数ファイル・モジュールをまたぐ大規模なリファクタリングや機能追加を支援\n・ユースケース: ノートサービスへのタグ機能追加など、コントローラー、ドメインモデル、リポジトリ、マイグレーション、テストにまたがる実装を一貫して設計\n・ユースケース: 「このサービスをドメイン層、インフラ層、インターフェース層に分解して提案」などのプロンプトで、アーキテクチャレビューを実施\n・新機能: アンチパターン、結合度の問題、潜在的な障害点を自動検出し、改善提案を生成\n・技術詳細: ヘキサゴナルアーキテクチャとレイヤードアーキテクチャの比較分析など、複数の設計パターンのトレードオフ評価が可能\n・対象ユーザー: スタッフエンジニア向けの設計思考を学びたい若手エンジニア、複雑なシステム設計に取り組む中堅以上の開発者\n・提供開始: 現在利用可能。GitHub Skillsの無料演習4モジュール（マルチステップ実行、アプリ構築、レガシー近代化、カスタマイズ）で段階的に学習",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b6e531bf-ea11-4751-83a8-584a37203038",
+      "created_at": "2026-02-02T23:34:24.469684+00:00",
+      "item": {
+        "title": "Introducing the Codex app",
+        "url": "https://www.youtube.com/watch?v=HFM3se4lNiw",
+        "source": "rss",
+        "published_at": "2026-02-02T22:16:58+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございません。提供された記事内容が YouTube のフッター情報のみで、実際のブログ記事の本文が含まれていないため、正確な投稿案を作成することができません。\n\nURL が YouTube 動画（https://www.youtube.com/watch?v=HFM3se4lNiw）を指しているようですが、動画の内容や説明文が提供されていません。\n\n以下のいずれかをご提供いただけますと、適切な投稿案を作成できます：\n\n1. **動画の説明文（Description）**: YouTube動画ページに記載されている説明テキスト\n2. **動画の字幕/トランスクリプト**: 動画内で話されている内容のテキスト\n3. **関連するブログ記事**: OpenAI公式ブログなどで公開されている詳細記事のURL\n\nもしくは、この動画に関する公式ブログ記事が別途存在する場合は、そちらのURLをお知らせください。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9ee43343-699f-43c1-a6d4-05e26ee5f751",
+      "created_at": "2026-02-02T23:34:31.817467+00:00",
+      "item": {
+        "title": "Accelerating science with Prism",
+        "url": "https://www.youtube.com/watch?v=NAcdcunPfJg",
+        "source": "rss",
+        "published_at": "2026-02-02T21:09:07+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供されたコンテンツはYouTube動画のメタデータのみで、実際の動画内容や技術的詳細が含まれていません。\n\n正確な投稿案を作成するには、以下の情報が必要です：\n\n1. **動画の実際の内容**\n   - Prismとは何か（サービス/ツール/プラットフォーム）\n   - どのように科学研究を加速させるのか\n   - 具体的な機能や特徴\n   - 技術的なアーキテクチャ\n\n2. **提供される価値**\n   - 対象となる研究者や開発者\n   - 解決する課題\n   - 実際のユースケース\n\n3. **リリース情報**\n   - 提供開始時期\n   - アクセス方法\n\n**次のステップ**\n- YouTube動画の視聴\n- または動画の文字起こし/説明文の提供\n- 関連するブログ記事やドキュメントがあればそちらの参照\n\nこれらの情報をご提供いただければ、適切な投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "51d7fe29-134f-4e8e-9988-315156801716",
+      "created_at": "2026-02-02T23:34:39.776418+00:00",
+      "item": {
+        "title": "A first look at the Codex app",
+        "url": "https://www.youtube.com/watch?v=0e-Brv-gS9Q",
+        "source": "rss",
+        "published_at": "2026-02-02T18:03:33+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "提供されたコンテンツはYouTube動画のメタデータのみで、実際の動画内容（Codexアプリに関する情報）が含まれていません。動画の内容を分析できないため、正確な投稿案を作成することができません。\n\n以下のいずれかの方法で再度ご依頼いただけますでしょうか：\n\n1. **動画の文字起こしテキスト**を提供\n2. **動画の概要欄の説明文**を提供\n3. 動画を視聴した上で、**主要なポイントを箇条書き**で提供\n\nあるいは、動画タイトル「A first look at the Codex app」から推測すると、OpenAIの新しいCodexアプリケーションに関する初見レビューの可能性がありますが、推測による投稿案作成は避けるべきです。\n\n正確で有用な情報をエンジニアの皆様に提供するため、実際のコンテンツをご共有いただけますと幸いです。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
