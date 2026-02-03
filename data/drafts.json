@@ -1309,6 +1309,91 @@
       "post_text": "提供されたコンテンツはYouTube動画のメタデータのみで、実際の動画内容（Codexアプリに関する情報）が含まれていません。動画の内容を分析できないため、正確な投稿案を作成することができません。\n\n以下のいずれかの方法で再度ご依頼いただけますでしょうか：\n\n1. **動画の文字起こしテキスト**を提供\n2. **動画の概要欄の説明文**を提供\n3. 動画を視聴した上で、**主要なポイントを箇条書き**で提供\n\nあるいは、動画タイトル「A first look at the Codex app」から推測すると、OpenAIの新しいCodexアプリケーションに関する初見レビューの可能性がありますが、推測による投稿案作成は避けるべきです。\n\n正確で有用な情報をエンジニアの皆様に提供するため、実際のコンテンツをご共有いただけますと幸いです。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "001a08ca-4d3a-4b8c-ada5-f48357e8f5e1",
+      "created_at": "2026-02-03T23:33:47.379239+00:00",
+      "item": {
+        "title": "Claude Code Documentation",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-03T23:33:36.010726+00:00",
+          "content_hash": "bf9960d48fdc8e4a2a4d953ee8c42f1cf8cab2046dab58c3ee2bbb2b9575908d",
+          "old_hash": "3716b98d60d9a38148710a251d7f343ed5162a10764243fb707b54f7403dee9e"
+        }
+      },
+      "post_text": "## changelogの概要\n・Prerequisites（前提条件）セクションに「システム要件を満たすこと」が追加\n・インストール前の確認事項として、システム要件のリンクが新設\n・ドキュメント構造の改善により、初期セットアップの明確化を強化\n\n## 詳細\n・改善点: Prerequisites項目に「Meet the system requirements」リンクが追加され、インストール前にシステム要件を確認できるように改善。これにより、非対応環境へのインストール試行を事前に防ぐことが可能に\n・改善点: セットアップ手順の構造を整理し、前提条件チェックのステップを明示化。特に初めてClaude Codeを導入するユーザーにとって、必要な環境確認が容易に\n・対象ユーザー: Claude Codeを新規導入する開発者、特にシステム要件の確認が必要な環境（特定のOS、WSL環境など）で作業する開発者\n・提供開始: ドキュメント更新として即座に反映済み",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4d62c0e3-f1f6-4a72-acf6-3e410e8806a4",
+      "created_at": "2026-02-03T23:34:02.674616+00:00",
+      "item": {
+        "title": "What the fastest-growing tools reveal about how software is being built",
+        "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+        "source": "rss",
+        "published_at": "2026-02-03T17:00:00+00:00",
+        "metadata": {
+          "feed_name": "GitHub Blog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・TypeScriptがGitHub上で最も使用される言語に(2025年8月、Python/JavaScriptを超える)\n・AI支援開発の普及により、型付き言語への移行が加速(型システムがAI生成コードのエラー検出に有効)\n・Python はAIプロジェクトの約50%で使用、実験から本番環境構築へシフト\n・AI関連プロジェクトが急成長(2025年の成長トップ10のうち6つがAIインフラ・ツール)\n\n## 詳細\n・新機能: GitHub Octoverse 2025レポートでソフトウェア開発トレンドを公開\n・技術詳細: TypeScriptが過去1年で100万人以上の新規コントリビューターを獲得(全言語中最大の絶対成長数)\n・技術詳細: Pythonは85万人のコントリビューター増加(前年比+48.78%)、JavaScriptは42.7万人増(+24.79%)\n・ユースケース: 型付き言語がAI生成コードの型不一致やコンポーネント間の不整合を早期検出し、レビュー負荷を軽減\n・ユースケース: Pythonでのパッケージング、型付け、CI、コンテナ化などの本番環境スキルが重要に\n・対象ユーザー: AI支援開発を導入するチーム、新規プロジェクト開始者、AI/MLインフラ構築者\n・提供開始: Octoverse 2025レポートは公開済み、2026年の開発戦略検討に活用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "450133b8-ba23-4410-ba69-dd6a710387f3",
+      "created_at": "2026-02-03T23:34:16.805479+00:00",
+      "item": {
+        "title": "v2.1.30",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.30",
+        "source": "rss",
+        "published_at": "2026-02-03T18:05:59+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・PDFの特定ページ範囲読み取りに対応、大容量PDF処理を最適化\n・MCPサーバー用OAuth認証（Slack等）をサポート\n・セッション再開時のメモリ使用量を68%削減\n・プロンプトキャッシュの無効化ロジックを修正、トークン効率が向上\n・VSCode拡張で複数行入力とセッション表示の改善\n\n## 詳細\n・新機能: Read toolに`pages`パラメータ追加。PDFの特定ページ範囲（例: `pages: \"1-5\"`）を指定可能。10ページ超のPDFは軽量リファレンスとして返却され、コンテキストへの直接展開を回避\n・新機能: `claude mcp add`コマンドで`--client-id`と`--client-secret`を使用し、動的クライアント登録非対応のMCPサーバー（Slack等）向けOAuth認証を事前設定可能\n・新機能: `/debug`コマンドでClaudeが現在のセッションのトラブルシューティングを支援\n・改善点: `--resume`使用時のメモリ使用量を68%削減。セッションインデックスを軽量なstat-basedローディングと段階的エンリッチメントに置き換え\n・バグ修正: API会話履歴に出現していた「(no content)」ブロックを排除し、トークン浪費とモデルの混乱を防止\n・バグ修正: プロンプトキャッシュがツール名のみで無効化され、説明や入力スキーマ変更を検知できなかった問題を修正\n・技術詳細: Task toolの結果にトークン数、ツール使用回数、実行時間のメトリクスを追加。読み取り専用モードで`git log`/`git show`の追加フラグ対応\n・対象ユーザー: PDF処理、MCP統合、大量セッション管理を行う開発者に有用\n・提供開始: 2025年2月3日リリース（v2.1.30）",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c2dcf037-ff20-44ce-bf42-67505fbe4b2b",
+      "created_at": "2026-02-03T23:34:27.400009+00:00",
+      "item": {
+        "title": "Why This Isn't the Dot-Com Bubble | Martin Casado on WSJ's BOLD NAMES",
+        "url": "https://ai-a16z.simplecast.com/episodes/why-this-isnt-the-dot-com-bubble-martin-casado-on-wsjs-bold-names-u9crQXPt",
+        "source": "rss",
+        "published_at": "2026-02-03T11:00:00+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・AI投資ブームはドットコムバブルとは根本的に異なる構造\n・現代のテック大手は数千億ドルの資産を持ち財務基盤が堅固\n・投機的な評価修正と システム的崩壊は別物として捉えるべき\n・a16zは最先端LLM以外のロングテールAI企業に機会を見出す\n\n## 詳細\n・技術詳細: ドットコム時代のWorldComは400億ドルの負債を抱えていたのに対し、現在のテック大手は数千億ドルの資産を保有しており、財務構造が本質的に異なる\n・ユースケース: a16zは最先端の大規模言語モデル企業だけでなく、特定領域や用途に特化した「ロングテール」のAI企業群に投資機会を見出している\n・改善点: AI投資における過熱懸念に対し、評価額の一時的な調整と市場全体の崩壊を明確に区別する必要性を指摘\n・対象ユーザー: AI投資やスタートアップエコシステムに関心のある開発者、VCやスタートアップ経営者\n・技術詳細: 現在のAI投資ブームは実際の収益基盤と技術的価値に裏付けられており、投機的要素が支配的だったドットコムバブルとは状況が異なる\n・提供開始: WSJ's BOLD NAMESポッドキャストエピソードとして配信中",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5b10f838-3b5b-4c9b-bd8a-17ee2a325a73",
+      "created_at": "2026-02-03T23:34:37.342270+00:00",
+      "item": {
+        "title": "Automate tasks with the Codex app",
+        "url": "https://www.youtube.com/watch?v=xHnlzAPD9QI",
+        "source": "rss",
+        "published_at": "2026-02-03T18:04:15+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "# X投稿案\n\n## 概要\n・OpenAIがCodexアプリによるタスク自動化のデモ動画を公開\n・自然言語でタスクを指示することで、複雑な作業を自動化可能\n・開発者向けの実用的なワークフロー改善ツールとして注目\n・動画で具体的な活用シーンが紹介されている\n\n## 詳細\n・新機能: Codexアプリを使った自動タスク実行機能のデモンストレーション\n・ユースケース: 自然言語による指示で開発ワークフローの自動化を実現\n・対象ユーザー: 繰り返しタスクの効率化を求める開発者やエンジニア\n・技術詳細: OpenAIのCodex技術を活用したタスク自動化の実装例を動画で解説\n・提供開始: 詳細はYouTube動画で確認可能（OpenAI公式チャンネル）\n\n**注意**: 提供されたコンテンツが限定的なため、動画の詳細な内容については実際の視聴が必要です。より詳しい技術仕様や具体的な機能については、動画本編をご確認ください。\n\n---\n**補足**: 記事内容が動画のメタデータのみのため、実際の動画コンテンツに基づいた詳細な分析ができませんでした。正確な情報提供のため、動画の視聴をお勧めします。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
