@@ -1428,6 +1428,261 @@
       "post_text": "申し訳ございません。提供された情報はYouTubeの標準的なフッター情報のみで、「Model Y AWD is here」というタイトルの動画の具体的な内容が含まれていません。\n\nYouTubeショート動画のため、以下の情報が必要です：\n- 動画の映像内容\n- ナレーションや字幕のテキスト\n- 表示されている製品情報や仕様\n- 発表されている新機能や改良点\n\n【対応方法】\n1. 動画を実際に視聴して内容を確認\n2. 動画の説明欄やコメント欄から追加情報を取得\n3. Tesla公式サイトで関連プレスリリースを確認\n\nもし動画の内容をテキストで提供いただけましたら、適切な投稿案を作成いたします。\n\n例：\n- 新型Model Y AWDの発表内容\n- 従来モデルとの違い\n- 価格や提供開始時期\n- 技術的な改良点\n\nこれらの情報があれば、エンジニア向けの有益な投稿案を作成できます。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "3f04bfc9-ae64-461e-9ddb-2896dc465374",
+      "created_at": "2026-02-04T23:33:55.126231+00:00",
+      "item": {
+        "title": "Claude Code Documentation",
+        "url": "https://code.claude.com/docs/",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-04T23:33:46.832250+00:00",
+          "content_hash": "7f0ced6d75b97000bce6aa43f90a579352b8ffbeb8b7f67556ca9fe69011173d",
+          "old_hash": "bf9960d48fdc8e4a2a4d953ee8c42f1cf8cab2046dab58c3ee2bbb2b9575908d"
+        }
+      },
+      "post_text": "## changelogの概要\n・インストール後のプラットフォーム案内を追加（VS Code、JetBrains IDEs、デスクトップアプリ、Web、Slackへのリンク）\n・「Start using Claude Code」セクション直後に追加のプラットフォーム情報を挿入\n\n## 詳細\n・改善点: インストール手順の直後に「Claude Code also runs in VS Code, JetBrains IDEs, as a desktop app, on the web, and in Slack. See all platforms below.」という案内文を追加。ユーザーがターミナル版以外の選択肢を早期に認識できるよう導線を改善\n・対象ユーザー: Claude Codeを初めて利用する開発者、特にターミナル以外の環境での利用を検討しているユーザー\n・提供開始: ドキュメントページに既に反映済み",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "05359adc-2af7-45d6-9ba2-7b7923037aed",
+      "created_at": "2026-02-04T23:34:09.625792+00:00",
+      "item": {
+        "title": "Pick your agent: Use Claude and Codex on Agent HQ",
+        "url": "https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/",
+        "source": "rss",
+        "published_at": "2026-02-04T17:00:19+00:00",
+        "metadata": {
+          "feed_name": "GitHub Blog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・GitHub Agent HQでClaude・Codex・Copilotの複数エージェントを選択可能に\n・GitHub.com、GitHub Mobile、VS Code内で直接エージェントを実行\n・issueやPRに複数エージェントをアサインして結果を比較できる\n・エージェントの作業はログとして記録され、レビュー可能な形で提供\n\n## 詳細\n・新機能: Agent HQでClaudeとCodexが利用可能に（パブリックプレビュー）\n・新機能: GitHub.com、GitHub Mobile、VS Code（バージョン1.109以降）でエージェントセッションを開始・管理できる機能\n・ユースケース: issueに複数エージェント（Copilot、Claude、Codex）をアサインし、異なるアプローチを比較して最適な解決策を選択\n・ユースケース: PRのコメントで@Copilot、@Claude、@Codexをメンションして追加作業を依頼\n・技術詳細: エージェントは非同期で実行され、完了したセッションは詳細なログとともに後から確認可能\n・技術詳細: 各エージェントセッションは1つのプレミアムリクエストとしてカウントされる\n・技術詳細: エージェントの出力（コメント、ドラフト、変更提案）は通常の開発者貢献と同様にレビュー可能\n・対象ユーザー: Copilot Pro+およびCopilot Enterpriseユーザー\n・提供開始: Claude and Codexは設定で明示的に有効化する必要あり（現在パブリックプレビュー中）",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a9232369-1a2c-4e04-bba3-b3950b9e12ed",
+      "created_at": "2026-02-04T23:34:25.581783+00:00",
+      "item": {
+        "title": "v2.1.31",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.31",
+        "source": "rss",
+        "published_at": "2026-02-04T00:44:13+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・セッション再開のヒント表示機能を追加、会話の継続方法を明示\n・PDF処理エラーやサンドボックスモードでのbashコマンドエラーなど複数のバグを修正\n・システムプロンプトを改善し、bash代替としてRead/Edit/Glob/Grepツールの使用を促進\n・日本語IMEの全角スペース入力に対応、チェックボックス選択が改善\n\n## 詳細\n・新機能: セッション終了時に再開方法のヒントを表示、後で会話を継続する手順を案内\n・改善点: 日本語IMEからの全角スペース入力をサポート、チェックボックス選択UIでの入力が正常に動作\n・バグ修正: PDFサイズエラー発生時にセッションが永続的にロックされる問題を解消、新規会話の作成が不要に\n・バグ修正: サンドボックスモード有効時にbashコマンドが「Read-only file system」エラーを誤報告する問題を修正\n・バグ修正: `~/.claude.json`のプロジェクト設定でデフォルトフィールド欠落時にプランモード移行後クラッシュする問題を解決\n・バグ修正: ストリーミングAPIで`temperatureOverride`が無視され、常にデフォルト値(1)が使用される問題を修正\n・バグ修正: 厳密なパラメータチェックを行う言語サーバーとのLSP shutdown/exit互換性を改善\n・技術詳細: システムプロンプトを最適化し、`cat`/`sed`/`grep`/`find`の代わりに専用ツール(Read/Edit/Glob/Grep)の使用を推奨、不要なbashコマンド実行を削減\n・改善点: PDFとリクエストサイズのエラーメッセージに実際の制限値(100ページ、20MB)を表示\n・改善点: ストリーミング中のスピナー表示・非表示時のターミナルレイアウトのちらつきを軽減\n・改善点: サードパーティプロバイダー(Bedrock/Vertex/Foundry)利用時、誤解を招くAnthropic API価格表示をモデル選択画面から削除\n・対象ユーザー: Claude Codeを使用する全開発者、特に日本語環境やサンドボックスモードを利用するユーザー\n・提供開始: v2.1.31として2025年2月4日リリース済み",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0916537b-096f-428e-990f-5a4925f59815",
+      "created_at": "2026-02-04T23:34:35.179749+00:00",
+      "item": {
+        "title": "Showing tool calls and other improvements to Copilot chat on the web",
+        "url": "https://github.blog/changelog/2026-02-04-showing-tool-calls-and-other-improvements-to-copilot-chat-on-the-web",
+        "source": "rss",
+        "published_at": "2026-02-04T18:17:01+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・GitHub Copilot Chatのツール呼び出しプロセスがリアルタイムで可視化\n・チャット履歴をJSON/Markdown形式でエクスポート可能に\n・リポジトリ添付時の検索機能が改善され、関連性の高い推薦を表示\n・Webベースのチャット体験が高速化・スムーズに\n\n## 詳細\n・新機能: ツール呼び出しの可視化 - Copilotがメッセージ処理時に実行する各ステップ、失敗時のデバッグポイント、ツールごとの参照情報をリアルタイム表示\n・新機能: チャット履歴のエクスポート - 会話履歴をJSON/Markdown形式でダウンロード可能。「Manage chat」メニューから選択してエクスポート\n・改善点: リポジトリ添付機能の強化 - 検索時のリポジトリ推薦アルゴリズムを改善し、より適切な候補を素早く発見\n・ユースケース: ツール実行の透明性向上により、Copilotの処理フローを理解し、問題発生時の対処が容易に\n・技術詳細: チャット応答にツール呼び出しの詳細情報が含まれ、デバッグやトラブルシューティングが効率化\n・対象ユーザー: github.comでCopilot Chatを利用する全ての開発者\n・提供開始: 2026年2月4日より利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5e7141d9-baa3-4bb9-bf95-949c36bfc881",
+      "created_at": "2026-02-04T23:34:49.065068+00:00",
+      "item": {
+        "title": "GitHub Copilot in Visual Studio Code v1.109 – January Release",
+        "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-code-v1-109-january-release",
+        "source": "rss",
+        "published_at": "2026-02-04T18:00:01+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・VS Code v1.109でClaude Agent SDKのパブリックプレビュー開始\n・マルチエージェント開発のセッション管理機能を大幅改善\n・エージェントオーケストレーションで反復可能なワークフロー構築が可能に\n・ターミナルコマンドのサンドボックス化で安全性向上（実験的機能）\n\n## 詳細\n・新機能: Claude Agent SDK統合により、Anthropic公式SDKを使ったタスク委譲が可能（パブリックプレビュー）\n・新機能: MCP（Model Context Protocol）アプリとの連携でツール駆動型のインタラクティブな体験を実現\n・改善点: チャットのストリーミング応答性を向上し、より高速でスナップな体験に\n・改善点: 推論品質の向上により、より信頼性の高い回答とタスク実行を実現\n・新機能: エージェントオーケストレーション機能でチームやプロジェクト固有の反復可能なワークフローを構築可能\n・新機能: Agent Skillsと組織全体のカスタマイズにより、開発者間で一貫した結果を確保\n・新機能: Copilot Memoryがインタラクション間で関連コンテキストを保持し、よりスマートに動作\n・新機能: 外部インデックスによる高速コード検索で大規模リポジトリ開発の応答性が向上\n・新機能: ターミナルコマンドのサンドボックス化により、エージェントが提案・実行するコマンドの安全性を向上（実験的、macOS/Linuxのみ）\n・改善点: 自動承認ルールの改善でエージェント駆動アクションの安全性と制御性を向上\n・改善点: エディタインラインチャットを刷新し、コーディング中のコンテキスト内対話がより自然で効果的に\n・技術詳細: マルチエージェントセッション管理でCopilot、Claude、ローカル/バックグラウンド/クラウドエージェント間のワーク委譲が容易に\n・対象ユーザー: VS Codeを使用するすべての開発者、特にエージェント駆動開発に関心のあるチーム\n・提供開始: 2026年1月リリース（一部機能はパブリックプレビュー）",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "304570bd-88b3-4738-8283-11ee049ee8ec",
+      "created_at": "2026-02-04T23:35:00.811891+00:00",
+      "item": {
+        "title": "GitHub Copilot in Visual Studio — January update",
+        "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update",
+        "source": "rss",
+        "published_at": "2026-02-04T17:41:21+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・Visual Studio 2026でコード補完にシンタックスハイライトが追加され、変数・関数が視覚的に区別可能に\n・コード補完の部分受け入れ機能が実装、クリック位置まで受け入れ可能\n・HTML形式のコピペ、高速スクロール、シンタックス行圧縮など生産性向上機能を追加\n・Markdown プレビューの操作性が向上し、Copilot ChatでMarkdownの直接編集が可能に\n\n## 詳細\n・新機能: コード補完の色分け表示 - 設定で「Use colorized text for code completions」を有効化すると、補完候補に構文ハイライトが適用され、変数・関数・その他の要素を瞬時に識別可能\n・新機能: 部分的なコード補完の受け入れ - 補完候補内を直接クリックすることで、カーソル位置までの部分的な受け入れが可能。ホバーで各セグメントがハイライト表示される\n・改善点: エディタのカスタマイズ性と制御性の向上 - 高速スクロール、HTML形式でのリッチなコピーペースト、シンタックス行圧縮など、ユーザーから高い要望があった機能群を実装\n・新機能: Markdownプレビュー操作の効率化 - Split Preview、Open Preview、Edit Markdownの3モードを切り替え可能。Mermaid図のズーム機能、Copilot Chatに「Preview」ボタンを追加し生成されたMarkdownの直接レンダリングと編集が可能（Stableチャンネルで利用可能）\n・対象ユーザー: Visual Studio 2026ユーザー。最新機能はInsidersチャンネルで先行利用可能\n・提供開始: 2026年1月アップデートとして提供中。Visual Studio 2026のダウンロードで全機能が利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "08b26007-6ed6-44e2-bd9b-cf108eb1e3e7",
+      "created_at": "2026-02-04T23:35:11.940918+00:00",
+      "item": {
+        "title": "Claude and Codex are now available in public preview on GitHub",
+        "url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github",
+        "source": "rss",
+        "published_at": "2026-02-04T17:00:26+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・GitHub CopilotでClaude（Anthropic）とCodex（OpenAI）がパブリックプレビューとして利用可能に\n・Copilot Pro+およびCopilot Enterpriseユーザーは追加料金なしで両エージェントを利用可能\n・github.com、GitHub Mobile、VS Codeの3つのクライアントでシームレスに利用できる\n・issueやPRへの割り当て、レビューコメントでのメンション機能など複数の起動方法を提供\n\n## 詳細\n・新機能: Claude（Anthropic）とCodex（OpenAI）がCopilotのコーディングエージェントとして追加、既存のCopilotサブスクリプションに含まれる\n・新機能: エージェントをissueに割り当てると自動的に作業を開始しドラフトPRを作成\n・新機能: PRでの@copilot、@claude、@codexメンションによるフィードバックと反復作業が可能\n・ユースケース: VS Code 1.109以降でLocal（高速対話）、Cloud（GitHub上の自律タスク）、Background（ローカル非同期、Copilotのみ）の3種類のセッションタイプから選択可能\n・技術詳細: パブリックプレビュー期間中、各エージェントセッションは1つのプレミアムリクエストを消費\n・対象ユーザー: Copilot Pro+個人ユーザーおよびCopilot Enterpriseユーザー（Enterprise版は管理者による事前設定が必要）\n・提供開始: 現在パブリックプレビューとして利用可能、設定ページから有効化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "175585f2-88ac-4806-9143-d488f8450a18",
+      "created_at": "2026-02-04T23:35:21.595749+00:00",
+      "item": {
+        "title": "Simplified Copilot model enablement experience for individual users",
+        "url": "https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users",
+        "source": "rss",
+        "published_at": "2026-02-04T02:46:48+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・GitHub Copilot個人ユーザー向けに、最新モデルへのアクセス方法を簡素化\n・設定画面でのポリシー管理不要で、新モデルがCopilot内で即座に利用可能に\n・Autoモードでは自動選択、手動選択も可能で柔軟性を維持\n・データ利用ポリシーは従来通り維持、段階的にロールアウト中\n\n## 詳細\n・新機能: 新モデルの即時アクセス - Copilot Pro+、Pro、Freeユーザーは、リリースされた最新モデルをCopilot機能内で直接利用可能。設定画面への移動やポリシー管理が不要\n・改善点: モデル選択の簡素化 - Autoモード有効時はGitHubが自動選択、手動でモデルを指定することも可能。選択後は即座に動作開始\n・改善点: 利用体験の向上 - モデルの利用可能性に関する不確実性を排除し、追加クリックや設定ページ訪問の手間を削減\n・技術詳細: 既存のデータ利用ポリシーは変更なく継続適用。Trust Centerで詳細確認可能\n・対象ユーザー: Copilot個人ユーザー（Pro+、Pro、Free）。エンタープライズユーザーは対象外の可能性\n・提供開始: 現在段階的にロールアウト中。未表示の場合は数日以内に利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "61d7738c-b430-4822-817e-acbb39a8a836",
+      "created_at": "2026-02-04T23:35:30.477263+00:00",
+      "item": {
+        "title": "Can I get a six pack quickly?",
+        "url": "https://www.youtube.com/watch?v=kQRu7DdTTVA",
+        "source": "rss",
+        "published_at": "2026-02-04T12:44:01+00:00",
+        "metadata": {
+          "feed_name": "Anthropic YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された記事内容はYouTubeの標準的なフッター情報のみで、実際の動画コンテンツや技術的な情報が含まれていません。\n\nAI開発ツールに関するブログ記事の分析とX投稿案の作成を行うには、以下の情報が必要です：\n\n**必要な情報：**\n- 動画の実際の内容説明\n- AnthropicのAI技術に関する具体的な話題\n- 新機能、改善点、ユースケースなどの技術情報\n\n**確認事項：**\n1. タイトル「Can I get a six pack quickly?」は、AI開発ツールとは関係のない内容に見えます\n2. Anthropic YouTubeチャンネルの動画であれば、Claude関連の技術内容が含まれているはずです\n\n**お願い：**\n- 動画の説明文や字幕テキスト\n- または別のAI開発ツールに関するブログ記事のURL\n\nをご提供いただけますでしょうか？\n\n正確で有用なX投稿案を作成するために、実際の技術コンテンツへのアクセスが必要です。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "71c10630-1de9-4f8f-ba56-285b41146be8",
+      "created_at": "2026-02-04T23:35:39.078770+00:00",
+      "item": {
+        "title": "How can I communicate better with my mom?",
+        "url": "https://www.youtube.com/watch?v=FBSam25u8O4",
+        "source": "rss",
+        "published_at": "2026-02-04T12:43:54+00:00",
+        "metadata": {
+          "feed_name": "Anthropic YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された情報では適切なX投稿案を作成できません。\n\n**理由：**\n1. 記事内容がYouTubeのフッター情報のみで、実質的なコンテンツが含まれていない\n2. タイトル「How can I communicate better with my mom?」とURL、フィード名から判断すると、これはAI開発ツールに関する技術記事ではなく、個人的なコミュニケーションに関する動画のようです\n3. 対象読者（生成AI活用に積極的なWebエンジニア）向けの技術情報として適切ではない\n\n**ご確認いただきたい点：**\n- URLが正しいか（AI開発ツールに関する記事のURLか）\n- 記事内容の抜粋が完全に取得できているか\n- Anthropic公式の技術ブログやドキュメントのURLか\n\n正しい技術記事のURLと内容をご提供いただければ、適切なX投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3976bc54-eeca-4386-8a13-ced687e52d30",
+      "created_at": "2026-02-04T23:35:47.549855+00:00",
+      "item": {
+        "title": "What do you think of my business idea?",
+        "url": "https://www.youtube.com/watch?v=De-_wQpKw0s",
+        "source": "rss",
+        "published_at": "2026-02-04T12:43:50+00:00",
+        "metadata": {
+          "feed_name": "Anthropic YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された記事内容が YouTube の標準的なフッター情報のみで、実際のビデオコンテンツの内容が含まれていません。\n\nX投稿案を作成するには、以下の情報が必要です：\n\n1. **ビデオの実際の内容**\n   - どのようなビジネスアイデアについて議論されているか\n   - Anthropic/Claudeがどのように関わっているか\n   - デモや具体例の有無\n\n2. **技術的な詳細**\n   - 紹介されている機能や手法\n   - 実装方法やアーキテクチャ\n\n3. **対象ユーザーや活用シーン**\n\n**ご対応いただきたいこと：**\n- YouTubeビデオを実際に視聴して、内容の要約をご提供ください\n- または、ビデオの説明欄やトランスクリプトがあればご共有ください\n\nビデオの具体的な内容が分かれば、エンジニア向けの有益なX投稿案を作成させていただきます。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "116c3616-83c7-4ab5-8ea7-82ba1b7a4b65",
+      "created_at": "2026-02-04T23:35:54.412241+00:00",
+      "item": {
+        "title": "Is my essay making a clear argument?",
+        "url": "https://www.youtube.com/watch?v=3sVD3aG_azw",
+        "source": "rss",
+        "published_at": "2026-02-04T12:43:47+00:00",
+        "metadata": {
+          "feed_name": "Anthropic YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございません。提供されたURLはYouTube動画であり、テキストベースのブログ記事ではないため、詳細な内容を抽出することができません。\n\nまた、記事内容（抜粋）として提供されたのはYouTubeのフッター部分のテキストのみで、動画の実際のコンテンツ情報が含まれていません。\n\nX投稿案を作成するためには、以下のいずれかが必要です：\n\n1. **動画の文字起こしテキスト**または**字幕データ**\n2. **動画の説明欄に記載されている詳細な情報**\n3. **動画の主要なポイントをまとめたテキスト**\n\nもし以下の情報をご提供いただければ、適切な投稿案を作成できます：\n- 動画のトランスクリプト（文字起こし）\n- 動画説明欄の詳細\n- 動画の主要トピックや取り扱っている機能の概要\n\nお手数ですが、追加の情報をご提供いただけますでしょうか？",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9c360840-269b-4e44-81ce-25a01ec3d6e1",
+      "created_at": "2026-02-04T23:36:04.870030+00:00",
+      "item": {
+        "title": "How designers prototype using the Codex app",
+        "url": "https://www.youtube.com/watch?v=P7HXxl14dCA",
+        "source": "rss",
+        "published_at": "2026-02-04T18:29:45+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "# 分析結果\n\n提供いただいた情報では、YouTube動画のメタデータのみで実際の動画コンテンツが含まれていないため、正確な分析ができません。\n\nただし、タイトル「How designers prototype using the Codex app」から推測される内容に基づいた投稿案は以下の通りです：\n\n---\n\n## 概要\n・デザイナー向けのCodexアプリを使ったプロトタイピング手法を紹介\n・OpenAIの公式YouTube動画でデモンストレーション\n・デザインプロセスでのCodex活用方法を実演\n・ノーコード/ローコードでのプロトタイプ作成が可能\n\n## 詳細\n・ユースケース: デザイナーがCodexアプリを使用してプロトタイプを作成する実践的なワークフロー\n・対象ユーザー: UIデザイナー、プロダクトデザイナー、デザインとコーディングを横断したい方\n・技術詳細: Codexの自然言語処理を活用したデザインからコードへの変換プロセス\n・新機能: Codexアプリを使った視覚的なプロトタイピング機能（動画内で紹介）\n\n---\n\n**注意**: より正確な投稿案を作成するには、実際の動画コンテンツの視聴が必要です。動画の音声や字幕データがあれば、より詳細で実用的な情報を抽出できます。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "133ca696-80c3-4255-96d5-c7354182a292",
+      "created_at": "2026-02-04T23:36:14.914332+00:00",
+      "item": {
+        "title": "Introducing Tesla Solar Panels",
+        "url": "https://www.youtube.com/shorts/9V_4QOpmmZQ",
+        "source": "rss",
+        "published_at": "2026-02-04T21:23:07+00:00",
+        "metadata": {
+          "feed_name": "Tesla YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございません。提供された情報から分析すると、この内容はTeslaのソーラーパネルに関するYouTube Shorts動画へのリンクですが、記事内容として抽出されているのはYouTubeの標準的なフッター情報のみで、実際のソーラーパネルに関する技術的な詳細や製品情報が含まれていません。\n\nこのような状況では、以下の理由により適切な投稿案を作成することができません：\n\n**問題点**\n- 製品の技術仕様が不明\n- 新機能や改善点の詳細が不明\n- ユースケースや対象ユーザーの情報が不足\n- リリース時期や提供方法が不明\n\n**必要な情報**\n- ソーラーパネルの発電効率や容量\n- 設置方法や対応する建物タイプ\n- 価格帯や提供地域\n- 既存製品との違いや改善点\n- Powerwallなど他製品との連携\n\nYouTubeの動画コンテンツを直接確認するか、Tesla公式サイトの製品ページなど、より詳細な情報源からの内容抽出が必要です。\n\n動画の内容を文字起こしするか、関連する詳細記事のURLを提供いただければ、適切な投稿案を作成できます。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "19a49632-c9c6-4c5a-862d-b287a76a45cc",
+      "created_at": "2026-02-04T23:36:25.226094+00:00",
+      "item": {
+        "title": "Model Y AWD is here",
+        "url": "https://www.youtube.com/shorts/g2yofR9OYE0",
+        "source": "rss",
+        "published_at": "2026-02-04T01:50:45+00:00",
+        "metadata": {
+          "feed_name": "Tesla YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された情報では適切な投稿案を作成できません。\n\n**理由：**\n1. **記事内容が不完全**: YouTube Shortsの動画ページですが、動画の実際のコンテンツ（Tesla Model Y AWDに関する具体的な情報）が含まれていません\n2. **技術情報の欠如**: 記事内容がYouTubeのフッター情報のみで、Model Y AWDの技術的詳細、新機能、リリース情報などが一切ありません\n3. **AI開発ツールとの関連性**: このフィードは「Tesla YouTube」で、自動車製品の発表であり、生成AI活用に積極的なWebエンジニア向けのAI開発ツール情報ではありません\n\n**必要な情報：**\n- Model Y AWDの具体的な仕様や新機能\n- リリース時期や提供地域\n- 技術的な改善点や特徴\n- 価格情報や購入方法\n\nもし以下のような情報源があれば、投稿案の作成が可能です：\n- 動画の内容を文字起こししたテキスト\n- Teslaの公式プレスリリース\n- Model Y AWDに関する詳細な技術記事\n\nまた、このフィードがAI開発ツールに関連するものであれば、正しいURLやコンテンツをご提供ください。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
