@@ -1683,6 +1683,159 @@
       "post_text": "申し訳ございませんが、提供された情報では適切な投稿案を作成できません。\n\n**理由：**\n1. **記事内容が不完全**: YouTube Shortsの動画ページですが、動画の実際のコンテンツ（Tesla Model Y AWDに関する具体的な情報）が含まれていません\n2. **技術情報の欠如**: 記事内容がYouTubeのフッター情報のみで、Model Y AWDの技術的詳細、新機能、リリース情報などが一切ありません\n3. **AI開発ツールとの関連性**: このフィードは「Tesla YouTube」で、自動車製品の発表であり、生成AI活用に積極的なWebエンジニア向けのAI開発ツール情報ではありません\n\n**必要な情報：**\n- Model Y AWDの具体的な仕様や新機能\n- リリース時期や提供地域\n- 技術的な改善点や特徴\n- 価格情報や購入方法\n\nもし以下のような情報源があれば、投稿案の作成が可能です：\n- 動画の内容を文字起こししたテキスト\n- Teslaの公式プレスリリース\n- Model Y AWDに関する詳細な技術記事\n\nまた、このフィードがAI開発ツールに関連するものであれば、正しいURLやコンテンツをご提供ください。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "b86dfcd2-d908-4a4f-bd6c-1b63ec3e1bcb",
+      "created_at": "2026-02-05T23:29:17.810565+00:00",
+      "item": {
+        "title": "Cursor Blog",
+        "url": "https://cursor.com/ja/blog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-05T23:29:07.600730+00:00",
+          "content_hash": "b3bdbebb62c11951ce506c6ad2aec46d375f975df79364e95e41e068d5ae77e5",
+          "old_hash": "e458e354160f29e9d17f4dc4d6c60e986ff40870a94ed9ab5723915f331e736c"
+        }
+      },
+      "post_text": "## changelogの概要\n・マルチエージェント研究用ハーネスのプレビュー版がリリース\n・自動運転するコードベースに向けた新しい研究投稿を公開\n・Salesforce事例の数値が更新（開発者の利用率75%超、開発速度30%以上加速）\n\n## 詳細\n・新機能: マルチエージェント研究用ハーネスのプレビュー版を提供開始。複数のAIエージェントを協調動作させる研究環境を試験的に利用可能に。\n・新機能: 「自動運転するコードベースに向けて」と題した研究投稿を2026年2月5日に公開。マルチエージェントシステムによる自律的なコード管理の取り組みを紹介。\n・改善点: Salesforce導入事例の記述を更新。開発者の利用率が「90%超」から「75%以上」に、タイトルに「開発速度を30%以上加速」という具体的な数値を追加し、より詳細な成果指標を明示。\n・対象ユーザー: マルチエージェントシステムやAI駆動開発に関心のある研究者・開発者、エンタープライズでのAI活用事例を参考にしたい開発チーム\n・提供開始: マルチエージェント研究用ハーネスはプレビュー版として即座に利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "78f4f79f-6319-4ef2-90fd-da64dceef9fd",
+      "created_at": "2026-02-05T23:29:35.017700+00:00",
+      "item": {
+        "title": "Continuous AI in practice: What developers can automate today with agentic CI",
+        "url": "https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/",
+        "source": "rss",
+        "published_at": "2026-02-05T17:00:00+00:00",
+        "metadata": {
+          "feed_name": "GitHub Blog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・GitHubがContinuous AI（継続的AI）という新しいパターンを提案\n・従来のCIは決定論的なルールベースの自動化に限定、判断が必要なタスクには対応不可\n・エージェント型AIを使い、コードレビューやドキュメント整合性など「意図の理解」が必要な作業を自動化\n・自然言語でルールを記述し、AIエージェントがリポジトリ内で継続的に評価・提案を生成\n\n## 詳細\n・新機能: Continuous AI - GitHubリポジトリ内でバックグラウンドエージェントが動作し、判断を要するタスクを自動化する新パターン。CIジョブのように動作するが、ルールではなく推論が必要なタスクに特化\n・ユースケース: ドキュメントと実装の整合性チェック、依存関係の挙動変更検出、パフォーマンス問題の発見（例：ループ内での正規表現コンパイル）、アクセシビリティの実質的な評価など\n・技術詳細: 「自然言語ルール + エージェント型推論」をリポジトリ内で継続実行。開発者は自然言語で期待される状態を記述し、エージェントが評価結果としてパッチ提案、Issue、ディスカッション、インサイトを生成\n・改善点: 従来のCIは「テストの成否」「ビルドの成否」など二値的な判定のみ対応。Continuous AIは文脈依存で判断が必要な「意図の理解」を要するタスクに対応し、CIの限界を補完\n・対象ユーザー: コードレビュー、ドキュメント管理、依存関係追跡、品質監視など判断業務に時間を取られているエンジニアチーム\n・技術詳細: GitHub Nextの研究開発イニシアチブとして開発。ワークフローは一度の記述ではなく、エージェントとの反復的な協働を通じて洗練される設計",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c1ca5986-bb43-43f9-afa1-e178b1f32efc",
+      "created_at": "2026-02-05T23:29:47.803479+00:00",
+      "item": {
+        "title": "v2.1.32",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.32",
+        "source": "rss",
+        "published_at": "2026-02-05T17:47:50+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・Claude Opus 4.6が利用可能に\n・実験的なマルチエージェント協調機能（Agent Teams）を追加\n・Claudeが作業中の記憶を自動記録・参照する機能を実装\n・スキル管理とBashツールの安定性が向上\n\n## 詳細\n・新機能: Claude Opus 4.6のサポート - 最新モデルでの開発が可能に\n・新機能: Agent Teams（研究プレビュー版）- 複数エージェントの協調作業機能。環境変数CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1で有効化（トークン消費量が多いため注意）\n・新機能: 自動メモリ機能 - Claudeが作業中に情報を自動記録し、後で参照可能\n・新機能: \"Summarize from here\" - メッセージセレクターから会話の部分的な要約が可能\n・改善点: スキルの自動読み込み - `--add-dir`で指定した追加ディレクトリ内の`.claude/skills/`からスキル定義を自動ロード\n・改善点: スキル文字数制限がコンテキストウィンドウに応じて動的に変更（2%）、大きなコンテキストウィンドウでより多くのスキル説明を表示可能\n・バグ修正: サブディレクトリからの実行時に`@`ファイル補完が誤った相対パスを表示していた問題を解決\n・バグ修正: Bashツールでヒアドキュメント内のJavaScriptテンプレートリテラル（`${index + 1}`など）が\"Bad substitution\"エラーを引き起こしていた問題を修正\n・バグ修正: VSCodeでスラッシュコマンドがEnterキー押下時に誤実行される問題を修正\n・対象ユーザー: Claude Code CLIおよびVSCode拡張機能のユーザー\n・提供開始: v2.1.32として2025年2月5日リリース",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c7c7031a-a1b1-4bfb-82d0-250a37de40d6",
+      "created_at": "2026-02-05T23:29:56.644628+00:00",
+      "item": {
+        "title": "Claude Opus 4.6 is now generally available for GitHub Copilot",
+        "url": "https://github.blog/changelog/2026-02-05-claude-opus-4-6-is-now-generally-available-for-github-copilot",
+        "source": "rss",
+        "published_at": "2026-02-05T17:45:16+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・Claude Opus 4.6がGitHub Copilotで一般提供開始\n・エージェント型コーディングと複雑なタスクに特化したAnthropicの最新モデル\n・VS Code、Visual Studio、github.com、モバイルアプリ、CLIなど全環境で利用可能\n・Pro、Pro+、Business、Enterpriseプランで段階的にロールアウト中\n\n## 詳細\n・新機能: Claude Opus 4.6をGitHub Copilotのモデルピッカーから選択可能に\n・技術詳細: プランニングやツール呼び出しが必要な高難度タスクで優れた性能を発揮するエージェント型コーディングに最適化\n・対象ユーザー: Copilot Pro、Pro+、Business、Enterpriseプランのユーザーが利用可能\n・新機能: VS Codeではchat、ask、edit、agentの全モード、Visual Studioではagent、askモードで対応\n・新機能: GitHub Mobileアプリ(iOS/Android)、GitHub CLI、Copilot coding agent(Pro/Pro+のみ)でも利用可能\n・提供開始: 段階的なロールアウトを実施中、まだ表示されない場合は近日中に利用可能\n・技術詳細: Business/Enterpriseプラン管理者はCopilot設定でClaude Opus 4.6ポリシーを有効化する必要あり",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "cfcec03a-1825-48de-accb-5a8b34374c21",
+      "created_at": "2026-02-05T23:30:06.414905+00:00",
+      "item": {
+        "title": "Introducing Claude Opus 4.6",
+        "url": "https://www.youtube.com/watch?v=dPn3GBI8lII",
+        "source": "rss",
+        "published_at": "2026-02-05T17:45:22+00:00",
+        "metadata": {
+          "feed_name": "Anthropic YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された記事内容がYouTubeの標準的なフッター情報のみで、「Claude Opus 4.6」に関する実質的な技術情報や発表内容が含まれていません。\n\n適切なX投稿案を作成するには、以下のいずれかが必要です：\n\n1. **YouTube動画の実際の内容**（音声の文字起こしや説明欄の詳細）\n2. **対応するブログ記事やプレスリリース**\n3. **動画で発表された機能の概要**\n\nもし以下の情報を提供いただければ、正確な投稿案を作成できます：\n- 動画の説明欄に記載されている内容\n- Claude Opus 4.6の新機能や改善点\n- 発表された技術的な詳細\n- リリース時期や対象ユーザー\n\nまたは、動画のURLから直接内容を確認できる権限があれば、より詳細な分析が可能です。\n\n**現時点で推測に基づいた投稿案を作成することは、誤った情報を含む可能性があるため控えさせていただきます。**",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5a186f18-6a70-4efc-a09a-b7645eb85dfc",
+      "created_at": "2026-02-05T23:30:18.112186+00:00",
+      "item": {
+        "title": "Growing a family tamale shop | with ChatGPT",
+        "url": "https://www.youtube.com/watch?v=iupsBLiNznU",
+        "source": "rss",
+        "published_at": "2026-02-05T10:01:16+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "# X投稿案\n\n## 概要\n・家族経営のタマーレ店がChatGPTを活用してビジネスを成長させる事例を紹介\n・小規模ビジネスにおけるAI活用の実践例\n・OpenAI公式YouTubeチャンネルでの動画コンテンツ\n・飲食店経営におけるChatGPTの具体的な活用方法を解説\n\n## 詳細\n・ユースケース: 家族経営の飲食店（タマーレショップ）がChatGPTを導入し、ビジネス運営を効率化・成長させた実例\n・対象ユーザー: 小規模ビジネス経営者、飲食店オーナー、AIツールの実践的な活用方法を知りたい開発者\n・コンテンツ形式: OpenAI公式YouTubeチャンネルでの動画として公開\n・技術詳細: 実際のビジネスシーンでのChatGPT活用方法を具体的に紹介（動画での詳細解説）\n\n**注意**: 提供された記事内容が動画のメタデータのみで具体的な内容が含まれていないため、動画を視聴しないと詳細な活用方法や成果については確認できません。より詳細な投稿案作成には動画の内容確認が必要です。\n\n【文字数: 約400文字】\n\n---\n\n**推奨アクション**: 動画の視聴により、以下の情報を補完することで、より具体的で実用的な投稿案を作成できます：\n- ChatGPTの具体的な活用場面（メニュー開発、顧客対応、マーケティングなど）\n- 導入による具体的な成果や効果\n- 実装時の工夫や課題",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "cb04fa54-014e-43e3-aca1-0c24ca8ac9fb",
+      "created_at": "2026-02-05T23:30:29.432466+00:00",
+      "item": {
+        "title": "Modernizing an 86-year-old salvage yard | with ChatGPT",
+        "url": "https://www.youtube.com/watch?v=W6c7XcB6HwM",
+        "source": "rss",
+        "published_at": "2026-02-05T10:01:10+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・ユースケース: 86年続く廃車場のビジネスをChatGPTで近代化\n・改善点: 在庫管理・顧客対応の効率化を実現\n・ユースケース: 伝統的な業界へのAI導入事例\n・対象ユーザー: レガシービジネスのデジタル化を検討する開発者向け\n\n## 詳細\n・ユースケース: 86年の歴史を持つ廃車場（salvage yard）がChatGPTを活用してビジネスプロセスを近代化した実例を紹介する動画コンテンツ\n・改善点: 従来の手作業やアナログな管理手法から、AIを活用した効率的なオペレーションへの転換プロセスを解説\n・ユースケース: 在庫検索、部品照会、顧客対応などの業務フローにChatGPTを統合し、作業効率を大幅に向上\n・対象ユーザー: レガシー産業やアナログな業務フローを持つビジネスのデジタル化・AI化を検討しているエンジニアや事業者\n・技術詳細: OpenAI公式YouTubeチャンネルでの公開動画形式で、実際の導入プロセスや成果を視覚的に理解可能\n・提供開始: 現在YouTubeで視聴可能\n\n※注: 提供されたコンテンツが動画のメタデータのみのため、動画本編の具体的な技術実装や詳細な改善指標については、実際の視聴が必要です",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9ac68a7f-fc90-4a72-84f1-7e6a9c7302c7",
+      "created_at": "2026-02-05T23:30:36.525066+00:00",
+      "item": {
+        "title": "Generations of farming | with ChatGPT",
+        "url": "https://www.youtube.com/watch?v=4rzeW4dbvlQ",
+        "source": "rss",
+        "published_at": "2026-02-05T10:01:03+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された記事内容はYouTubeの標準的なフッター情報のみで、実際の動画コンテンツの内容が含まれていません。\n\nYouTube動画「Generations of farming | with ChatGPT」について適切な投稿案を作成するには、以下の情報が必要です：\n\n**必要な情報:**\n- 動画の説明文（Description）\n- 動画の主な内容やトピック\n- 取り上げられている農業の世代間の話題\n- ChatGPTがどのように活用されているか\n- 具体的な事例やデモンストレーション\n\n**ご提案:**\n1. YouTube動画ページから「もっと見る」をクリックして説明文全文を取得\n2. 動画を視聴して主要なポイントを抽出\n3. または、動画の字幕テキストを取得\n\nこれらの情報をご提供いただければ、技術的に正確で実用的な投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d1fff515-0d40-4a93-8750-d393ee04a44c",
+      "created_at": "2026-02-05T23:30:44.840870+00:00",
+      "item": {
+        "title": "Cyber skijoring",
+        "url": "https://www.youtube.com/shorts/uEv9OHv3pnw",
+        "source": "rss",
+        "published_at": "2026-02-05T18:21:36+00:00",
+        "metadata": {
+          "feed_name": "Tesla YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された情報からはブログ記事の実質的な内容を抽出できません。\n\n【理由】\n- 記事内容がYouTubeの標準的なフッター情報のみ\n- 「Cyber skijoring」というタイトルに関する技術的な説明や詳細が含まれていない\n- AI開発ツールやエンジニア向けの技術情報が記載されていない\n\n【推奨される対応】\n1. YouTubeショート動画の場合、動画の説明欄や字幕の内容を提供していただく\n2. 記事の本文部分（技術的な説明、機能詳細など）を再度抽出していただく\n3. 別の技術ブログ記事やドキュメントのURLを提供していただく\n\nこのタスクは「AI開発ツールのブログ記事を分析」することを前提としていますが、現在の情報ではその要件を満たせません。より詳細な技術情報をご提供いただければ、適切なX投稿案を作成できます。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
