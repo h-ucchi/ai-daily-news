@@ -1853,6 +1853,125 @@
       "post_text": "## 概要\n・Claude Code v2.1.33がリリース、マルチエージェントワークフロー機能を大幅強化\n・エージェント間のメモリ永続化とスコープ管理に対応（user/project/local）\n・VSCodeリモートセッション対応でcllaude.aiからOAuth経由でセッション再開可能\n・エージェントの生成制限機能とイベントフック（TeammateIdle/TaskCompleted）を追加\n\n## 詳細\n・新機能: エージェントにメモリ永続化機能を追加。frontmatterの`memory`フィールドで`user`/`project`/`local`スコープを指定可能\n・新機能: マルチエージェントワークフロー用に`TeammateIdle`と`TaskCompleted`フックイベントを追加、エージェント間の協調動作を制御可能に\n・新機能: エージェントの\"tools\"frontmatterで`Task(agent_type)`構文による子エージェント生成制限をサポート\n・改善点: VSCodeでリモートセッション対応、OAuth認証ユーザーがclaude.aiのセッションを参照・再開できるように\n・改善点: セッションピッカーにgitブランチとメッセージ数を表示、ブランチ名での検索も可能に\n・バグ修正: tmux環境でのエージェントチームセッションにおけるメッセージ送受信の問題を解決\n・バグ修正: APIプロキシ互換性の修正でストリーミングエンドポイントの404エラー処理を改善\n・対象ユーザー: マルチエージェント開発やVSCode環境でClaude Codeを活用するエンジニア",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "1f372308-70f6-4503-8373-197f9250bb1f",
+      "created_at": "2026-02-06T23:31:43.639793+00:00",
+      "item": {
+        "title": "Cursor Blog",
+        "url": "https://cursor.com/ja/blog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-06T23:31:32.953561+00:00",
+          "content_hash": "4a4edd8f14ef3e7f427e58aa062cacbe9b5ac067bb8db2d02087c7ab3dbd4b66",
+          "old_hash": "b3bdbebb62c11951ce506c6ad2aec46d375f975df79364e95e41e068d5ae77e5"
+        }
+      },
+      "post_text": "【注目】Cursor、NVIDIA事例を公開\n\nAI支援開発ツールCursorが、NVIDIAにおける大規模導入事例を公開した。30,000人の開発者がコミットコード量を3倍に増加。SDLC全体への統合により、主要開発ワークフローの自動化を実現。\n\nhttps://cursor.com/ja/blog\n\n## 主要な変更点\n∙ NVIDIA事例：30,000人の開発者がコミットコード量3倍に増加\n∙ SDLC全体にCursorを統合した事例を公開\n∙ コード生成、テスト、デバッグ、デプロイの自動化を実現\n∙ 大規模エンタープライズでの実績データを提示\n\n## 詳細\n∙ 事例公開「NVIDIA、30,000人の開発者がCursorでコミットコード量を3倍に」NVIDIAの30,000人規模の開発組織において、Cursorの導入によりコミットコード量が3倍に増加した実績を公開。2026年2月6日付の最新事例。\n\n∙ 改善点「SDLC全体への統合」コード生成、テスト、デバッグ、デプロイなどソフトウェア開発ライフサイクル全体にCursorを組み込み、主要ワークフローの自動化を達成。エンタープライズ環境での包括的な活用方法を示す事例として公開。\n\n∙ 改善点「大規模組織での生産性向上」30,000人という大規模開発組織での導入実績により、Cursorのスケーラビリティと実用性を実証。コミットコード量の3倍増加という定量的な成果を提示。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8d7f88b9-28b0-4a4d-b1f8-4f3e355913da",
+      "created_at": "2026-02-06T23:31:54.090607+00:00",
+      "item": {
+        "title": "v2.1.34",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.34",
+        "source": "rss",
+        "published_at": "2026-02-06T14:26:47+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・Agent Teams設定変更時のクラッシュを修正\n・サンドボックス除外コマンドの権限バイパス脆弱性を修正\n・autoAllowBashIfSandboxed有効時のセキュリティ問題に対応\n・2024年2月6日リリース（v2.1.34）\n\n## 詳細\n・バグ修正: Agent Teams設定をレンダリング間で変更した際に発生していたクラッシュを解消。複数エージェントを使用する環境での安定性が向上\n・バグ修正: `sandbox.excludedCommands`または`dangerouslyDisableSandbox`でサンドボックスから除外されたコマンドが、`autoAllowBashIfSandboxed`有効時にBash実行許可ルールをバイパスできた脆弱性を修正\n・セキュリティ改善: サンドボックス設定とコマンド実行許可の整合性を強化し、意図しないコマンド実行を防止\n・対象ユーザー: Agent Teams機能を利用する開発者、セキュリティを重視したサンドボックス環境を構築している開発者\n・提供開始: GitHub ReleasesページからダウンロードまたはVS Code拡張機能の自動更新で利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5db30c87-1212-4b25-bf36-1ed23a662c4e",
+      "created_at": "2026-02-06T23:32:06.530364+00:00",
+      "item": {
+        "title": "v2.1.33",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.33",
+        "source": "rss",
+        "published_at": "2026-02-06T01:47:21+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・マルチエージェント機能の強化（tmux対応、新フックイベント追加）\n・エージェントごとの永続メモリ機能追加（user/project/local scope）\n・拡張思考モード中の中断処理を改善\n・VSCode拡張でリモートセッション対応（claude.aiからの再開が可能に）\n・APIプロキシの互換性問題を複数修正\n\n## 詳細\n・新機能: エージェントチームセッションのtmux対応、メッセージ送受信が正常に動作するよう修正\n・新機能: マルチエージェントワークフロー用に`TeammateIdle`と`TaskCompleted`フックイベントを追加\n・新機能: エージェントに`memory`フロントマター追加、`user`/`project`/`local`スコープで永続メモリ実装\n・新機能: エージェント\"tools\"フロントマターで`Task(agent_type)`構文により、生成可能なサブエージェントを制限可能\n・改善点: 拡張思考中の新規メッセージ送信で思考フェーズが中断される問題を修正\n・改善点: プラグイン名をスキル説明と`/skills`メニューに表示し、発見性を向上\n・バグ修正: ストリーミング中止時の空白テキストと思考ブロック組み合わせによる無効リクエスト生成を修正\n・バグ修正: APIプロキシで404エラー時に非ストリーミングフォールバックがトリガーされない互換性問題を解決\n・バグ修正: Node.jsビルドで`settings.json`環境変数のプロキシ設定がWebFetchに適用されない問題を修正\n・VSCode: OAuth利用者がclaude.aiからリモートセッションを閲覧・再開可能に\n・VSCode: セッションピッカーにgitブランチとメッセージ数を表示、ブランチ名検索に対応",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8477909e-d9c3-4497-af3b-7a9e0902cc64",
+      "created_at": "2026-02-06T23:32:14.467579+00:00",
+      "item": {
+        "title": "Multitasking with the Codex app",
+        "url": "https://www.youtube.com/watch?v=9ohXlkbXiM4",
+        "source": "rss",
+        "published_at": "2026-02-06T23:08:52+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供いただいた記事内容が YouTube の標準フッター情報のみで、Codex アプリのマルチタスキング機能に関する具体的な技術情報や詳細が含まれていません。\n\n適切な X 投稿案を作成するために、以下のいずれかの方法をお試しください:\n\n1. **動画の視聴**: YouTube URL（https://www.youtube.com/watch?v=9ohXlkbXiM4）の動画を直接ご覧いただき、内容をご共有ください\n\n2. **動画説明文の提供**: YouTube 動画ページの「説明」セクションにある詳細情報をコピーしてください\n\n3. **文字起こしの利用**: YouTube の字幕/文字起こし機能を使用して、動画の内容テキストを取得してください\n\nこれらの具体的な情報があれば、Codex アプリのマルチタスキング機能について、技術的に正確で実用的な X 投稿案を作成できます。\n\nお手数ですが、追加情報のご提供をお願いいたします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "04106315-c78c-4d51-8f9f-4a5e58541516",
+      "created_at": "2026-02-06T23:32:24.207644+00:00",
+      "item": {
+        "title": "Cricket Academy with ChatGPT",
+        "url": "https://www.youtube.com/watch?v=4l_w08gcBFk",
+        "source": "rss",
+        "published_at": "2026-02-06T20:06:40+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "# X投稿案\n\n提供された情報が非常に限定的（YouTubeの標準フッター情報のみ）で、動画の実際のコンテンツが含まれていないため、正確な投稿案の作成が困難です。\n\n## 推奨事項\n\n以下のいずれかの方法で、より詳細な情報を取得してください:\n\n1. **動画の説明欄を確認**\n   - YouTubeの動画ページにアクセスし、概要欄の内容を取得\n\n2. **動画を視聴**\n   - 実際の内容を確認し、主要なポイントを抽出\n\n3. **字幕/トランスクリプトを取得**\n   - YouTube動画の字幕機能から内容を把握\n\n## 暫定的な構成案（タイトルのみから推測）\n\nタイトル「Cricket Academy with ChatGPT」から推測される可能性:\n- **ユースケース**: ChatGPTを活用したクリケット教育プログラム\n- **新機能**: スポーツコーチング分野でのAI活用事例\n- **対象ユーザー**: スポーツ教育者、コーチング分野の開発者\n\n---\n\n**注**: 正確な投稿案作成には、動画の実際のコンテンツ情報が必要です。より詳細な情報をご提供いただけますか?",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8aa1b36d-4351-4d5a-b297-105192ab5587",
+      "created_at": "2026-02-06T23:32:32.109005+00:00",
+      "item": {
+        "title": "City Selections with ChatGPT",
+        "url": "https://www.youtube.com/watch?v=SkSlUt63V6Y",
+        "source": "rss",
+        "published_at": "2026-02-06T20:05:25+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供された記事内容がYouTubeのフッター情報のみで、実際の動画コンテンツの内容が含まれていません。\n\n「City Selections with ChatGPT」というタイトルの動画について、X投稿案を作成するには以下の情報が必要です：\n\n**必要な情報：**\n- 動画の内容説明（どのような機能やデモが紹介されているか）\n- ChatGPTの新機能の詳細\n- 都市選択に関する具体的な使用例\n- 対象ユーザーや活用シーン\n- リリース時期や利用方法\n\n**ご対応いただきたいこと：**\n1. 動画の説明欄（Description）のテキストを提供\n2. 動画を視聴して内容を要約\n3. または、OpenAIの公式ブログ記事など関連する文字情報を提供\n\n上記いずれかの方法で、動画の実際の内容についての情報をご提供いただければ、適切なX投稿案を作成させていただきます。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "071f6559-12fd-4a60-a905-a898376fb294",
+      "created_at": "2026-02-06T23:32:41.899141+00:00",
+      "item": {
+        "title": "Tesla is now in Africa | Morocco launch",
+        "url": "https://www.youtube.com/shorts/wqATgTmPA8M",
+        "source": "rss",
+        "published_at": "2026-02-06T19:50:13+00:00",
+        "metadata": {
+          "feed_name": "Tesla YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "この記事内容は、YouTubeの標準的なフッター情報のみで、実際のTeslaのモロッコ展開に関する具体的な情報が含まれていません。\n\nYouTube Shortsの動画コンテンツを分析するには、動画の視聴が必要ですが、提供されたテキストには動画の内容が含まれていません。\n\nそのため、以下の情報が不足しており、正確な投稿案を作成できません：\n\n**不足している情報：**\n- モロッコでの具体的な展開内容（販売開始時期、取扱車種など）\n- サービス拠点の情報（ショールーム、サービスセンターの場所）\n- 充電インフラの計画\n- 価格設定や購入方法\n- アフリカ市場での戦略\n- 技術的な仕様や現地対応\n\n**対応方法の提案：**\n1. 動画を実際に視聴して内容を確認する\n2. 動画の字幕やキャプションがあれば、それを含めて再度提供する\n3. Teslaの公式プレスリリースや関連記事があれば、それを参照する\n\n正確で有用な投稿案を作成するため、上記の方法で追加情報を入手していただけますでしょうか？",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
