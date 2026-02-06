@@ -1836,6 +1836,23 @@
       "post_text": "申し訳ございませんが、提供された情報からはブログ記事の実質的な内容を抽出できません。\n\n【理由】\n- 記事内容がYouTubeの標準的なフッター情報のみ\n- 「Cyber skijoring」というタイトルに関する技術的な説明や詳細が含まれていない\n- AI開発ツールやエンジニア向けの技術情報が記載されていない\n\n【推奨される対応】\n1. YouTubeショート動画の場合、動画の説明欄や字幕の内容を提供していただく\n2. 記事の本文部分（技術的な説明、機能詳細など）を再度抽出していただく\n3. 別の技術ブログ記事やドキュメントのURLを提供していただく\n\nこのタスクは「AI開発ツールのブログ記事を分析」することを前提としていますが、現在の情報ではその要件を満たせません。より詳細な技術情報をご提供いただければ、適切なX投稿案を作成できます。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "5644ff2f-62f5-4416-ab8c-54d877bc8ae9",
+      "created_at": "2026-02-06T06:50:51.263761+00:00",
+      "item": {
+        "title": "v2.1.33",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.33",
+        "source": "rss",
+        "published_at": "2026-02-06T01:47:21+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "## 概要\n・Claude Code v2.1.33がリリース、マルチエージェントワークフロー機能を大幅強化\n・エージェント間のメモリ永続化とスコープ管理に対応（user/project/local）\n・VSCodeリモートセッション対応でcllaude.aiからOAuth経由でセッション再開可能\n・エージェントの生成制限機能とイベントフック（TeammateIdle/TaskCompleted）を追加\n\n## 詳細\n・新機能: エージェントにメモリ永続化機能を追加。frontmatterの`memory`フィールドで`user`/`project`/`local`スコープを指定可能\n・新機能: マルチエージェントワークフロー用に`TeammateIdle`と`TaskCompleted`フックイベントを追加、エージェント間の協調動作を制御可能に\n・新機能: エージェントの\"tools\"frontmatterで`Task(agent_type)`構文による子エージェント生成制限をサポート\n・改善点: VSCodeでリモートセッション対応、OAuth認証ユーザーがclaude.aiのセッションを参照・再開できるように\n・改善点: セッションピッカーにgitブランチとメッセージ数を表示、ブランチ名での検索も可能に\n・バグ修正: tmux環境でのエージェントチームセッションにおけるメッセージ送受信の問題を解決\n・バグ修正: APIプロキシ互換性の修正でストリーミングエンドポイントの404エラー処理を改善\n・対象ユーザー: マルチエージェント開発やVSCode環境でClaude Codeを活用するエンジニア",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
