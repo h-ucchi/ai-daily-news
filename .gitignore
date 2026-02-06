@@ -49,4 +49,5 @@ htmlcov/
 
 # その他
 *.bak
+*.backup
 *.tmp
