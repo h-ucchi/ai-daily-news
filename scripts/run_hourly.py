@@ -22,6 +22,8 @@ import feedparser
 # 既存モジュールをインポート
 from run_daily import StateManager
 from draft_manager import DraftManager
+from article_fetcher import fetch_article_content_safe
+from post_prompt import get_system_prompt, create_user_prompt_from_article
 
 
 @dataclass
@@ -186,102 +188,17 @@ def generate_post_from_snapshot(old_snapshot: Optional[PageSnapshot], new_snapsh
 
         client = anthropic.Anthropic(api_key=api_key)
 
-        # 3. システムプロンプト（changelog専用フォーマット）
-        system_prompt = """あなたはAI開発ツールのchangelogを分析し、X投稿案を作成する専門家です。
-読者は生成AI活用に積極的なWebエンジニアです。
+        # 3. 共通プロンプトを使用
+        system_prompt = get_system_prompt()
 
-【重要な原則】
-- ニュースキャスター風の速報スタイルで、読者の注目を引く
-- changelogの最新の重要な変更点を抽出する
-- 具体的で実用的な情報を提供する（抽象的な表現は避ける）
-- カテゴリ（新機能、改善点、バグ修正など）を明確にする
-- 技術的な詳細を省略せず、エンジニアが理解できるレベルで記載
-
-【出力フォーマット】
-【速報】または【注目】製品名、最新アップデートを公開
-
-製品名の最新版が公開された。新機能〇〇、パフォーマンス改善△△など。[具体的な効果や数値]。
-
-{url}
-
-## 主要な変更点
-∙ [変更点1を簡潔に1行で]
-∙ [変更点2を簡潔に1行で]
-∙ [変更点3を簡潔に1行で]
-∙ [変更点4を簡潔に1行で]
-（3-5項目）
-
-## 詳細
-∙ 新機能「[機能名]」[詳細な説明]
-∙ 新機能「[機能名]」[詳細な説明]
-∙ 改善点「[改善内容]」[詳細な説明]
-∙ 改善点「[改善内容]」[詳細な説明]
-∙ バグ修正「[修正内容]」[詳細な説明]
-
-【カテゴリの使い分け】
-- 新機能: 新たに追加された機能（例: 新しいAPIエンドポイント、新しいUI要素）
-- 改善点: 既存機能の強化・最適化（例: パフォーマンス改善、UX改善）
-- バグ修正: 不具合の修正（例: クラッシュ修正、表示不具合の解消）
-- 破壊的変更: 互換性のない変更（該当する場合のみ）
-
-【制約】
-- タイトル行は【速報】または【注目】で始める（簡潔に）
-- サマリは短文で構成し、句点「。」で区切る
-- ダッシュ「-」で文をつながない
-- 「本日」などの過剰な修飾は避ける（「公開した」「公開された」は使用可）
-- 「初のXX」「だけでなく～まで」「幅広く」などAI的表現を避ける
-- 箇条書きには「∙」（中黒）のみ使用
-- 全体で600-800文字程度
-- changelogにない情報は推測しない
-- カテゴリプレフィックス（「新機能」など）を含めるが、コロンは使わない"""
-
-        # 4. ユーザープロンプト（差分抽出型）
-        if old_text:
-            user_prompt = f"""以下のchangelogページの前回と今回のスナップショットを比較し、**新たに追加された変更点**についてX投稿案を作成してください。
-
-【ページ名】
-{new_snapshot.name}
-
-【URL】
-{new_snapshot.url}
-
-【前回のスナップショット（抜粋）】
-{old_text[:3000]}
-
-【今回のスナップショット（抜粋）】
-{new_text[:3000]}
-
-【重要】
-- 前回のスナップショットと今回のスナップショットを比較し、**新たに追加された変更点のみ**を抽出してください
-- 前回から変更がない部分は含めないでください
-- changelogの構造（日付、バージョン番号など）を考慮して最新の変更を特定してください
-
-【変更がない場合の対応】
-- **もし前回と今回で実質的な内容が完全に同一の場合は、以下の形式で応答してください：**
-  ```
-  NOCHANGE
-  ```
-- 「変更なし」「完全に同一」などのメタメッセージは出力しないでください
-- 実質的な変更がない場合は、上記の「NOCHANGE」とだけ返してください
-
-上記フォーマットに従って投稿案を作成してください。"""
-        else:
-            # 初回スナップショット（前回データなし）
-            user_prompt = f"""以下のchangelogページについて、X投稿案を作成してください。
-
-【ページ名】
-{new_snapshot.name}
-
-【URL】
-{new_snapshot.url}
-
-【ページ内容（抜粋）】
-{new_text[:4000]}
-
-【重要】
-このページは初回スナップショットのため、最新の重要な変更点に焦点を当てて投稿案を作成してください。
-
-上記フォーマットに従って投稿案を作成してください。"""
+        # 4. 共通プロンプトを使用（changelog用）
+        from post_prompt import create_user_prompt_from_changelog
+        user_prompt = create_user_prompt_from_changelog(
+            new_snapshot.url,
+            new_snapshot.name,
+            old_text if old_text else "",
+            new_text
+        )
 
         # 5. API呼び出し
         message = client.messages.create(
@@ -474,6 +391,153 @@ def generate_post_from_article(article: Dict, config: Dict) -> Optional[str]:
         return None
 
 
+def generate_post_from_rss_article(url: str, title: str, content: str, config: Dict) -> Optional[str]:
+    """RSS記事から投稿案を生成
+
+    Args:
+        url: 記事URL
+        title: 記事タイトル
+        content: 記事本文
+        config: 設定
+
+    Returns:
+        投稿案テキスト、生成失敗時はNone
+    """
+    try:
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            raise ValueError("ANTHROPIC_API_KEY が設定されていません")
+
+        client = anthropic.Anthropic(api_key=api_key)
+
+        # 共通プロンプトを使用
+        system_prompt = get_system_prompt()
+        user_prompt = create_user_prompt_from_article(url, title, content)
+
+        message = client.messages.create(
+            model="claude-sonnet-4-5-20250929",
+            max_tokens=1500,
+            system=system_prompt,
+            messages=[{
+                "role": "user",
+                "content": user_prompt
+            }]
+        )
+
+        return message.content[0].text
+
+    except Exception as e:
+        print(f"❌ RSS投稿案生成エラー: {e}")
+        return None
+
+
+def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
+    """RSSフィードを処理して新規記事の投稿案を生成
+
+    Args:
+        state: 状態管理
+        config: 設定
+
+    Returns:
+        新規記事の投稿案リスト [{"url": str, "post_text": str, "title": str}, ...]
+    """
+    feeds = config.get("rss", {}).get("feeds", [])
+    if not feeds:
+        print("📰 RSS監視: フィード設定なし")
+        return []
+
+    print(f"\n📰 RSS監視: {len(feeds)} フィード")
+
+    new_posts = []
+
+    for feed_config in feeds:
+        feed_url = feed_config["url"]
+        feed_name = feed_config["name"]
+
+        print(f"\n📡 {feed_name}")
+        print(f"   URL: {feed_url}")
+
+        try:
+            # フィード取得
+            feed = feedparser.parse(feed_url)
+
+            # エラーチェック
+            if hasattr(feed, 'status') and feed.status >= 400:
+                print(f"   ⚠️  HTTP {feed.status}: 取得失敗")
+                continue
+
+            if not feed.entries:
+                print(f"   ℹ️  記事0件")
+                continue
+
+            print(f"   ✅ 記事取得: {len(feed.entries)}件")
+
+            # 前回取得した記事URLリストを取得
+            previous_urls = state.get_rss_article_urls(feed_url)
+            if previous_urls is None:
+                previous_urls = []
+                print(f"   ℹ️  初回取得（全記事を対象）")
+
+            # 今回取得した記事URLリスト
+            current_urls = [entry.link for entry in feed.entries]
+
+            # 差分（新規記事）を抽出
+            new_urls = set(current_urls) - set(previous_urls)
+
+            if new_urls:
+                print(f"   🆕 新規記事: {len(new_urls)}件")
+            else:
+                print(f"   ℹ️  新規記事なし")
+                # 記事URLリストを更新
+                state.set_rss_article_urls(feed_url, current_urls)
+                continue
+
+            # 新規記事を処理
+            for entry in feed.entries:
+                if entry.link not in new_urls:
+                    continue
+
+                print(f"\n   📄 新規記事: {entry.title[:60]}...")
+
+                # 記事本文を取得
+                article_title, article_content = fetch_article_content_safe(entry.link)
+
+                if not article_content:
+                    print(f"      ⚠️  記事本文取得失敗: {entry.link}")
+                    continue
+
+                print(f"      ✅ 記事本文取得成功: {len(article_content)}文字")
+
+                # 投稿案を生成
+                post_text = generate_post_from_rss_article(
+                    entry.link,
+                    article_title or entry.title,
+                    article_content,
+                    config
+                )
+
+                if post_text:
+                    print(f"      ✅ 投稿案生成成功")
+                    new_posts.append({
+                        "url": entry.link,
+                        "post_text": post_text,
+                        "title": article_title or entry.title,
+                        "feed_name": feed_name
+                    })
+                else:
+                    print(f"      ⚠️  投稿案生成失敗")
+
+            # 記事URLリストを更新
+            state.set_rss_article_urls(feed_url, current_urls)
+            print(f"   💾 記事URLリスト保存: {len(current_urls[:20])}件")
+
+        except Exception as e:
+            print(f"   ❌ エラー: {e}")
+            continue
+
+    return new_posts
+
+
 def is_meta_message(post_text: str) -> bool:
     """投稿案がメタメッセージかどうかを判定
 
@@ -531,8 +595,8 @@ def main():
     if not slack_webhook_url:
         raise ValueError("環境変数 SLACK_WEBHOOK_URL が設定されていません")
 
-    # 状態管理初期化（semi-daily専用のstate）
-    state = StateManager("data/state_hourly.json")
+    # 状態管理初期化（run_daily.pyと共有）
+    state = StateManager("data/state.json")
 
     try:
         # ページスナップショット監視
@@ -614,44 +678,40 @@ def main():
                 "failure_reason": None
             }
 
-        # RSS記事収集と投稿案生成
-        print("\n📡 RSS記事収集開始")
-        rss_articles = collect_rss_articles(config)
+        # RSS記事収集と投稿案生成（新規記事のみ）
+        print("\n📰 RSS監視開始")
+        new_rss_posts = process_rss_feeds(state, config)
 
-        for article in rss_articles:
-            # 投稿案生成
-            post_text = generate_post_from_article(article, config)
-
-            if not post_text:
-                print(f"⚠️ 投稿案生成失敗: {article['title']} - スキップ")
-                # 失敗理由をdraft_mapに保存
-                draft_map[article["url"]] = {
-                    "id": None,
-                    "post_text": None,
-                    "failure_reason": "API_FAILURE"
-                }
-                continue
-
+        rss_articles = []  # Slack通知用のリスト
+        for post_data in new_rss_posts:
             # 下書き保存
             draft_id = draft_manager.save_draft(
                 {
-                    "title": article["title"],
-                    "url": article["url"],
+                    "title": post_data["title"],
+                    "url": post_data["url"],
                     "source": "rss",
-                    "published_at": article["published_at"],
+                    "published_at": datetime.now(timezone.utc).isoformat(),
                     "metadata": {
-                        "feed_name": article["feed_name"],
+                        "feed_name": post_data["feed_name"],
                         "semi_daily": True  # semi-daily由来
                     }
                 },
-                post_text
+                post_data["post_text"]
             )
-            print(f"📝 RSS記事を下書き保存: {draft_id} - {article['title'][:50]}...")
-            draft_map[article["url"]] = {
+            print(f"📝 RSS記事を下書き保存: {draft_id} - {post_data['title'][:50]}...")
+            draft_map[post_data["url"]] = {
                 "id": draft_id,
-                "post_text": post_text,
+                "post_text": post_data["post_text"],
                 "failure_reason": None
             }
+
+            # Slack通知用のリストに追加
+            rss_articles.append({
+                "title": post_data["title"],
+                "url": post_data["url"],
+                "feed_name": post_data["feed_name"],
+                "published_at": datetime.now(timezone.utc).isoformat()
+            })
 
         # 必見の更新をSlackに通知（changelogとブログ記事の両方）
         must_include_snapshots = [

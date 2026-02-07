@@ -9,28 +9,9 @@ from bs4 import BeautifulSoup
 import anthropic
 
 
-def fetch_article_content(url: str) -> tuple[str, str]:
-    """記事を取得してタイトルと本文を返す"""
-    headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; AIResearchBot/1.0)"
-    }
-    response = requests.get(url, headers=headers, timeout=30)
-    response.raise_for_status()
-
-    soup = BeautifulSoup(response.text, 'html.parser')
-
-    # タイトル取得
-    title = soup.find('title')
-    title_text = title.get_text(strip=True) if title else "Unknown"
-
-    # 不要タグを削除
-    for tag in soup(['script', 'style', 'nav', 'footer', 'header']):
-        tag.decompose()
-
-    # 本文取得
-    content = soup.get_text(separator='\n', strip=True)
-
-    return title_text, content
+# 共通モジュールから import
+from article_fetcher import fetch_article_content
+from post_prompt import get_system_prompt, create_user_prompt_from_article
 
 
 def generate_post(url: str, title: str, content: str) -> str:
@@ -41,63 +22,9 @@ def generate_post(url: str, title: str, content: str) -> str:
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    # 既存のrun_daily.pyのプロンプトを簡略化して使用
-    system_prompt = """あなたはAI業界のトレンドを追うX（Twitter）アカウントの投稿作成者です。
-読者は生成AI活用に積極的なWebエンジニアです。
-
-【重要な原則】
-- ニュースキャスター風の速報スタイルで、読者の注目を引く
-- 具体的で実用的な情報を提供する
-- 読者が「自分も使ってみたい」と思える内容にする
-- 抽象的な表現（「革新的」「画期的」）は避け、何ができるかを明示する
-- 絵文字は最小限に抑える
-- セクション番号は「1.」「2.」「3.」の形式で構造化する
-
-【出力フォーマット】
-【速報】または【注目】企業名、製品/機能名「XXX」を発表
-
-企業名が新製品/新機能を発表した。[主要な特徴や成果を1-2文で]。[具体的な数値や改善点があれば記載]。
-
-{url}
-
-💡 業界インパクト（または主要ポイント）
-・[具体的な効果や特徴1]
-・[具体的な効果や特徴2]
-・[具体的な効果や特徴3]
-
-1. [セクション名]
-・ポイント1
-・ポイント2
-・ポイント3
-
-2. [セクション名]
-・ポイント4
-・ポイント5
-
-【制約】
-- タイトル行は【速報】または【注目】で始める（簡潔に）
-- サマリは短文で構成し、句点「。」で区切る
-- ダッシュ「-」で文をつながない
-- 「本日」などの過剰な修飾は避ける（「発表した」「公開した」は使用可）
-- 具体的な数値や成果があれば必ず含める
-- 「初のXX」「だけでなく～まで」「幅広く」などAI的表現を避ける
-- 各セクションの箇条書きは3-5項目
-- 箇条書きには「・」（中黒）のみ使用
-- 全体で600-800文字程度
-- 記事にない情報は推測しない"""
-
-    user_prompt = f"""以下の記事について、X投稿スレッドの素案を作成してください。
-
-【URL】
-{url}
-
-【記事タイトル】
-{title}
-
-【記事本文（抜粋）】
-{content[:4000]}
-
-上記フォーマットに従って投稿案を作成してください。"""
+    # 共通プロンプトを使用
+    system_prompt = get_system_prompt()
+    user_prompt = create_user_prompt_from_article(url, title, content)
 
     message = client.messages.create(
         model="claude-sonnet-4-5-20250929",
