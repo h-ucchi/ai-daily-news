@@ -4182,6 +4182,1111 @@
       "post_text": "申し訳ございませんが、提供された情報はYouTubeの標準的なフッター情報のみで、具体的な記事内容や動画の詳細が含まれていません。\n\nX投稿スレッドを作成するには、以下の情報が必要です：\n\n**必要な情報：**\n- 動画のタイトル\n- 動画の説明文\n- 発表内容の詳細（製品名、機能、特徴など）\n- 企業名や発表者\n- 具体的な数値や成果\n\n**ご確認いただきたいこと：**\n1. YouTubeのURLは正しく開けますか？\n2. 動画の概要欄に記事内容が記載されていますか？\n3. 別の記事ソースやプレスリリースはありますか？\n\n動画の実際の内容や説明文をご提供いただければ、速報スタイルの投稿案を作成いたします。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "60b01f10-021c-4e28-87b7-f4290520bfbb",
+      "created_at": "2026-02-08T23:48:22.898611+00:00",
+      "item": {
+        "title": "Release v2.1.37 · anthropics/claude-code · GitHub",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.37",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.898578+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【速報】Anthropic、「Claude Code v2.1.37」をリリース\n\nAnthropicが開発者向けツール「Claude Code」の最新版v2.1.37をリリースした。`/extra-usage`有効化直後に`/fast`コマンドが使用できない不具合を修正。開発フロー改善により、高速モード切替の待機時間が解消された。\n\nhttps://github.com/anthropics/claude-code/releases/tag/v2.1.37\n\n💡 主要ポイント\n・`/extra-usage`と`/fast`の連携動作を最適化\n・コマンド切替の待機時間を削減\n・開発者の作業効率が向上\n\n1. 修正内容\n・`/extra-usage`有効化後、`/fast`が即座に利用可能に\n・コマンド間の依存関係を改善\n・切替時のエラーハンドリングを強化\n\n2. 開発者への影響\n・高速モードへの移行がスムーズに\n・使用量調整と速度切替を同時実行可能\n・開発ワークフローの中断が減少",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "022483c3-1e36-4ae7-9919-8e2094373a54",
+      "created_at": "2026-02-08T23:48:22.904564+00:00",
+      "item": {
+        "title": "Release v2.1.36 · anthropics/claude-code · GitHub",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.36",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.904546+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【速報】Anthropic、Claude Code v2.1.36でOpus 4.6のFast Mode対応を発表\n\nAnthropicがClaude Codeの最新版v2.1.36をリリースした。Opus 4.6モデルでFast Modeが利用可能になった。コーディング作業の応答速度向上が期待される。\n\nhttps://github.com/anthropics/claude-code/releases/tag/v2.1.36\n\n💡 主要ポイント\n・Opus 4.6でFast Mode機能が新たに利用可能に\n・コーディングアシスタント機能の応答速度が向上\n・公式ドキュメントでFast Modeの詳細を公開\n\n1. Fast Modeの特徴\n・Opus 4.6モデルでの高速応答を実現\n・コーディング作業の待機時間を短縮\n・既存のOpus品質を維持しながら速度改善\n\n2. 開発者への影響\n・プロトタイピング速度の向上\n・反復的な開発フローの効率化\n・詳細は公式ドキュメント（https://code.claude.com/docs/en/fast-mode）で確認可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f2d8d848-3ef3-49c8-a4e4-feff4a7bc69c",
+      "created_at": "2026-02-08T23:48:22.910553+00:00",
+      "item": {
+        "title": "Fast mode for Claude Opus 4.6 is now in preview for GitHub Copilot - GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-02-07-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.910538+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【速報】GitHub、Claude Opus 4.6の高速モード「Fast mode」を公開プレビューで提供開始\n\nGitHubがCopilot向けにClaude Opus 4.6の高速モードを公開プレビューで提供開始した。出力速度が最大2.5倍に向上。Opus 4.6と同等の性能を維持しながら推論速度を大幅改善。\n\nhttps://github.blog/changelog/2026-02-07-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot\n\n💡 主要ポイント\n・出力トークン速度が最大2.5倍高速化\n・Opus 4.6の知性レベルは維持\n・Copilot Pro+とEnterpriseユーザーが利用可能\n\n1. 利用可能な環境\n・Visual Studio Code（チャット、編集、エージェントモード全て）\n・Copilot CLI\n・段階的なロールアウト（順次利用可能に）\n\n2. 利用開始方法\n・Copilot Enterpriseプラン管理者による設定が必要\n・Copilot設定でFast modeポリシーを有効化\n・モデルピッカーから選択可能\n\n3. 技術的特徴\n・研究プレビュー段階での提供\n・推論速度の大幅改善に焦点\n・実験的リリース",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "1bdd131e-a252-4384-8f79-1ce6e25bb27b",
+      "created_at": "2026-02-08T23:48:22.916383+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/keycard-2026-is-the-year-of-agents-rFx2QSzx",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.916369+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIエージェント管理のKeycard特集「2026年はエージェントの年」\n\na16zパートナーJoel de la GarzaがKeycard CEO Ian Livingstoneと対談。2025年に登場した真のAIエージェントが、2026年には全企業が本番環境導入を急ぐ段階に入る。エージェント管理プラットフォームへの需要が急拡大する見通し。\n\nhttps://ai-a16z.simplecast.com/episodes/keycard-2026-is-the-year-of-agents-rFx2QSzx\n\n💡 主要ポイント\n・2026年、企業のAIエージェント本番導入が加速\n・エージェント群の管理・制御が新たな課題に\n・消費者より先に企業での採用が進む\n\n1. コパイロットからエージェントへの進化\n・支援ツールから自律実行への移行が進行中\n・ツール呼び出し機能の実装が鍵\n・複数エージェントの協調動作が標準化\n\n2. セキュリティとコントロール\n・ツール呼び出し時のセキュリティリスクが顕在化\n・エージェント群の統制管理が必須要件に\n・企業は権限管理とガバナンス体制の構築が急務\n\n3. エンタープライズ先行の理由\n・明確なROIと業務フローへの組み込みやすさ\n・既存システムとの統合ニーズの高さ\n・統制された環境でのリスク管理が可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "cc969f98-28c6-4044-bb60-9a2450af22e7",
+      "created_at": "2026-02-08T23:48:22.922284+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/the-trillion-dollar-ai-software-development-stack-xYS2_Aw3",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.922271+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIコーディング市場の分析レポート「1兆ドル規模のAI開発スタック」を公開\n\na16zのインフラ担当パートナーが、AIコーディング市場の現状と将来展望を解説。「エージェント＋環境」が開発ループをどう変えているか、ROIが最も早く現れる領域について分析。\n\nhttps://ai-a16z.simplecast.com/episodes/the-trillion-dollar-ai-software-development-stack-xYS2_Aw3\n\n💡 主要ポイント\n・レガシーコード移行で既に投資対効果が実証済み\n・リポジトリやPRに新しい抽象化が必要になる可能性\n・エージェントをツールではなくユーザーとして扱う設計思想\n\n1. エージェント開発環境の変化\n・「エージェント＋環境」モデルが開発プロセスを再定義\n・従来の開発ループが大きく変わりつつある\n・新しいワークフローへの移行が進行中\n\n2. 新興ツールボックス\n・サンドボックス環境の整備\n・コード検索・解析機能の強化\n・エージェント最適化されたドキュメント\n・オーケストレーション層の構築\n\n3. エンジニアリングチームへの影響\n・トークンエコノミクスが予算計画に影響\n・レガシーコード移行で早期のROI実現\n・エージェントをユーザー視点で設計する新たな機会",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "318cf1ac-3716-4972-8b0e-c2e1a0315101",
+      "created_at": "2026-02-08T23:48:22.928207+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/material-security-ceo-how-to-find-your-ideal-customer-zZVrL5A6",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.928193+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、Material Security CEOとの対談「理想の顧客を見つける方法」を公開\n\na16z General PartnerのMartin Casadoが、Material Security共同創業者・CEOのAbhishek Agrawalと対談。スタートアップにおける理想顧客プロファイル（ICP）の発見プロセスと顧客管理の実践手法を議論した。\n\nhttps://ai-a16z.simplecast.com/episodes/material-security-ceo-how-to-find-your-ideal-customer-zZVrL5A6\n\n💡 主要ポイント\n・プロダクト開発より「誰のため」を定義する難しさ\n・実践的な顧客プロファイル発見手法\n・過熱市場での本質的シグナルの見極め方\n\n1. 理想顧客プロファイルの発見\n・製品より顧客定義が事業成功の鍵\n・Material Securityの実例に基づく具体的アプローチ\n・初期段階での顧客選定の判断基準\n\n2. 顧客管理の実践\n・あらゆるタイプの顧客への対応方法\n・セキュリティ企業ならではの顧客課題\n・スケール時の顧客関係構築\n\n3. 市場環境の読み方\n・バブル的市場での真のニーズの把握\n・ノイズと本質的シグナルの区別\n・持続可能な成長のための判断軸\n\n※Material SecurityはエンタープライズメールセキュリティのB2B SaaS企業",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "44f24da5-ee26-4e62-8c29-9bf17df8844a",
+      "created_at": "2026-02-08T23:48:22.934019+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/when-deepfakes-steal-30m-the-new-edge-of-cybercrime-Ju51B3Oj",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.934005+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、ディープフェイク詐欺とAI防御の最前線を解説\n\na16zがポッドキャストで3000万ドル規模のディープフェイク詐欺事例を紹介。Doppel SecurityのCEO Kevin Tianが、LLMを活用した攻撃の自動検知と対策を語る。\n\nhttps://ai-a16z.simplecast.com/episodes/when-deepfakes-steal-30m-the-new-edge-of-cybercrime-Ju51B3Oj\n\n💡 主要ポイント\n・攻撃側も防御側もLLMを活用する時代に突入\n・従来の手動対応では追いつかない攻撃規模に\n・推論モデルによる誤検知削減が実用化の鍵\n\n1. ソーシャルエンジニアリング攻撃の3V\n・Volume：攻撃の量が増大\n・Velocity：攻撃スピードが加速\n・Variety：攻撃手法が多様化\n\n2. Doppelの技術アプローチ\n・推論モデルと強化学習で誤検知を削減\n・攻撃の自動検知から削除まで対応\n・「vibe phishing」で実践的な従業員訓練を提供\n\n3. セキュリティ業界の変化\n・手動のサイバーインテリジェンスからAI駆動ソフトウェアへ\n・現在のボトルネックはモデルコストではなくエンジニアリング工数\n・適切なコンテキスト提供が精度向上の決め手",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "457510d5-4523-4eb3-82c0-a52ca6f891db",
+      "created_at": "2026-02-08T23:48:22.940717+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/how-ai-will-change-photography-forever-VipBASBk",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.940695+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIによる写真の未来を語るポッドキャスト公開\n\na16z General PartnerのMartin Casado氏らが、Lytro創業者Ren Ng氏、Phota Labs共同創業者らと「AI時代の写真」について議論した。数年前の思い出を今から撮り直せる技術について語る。AIは写真の「決定的瞬間」という概念を変えつつある。\n\nhttps://ai-a16z.simplecast.com/episodes/how-ai-will-change-photography-forever-VipBASBk\n\n💡 主要ポイント\n・過去の写真を照明や表情まで修正して「撮り直す」技術\n・ライトフィールドカメラからスマートフォン写真、AI写真編集への進化\n・フィルタではなくアイデンティティとコンテキストを保持した編集\n\n1. 議論の焦点\n・ライトフィールド写真技術の誕生から現在のAI搭載写真編集までの変遷\n・「瞬間を捉える」という写真の本質がAIによってどう変わるか\n・美的センスと同じく真正性（authenticity）が重要になる理由\n\n2. 技術的トピック\n・ハードウェアイノベーションからソフトウェアイノベーションへの移行\n・個人に最適化されたビジュアル生成AI\n・ユーザー行動とジェネレーティブAIの関係\n\n3. 未来の写真撮影\n・レンズに依存しない写真技術の可能性\n・ユーザーを「知っている」モデルによる写真生成\n・コンピュテーショナルフォトグラフィの進化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f75df1bf-1114-41cc-ad78-32fe7f916a0b",
+      "created_at": "2026-02-08T23:48:22.949211+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/how-openai-built-its-coding-agent-C6frUqag",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.949193+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "# 分析と投稿案作成\n\nこの記事はポッドキャストエピソードの情報ですが、具体的な技術詳細や数値データが限られています。エピソードサマリーから得られる情報のみで投稿を作成します。\n\n---\n\n【注目】OpenAI、コーディングエージェント「Codex」の舞台裏を公開\n\nOpenAIのCodexが初月で数十万件のプルリクエストを処理した。a16zのポッドキャストで、製品リードのAlexander Embiricosが開発の経緯、高いPR成功率の理由、自律型エージェントの安全性課題について語った。\n\nhttps://ai-a16z.simplecast.com/episodes/how-openai-built-its-coding-agent-C6frUqag\n\n💡 主要ポイント\n・初月で数十万件のプルリクエストを実際にマージ\n・高いPR成功率を実現する仕組み\n・開発者や学生のコーディング業務への影響\n\n1. Codexの実績と特徴\n・リリース初月から実運用環境で大量のPRを処理\n・単なるコード補完ではなく完全なPR作成が可能\n・実用レベルの品質でマージ可能なコードを生成\n\n2. 開発の背景\n・製品開発チームが直面した課題と解決策\n・自律型エージェントの安全性に関する技術的考慮\n・開発者ワークフローへの統合方法\n\n3. ソフトウェア開発への影響\n・開発者の作業パターンの変化\n・プログラミング学習への影響\n・今後のソフトウェア開発の方向性",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e4b44fb1-e134-4087-84da-c1758bef9400",
+      "created_at": "2026-02-08T23:48:22.963609+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/models-modalities-and-memes-creating-compelling-ai-characters-_sIjegvt",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.963586+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Hedra、表情豊かなAIキャラクター動画生成技術を公開\n\na16zのポッドキャストでHedra CEO Michael Lingelbachが、リアルタイムで感情表現可能なAI動画生成技術について解説。音声、画像、キャラクター制御を統合したモデルで、ミームコンテンツから企業研修ツールまで幅広く活用されている。\n\nhttps://ai-a16z.simplecast.com/episodes/models-modalities-and-memes-creating-compelling-ai-characters-_sIjegvt\n\n💡 主要ポイント\n・「キャラクター」を設計の中心に据えた独自アーキテクチャ\n・静的アバターから制御可能なペルソナへのシフト\n・コンシューマー発見→エンタープライズ展開の実例\n\n1. 技術的特徴\n・音声、画像、キャラクター制御をリアルタイムで統合\n・全身表現と対話に特化したマルチモーダル生成\n・ユーザー制御による自然なAIパフォーマンス実現\n\n2. 実用事例と課題\n・バイラルミームから企業研修ツールまで実装済み\n・既存LLMでは感情的に本物らしいキャラクター生成が困難\n・創造的ワークフローのスケール化が次の焦点",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "966e6eb8-b081-4a54-ac64-a5d0f8b8159d",
+      "created_at": "2026-02-08T23:48:22.969708+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/speed-performance-and-passion-fals-approach-to-ai-inference-nBeW8e4u",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.969694+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Fal、スピード最適化に特化した生成AI推論プラットフォームの設計思想を公開\n\na16zのポッドキャストでFalの共同創業者兼CEO Burkay Gur氏らが登場。画像・動画・音声モデルの推論速度を極限まで高速化したプラットフォームの開発背景を語った。GPU不足の制約下で生まれた技術設計が特徴。\n\nhttps://ai-a16z.simplecast.com/episodes/speed-performance-and-passion-fals-approach-to-ai-inference-nBeW8e4u\n\n💡 主要ポイント\n・生成AIモデルの実行速度とユーザー体験に特化した設計\n・限られたGPUリソースを最大活用する技術アプローチ\n・画像・動画・音声の各モダリティに対応した推論基盤\n\n1. プラットフォーム設計の背景\n・AI基盤のGPU逼迫期に少ないリソースで最適化を追求\n・生成メディアクラウドとしての位置づけ\n・速度とパフォーマンスを中核機能に据えた開発方針\n\n2. 技術的アプローチ\n・画像・動画・音声モデルの推論速度を重点的に改善\n・ユーザー体験を損なわない応答時間の実現\n・チームの技術的こだわりが生んだ最適化手法\n\n3. 市場動向への見解\n・動画モデル分野での競争激化\n・新しいモダリティへの期待と展開\n・プロダクト開発における速度の重要性",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "dcaf44c7-65aa-4ba3-ae0e-405a4f57bf73",
+      "created_at": "2026-02-08T23:48:22.975771+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/how-to-vibe-code-securely-Zoh0MO54",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.975757+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIコーディングのセキュリティ実践を解説\n\nSocket CEOのFeross Aboukhadijehがa16zパートナーJoel de la Garzaと対談。LLMを活用した「Vibe Coding」のセキュリティリスクと実践方法を議論した。生産性向上とセキュリティの両立が焦点となっている。\n\nhttps://ai-a16z.simplecast.com/episodes/how-to-vibe-code-securely-Zoh0MO54\n\n💡 主要ポイント\n・AI支援コーディングでも従来と同じセキュリティ原則が必要\n・パッケージの検証とコードレビューは省略不可\n・生産性とセキュリティは適切な運用でトレードオフにならない\n\n1. セキュリティファーストのAIコーディング\n・LLMによる生成コードも通常のコードと同様に扱う\n・依存パッケージの安全性確認を徹底する\n・コードレビュープロセスを維持する\n\n2. Socket CEOの実践知見\n・セキュリティ企業がLLMを早期採用した経験を共有\n・開発ワークフローの生産性向上事例を紹介\n・実装時の注意点と回避すべき落とし穴を解説\n\n3. 安全なサプライチェーンの構築\n・速度優先でセキュリティを犠牲にしない原則\n・開発者が実践すべき具体的な対策\n・LLMとセキュリティの両立手法",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "65bcefec-0188-407a-9b29-6313d8da8952",
+      "created_at": "2026-02-08T23:48:22.981841+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/ai-is-upending-saas-pricing-2YHTA0_S",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.981827+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AI時代のSaaS価格モデル転換を解説\n\na16zのGP Martin CasadoとMetronome CEO Scott Woodyが、AIによるソフトウェア価値提案の根本的変化を議論。クラウド時代の「ユーザー数課金」からAI時代の「アウトプット課金」への移行を詳説している。\n\nhttps://ai-a16z.simplecast.com/episodes/ai-is-upending-saas-pricing-2YHTA0_S\n\n💡 主要ポイント\n・価値基準が「システムアクセス数」から「実行した作業量」へシフト\n・従来のSaaSモデルでは AI製品の価値を捉えきれない\n・GTMチームとカスタマーサクセスの評価指標も再設計が必要\n\n1. 価値指標の構造的変化\n・クラウド時代：共有システムへのアクセス権が価値（例：Salesforceのユーザー数課金）\n・AI時代：ソフトウェアが代行する作業そのものが価値（コード生成、チケット対応など）\n・「ユーザー数」から「アウトプット量」への評価軸変更\n\n2. 新価格モデルの台頭\n・使用量ベース課金（usage-based billing）の浸透\n・ハイブリッド課金モデルの設計手法\n・従来モデルとの共存戦略\n\n3. 組織設計への影響\n・営業チームのインセンティブ設計変更\n・カスタマーサクセスの成功指標再定義\n・SaaS創業者が直面するトランジション戦略",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "295f85f6-6dca-4d3b-a515-fb15021447b0",
+      "created_at": "2026-02-08T23:48:22.987901+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/the-ai-infrastructure-stack-with-jennifer-li-GlVBpQy4",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.987888+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIインフラの未来を語る「The AI Infrastructure Stack」を公開\n\na16z ゼネラルパートナーのJennifer Li氏がAIによるソフトウェアスタック全層の再構築について解説。新たなミドルウェアの需要と、次世代の価値あるAI企業が「地味なインフラ提供者」である理由を語った。\n\nhttps://ai-a16z.simplecast.com/episodes/the-ai-infrastructure-stack-with-jennifer-li-GlVBpQy4\n\n💡 主要ポイント\n・AIがソフトウェアスタックの全レイヤーを再構築中\n・新しいタイプのミドルウェアへの需要が急増\n・次の勝者は華やかなアプリではなくインフラ企業\n\n1. AIインフラの再編成\n・従来のスタック構造がAIにより根本から変化\n・各レイヤーで新しい技術要件が発生\n・既存のインフラでは対応できない課題が顕在化\n\n2. ミドルウェアの重要性\n・AIアプリケーションとモデル間を繋ぐ層が必要\n・データ管理、推論最適化、モニタリングなど新カテゴリ\n・開発者の生産性を左右する重要な位置づけ\n\n3. 投資家の視点\n・表に出ない「unsexy」な企業に注目\n・明日のインテリジェントアプリを支えるレイヤー\n・長期的な価値創出はインフラ層で起きる",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e2fee950-85f8-4398-b0c8-32d79dcd91d2",
+      "created_at": "2026-02-08T23:48:22.994328+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/ais-unsung-hero-data-labeling-and-expert-evals-FiUonGPv",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:22.994315+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Labelbox CEO、AIデータラベリングの進化を語る\n\nLabelbox CEOのManu Sharmaが、AIデータラベリングと評価の変遷について語った。初期の教師あり学習から現代の強化学習ループまで、データラベリングの役割が大きく変化している。価値創出の中心が事前学習から事後学習へ移行した点が鍵となる。\n\nhttps://ai-a16z.simplecast.com/episodes/ais-unsung-hero-data-labeling-and-expert-evals-FiUonGPv\n\n💡 主要ポイント\n・AIモデル構築から「AI知能のレンタル」へとパラダイム転換\n・コーディング、医療、カスタマーサービスのプロが評価に参加\n・Meta by Scale AI買収でデータと人材の重要性が裏付けられた\n\n1. ビジネスモデルの転換\n・企業は独自モデル構築からベースモデルのカスタマイズへ\n・ハイパースケーラーとAIラボが数十億ドル規模のデータセット投資\n・ソフトウェアツール思考からサービス提供モデルへの移行\n\n2. 評価システムの高度化\n・モデルが自身の回答品質を評価する時代に\n・専門職による「アライナー」ネットワークを世界規模で構築\n・ファウンデーションモデル時代に合わせた評価手法の刷新\n\n3. 実践アプローチ\n・MVPを素早く構築して検証する文化\n・コンピュータビジョンから生成AIへの軸足転換に成功\n・事前学習から事後学習へ価値移動を捉えた戦略",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "052a27a3-fc35-48d5-8e78-262a44b7081a",
+      "created_at": "2026-02-08T23:48:23.000697+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/ai-data-engineering-and-the-modern-data-stack-wXXhHLo7",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.000683+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】dbt Labs CEO、a16zポッドキャストで「AIとデータエンジニアリングの次章」を語る\n\ndbt Labs創業者兼CEOのTristan Handyが、a16zのJennifer Li、Matt Bornsteinと対談。モダンデータスタックの現在地とAIがもたらすデータワークフローの変革について議論した。\n\nhttps://ai-a16z.simplecast.com/episodes/ai-data-engineering-and-the-modern-data-stack-wXXhHLo7\n\n💡 主要ポイント\n・モダンデータスタックは成長の踊り場に到達\n・AIによるセルフサービス分析の可能性と課題\n・新機能「Fusion Engine」の開発者体験への影響\n\n1. AIとデータ分析の未来\n・AI導入の焦点は「人の関与の有無」\n・AIはアナリストの代替ではなく、全社的なセルフサービスを実現するツール\n・検証なしの自動化は依然としてリスクが高い\n\n2. データエンジニアリングの変化\n・SQLコンパイラなどの自動化ツールがエンジニアの働き方を再定義\n・dbtの新機能「Fusion Engine」が開発者ワークフローに変革をもたらす\n・データ業界での買収とプロダクトローンチの動向",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b7616488-848d-41e9-86e8-cf0f05666e97",
+      "created_at": "2026-02-08T23:48:23.010588+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/enabling-agents-and-battling-bots-on-an-ai-centric-web-LysFuQCF",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.010567+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIエージェント時代のWeb防御戦略を特集\n\na16zのポッドキャストでArcjet CEO David Myttonが、AI駆動型Webにおける新たなセキュリティ課題を解説。従来のBot対策では対応できない複雑化する脅威への対処法を議論。エッジでの高速推論が実現する新しい可能性を提示した。\n\nhttps://ai-a16z.simplecast.com/episodes/enabling-agents-and-battling-bots-on-an-AI-centric-web-LysFuQCF\n\n💡 主要ポイント\n・AIエージェントと悪意あるBotの区別が困難に\n・レイテンシーを追加せずに全リクエスト分析が必要\n・低コスト推論でフルコンテキスト判定が可能に\n\n1. 新しいセキュリティ課題\n・顧客代理で購入するAIエージェントと攻撃Botの判別\n・従来の脅威分析手法が通用しない状況\n・アクセス元とアクションの多様化による複雑性増加\n\n2. 技術的ソリューション\n・エッジでのサブセカンド推論実行\n・ユーザー、セッション、アプリケーション情報を含むフルコンテキストチェック\n・詐欺防止、コンテンツフィルタリング、広告技術への応用\n\n3. ゲストとの議論内容\n・Arcjet CEO David Myttonとa16zパートナーJoel de la Garzaが対談\n・推論コスト削減がコンテキスト活用の鍵\n・リクエスト分析における待機時間ゼロ実現の重要性",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f0d7fb34-a252-49db-a488-8a09e7c28445",
+      "created_at": "2026-02-08T23:48:23.019475+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/giving-new-life-to-unstructured-data-with-llms-and-agents-uk2KZglN",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.019460+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Instabase CEO、非構造化データ活用の新展開を語る\n\nInstabaseのCEO Anant Bhardwajがa16zポッドキャストに出演。LLMによる非構造化データ分析の現状と、AIエージェントによる自動化の将来像を解説した。WhatsAppでの本人確認・ローン審査など、実用例も紹介された。\n\nhttps://ai-a16z.simplecast.com/episodes/giving-new-life-to-unstructured-data-with-llms-and-agents-uk2KZglN\n\n💡 主要ポイント\n・従来のRPAでは対応困難だった非構造化データをLLMで処理可能に\n・レイアウト認識モデルによるPDF・複雑文書からの情報抽出\n・エンタープライズでは「完璧さ」より「予測可能性」が重要\n\n1. 技術的アプローチ\n・PDFや複雑な文書構造を理解するレイアウト認識モデルを開発\n・従来のRPAが苦手とした非構造化入力への対応を実現\n・文書からの洞察抽出精度を向上\n\n2. 実用化の視点\n・エンタープライズ導入では予測可能性を最重要指標に設定\n・WhatsApp経由での本人確認・ローン承認など具体的なユースケース\n・文書分析に基づくアクション自動化をAIエージェントで実現\n\n3. 今後の展開\n・コンパイル時AIエージェント（ランタイムではない）の活用拡大\n・複雑なワークフロー全体で自動化をスケールさせる分散型・連合型AIシステムの構想\n・文書処理から意思決定までの一貫した自動化を目指す",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "92b10daf-09a9-4573-9287-7a59902e5b19",
+      "created_at": "2026-02-08T23:48:23.027356+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/beyond-leaderboards-lmarenas-mission-to-make-ai-reliable-FXSI58J_",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.027341+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、LMArena共同創業者との対談でAI評価の未来を議論\n\nLMArenaの共同創業者3名とa16zのパートナーが、AI評価の新しいアプローチについて語った。従来のベンチマークでは実用化のスピードに追いつけない中、数百万人のユーザー投票でモデルを評価する手法が注目を集めている。\n\nhttps://ai-a16z.simplecast.com/episodes/beyond-leaderboards-lmarenas-mission-to-make-ai-reliable-FXSI58J_\n\n💡 主要ポイント\n・研究プロジェクトからAIスタックの中核へ進化\n・専門家のみの評価から、ユーザー選好による実践的評価へ移行\n・リアルタイムテストによるミッションクリティカルなAI実現\n\n1. 評価手法の転換\n・従来の専門家中心の評価では不十分に\n・ユーザー選好がモデルの能力と限界を明らかにする\n・新鮮で主観的なデータが信頼性向上に不可欠\n\n2. プロダクト展開\n・パーソナライズされたリーダーボードの構築\n・評価SDK（開発キット）の提供\n・大規模モデル向けCI/CDパイプラインの実現\n\n3. 今後の方向性\n・プロンプトごとのリーダーボード実装\n・エージェント等の新しいAI形態への対応\n・オープンソースとオープンな姿勢の維持",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3073f8d0-e3ad-4296-89f1-465454cfb293",
+      "created_at": "2026-02-08T23:48:23.033779+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/building-ai-systems-you-can-trust-AEtnbIY6",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.033765+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zポッドキャスト、生成AIシステムの「信頼性テスト」の重要性を解説\n\nDistributional CEO Scott Clarkが、生成AIの本番導入における継続的テストの必要性を語る。従来のパフォーマンス指標だけでは不十分な理由を具体的に説明。\n\nhttps://ai-a16z.simplecast.com/episodes/building-ai-systems-you-can-trust-AEtnbIY6\n\n💡 主要ポイント\n・非決定的な出力により、同じ入力でも異なる結果が生じる\n・上流の小さな変更が下流に大きな影響を与える\n・企業のAI導入で信頼性が採用の鍵となる\n\n1. 従来の評価手法の限界\n・正確性や速度などの性能指標では振る舞いの変化を捉えられない\n・生成AIの非決定的な性質に対応した新しいテスト手法が必要\n・継続的な動作検証が本番環境で不可欠\n\n2. 企業導入の現実的課題\n・集中型AIプラットフォームによる複雑性の管理\n・シャドーAIの増加がセキュリティとコンプライアンスに影響\n・プロトタイプから本番環境へのスケール戦略\n\n3. 信頼性確保のアプローチ\n・振る舞いテストによる予期せぬ動作の検出\n・モデルの挙動変化を継続的に監視\n・責任あるAI利用を担保する仕組みの構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4ecf6199-c7e7-451a-ad07-7ce80b5a60ce",
+      "created_at": "2026-02-08T23:48:23.040131+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/whos-coding-now-ai-and-the-future-of-software-development-kII71_li",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.040116+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zのインフラパートナーが語る「AIがソフトウェア開発を再定義する時代」\n\na16zのインフラ部門パートナー3名が、生成AIによる開発現場の変化を分析。生産性向上の数値的効果から、プログラミング教育の未来まで議論した。AIコーディングツールが「開発者」の定義を変える可能性に焦点を当てている。\n\nhttps://ai-a16z.simplecast.com/episodes/whos-coding-now-ai-and-the-future-of-software-development-kII71_li\n\n💡 主要ポイント\n・AIコード生成による生産性向上は数兆ドル規模の市場ポテンシャル\n・プロンプトベースのプログラミングが高度な開発アシスタントへ進化中\n・Python/Javaなどの形式言語は自然言語対話の時代でも不可欠\n\n1. AIコーディングの実践的インパクト\n・「vibe coding」（感覚的なコーディング）の特性と課題\n・Stack Overflow的な用途から洗練された開発支援への進化\n・非決定論的な動作をエンタープライズ環境で管理する技術的課題\n\n2. プログラミング教育と基礎知識の重要性\n・CS教育のカリキュラムが変化する中でも基礎的抽象概念の理解は必須\n・形式言語とプロンプトベース開発の共存\n・開発者に求められるスキルセットの変化\n\n3. エンタープライズ導入の課題\n・不確実性の管理とシステム信頼性の確保\n・既存の開発ワークフローへの統合\n・AI駆動アプリケーションの品質保証",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a73a70e2-44f4-4ced-a2f2-2e66cf75e052",
+      "created_at": "2026-02-08T23:48:23.046548+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/mcp-creator-on-the-next-wave-of-llm-innovation-RBH9eGzD",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.046534+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Anthropic、MCP（Model Context Protocol）の開発背景を公開\n\nAnthropicの共同創設者David Soria ParraがMCPの設計思想を語った。LLMアプリケーションを外部ツールと接続する標準プロトコルとして、APIエコシステムのような拡張性を実現する。開発チーム外のエンジニアでも機能拡張が可能になる仕組みだ。\n\nhttps://ai-a16z.simplecast.com/episodes/mcp-creator-on-the-next-wave-of-llm-innovation-RBH9eGzD\n\n💡 主要ポイント\n・LLMアプリケーションと外部ツールの接続を標準化\n・開発チーム外のエンジニアでも機能拡張可能\n・1つのMCPサーバーで複数クライアント対応\n\n1. MCPの設計思想\n・AI applications間で統一された通信プロトコル\n・従来はクライアントごとに個別実装が必要だった問題を解決\n・SalesforceやHubSpotのようなAPI統合の標準化モデル\n\n2. 実用面での効果\n・メール送信などの機能を1つのMCPサーバーで実装\n・Cursor、Claude Desktop、Gooseなど複数環境で再利用\n・クライアントごとにツールを作り直す必要がなくなる\n\n3. エコシステムへの影響\n・エージェントが未知のツールを実行できる標準インターフェース\n・必要なコンテキストの取得方法も規定\n・LLM向けのAPIエコシステム構築を目指す",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ecf85e94-b881-4a23-b640-05465a83c988",
+      "created_at": "2026-02-08T23:48:23.052864+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/what-is-an-ai-agent-PIccwshu",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.052851+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIエージェントの定義と実装を徹底議論\n\na16zのインフラチームが「AIエージェント」の本質を多角的に分析したポッドキャストを公開した。LLMや関数との違い、価格設定、人間の代替可能性まで、実装者が直面する課題を議論。\n\nhttps://ai-a16z.simplecast.com/episodes/what-is-an-ai-agent-PIccwshu\n\n💡 主要ポイント\n・統一的な「エージェント」定義は存在するのか\n・LLM/関数との技術的境界線をどう引くか\n・データサイロがWeb連携型エージェントに与える影響\n\n1. 技術的定義の課題\n・エージェント、LLM、関数の区別が曖昧\n・業界で統一された定義が未確立\n・実装者ごとに異なる解釈が存在\n\n2. ビジネス上の論点\n・エージェントの価格設定モデル\n・人間業務の代替可能性の見極め\n・Webアクセス時のデータ分断問題\n\n3. 議論の実用性\n・フルスタックコーディングでのベンチマーク事例\n・MCPを使った開発者メール自動化\n・カスタマーサポートへの適用可能性\n\n※ a16z partners（Guido Appenzeller、Matt Bornstein、Yoko Li）による議論形式",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9456ffca-3b15-45e7-933a-b6a8be3458bb",
+      "created_at": "2026-02-08T23:48:23.073124+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/benchmarking-ai-agents-on-full-stack-coding-QGpiWJ91",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.073102+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Convex、AIエージェントのフルスタック開発能力を測定する「Fullstack-Bench」を発表\n\na16zのポッドキャストでConvex共同創業者のSujay Jayakar氏が新しいベンチマーク手法を解説した。AIエージェントが実際のアプリ開発タスクをどこまで自律的に実行できるかを評価する。型安全性などの「ガードレール」が失敗率を大幅に削減することが判明。\n\nhttps://ai-a16z.simplecast.com/episodes/benchmarking-ai-agents-on-full-stack-coding-QGpiWJ91\n\n💡 主要ポイント\n・実際のアプリ構築タスクでモデル性能を比較評価\n・型安全性の導入でエージェントの実行結果のばらつきが大幅に減少\n・ツールチェーン自体がプロンプトの一部として機能する\n\n1. Fullstack-Benchの特徴\n・フルスタック開発タスクでAIエージェントを評価\n・単なるコード生成ではなく自律的なアプリ構築能力を測定\n・実世界のユースケースに基づいた設計\n\n2. 開発者への示唆\n・巧妙なプロンプトよりも堅牢な評価手法が重要\n・軌跡管理と実行ごとのばらつきへの対処が必要\n・型安全性などの構造的制約が成功率向上のカギ\n\n3. 対象読者\n・AI活用に関心のある個人開発者\n・AIツールを組み込むインフラチームの開発者",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "bacc9781-1e7e-4465-9cde-288eb7d45bb5",
+      "created_at": "2026-02-08T23:48:23.079521+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/automating-developer-email-with-mcp-and-al-agents-cDVmKE0u",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.079506+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、開発者向けメールの自動化を特集\n\na16zのポッドキャストで、Resend CEOのZeno Rochaが開発者向けメール体験のAI化を解説。MCPプロトコルとAIエージェントによる新しいメール処理の実装例を紹介。開発者体験（DX）から「エージェント体験（AX）」への設計思想の転換が焦点となった。\n\nhttps://ai-a16z.simplecast.com/episodes/automating-developer-email-with-mcp-and-al-agents-cDVmKE0u\n\n💡 主要ポイント\n・MCPを活用したメール自動化の実装手法\n・DXからAXへの設計思想の転換\n・エージェントフレンドリーなAPI設計の実例\n\n1. メール処理の自動化\n・AIエージェントがメールの送信、解析、最適化を実行\n・開発者とエンドユーザー双方のメール体験を改善\n・プログラミング環境全体への影響を議論\n\n2. エージェント体験（AX）の登場\n・LLM駆動エージェントが製品を構築し操作する時代\n・従来のDX設計からAX設計へのシフト\n・エージェントフレンドリーなAPI設計の重要性\n\n3. MCPプロトコルの可能性\n・AI開発者向けツールの未来を深掘り\n・プロシューマーと開発者の創造サイクルを短縮\n・実装における具体的な活用方法を紹介",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f0810181-dd27-441b-b7e8-baadb841e7c3",
+      "created_at": "2026-02-08T23:48:23.085973+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/the-future-of-digital-workers-x2kUEf_N",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.085960+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】11x、AI営業エージェント「Alice」「Mike」の技術戦略を公開\n\na16zのポッドキャストで11x CTOが、AI営業エージェントの実装詳細を語った。音声AIのリアルタイム処理、マルチモーダル対応、プラットフォーム全面再構築の裏側を解説。\n\nhttps://ai-a16z.simplecast.com/episodes/the-future-of-digital-workers-x2kUEf_N\n\n💡 主要ポイント\n・真のAIエージェントと複雑なオーケストレーションの違いを明示\n・AliceとMikeで人間レベルの営業パフォーマンスを実現\n・顧客ベース拡大中にプラットフォームを全面再構築\n\n1. エージェント設計の核心\n・オーケストレーション型と自律型の技術的トレードオフ\n・リアルタイム音声AIの実装課題\n・マルチモーダルエージェント間の相互作用設計\n\n2. 11xの開発戦略\n・測定可能な顧客成果を重視した設計方針\n・稼働中システムの全面アーキテクチャ刷新\n・モデルプロバイダー選定とOSS活用のバランス\n\n3. エンタープライズAIの実践\n・営業自動化におけるスケール課題\n・急速な技術変化への対応アプローチ\n・短期イテレーションと長期戦略投資の両立\n\na16z Partner Joe Schmidtとの対談形式で、AI営業エージェント開発の最前線を語る必須エピソード。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f114774f-258d-4653-8cc3-10d94f24a21d",
+      "created_at": "2026-02-08T23:48:23.092287+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/building-the-next-generation-of-conversational-ai-gN5BfFT9",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.092274+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Sesame AI、リアルタイム音声生成技術の詳細を公開\n\na16zのポッドキャストでSesame AI共同創業者CTOのAnkit Kumar氏が登場。同社の音声技術の研究開発の裏側を解説した。フルデュプレックス会話モデリングと低レイテンシ実装の技術的課題について詳述。主要コンポーネントのオープンソース化も発表している。\n\nhttps://ai-a16z.simplecast.com/episodes/building-the-next-generation-of-conversational-ai-gN5BfFT9\n\n💡 主要ポイント\n・リアルタイム音声生成の技術的実装を詳細解説\n・音声モデルのオープンソース化で研究コミュニティに貢献\n・フルデュプレックスモデリングによる応答性向上を実現\n\n1. 技術的アプローチ\n・リアルタイム音声生成における計算効率の最適化手法\n・パーソナリティと効率性のバランス調整\n・システムレイテンシが会話品質に与える影響の分析\n・マルチモーダルAIの実装における複雑性への対処\n\n2. オープンソース戦略\n・Sesame CSM 1Bモデルの公開\n・音声合成のスケーリング則に関する知見共有\n・in-context learningによる音声表現力の向上手法\n\n3. 実用展開\n・自然言語UIとしての音声インターフェース\n・Maya + Milesデモで実証された実装例\n・人間とコンピュータのインタラクション再定義への取り組み",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4d06a8b5-be6f-4bf9-b3bf-d081173a195e",
+      "created_at": "2026-02-08T23:48:23.098789+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/agent-experience-building-an-open-web-for-the-ai-era-ssRRM1rQ",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.098776+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Netlify CEO、AI時代の新概念「Agent Experience（AX）」を提唱\n\nNetlify CEOのMatt BiilmannがWeb開発の新パラダイムを語った。AIエージェントが単なるツールでなく、開発プロセスの積極的な参加者となる「AX」の概念を提示。次の1億人のWeb開発者はAIと協働すると予測している。\n\nhttps://ai-a16z.simplecast.com/episodes/agent-experience-building-an-open-web-for-the-ai-era-ssRRM1rQ\n\n💡 主要ポイント\n・Web開発がコード生成の高速化から、思考プロセス自体の変革へ\n・AIエージェントが開発の協働者として機能する新時代\n・オープンウェブか閉鎖的プラットフォームか、岐路に立つインターネット\n\n1. Agent Experience（AX）とは\n・AIエージェントをツールでなく開発参加者として位置づける概念\n・クリエイティブプロセスと基盤インフラの両方を再定義\n・従来のUX/DXに続く、第3の設計思想\n\n2. Web開発の未来像\n・次の1億人の開発者はAIとの協働が前提\n・コード生成だけでなく、開発の思考方法そのものが変化\n・Netlifyもこの変化に対応した進化を推進\n\n3. オープンウェブの分岐点\n・AI活用が進むオープンなインターネットの実現可能性\n・一方で閉鎖的プラットフォームに支配されるリスクも\n・Webの適応が業界の未来を左右する",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2fb3d7ad-2a41-473e-b9f0-6fd855c458ee",
+      "created_at": "2026-02-08T23:48:23.105180+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/what-deepseek-means-for-cybersecurity-bzFt_hoW",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.105168+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、DeepSeekのセキュリティリスクを3名の専門家が解説\n\na16zがDeepSeek推論モデルのセキュリティリスクについて、3名のセキュリティ専門家とのポッドキャスト対談を公開した。モデル自体の脆弱性、AI生成コードの安全性、ディープフェイク対策の3つの視点から実務的な対策を議論している。\n\nhttps://ai-a16z.simplecast.com/episodes/what-deepseek-means-for-cybersecurity-bzFt_hoW\n\n💡 主要ポイント\n・DeepSeekモデル自体に存在するバックドアやジェイルブレイクの脆弱性\n・AI生成コードの安全性確保における課題とモデル訓練時の問題\n・ディープフェイクなど新たな脅威ベクトルへの対応策\n\n1. DeepSeekモデルの脆弱性（Promptfoo Ian Webster）\n・モデル内のバックドアやジェイルブレイクへの対策\n・検閲回避のリスクと防御方法\n・ユーザー側で実施可能な保護施策\n\n2. AI生成コードのセキュリティ（Truffle Security Dylan Ayrey）\n・訓練データに含まれる12,000件のAPIキーとパスワードが判明\n・モデル訓練時のセキュリティアライメントの課題\n・開発チームとセキュリティチームが実施すべき検証項目\n\n3. 新たな脅威への対応（Adaptive Brian Long）\n・ディープフェイクをはじめとする攻撃手法の増加\n・ハッカーとホワイトハットAIエージェントの攻防\n・組織と個人が警戒すべきリスク領域",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e8596b24-3bda-4d18-b37f-060a4b2cd4e8",
+      "created_at": "2026-02-08T23:48:23.111618+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/agents-lawyers-and-llms-CV33MiPf",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.111606+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】法律AI「Harvey」、エンタープライズAI製品開発の実践知見を公開\n\na16zのポッドキャストでHarvey社のプロダクト責任者Aatish Nayak氏が登壇。法律業界向けAI製品の開発において、UX設計、信頼構築、顧客エンゲージメントの実践的なアプローチを解説した。\n\nhttps://ai-a16z.simplecast.com/episodes/agents-lawyers-and-llms-CV33MiPf\n\n💡 主要ポイント\n・法律業界にはAGIや最新モデルは不要\n・既存ワークフローへの統合が成功の鍵\n・実務者が定時退社できる実用性を重視\n\n1. エンタープライズAI開発の原則\n・最先端技術より業務への適合性を優先\n・専門職の既存業務フローを補完する設計\n・クライアント対応の質向上と業務効率化を両立\n\n2. 法律業界特有の要件\n・高度な信頼性とセキュリティ基準\n・専門用語と法的文脈の正確な理解\n・弁護士の判断を支援する位置づけ\n\n3. 製品開発のアプローチ\n・ユーザー体験の継続的な改善\n・段階的な機能展開と顧客フィードバック\n・業界ベンチマーク（BigLaw Bench）による評価\n\nHarvey社は大手法律事務所向けにLLMベースの業務支援ツールを提供。本エピソードは規制産業へのAI導入を検討する開発者に参考となる内容。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "fd90eca3-1f51-40c1-89f5-f44915228f62",
+      "created_at": "2026-02-08T23:48:23.118043+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/reasoning-models-are-remaking-professional-services-Kt3C1oXU",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.118031+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Hebbia創業者が語る「推論モデルが知識労働を変える」\n\nHebbia CEOのGeorge Sivulkaがa16zポッドキャストで、推論モデルとAIエージェントによる知識労働の変革を語った。金融・法律などの専門職で、すでに顧客は重要だが単調な業務の時間を大幅削減している。\n\nhttps://ai-a16z.simplecast.com/episodes/reasoning-models-are-remaking-professional-services-Kt3C1oXU\n\n💡 主要ポイント\n・推論モデルとAIエージェントが専門職の生産性を向上\n・金融・法律業界で実際に業務時間を削減\n・チャットUIではなく、業務フローに特化した設計\n\n1. Hebbia創業の背景\n・スタンフォード時代、優秀な友人が金融業界で単調作業に追われる姿を目撃\n・「最も賢い人材が最も愚かなタスクをしている」現実に気づく\n・痛みのある場所こそビジネス機会と判断\n\n2. プロダクト設計の特徴\n・推論モデルを早期から採用\n・従来のチャットUIを廃止\n・AIネイティブユーザー向けの専用インターフェース設計\n\n3. スケーリング則への見解\n・学習時のスケーリングと推論時のスケーリングは別物\n・データと計算量の追加で性能向上は数学的特性\n・GPT-5でさらなる性能向上を予測\n\n専門職のAI活用が、実験段階から実用フェーズへ移行している好例です。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a069f028-631d-431d-bc3e-7768287d06ee",
+      "created_at": "2026-02-08T23:48:23.124493+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/data-management-for-enterprise-llms-qbA99Sv6",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.124481+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Fivetran CEO、企業のLLM活用における「データ管理の再定義」を解説\n\na16zのポッドキャストにFivetran CEOのGeorge Fraserが出演。大企業がLLMを活用する際のデータ管理戦略について議論した。既存インフラの刷新は不要だが、データの扱い方を見直す必要があると指摘している。\n\nhttps://ai-a16z.simplecast.com/episodes/data-management-for-enterprise-llms-qbA99Sv6\n\n💡 主要ポイント\n・既存のデータインフラは維持できる\n・言語モデルが理解できるデータ整備が鍵\n・企業のLLM導入における現実的なアプローチを提示\n\n1. 企業LLM活用の現実的な道筋\n・既存のデータ基盤を破棄する必要はない\n・インフラ投資を活かしながらLLM導入が可能\n・段階的な移行が実現できる\n\n2. 必要なデータ管理の変化\n・言語モデルが解釈可能なデータ構造への転換\n・データハイジーン（品質管理）の見直し\n・LLMに適したデータ整備の実践\n\n3. エンタープライズでの実装\n・大規模組織特有のデータ管理課題\n・既存システムとの統合方法\n・実用的な導入戦略\n\nFivetranはデータパイプライン自動化のリーディングカンパニー。a16zパートナーのGuido Appenzeller氏との対談形式。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "14dfe232-5c09-4770-a0b0-9bf5bc0d63ce",
+      "created_at": "2026-02-08T23:48:23.130973+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/from-nlp-to-llms-the-quest-for-a-reliable-chatbot-3iZNGUgQ",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.130960+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zポッドキャスト、Rasa CEO Alan Nichol氏がチャットボット開発の変遷を語る\n\nMartin Casado氏との対談で、従来型NLPからLLM時代のAIエージェント開発まで、実践者視点の知見を公開。LLMと固定的ビジネスロジックの組み合わせが最適解と提言。\n\nhttps://ai-a16z.simplecast.com/episodes/from-nlp-to-llms-the-quest-for-a-reliable-chatbot-3iZNGUgQ\n\n💡 主要ポイント\n・従来型NLPからLLMへの技術移行の実体験\n・自然言語処理の課題をLLMがどう解決するか\n・柔軟なLLMと固定的ロジックの実用的な組み合わせ方\n\n1. 対談者の背景\n・Alan Nichol氏：対話型AIプラットフォームRasaの共同創業者兼CEO\n・Martin Casado氏：a16zゼネラルパートナー\n・AIエージェント・チャットボット開発の第一線で活動\n\n2. 議論の焦点\n・従来型NLPでの自然言語対話の難しさ\n・LLMが自然言語インタラクションの問題をどう緩和するか\n・LLMの柔軟性とビジネスロジックの確実性を両立させる設計思想\n\n3. 実務への示唆\n・タスク指向型対話システムにおけるLLM活用法\n・自律的LLMアプリケーションのランタイム設計\n・エンタープライズ向けAIエージェント構築のベストプラクティス",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "67881166-6a5e-49b0-81e0-dc751762f958",
+      "created_at": "2026-02-08T23:48:23.137602+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/best-of-the-year-building-ai-companies-i0QzGcKn",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.137589+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、2024年AI企業構築ベストプラクティス集を公開\n\nベンチャーキャピタルa16zが、基盤モデル開発からバーティカルAI応用まで、10社の創業者による実践知見をまとめたポッドキャスト特集を公開した。開発者ツール構築、AIエージェント販売の初期学習、特定業界へのAI導入など、現場の具体的な経験が語られている。\n\nhttps://ai-a16z.simplecast.com/episodes/best-of-the-year-building-ai-companies-i0QzGcKn\n\n💡 主要ポイント\n・基盤モデルラボから業界特化型まで、10社の実践事例\n・研究者から創業者への転身プロセス\n・開発者向けAIツールとAIエージェント販売の実践知見\n\n1. 登場企業とテーマ\n・Ambience（医療）、Anyscale（インフラ）、Black Forest Labs（画像生成）\n・CommandZero（セキュリティ）、Databricks（データ）、Decagon（カスタマーサポート）\n・Ideogram（画像生成）、Inngest（開発者ツール）、Replicate（AI展開）、Socket（セキュリティ）\n\n2. カバーされる実践知見\n・システムエキスパートからAI領域への参入方法\n・開発者向けAIツールの構築アプローチ\n・特定業界でのAI企業立ち上げ戦略\n・AIエージェント販売の初期段階での学び\n・研究職から創業者へのキャリア転換",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "49454c82-b003-4e56-8343-328d4b810766",
+      "created_at": "2026-02-08T23:48:23.144196+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/can-ai-agents-finally-fix-customer-support-Gsu0K0AX",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.144183+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Decagon CEO、AIエージェントによるカスタマーサポート変革を語る\n\na16zポッドキャストでDecagon創業者Jesse Zhangが、LLMを活用したカスタマーサポートの刷新について語った。従来のシート課金モデルを覆す新価格戦略と、スタートアップが大手を disruption できる理由を解説。\n\nhttps://ai-a16z.simplecast.com/episodes/can-ai-agents-finally-fix-customer-support-Gsu0K0AX\n\n💡 主要ポイント\n・会話数ベース課金モデルが顧客に支持される\n・既存企業は自社モデルとの競合リスクで動けない\n・スタートアップの高速イテレーションが製品優位を生む\n\n1. 新価格モデルの優位性\n・従来のシート課金ではなく会話数・解決数ベース課金を採用\n・AIエージェントの価値は作業量に比例する\n・顧客の多くが予測可能性から会話数課金を選択\n\n2. スタートアップの競争優位\n・既存企業はシート課金モデルを自己破壊できない\n・大量顧客を抱える既存企業はリスク許容度が低い\n・若い企業は高速イテレーションで製品品質を向上\n・出荷速度と製品品質への徹底したこだわり\n\n3. カスタマーサポート変革\n・LLMがカスタマーサポート業界を再構築\n・AIエージェントへの強い市場需要\n・作業量に応じた柔軟な価格設定が可能に",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f4a5af09-1d8b-4742-b06d-98fa8763f560",
+      "created_at": "2026-02-08T23:48:23.150714+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/replay-scoping-the-enterprise-llm-market-AkytHnbF",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.150702+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "この記事はポッドキャストのエピソード紹介ページで、具体的な技術情報や数値データが含まれていません。X投稿として適切なコンテンツを作成するには、以下の情報が不足しています：\n\n**不足している情報：**\n- エンタープライズLLM市場の具体的なトレンドや数値\n- 議論された具体的な技術的課題や解決策\n- ハードウェアプラットフォームに関する具体的な知見\n- AI主流化の定義や指標\n- Databricksの具体的な取り組みや成果\n\n**代替案：**\n1. ポッドキャストの音声内容を文字起こしして提供いただく\n2. より詳細な記事やプレスリリースのURLを提供いただく\n3. このエピソードで議論された主要ポイントの要約を提供いただく\n\n現状の情報では「a16zとDatabricksがLLMについて対談した」という事実しか伝えられず、読者にとって実用的な価値を提供できません。\n\n追加情報をご提供いただけますでしょうか？",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a674c1b6-7722-47db-8a43-1a21c5ef1406",
+      "created_at": "2026-02-08T23:48:23.157446+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/building-developers-tools-from-docker-to-diffusion-models-XJC7uYVj",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.157433+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Docker Compose創設者が語る「開発者向けAIツールの作り方」\n\na16zポッドキャストに、Replicate CEO Ben Firshman氏（Docker Compose創設者）が出演。開発者コミュニティ構築の知見を共有した。画像・動画モデルがLLMより多様なアプリを生む理由を解説。\n\nhttps://ai-a16z.simplecast.com/episodes/building-developers-tools-from-docker-to-diffusion-models-XJC7uYVj\n\n💡 主要ポイント\n・Docker ComposeからReplicateへの知見の継承\n・マルチメディアモデルとLLMのアプリ多様性の違い\n・開発者向けプロダクト設計の実践論\n\n1. マルチメディアモデルの優位性\n・FLUX、Stable Diffusion APIから多様なアプリが誕生\n・LLMアプリは「チャット」に収束する傾向\n・画像・動画モデルは「これまで不可能だった製品」を実現\n・コンピュータができなかった領域を開拓\n\n2. LLMの実用的価値\n・非構造化データを構造化データに変換する能力\n・チャット以外の用途として有効\n・従来のコンピュータが苦手だった処理を実現\n\n3. Replicateのアプローチ\n・開発者がモデルをホスティング・ファインチューニング\n・活発な開発者コミュニティを形成\n・API提供によるアプリケーション開発支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "89043c86-a5bf-4213-879d-21265f7afeb8",
+      "created_at": "2026-02-08T23:48:23.164182+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/the-best-way-to-achieve-agi-is-to-invent-it-IOxN7syq",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.164169+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、機械学習の権威Pedro Domingos氏とAGI実現の道筋を議論するポッドキャストを公開\n\na16zのMartin Casado氏が、ワシントン大学名誉教授のPedro Domingos氏とAI開発の方向性について対談した。Domingos氏は「AGI達成に1兆ドルは不要。そこまで投資すれば極めて悪い投資だ」と指摘している。\n\nhttps://ai-a16z.simplecast.com/episodes/the-best-way-to-achieve-agi-is-to-invent-it-IOxN7syq\n\n💡 主要ポイント\n・スケーリング則への過度な依存に警鐘\n・フロンティアモデルの巨額投資の妥当性を問う\n・研究方向の多様化が必要\n\n1. Domingos氏の指摘\n・スケーリング則が人間レベルの知能達成につながる保証はない\n・計算リソースの爆発的増加が必要になる現状は問題\n・1兆ドル規模の投資は非効率的\n\n2. 業界への示唆\n・主流のAI採用期を迎える中での方向性の見直し\n・研究アプローチの多様化が進歩を加速させる\n・コスト効率の良いAGI実現手法の探求が重要\n\n※Pedro Domingos氏：『マスター・アルゴリズム』著者、機械学習分野の長年の研究者",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0529998c-9692-4c22-8a00-d9c237aa08b7",
+      "created_at": "2026-02-08T23:48:23.189595+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/neural-nets-and-nobel-prizes-9z3A0pnK",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.189579+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zのAnjney Midha氏、AI研究のノーベル賞受賞を解説\n\nAIに関する2つのノーベル賞（物理学賞・化学賞）受賞を受け、a16zのAnjney Midha氏がポッドキャストで解説。1980年代のニューラルネット研究から現在のAI技術に至る40年の軌跡を振り返る。\n\nhttps://ai-a16z.simplecast.com/episodes/neural-nets-and-nobel-prizes-9z3A0pnK\n\n💡 主要ポイント\n・1980年代の初期研究がAI冬の時代を経て今日の技術基盤に\n・オープンソースモデルが研究の民主化を加速\n・大学・企業ラボ以外からの革新的研究が増加する可能性\n\n1. オープンソースがもたらす変化\n・Llamaなどの事前学習済みモデルを誰でも活用可能\n・個人研究者が独自データセットに適用し新発見を生む\n・数百万ドルの計算資源を間接的に利用できる\n\n2. 既存研究機関の課題\n・大学は論文発表サイクルに縛られる\n・企業ラボは次期モデルリリースへの貢献が求められる\n・独立研究者はこうしたインセンティブ構造から自由\n\n3. 今後の展望\n・未開拓の領域への応用が加速\n・異分野の組み合わせから新たなブレークスルー\n・創造性が研究の律速段階に",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "33097aad-5a2e-433b-9233-f9c7576ddfe5",
+      "created_at": "2026-02-08T23:48:23.196463+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/how-gpu-access-helps-ai-startups-be-agile-kyoI6Qvk",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.196450+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、GPU不足に悩むAIスタートアップ向けプログラム「Oxygen」を解説\n\na16zのゼネラルパートナー、Anjney Midhaがポッドキャストで、AIスタートアップのGPU調達課題と同社の支援プログラムについて語った。大手企業との価格競争や長期契約リスクへの対処法を明らかにした。\n\nhttps://ai-a16z.simplecast.com/episodes/how-gpu-access-helps-ai-startups-be-agile-kyoI6Qvk\n\n💡 主要ポイント\n・スタートアップは大手に競り負け、必要なGPUを確保できない\n・長期契約で大量購入後、利用用途がなくなるリスクがある\n・学習と推論ワークロードの最適化が鍵\n\n1. GPU不足の構造的問題\n・大手企業が長期契約で高値入札し、市場を独占\n・スタートアップは必要なタイミングでGPUを確保できない\n・a16zは「Oxygen」プログラムで投資先にGPUを提供\n\n2. 学習と推論のバランス戦略\n・H100で学習後、顧客需要があれば推論ワークロードに転用可能\n・新しいBlackwellを学習用に追加購入できる\n・顧客需要がない場合、旧世代ハードでの学習継続を強いられる\n\n3. リソース効率化の実例\n・画像・動画モデル企業がH100で学習完了後、製品需要が高まる\n・学習用チップを推論ワークロードに切り替え\n・次世代チップを学習専用として追加調達",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9bd8acfc-d572-4e4c-9658-13fda3a2ea24",
+      "created_at": "2026-02-08T23:48:23.203236+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/distro-and-the-quest-for-community-trained-ai-models-vRIP4M42",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.203209+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Nous Research、分散型AIモデル訓練技術「DisTrO」を発表\n\nオープンソースAI研究グループのNous Researchが、公開インターネット上でAIモデルを訓練する新技術DisTrOを発表した。従来不可能とされていた分散環境での高速訓練を実証。個人が持つGPUを集約してLlama 4クラスのモデルを構築できる可能性を示した。\n\nhttps://ai-a16z.simplecast.com/episodes/distro-and-the-quest-for-community-trained-ai-models-vRIP4M42\n\n💡 主要ポイント\n・2万台のH100 GPUなしでも大規模モデル訓練が可能に\n・コミュニティの分散GPU資源を活用する新アプローチ\n・オープンソースAIの持続可能性を担保する基盤技術\n\n1. DisTrOの技術的特徴\n・公開インターネット経由での分散訓練を実現\n・個人や小規模組織が保有するGPUを統合\n・従来想定より大幅に高速な訓練速度を達成\n\n2. 開発の背景\n・Llama 4が提供されない場合の代替手段として構想\n・大手プロバイダーのクローズド化リスクへの対応\n・コミュニティの意欲を実際の行動に変える仕組み\n\n3. Nous Researchの取り組み\n・ガードレール非搭載の「Hermes」モデルシリーズを開発\n・独立開発者コミュニティの活性化を推進\n・オープンソースAI研究の継続を目指す",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "22c21b30-b8b6-4e45-a7e7-5bccf568aa96",
+      "created_at": "2026-02-08T23:48:23.210272+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/balancing-ai-expertise-and-industry-acumen-when-building-vertical-applications-B9iQiL0o",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.210254+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Ambience共同創業者が語る「垂直統合型AI製品の成功法則」\n\na16zのポッドキャストで、医療AI企業Ambience共同創業者ニキル・ブドゥマ氏が、垂直統合型AIアプリケーション構築の実践知を共有した。技術力よりも業界知見が重要と強調している。\n\nhttps://ai-a16z.simplecast.com/episodes/balancing-ai-expertise-and-industry-acumen-when-building-vertical-applications-B9iQiL0o\n\n💡 主要ポイント\n・次世代の価値ある企業は、アプリ層とモデル層の垂直統合から生まれる\n・業界の深い理解が、技術的専門性と同等以上に重要\n・製品設計、ワークフロー統合、変革管理への投資が成功の鍵\n\n1. 垂直統合型AI企業に必要な要素\n・数年かけて業界の専門家になる執念\n・最も価値あるユースケースを特定する能力\n・複数のユースケースを組み合わせた相乗効果の設計\n・顧客が誰で、何を求めているかの深い理解\n\n2. 技術面での必要条件\n・適切なライブラーニングループの構築\n・MLOpsループによるモデル品質の測定と改善\n・企業データとの統合設計\n・既存ワークフローへの適切な組み込み\n\n3. 見落とされがちな成功要因\n・製品デザインと配信能力への投資\n・顧客の変革管理サポート\n・購入した価値を完全に実現させる伴走体制\n\nブドゥマ氏は「モデルは問題解決の一部に過ぎない。それ以外の要素の方が、人々が認識している以上に重要だ」と指摘。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2ab2bbbb-f814-49b1-b9f2-d6c447542a12",
+      "created_at": "2026-02-08T23:48:23.217046+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/ai-sql-and-the-end-of-big-data-1f3hQwYf",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.217032+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、MotherDuck CEO Jordan Tigani氏とのポッドキャスト「AI + SQL、ビッグデータ時代の終焉」を公開\n\nビッグデータ時代が終わりを迎える中、DuckDBの急成長とAIワークロードへのSQL活用について議論。Text-to-SQLによるデータ分析の可能性も探る。\n\nhttps://ai-a16z.simplecast.com/episodes/ai-sql-and-the-end-of-big-data-1f3hQwYf\n\n💡 主要ポイント\n・SQLクエリ作成にGPT-4を活用し、エラー自動修正を実現\n・ビッグデータからスモールデータへのパラダイムシフト\n・AI時代のデータ分析ツールとしてのDuckDBの位置づけ\n\n1. 生成AIによるSQL体験の改善\n・クエリ実行時のエラーをGPT-4に送信し自動修正\n・構文忘れを補完し、コーディングフローを維持\n・Copilotのようなアシスト機能で開発効率向上\n\n2. ビッグデータ時代の終焉\n・DuckDBの人気急上昇の背景\n・SQL系システムのAIワークロード適用性\n・Text-to-SQLによる自然言語でのデータ分析の展望\n\n3. 実用的な活用シーン\n・エラー修正の自動化で開発速度向上\n・クエリ作成の対話的な体験\n・データ分析の民主化への貢献",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "39c9e5d5-96ef-4b5a-b610-9359c33f5085",
+      "created_at": "2026-02-08T23:48:23.223892+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/the-researcher-to-founder-journey-and-the-power-of-open-models-dPtNB0So",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.223879+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Black Forest Labs創業者が語る、研究者からスタートアップへの転身とオープンモデル戦略\n\na16zポッドキャストに、Stable Diffusion開発チームの中心メンバーだったRobin Rombach、Andreas Blattmann、Patrick Esserが登場。研究者からStability AI、そして自社創業に至る道のりと、なぜオープンモデルにこだわるのかを語った。\n\nhttps://ai-a16z.simplecast.com/episodes/the-researcher-to-founder-journey-and-the-power-of-open-models-dPtNB0So\n\n💡 主要ポイント\n・PhD研究者からAI企業創業者への実践的なキャリアパス\n・最先端の画像・動画生成モデルFLUXの開発背景\n・オープンモデル公開が業界にもたらす具体的メリット\n\n1. 創業チームの経歴\n・3名ともStable Diffusionの主要開発者\n・Stability AI在籍を経て独立\n・学術研究の知見を商用製品に転換\n\n2. オープンモデル戦略\n・研究成果とモデルウェイトを公開\n・コミュニティとの知見共有を重視\n・透明性が技術発展を加速させる\n\n3. 実務への示唆\n・研究者が起業する際の判断基準\n・技術の商用化における課題\n・オープンとクローズドの使い分け\n\na16z general partner Anjney Midhaとの対談で、技術者がスタートアップを立ち上げる際の実践的な視点が語られている。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "126bf2fc-a622-4674-b152-7f65ac5fe872",
+      "created_at": "2026-02-08T23:48:23.230666+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/why-computer-science-subsumed-biotech-xfxkSRNU",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.230653+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z Vijay Pande氏、コンピュータサイエンスがバイオテックを変革した20年を語る\n\na16z General PartnerのVijay Pande氏が、ソフトウェア工学が生命科学を変えた20年間を振り返るポッドキャストを公開した。自身が立ち上げたFolding@HomeからAlphaFoldまでの進化と、AI×医療の落とし穴について語る。\n\nhttps://ai-a16z.simplecast.com/episodes/why-computer-science-subsumed-biotech-xfxkSRNU\n\n💡 主要ポイント\n・AlphaFoldの成功要因は「アルゴリズム」ではなく「ソフトウェアエンジニアリング手法」\n・学術研究室（20-30人の学生）とプロのエンジニアチームの生産性の差が成果を分けた\n・AI×医療分野での創業者が注意すべき課題を指摘\n\n1. AlphaFoldが示した「エンジニアリング」の威力\n・生物学分野は伝統的に学生中心の学術研究が主流だった\n・20-30人規模の研究室とプロフェッショナルなエンジニアチームでは生産性が根本的に異なる\n・機械学習技術そのものより、組織体制とエンジニアリング手法の差が大きな飛躍を生んだ\n・Googleのような企業の参入が業界全体に大きなシグナルとなった\n\n2. 今後の展望\n・AI×医療・ヘルスケア分野の変革機会について解説\n・この分野で起業する際の注意点を実例から説明\n・20年間の経験から見た実用化への道筋を提示",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "6519df84-673e-430a-97cb-e7f1278bbbdd",
+      "created_at": "2026-02-08T23:48:23.237381+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/securing-ai-by-democratizing-red-teams-ML60QMBJ",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.237369+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】PromptFoo、生成AIレッドチーム機能の民主化を推進\n\na16zポッドキャストでPromptFoo CEOのIan Websterが登場。「AI安全性はオープンソースで実現すべき」と主張。大手AI企業5社だけがレッドチームを持つ現状を変え、すべての開発者に安全性検証ツールを提供する必要性を訴えた。\n\nhttps://ai-a16z.simplecast.com/episodes/securing-ai-by-democratizing-red-teams-ML60QMBJ\n\n💡 主要ポイント\n・大手AI企業のみがレッドチームを保有する現状の問題提起\n・実用的なセキュリティ対策を「今ここ」で実装する重要性\n・オープンソースによる安全性検証ツールの必要性\n\n1. 現状の課題\n・大手AI企業5社のみが専門的なレッドチームを運用\n・中小企業や個人開発者は安全性検証の手段を持たない\n・基盤モデル企業だけに安全性を任せる体制の限界\n\n2. PromptFooの方針\n・すべての開発者が利用可能なオープンソースツールを提供\n・実際に発生しているセキュリティ問題に焦点を当てる\n・存在論的脅威より現実的なリスク対策を優先\n\n3. AI規制への提言\n・モデルではなくアプリケーションと用途に規制を集中\n・Discord時代の早期LLM導入経験から得た知見を共有\n・実践的な安全性検証の標準化を目指す",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "cccf95e8-d333-41fe-8a6d-4de4ca35ce31",
+      "created_at": "2026-02-08T23:48:23.244301+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/augmenting-incident-response-with-llms-h7juJCvd",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.244279+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Command Zero、セキュリティインシデント対応にLLMを活用\n\nCommand Zero共同創業者のDean de Beer氏がa16zポッドキャストに出演。セキュリティデータでLLMを訓練し、インシデント対応を強化する実践的アプローチを解説した。複数モデルの使い分けやメモリ管理など、本番運用の技術課題にも言及。\n\nhttps://ai-a16z.simplecast.com/episodes/augmenting-incident-response-with-llms-h7juJCvd\n\n💡 主要ポイント\n・セキュリティインシデント対応の自動化にLLMを実装\n・用途に応じて複数のLLMモデルを使い分ける戦略\n・コンテキスト管理やエンティティ抽出など周辺技術の重要性\n\n1. LLM実装の課題\n・APIトークン制限とコスト管理\n・各モデルの特性理解と用途別の選択\n・単一モデルでは全ニーズに対応できない\n\n2. 本番運用で重視する技術\n・コンテキストウィンドウを超えるメモリ管理\n・モデルへのデータ受け渡し時の文脈維持\n・優先エンティティの抽出と認識\n・セマンティック検索によるモデル能力の拡張\n\n3. 実装の現実\n・モデル選定より周辺インフラに開発時間を費やす\n・用途に適したモデルの組み合わせを確立\n・隣接技術でLLM機能を補強する設計",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7ebd07ef-a96b-45fb-9a86-d5fdbc2366aa",
+      "created_at": "2026-02-08T23:48:23.251062+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/scaling-ai-for-the-coming-data-deluge-5F5qykAS",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.251049+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Anyscale CEO、大規模AI運用と動画モデル時代の課題を語る\n\na16zポッドキャストにAnyscale CEOロバート・ニシハラ氏が出演。企業の生成AI導入における時間とリソースの課題、動画モデルが要求する膨大なデータ処理の変化について議論した。\n\nhttps://ai-a16z.simplecast.com/episodes/scaling-ai-for-the-coming-data-deluge-5F5qykAS\n\n💡 主要ポイント\n・企業のAI優先度が2年前と比べ劇的に変化\n・ML人材がインフラ管理に時間を取られる課題\n・開発から本番環境への移行に6-12週間かかる現実\n\n1. 企業のAI導入における変化\n・2年前はAIが企業レベルの優先事項ではなかった\n・生成AIにより競争優位性確保のため導入が必須に\n・20人規模のインフラチーム構築に1年かける余裕がない\n・即座に使える環境が求められている\n\n2. ML開発の生産性課題\n・採用したML人材がクラスター管理に時間を消費\n・ローカル環境からクラウドへの移行でコード書き直しが発生\n・単一マシンからスケール時の高コストな移行作業\n・開発環境と本番環境の移行に6-12週間必要\n\n3. 動画モデルがもたらす変化\n・動画データの処理量増加がインフラに新たな要求\n・大規模データ処理への対応が次の課題\n・UC Berkeley Sky Computing Labからの知見を活用",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9689ac80-4aa6-4664-8429-509aa37cbf10",
+      "created_at": "2026-02-08T23:48:23.257953+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/archive-the-dream-of-ai-is-alive-in-alphago-0MEOO8xc",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.257941+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供いただいた情報はポッドキャストのエピソード概要のみで、具体的な技術詳細や新しい発表内容が含まれていません。\n\nこれは2015年のアーカイブエピソードの再配信であり、以下の理由から投稿作成が困難です：\n\n**不足している情報**\n- AlphaGoの具体的な技術仕様や成果\n- 強化学習の実装方法\n- 対局結果や勝率などの数値データ\n- 現在のAI技術への影響\n- なぜ今このアーカイブが再配信されたのか\n\n**推奨される対応**\n1. ポッドキャストの音声内容を文字起こしして提供\n2. AlphaGoに関する技術記事のURLを提供\n3. より詳細な情報を含む別の記事を選択\n\nもし、このポッドキャストで議論された具体的な内容（技術的な洞察、数値、事例など）をご提供いただければ、投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a915d034-ac75-4eaf-9c23-fac35353f6f2",
+      "created_at": "2026-02-08T23:48:23.264809+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/beyond-language-inside-a-hundred-trillion-token-video-model-48FKpX9k",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.264796+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Luma、100兆トークン相当の動画データで訓練した「Dream Machine 3D」の開発背景を公開\n\nLuma Chief ScientistのJiaming Song氏がa16zポッドキャストに登壇。言語データに換算すると数百兆トークンに相当する大規模動画データで訓練されたDream Machine 3Dの開発思想を語った。\n\nhttps://ai-a16z.simplecast.com/episodes/beyond-language-inside-a-hundred-trillion-token-video-model-48FKpX9k\n\n💡 主要ポイント\n・動画データは言語データより圧倒的に情報密度が高い\n・「シンプルな手法×大規模計算」が複雑な事前知識より有効\n・言語は人間が作った圧縮された知識に過ぎない\n\n1. \"Bitter Lesson\"の動画版\n・文法や意味解析より大規模言語モデルが勝った歴史の再現\n・ルールベースより計算量を増やす方が長期的に生産的\n・視覚領域でも同じパターンが発生中\n\n2. 言語データの限界\n・高品質な言語データは枯渇しつつある\n・人間が言語を生成する速度がスケーリング則に追いつかない\n・計算インフラは拡張できてもデータインフラは困難\n\n3. 動画データの優位性\n・視覚信号は言語より桁違いに大きいデータセット\n・言語自体が物理世界の豊かなデータに対する「事前知識」に過ぎない\n・物理世界の理解には視覚情報が本質的",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7ad7f53b-d0d2-4a29-9ee5-af8513aae8d2",
+      "created_at": "2026-02-08T23:48:23.271870+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/developer-tool-ux-in-the-age-of-generative-ai-ylZ7o5cj",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.271858+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zポッドキャスト、AI時代の開発者ツールUXを議論\n\nデザインエンジニアのAlasdair Monk氏が、生成AIが開発者ツールのUXをどう変えるかを語った。プロンプトバーの限界と、次世代インターフェースの可能性を指摘。\n\nhttps://ai-a16z.simplecast.com/episodes/developer-tool-ux-in-the-age-of-generative-ai-ylZ7o5cj\n\n💡 主要ポイント\n・現在のAI対話は「1980年代のターミナル回帰」\n・プロンプトバーだけでは開発体験が不十分\n・GUIとAIの融合が次のステップ\n\n1. プロンプトバーの課題\n・30年分のHCI（人間-コンピュータ相互作用）知見が活かされていない\n・プレーンテキストのみの対話に制限\n・LLMの非決定的な出力に対するUI設計が未確立\n\n2. 次世代の開発者ツールUX\n・チャット形式は特定のユースケースに限定すべき\n・従来のGUI要素（ウィンドウ、ボタン）との統合が重要\n・AIの強みを活かしつつ、予測可能な操作性を提供\n\n3. 実務への示唆\n・Heroku/Salesforce、現在はPoolside（AIプログラミングスタートアップ）でのUX設計経験\n・開発者ツール設計者が直面する現実的な課題\n・ラバーダック的対話と構造化UIの使い分け",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d7be2d1d-19ed-43b0-9716-b073da1bc190",
+      "created_at": "2026-02-08T23:48:23.278864+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/building-production-workflows-for-ai-applications-mw_yqRkR",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.278851+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Inngest CEO、本番環境でのAIエージェント運用の現実を語る\n\nInngestのCEO Tony Holdstock-Brown氏がa16zポッドキャストに出演。マルチステップAIワークフローを本番環境で動かす際の複雑さと、開発者ツールの進化について議論した。CPUとGPUの2つのエンジニアリング領域が並行して進化している現状を指摘。\n\nhttps://ai-a16z.simplecast.com/episodes/building-production-workflows-for-ai-applications-mw_yqRkR\n\n💡 主要ポイント\n・AIエージェントの本番運用には従来の開発ツールと異なる考慮が必要\n・CPUとGPUで求められるエンジニアリングスキルが大きく分岐\n・生成AI向け開発者ツールは従来製品と類似パターンをたどる可能性\n\n1. エンジニアに求められる2つの選択肢\n・アプリケーション層：AIモデルを組み合わせて製品を構築\n・数学/低レイヤー層：コンパイラ最適化でAI実行効率を改善\n・どちらもエンジニアリングだが、必要なスキルセットは全く異なる\n\n2. 本番環境での課題\n・マルチステップワークフローの複雑性管理\n・従来のCPUベース開発とGPU最適化の並行進化\n・開発者ツールの改善余地は依然として大きい",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b2596135-466c-4a0e-a624-3feadb8191e4",
+      "created_at": "2026-02-08T23:48:23.285724+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/the-future-of-image-models-is-multimodal-gSij1jNf",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.285711+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Ideogram CEO、Google時代の画像生成AI開発とスタートアップ経営を語る\n\na16zのポッドキャストにIdeogram CEO Mohammad Norouziが出演。Google在籍時のText-to-Image モデル開発経験と、研究者からスタートアップCEOへの転身について語った。Transformerアーキテクチャの初期反応も明かした。\n\nhttps://ai-a16z.simplecast.com/episodes/the-future-of-image-models-is-multimodal-gSij1jNf\n\n💡 主要ポイント\n・Google AI チームでのTransformer論文への初期反応を証言\n・TransformerとDiffusionモデルの技術的違いを解説\n・研究者からCEOへのキャリア転換の実態を共有\n\n1. Transformer論文「Attention Is All You Need」の内幕\n・論文提出直後、筆頭著者Vaswaniは技術の重要性を認識していた\n・当初は翻訳タスクのテストベッドとして開発\n・訓練速度と翻訳品質の両面で改善を実現\n\n2. Transformerの進化\n・言語だけでなくコンピュータビジョンの基盤アーキテクチャに成長\n・単なる翻訳タスクを超え、汎用アシスタント開発に発展\n・汎用知能機械構築における中核的役割を担う\n\n3. 対談内容\n・イラン出身の成長ストーリー\n・Google での影響力の大きいText-to-Imageモデル構築\n・Ideogram共同創業とスタートアップ経営の現実",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "259b4b7e-66c5-44ca-bca0-c2495bc7c2b8",
+      "created_at": "2026-02-08T23:48:23.292781+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/archive-open-models-with-arthur-mensch-and-video-models-with-stefano-ermon-Gyvsu16j",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.292768+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "この記事はポッドキャストのエピソード紹介ページで、具体的な技術情報や数値データが含まれていないため、X投稿スレッドの作成には適していません。\n\n【理由】\n- ポッドキャストの概要紹介のみで、新製品/新機能の発表ではない\n- 過去エピソードの再編集版であり、速報性がない\n- 具体的な技術仕様、ベンチマーク結果、リリース情報が含まれていない\n- Arthur Menschの発言は規制に関する意見表明で、実用的な技術情報ではない\n\n【推奨される対応】\nこのようなコンテンツの場合は、以下のような情報がある記事を選択することをお勧めします:\n- 新しいAIモデルのリリース発表\n- 技術的なベンチマーク結果を含む記事\n- 具体的な機能追加や性能改善の発表\n- 実用的なツールやサービスのローンチ情報\n\n別の記事URLをご提供いただければ、そちらで投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "acc69826-850d-4be2-a2ce-5e91565085fd",
+      "created_at": "2026-02-08T23:48:23.302348+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/open-models-and-maturation-assessing-the-generative-ai-market-DvN9dXg6",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.302335+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、生成AI市場の最新動向を分析「成長は鋸歯状パターン」\n\na16zのGuido AppenzellerとMatt Bornsteinが、ChatGPT登場から18ヶ月後の生成AI市場を総括した。オープンソースLLMの台頭からAI音楽生成まで幅広く議論。市場は技術的進歩と収益化を実現する一方、依然として流動的な状態にあると指摘。\n\nhttps://ai-a16z.simplecast.com/episodes/open-models-and-maturation-assessing-the-generative-ai-market-DvN9dXg6\n\n💡 主要ポイント\n・AIアプリケーションの成長は「鋸歯状パターン」を示す\n・新機能発表時に急成長、リリース間隔が空くと停滞\n・「ゴールドラッシュは終わった」と思われても1ヶ月で状況は変化\n\n1. 市場の現状認識\n・技術的進歩と収益化は進展\n・成熟期に入ったという見方は時期尚早\n・評価は時間軸によって大きく変動\n\n2. 成長パターンの特徴\n・大型リリース後に急速な成長\n・新機能がない期間は成長が鈍化\n・ユーザー定着率も変動が大きい\n\n3. 今後の展望\n・新たな技術革新が継続的に発生\n・短期的な停滞は成長の前兆\n・長期視点での評価が重要",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e143f500-9c43-4477-b8ce-37c7aca2b1b8",
+      "created_at": "2026-02-08T23:48:23.309415+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/security-founders-talk-shop-about-generative-ai-JeSoaIOH",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.309403+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zがセキュリティスタートアップ3社の創業者によるLLM実装の実践知を公開\n\n生成AI活用に取り組むセキュリティ企業の創業者が、LLM構築の現場で直面する課題と解決策を議論。推論時間の管理、モデル選定、LLMベースの脅威対策など、実装者が知るべき実践的な知見を共有している。\n\nhttps://ai-a16z.simplecast.com/episodes/security-founders-talk-shop-about-generative-ai-JeSoaIOH\n\n💡 主要ポイント\n・LLMの推論時間がユーザー体験を左右する（90秒でも「遅い」と感じられる）\n・ユースケースの複雑さがパフォーマンスに直結\n・セキュリティ領域でのLLM活用とLLM脅威への対応を両立\n\n1. 登壇した創業者\n・Dean De Beer（Command Zero）\n・Kevin Tian（Doppel）\n・Travis McPeak（Resourcely）\n\n2. 推論時間管理の重要性\n・プロンプトの複雑さやデータ量が推論時間に影響\n・ユーザーの体感待ち時間を考慮した設計が必須\n・手作業なら4時間かかる作業も、90秒では「遅い」と判断される\n\n3. モデル選定の考慮点\n・ユースケースの高度さに応じた要件定義\n・データ添付量とプロンプト複雑度のバランス\n・エレベーターの待ち時間設計と同様の UX 最適化が必要",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "1054a555-78e6-4bcf-a246-0fcffdb9a36b",
+      "created_at": "2026-02-08T23:48:23.316416+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/how-to-think-about-foundation-models-for-cybersecurity-MOVCREQh",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.316404+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16zが語るセキュリティ×基盤モデルの本当の価値\n\na16zのZane LackeyとJoel de la Garzaが、サイバーセキュリティにおける生成AIと基盤モデルの実用性を語った。セキュリティチームが抱える「ノイズの洪水」と「単純作業による人的ミス」の問題に、LLMがどう対処できるかを解説。\n\nhttps://ai-a16z.simplecast.com/episodes/how-to-think-about-foundation-models-for-cybersecurity-MOVCREQh\n\n💡 主要ポイント\n・セキュリティベンダーの長年の「AI-washing」と今回の違い\n・セキュリティチームの業務負荷を具体的にどう削減できるか\n・2024年がセキュリティAIの転換点になる理由\n\n1. セキュリティチームの現実的な課題\n・アラートのノイズで本当の脅威を見逃すリスク\n・単純作業の繰り返しがミスの温床に\n・人手不足で業務量が処理能力を超えている\n\n2. LLMが変える実務の姿\n・膨大なログやアラートから重要な情報を抽出\n・反復的なセキュリティタスクの自動化\n・業務の一部でも削減できれば大きな効果\n\n3. 今回のAI活用が「本物」な理由\n・過去のAI-washingとの明確な違い\n・実際の業務フローに組み込める実用性\n・セキュリティ専門家が認める効果",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8d57136c-69a8-4855-badf-8c9c1f562232",
+      "created_at": "2026-02-08T23:48:23.323496+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/securing-the-software-supply-chain-with-llms-3552jvU_",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.323484+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Socket、LLMを活用したOSS脆弱性検出システムの実践手法を公開\n\na16zのポッドキャストでSocket創業者Feross Aboukhadijehが、LLMを使った大規模なオープンソース脆弱性検出の取り組みを解説した。人手では不可能な全OSSコードの検査を実現する。\n\nhttps://ai-a16z.simplecast.com/episodes/securing-the-software-supply-chain-with-llms-3552jvU_\n\n💡 主要ポイント\n・全OSSパッケージのセキュリティ検査を人力では実現不可能\n・LLMによる事前フィルタリングで高リスクパッケージを抽出\n・人間レビューが必要な対象を大幅削減し検査を実用化\n\n1. LLMの役割\n・人間の精度には及ばないが「何もしないよりマシ」\n・膨大なOSSコードの全量スキャンを可能にする\n・ノイズを削減し重要な問題を浮上させる\n\n2. 実装アプローチ\n・複数段階の事前フィルタリング処理を導入\n・LLM通過後に高リスクパッケージリストを生成\n・最終的な判断は人間の専門家が担当\n\n3. セキュリティチームへの影響\n・人手不足のセキュリティチームを支援\n・開発者の負担を軽減\n・これまで実現不可能だった課題に取り組める",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f36a2e66-708a-41b0-91fb-9ebce69a0ff4",
+      "created_at": "2026-02-08T23:48:23.330675+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/archive-gpt-3-hype-KhECv3pm",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.330662+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、GPT-3初期（2020年）の議論を再公開\n\na16zがGPT-3のAPI公開直後（2020年7月）に収録したポッドキャストをアーカイブ公開した。当時の開発者コミュニティの反応やLLMの商業可能性について議論している。現在のマルチモーダルモデルや規制議論の起点となった時期の記録。\n\nhttps://ai-a16z.simplecast.com/episodes/archive-gpt-3-hype-KhECv3pm\n\n💡 主要ポイント\n・GPT-3 API公開時（2020年）の業界の反応を記録\n・LLMのビジネス的意味についての初期の問いを提示\n・現在の生成AI活況の起点となった時期の議論\n\n1. 収録時期の背景\n・OpenAIがGPT-2論文を2018年末に発表\n・GPT-3を2020年に初めてAPI経由で一般公開\n・開発者コミュニティが実用可能性を検証し始めた時期\n\n2. 議論の内容\n・商業利用可能なLLMの登場が持つ意味\n・ビジネス観点でのLLMツールの価値\n・知能の定義に関する根本的な問い\n\n3. 現在との接続\n・2022年以降のマルチモーダルモデル爆発の前段階\n・規制や著作権議論が本格化する前の状況\n・起業家活動が活発化する起点となった時期",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f0adb3c8-7551-4d62-9dff-b08f86f02513",
+      "created_at": "2026-02-08T23:48:23.340254+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/vector-databases-and-the-power-of-rag-5cAv48Af",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.340239+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Pinecone CEO、RAG技術の現状と未来を語る\n\nPinecone創業者のEdo Liberty氏がa16zポッドキャストに出演。ベクトルデータベースとRAG（検索拡張生成）の可能性を語った。Yahoo、AWS研究チームを率いた経験から、現在のRAG技術は「2017年のTransformer」段階と分析している。\n\nhttps://ai-a16z.simplecast.com/episodes/vector-databases-and-the-power-of-rag-5cAv48Af\n\n💡 主要ポイント\n・RAGは実用性があるが、まだ扱いにくく改善の余地が大きい\n・情報検索とハルシネーション対策は未開拓領域\n・先進的なユーザーが既に実装を始めている\n\n1. RAG技術の現状評価\n・2017年のTransformerと同じ発展段階\n・実装が難しく、使いこなすには工夫が必要\n・一部の先進ユーザーが課題を乗り越えて活用中\n\n2. 今後の展望\n・情報検索精度の向上が課題\n・AIの信頼性向上に直結する技術\n・イノベーションの余地が無限にある領域",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0a13fc7f-e374-42fb-9bf8-1e93b8b3d56c",
+      "created_at": "2026-02-08T23:48:23.347874+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/remaking-the-ui-for-ai-fjtNyoWs",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.347859+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AIハードウェアの次なる主戦場は「推論層」\n\na16zのAnjney Midha氏がポッドキャストでAIハードウェアの展望を語った。Nvidiaが学習分野を制する一方、推論処理とウェアラブル端末に大きな機会があると指摘。プライバシー重視の需要が端末内AI処理を加速させる。\n\nhttps://ai-a16z.simplecast.com/episodes/remaking-the-ui-for-ai-fjtNyoWs\n\n💡 主要ポイント\n・学習はNvidia優位だが、推論処理で新たな競争が始まる\n・Ollamaへの開発者集中は、ローカルAI処理への強い需要を示す\n・オープンソースモデルが効率化の起爆剤となる\n\n1. AIハードウェアの転換点\n・学習用チップは確立されたが、推論用チップに未開拓の余地\n・ウェアラブルデバイスでの自然なAI活用を目指す\n・端末内処理により、ユーザーデータが外部に出ない設計が可能\n\n2. オープンソースが変える推論処理\n・消費者のプライバシー意識がローカルAI需要を喚起\n・開発者がOllamaに集まる理由はプライベートな言語モデル利用\n・オープンソースエコシステムが効率化競争を推進\n\n3. 次世代チップへの期待\n・端末内での大規模推論を処理できる新チップが必要\n・ウェアラブルへの統合で日常的なAI活用が実現\n・推論専用ハードウェアの開発競争が本格化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d5c2fd01-b7aa-4fa3-93f3-e7af36b0da4c",
+      "created_at": "2026-02-08T23:48:23.355372+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/making-the-most-of-open-source-in-ai-tGGTz6m_",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.355359+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z「AI×オープンソースの未来」パネルディスカッション公開\n\na16zがLinux Foundation、Mozilla、Stanford/Together AIの専門家を招き、AIにおけるオープンソースの実践と課題を議論した。開発者の期待とビジネスモデルの対立、規制議論が活発化する中での知見を共有。\n\nhttps://ai-a16z.simplecast.com/episodes/making-the-most-of-open-source-in-ai-tGGTz6m_\n\n💡 主要ポイント\n・過去のOSS成功事例からAI業界が学べる教訓\n・「オープン」の定義をめぐる業界内の議論\n・企業ライセンスと開発者の期待値のギャップ\n\n1. 登壇者の構成\n・Jim Zemlin（Linux Foundation事務局長）\n・Mitchell Baker（Mozilla会長）\n・Percy Liang（Stanford准教授/Together AI共同創業者）\n・Anjney Midha（a16zゼネラルパートナー）\n\n2. 議論の背景\n・開発者がスタック全体でOSSツールを期待する現状\n・強力なモデルが企業ライセンスで制限される懸念\n・イノベーションの主体と開発スケジュールの透明性\n・米国政府によるオープンモデル規制の検討状況\n\n3. 開発者への示唆\n・ビジネスモデルと技術開放のバランス\n・規制環境下での実装戦略\n・エンタープライズ利用とオープン化の両立",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f7060d7e-65d4-46df-a527-db03309ac3f5",
+      "created_at": "2026-02-08T23:48:23.362939+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/scoping-the-enterprise-llm-market-9d41HJPD",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.362926+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】Databricks VP Naveen Rao、エンタープライズLLM市場の現状と展望を語る\n\nAI チップ企業Nervana Systems、MosaicML創業者で現Databricks VPのNaveen Raoが、a16zポッドキャストで企業向けLLM活用について語った。AIチップからLLMトレーニング最適化まで10年の知見を凝縮。\n\nhttps://ai-a16z.simplecast.com/episodes/scoping-the-enterprise-llm-market-9d41HJPD\n\n💡 主要ポイント\n・AIチップ開発からLLMソフトウェア最適化への移行経験\n・Databricks/MosaicMLの企業向けLLM実装アプローチ\n・エンタープライズ市場の具体的な動向と課題\n\n1. 登壇者の経歴\n・2014年 AIチップスタートアップNervana Systems創業\n・2016年 Intelが買収、その後Intel在籍\n・2021年 MosaicML創業（LLMトレーニング最適化）\n・2023年7月 Databricksが買収、現在VP of Generative AI\n\n2. 議論の範囲\n・LLMの基礎理論から専用チップまで幅広くカバー\n・企業によるLLM/生成AI活用の実態\n・ファウンデーションモデルのファインチューニング手法\n・最適化された技術スタックの重要性\n\n3. エンタープライズ視点\n・自社LLMトレーニングのニーズと課題\n・既存モデルのカスタマイズアプローチ\n・業務外でもAIの話題から逃れられない現状",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7eb95995-08ab-444c-adad-729d8b699a3b",
+      "created_at": "2026-02-08T23:48:23.370145+00:00",
+      "item": {
+        "title": "AI + a16z",
+        "url": "https://ai-a16z.simplecast.com/episodes/welcome-to-the-ai-a16z-podcast-XkLsxrUq",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.370132+00:00",
+        "metadata": {
+          "feed_name": "AI + a16z Podcast",
+          "semi_daily": true
+        }
+      },
+      "post_text": "【注目】a16z、AI専門ポッドキャスト「AI + a16z」を開始\n\nベンチャーキャピタルa16zが新ポッドキャスト番組を公開した。AI技術の基盤インフラから実用ツールまで幅広くカバーする。LLMを活用した採用プロセスの変革など、ビジネス現場での活用事例も扱う。\n\nhttps://ai-a16z.simplecast.com/episodes/welcome-to-the-ai-a16z-podcast-XkLsxrUq\n\n💡 主要ポイント\n・基盤モデルを支えるインフラ技術の解説\n・LLMなど具体的ツールの実用例を紹介\n・生成AI、セキュリティ、開発スタックを定期配信\n\n1. 番組の特徴\n・AI投資で知られるa16zの見解を直接配信\n・理論から実装まで技術者向けの実践的な内容\n・最新の生成AI動向を継続的にフォロー\n\n2. 扱うトピック\n・基盤モデルのインフラ構築と運用\n・LLM構築・運用のツールスタック\n・AIセキュリティの最新課題\n・採用など業務プロセスへのLLM活用\n\nエンジニア視点での技術解説が期待できる内容です。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7345ceb0-eb45-453a-93f9-7dae797e019a",
+      "created_at": "2026-02-08T23:48:23.377347+00:00",
+      "item": {
+        "title": "- YouTube",
+        "url": "https://www.youtube.com/watch?v=9ohXlkbXiM4",
+        "source": "rss",
+        "published_at": "2026-02-08T23:48:23.377333+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供されたURLの情報では記事の具体的な内容を確認できませんでした。\n\nYouTubeの動画URLのみで、タイトルと本文が標準的なフッター情報のみとなっています。投稿を作成するには、以下の情報が必要です：\n\n**必要な情報：**\n- 動画のタイトル\n- 動画の内容・概要\n- 発表された製品/機能/サービスの詳細\n- 具体的な特徴や数値データ\n- リリース日や提供時期\n\n**お手数ですが、以下のいずれかをご提供ください：**\n1. 動画の詳細な内容説明\n2. 動画の字幕テキスト\n3. プレスリリースやニュース記事のURL\n4. 発表内容の要約\n\nこれらの情報があれば、ご要望に沿った投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
