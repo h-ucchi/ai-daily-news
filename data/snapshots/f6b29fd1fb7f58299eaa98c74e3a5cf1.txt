@@ -1,6 +1,6 @@
 # GitHub Copilot Blog
 # URL: https://github.blog/ai-and-ml/github-copilot/
-# Timestamp: 2026-02-09T07:00:59.175139+00:00
+# Timestamp: 2026-02-09T23:42:30.557124+00:00
 # Hash: ce77e224abe49a167df0bbc252e5efb856516a208edaf9304ff197035861a6ef
 
 <!doctype html>
@@ -12,7 +12,7 @@
 	<link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-	<!-- This site is optimized with the Yoast SEO Premium plugin v26.6.1 (Yoast SEO v26.6) - https://yoast.com/wordpress/plugins/seo/ -->
+	<!-- This site is optimized with the Yoast SEO Premium plugin v26.6.1 (Yoast SEO v26.9) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
 	<title>The latest on GitHub Copilot - The GitHub Blog</title>
 	<link rel="canonical" href="https://github.blog/ai-and-ml/github-copilot/" />
 	<link rel="next" href="https://github.blog/ai-and-ml/github-copilot/page/2/" />
@@ -68,7 +68,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel='stylesheet' id='all-css-8' href='https://github.blog/_static/??/wp-content/plugins/wp-menu-image/assets/css/wmi-front-style.css,/wp-content/themes/github-2021/dist/css/site-script.css?m=1769421355' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-8' href='https://github.blog/_static/??/wp-content/plugins/wp-menu-image/assets/css/wmi-front-style.css,/wp-content/themes/github-2021/dist/css/site-script.css?m=1770624814' type='text/css' media='all' />
 <link rel="https://api.w.org/" href="https://github.blog/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://github.blog/wp-json/wp/v2/categories/3295" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://github.blog/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.9.1" />
 <!-- Stream WordPress user activity plugin v4.1.1 -->
@@ -1180,7 +1180,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </script>
 <div id="ghcc" style="position: sticky; bottom: 0; z-index: 99999;"></div><script src="https://ghcc.githubassets.com/ghcc.min.js" id="github_cookie_consent-js"></script>
 <script src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.js" id="github_microsoft_analytics-js"></script>
-<script type="text/javascript" src="https://github.blog/_static/??/wp-content/plugins/gh-cookie-consent-and-tracking/dist/js/cookie-consent-and-tracking.js,/wp-includes/js/dist/hooks.min.js?m=1770142567j" ></script><script src="https://github.blog/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" src="https://github.blog/_static/??/wp-content/plugins/gh-cookie-consent-and-tracking/dist/js/cookie-consent-and-tracking.js,/wp-includes/js/dist/hooks.min.js?m=1770624814j" ></script><script src="https://github.blog/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
 <script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
@@ -1188,13 +1188,13 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script type="text/javascript" src="https://github.blog/wp-includes/js/dist/url.min.js?m=1770142567g" ></script><script src="https://github.blog/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://github.blog/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "88512b570e" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "074124d384" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://github.blog/wp-admin/admin-ajax.php?action=rest-nonce";
 //# sourceURL=wp-api-fetch-js-after
 </script>
-<script type="text/javascript" src="https://github.blog/wp-content/themes/github-2021/dist/js/site-script.js?m=1769421355g" ></script><script integrity="sha256-kAnFXX7lCXF9K2o4g5q1lKyk167yRq6C4TiXWtbgvQw=" crossorigin="anonymous" src="https://analytics.githubassets.com/v1.1.0/hydro-marketing.min.js?ver=6.9.1" id="hydro-analytics-js"></script>
+<script type="text/javascript" src="https://github.blog/wp-content/themes/github-2021/dist/js/site-script.js?m=1770624814g" ></script><script integrity="sha256-kAnFXX7lCXF9K2o4g5q1lKyk167yRq6C4TiXWtbgvQw=" crossorigin="anonymous" src="https://analytics.githubassets.com/v1.1.0/hydro-marketing.min.js?ver=6.9.1" id="hydro-analytics-js"></script>
 <script id="jetpack-stats-js-before">
 _stq = window._stq || [];
 _stq.push([ "view", {"v":"ext","blog":"153214340","post":"0","tz":"-8","srv":"github.blog","arch_cat":"ai-and-ml/github-copilot","arch_results":"15","hp":"vip","j":"1:15.4"} ]);
