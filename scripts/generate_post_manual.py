@@ -81,7 +81,12 @@ def main():
 
         # AI-lintチェッカー初期化
         rules_path = os.path.join(os.path.dirname(__file__), "..", "ai-lint", ".claude", "skills", "ai-lint", "rules", "ai-lint-rules.yml")
-        checker = AILintChecker(rules_path)
+        if os.path.exists(rules_path):
+            checker = AILintChecker(rules_path)
+            print("✓ AI-lintルールを読み込みました")
+        else:
+            checker = AILintChecker()  # デフォルトルールを使用
+            print("✓ デフォルトAI-lintルールを使用します")
 
         # 投稿案生成（最大3回リトライ）
         max_retries = 2

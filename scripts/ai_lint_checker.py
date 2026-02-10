@@ -3,6 +3,7 @@
 AI-Lint Checker
 AIっぽい表現を検出するチェッカー（プロダクト公式X向け）
 """
+import os
 from dataclasses import dataclass
 from typing import List, Dict, Any, Optional
 import yaml
@@ -55,15 +56,82 @@ class AILintChecker:
         "AI-TONE-008",   # 口語表現の欠如
     }
 
-    def __init__(self, rules_path: str):
+    def __init__(self, rules_path: Optional[str] = None):
         """
         Args:
-            rules_path: ai-lint-rules.ymlへのパス
+            rules_path: ai-lint-rules.ymlへのパス（Noneの場合は基本ルールを使用）
         """
-        with open(rules_path, 'r', encoding='utf-8') as f:
-            self.rules_config = yaml.safe_load(f)
+        if rules_path and os.path.exists(rules_path):
+            with open(rules_path, 'r', encoding='utf-8') as f:
+                self.rules_config = yaml.safe_load(f)
+        else:
+            # フォールバック: 基本的なAI的表現ルール
+            self.rules_config = self._get_default_rules()
 
         self.rules = self._compile_rules()
+
+    def _get_default_rules(self) -> Dict[str, Any]:
+        """YAMLファイルがない場合のデフォルトルール"""
+        return {
+            'rules': [
+                {
+                    'id': 'AI-VOCAB-001',
+                    'severity': 'high',
+                    'category': 'vocabulary',
+                    'pattern': 'と考えられます',
+                    'description': 'AI特有の推量表現',
+                    'suggestion': '「と思います」「かもしれません」に書き換え'
+                },
+                {
+                    'id': 'AI-VOCAB-002',
+                    'severity': 'medium',
+                    'category': 'vocabulary',
+                    'pattern': 'において',
+                    'description': 'AI特有の硬い助詞表現',
+                    'suggestion': '「で」「では」に書き換え'
+                },
+                {
+                    'id': 'AI-VOCAB-004',
+                    'severity': 'high',
+                    'category': 'vocabulary',
+                    'pattern': 'が挙げられます',
+                    'description': 'AI特有の列挙導入表現',
+                    'suggestion': '直接列挙する。または「があります」に書き換え'
+                },
+                {
+                    'id': 'AI-VOCAB-005',
+                    'severity': 'high',
+                    'category': 'vocabulary',
+                    'pattern': 'が不可欠です',
+                    'description': 'AI特有の硬い必要性表現',
+                    'suggestion': '「が大事です」「が必要です」に書き換え'
+                },
+                {
+                    'id': 'AI-VOCAB-009',
+                    'severity': 'medium',
+                    'category': 'vocabulary',
+                    'pattern': '参考になれば幸いです',
+                    'description': 'AI記事の定型的な締め表現',
+                    'suggestion': '具体的な行動を提案する締めに変更'
+                },
+                {
+                    'id': 'AI-SYNTAX-006',
+                    'severity': 'medium',
+                    'category': 'syntax',
+                    'pattern': '本記事では',
+                    'description': '記事メタ的な導入表現',
+                    'suggestion': '「今回は」「ここでは」に書き換え'
+                },
+                {
+                    'id': 'AI-MARKER-010',
+                    'severity': 'high',
+                    'category': 'marker',
+                    'pattern': 'を実現',
+                    'description': 'AI特有の表現パターン',
+                    'suggestion': '「できた」「した」「を作った」に書き換え'
+                }
+            ]
+        }
 
     def _compile_rules(self) -> List[Dict[str, Any]]:
         """パターンを正規表現にコンパイル（除外ルール適用）"""
