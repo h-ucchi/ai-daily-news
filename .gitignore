@@ -51,3 +51,4 @@ htmlcov/
 *.bak
 *.backup
 *.tmp
+ai-lint/
