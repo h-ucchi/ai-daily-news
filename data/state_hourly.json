@@ -35,20 +35,21 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-07T06:38:06.879389+00:00",
+    "last_run_at": "2026-02-10T01:37:37.192285+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
-      "https://openai.com/policies/kr-privacy-policy",
+      "https://openai.com/index/bringing-chatgpt-to-genaimil",
+      "https://openai.com/index/testing-ads-in-chatgpt",
       "https://openai.com/index/our-approach-to-localization",
       "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
       "https://openai.com/index/trusted-access-for-cyber",
       "https://openai.com/index/introducing-openai-frontier",
-      "https://openai.com/index/navigating-health-questions",
       "https://openai.com/index/introducing-gpt-5-3-codex",
       "https://openai.com/index/gpt-5-3-codex-system-card",
+      "https://openai.com/index/navigating-health-questions",
       "https://openai.com/index/unlocking-the-codex-harness",
       "https://openai.com/index/vfl-wolfsburg",
       "https://openai.com/index/sora-feed-philosophy",
@@ -59,8 +60,7 @@
       "https://openai.com/index/taisei",
       "https://openai.com/index/emea-youth-and-wellbeing-grant",
       "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
-      "https://openai.com/index/ai-agent-link-safety",
-      "https://openai.com/index/pvh-future-of-fashion"
+      "https://openai.com/index/ai-agent-link-safety"
     ],
     "https://github.blog/feed/": [
       "https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/",
@@ -75,18 +75,20 @@
       "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.38",
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.37",
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.36",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.34",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.33",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.32",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.31",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.30",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.29",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.27",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.25",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.23",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.22"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.27"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
+      "https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot",
+      "https://github.blog/changelog/2026-02-07-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot",
       "https://github.blog/changelog/2026-02-05-claude-opus-4-6-is-now-generally-available-for-github-copilot",
       "https://github.blog/changelog/2026-02-04-showing-tool-calls-and-other-improvements-to-copilot-chat-on-the-web",
       "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-code-v1-109-january-release",
@@ -94,9 +96,7 @@
       "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github",
       "https://github.blog/changelog/2026-02-03-simplified-copilot-model-enablement-experience-for-individual-users",
       "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview",
-      "https://github.blog/changelog/2026-01-29-closing-down-notice-of-legacy-copilot-metrics-apis",
-      "https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview",
-      "https://github.blog/changelog/2026-01-28-github-mcp-server-new-projects-tools-oauth-scope-filtering-and-new-features"
+      "https://github.blog/changelog/2026-01-29-closing-down-notice-of-legacy-copilot-metrics-apis"
     ],
     "https://feeds.simplecast.com/Hb_IuXOo": [
       "https://ai-a16z.simplecast.com/episodes/why-this-isnt-the-dot-com-bubble-martin-casado-on-wsjs-bold-names-u9crQXPt",
@@ -138,6 +138,10 @@
       "https://www.youtube.com/watch?v=Uh98_aGhAuY"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
+      "https://www.youtube.com/watch?v=6OiE0jIY93c",
+      "https://www.youtube.com/watch?v=2agJo3Jf_O4",
+      "https://www.youtube.com/watch?v=aCN9iCXNJqQ",
+      "https://www.youtube.com/watch?v=9ohXlkbXiM4",
       "https://www.youtube.com/watch?v=4l_w08gcBFk",
       "https://www.youtube.com/watch?v=SkSlUt63V6Y",
       "https://www.youtube.com/watch?v=iupsBLiNznU",
@@ -148,13 +152,10 @@
       "https://www.youtube.com/watch?v=HFM3se4lNiw",
       "https://www.youtube.com/watch?v=NAcdcunPfJg",
       "https://www.youtube.com/watch?v=0e-Brv-gS9Q",
-      "https://www.youtube.com/watch?v=xnInEsaaj9c",
-      "https://www.youtube.com/watch?v=Wpxv-8nG8ec",
-      "https://www.youtube.com/watch?v=mFG-4vUJ0kI",
-      "https://www.youtube.com/watch?v=1XkVsE9-ZK4",
-      "https://www.youtube.com/watch?v=Z3D2UmAesN4"
+      "https://www.youtube.com/watch?v=xnInEsaaj9c"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
+      "https://www.youtube.com/shorts/wZ1QDXeYb6M",
       "https://www.youtube.com/shorts/wqATgTmPA8M",
       "https://www.youtube.com/shorts/uEv9OHv3pnw",
       "https://www.youtube.com/shorts/9V_4QOpmmZQ",
@@ -168,8 +169,7 @@
       "https://www.youtube.com/shorts/kHtvEoCQM_Y",
       "https://www.youtube.com/shorts/3zke56cE4H4",
       "https://www.youtube.com/shorts/X1oyhh5cS30",
-      "https://www.youtube.com/shorts/tqvdJBPmStg",
-      "https://www.youtube.com/shorts/B-RKSzxbo-k"
+      "https://www.youtube.com/shorts/tqvdJBPmStg"
     ]
   }
 }
