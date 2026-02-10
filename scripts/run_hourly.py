@@ -20,7 +20,7 @@ import anthropic
 import feedparser
 
 # 既存モジュールをインポート
-from run_daily import StateManager
+from state_manager import StateManager
 from draft_manager import DraftManager
 from article_fetcher import fetch_article_content_safe
 from post_prompt import get_system_prompt, create_user_prompt_from_article
@@ -595,8 +595,8 @@ def main():
     if not slack_webhook_url:
         raise ValueError("環境変数 SLACK_WEBHOOK_URL が設定されていません")
 
-    # 状態管理初期化（run_daily.pyと共有）
-    state = StateManager("data/state.json")
+    # 状態管理初期化（run_hourly専用）
+    state = StateManager("data/state_hourly.json")
 
     try:
         # ページスナップショット監視
