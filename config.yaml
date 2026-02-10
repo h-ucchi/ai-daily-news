@@ -56,9 +56,9 @@ rss:
     - url: "https://github.blog/changelog/label/copilot/feed/"
       name: "GitHub Copilot Changelog"
 
-    # Podcast Feeds
-    - url: "https://feeds.simplecast.com/Hb_IuXOo"
-      name: "AI + a16z Podcast"
+    # Podcast Feeds（無効化 - 音声コンテンツは投稿案として不適切）
+    # - url: "https://feeds.simplecast.com/Hb_IuXOo"
+    #   name: "AI + a16z Podcast"
 
     # YouTube Channels (RSS format)
     - url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA"

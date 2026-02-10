@@ -475,11 +475,17 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
             # 前回取得した記事URLリストを取得
             previous_urls = state.get_rss_article_urls(feed_url)
             if previous_urls is None:
+                # 初回取得時は最新3件のみ処理
+                INITIAL_FETCH_LIMIT = 3
                 previous_urls = []
-                print(f"   ℹ️  初回取得（全記事を対象）")
+                print(f"   ℹ️  初回取得（最新{INITIAL_FETCH_LIMIT}件のみ処理）")
 
-            # 今回取得した記事URLリスト
-            current_urls = [entry.link for entry in feed.entries]
+                # current_urlsを取得してから制限を適用
+                current_urls_all = [entry.link for entry in feed.entries]
+                current_urls = current_urls_all[:INITIAL_FETCH_LIMIT]
+            else:
+                # 通常時は全記事を取得
+                current_urls = [entry.link for entry in feed.entries]
 
             # 差分（新規記事）を抽出
             new_urls = set(current_urls) - set(previous_urls)
@@ -742,6 +748,22 @@ def main():
 def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_url: str, draft_map: Dict):
     """スナップショット変更とRSS記事をSlackに送信（必見の更新）- ページネーション対応"""
     import requests
+
+    # === 追加: 1回あたりの最大送信数を制限 ===
+    MAX_ITEMS_PER_RUN = 10  # 5-10件に制限
+
+    # 統合リストを作る前に件数をチェック
+    total_items = len(snapshots) + len(rss_articles)
+    if total_items > MAX_ITEMS_PER_RUN:
+        print(f"⚠️  送信対象が{total_items}件 → 上位{MAX_ITEMS_PER_RUN}件に制限")
+
+        # スナップショットを優先、残り枠をRSS記事に割り当て
+        snapshots_limited = snapshots[:MAX_ITEMS_PER_RUN]
+        remaining_slots = MAX_ITEMS_PER_RUN - len(snapshots_limited)
+        rss_articles_limited = rss_articles[:max(0, remaining_slots)]
+
+        snapshots = snapshots_limited
+        rss_articles = rss_articles_limited
 
     # 1メッセージあたり最大10件（3ブロック/件 × 10 = 30ブロック < 50ブロック制限）
     ITEMS_PER_PAGE = 10
