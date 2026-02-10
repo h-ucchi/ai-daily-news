@@ -35,20 +35,20 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-10T14:16:18.553522+00:00",
+    "last_run_at": "2026-02-10T23:44:31.853705+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
-      "https://openai.com/index/testing-ads-in-chatgpt",
       "https://openai.com/index/bringing-chatgpt-to-genaimil",
+      "https://openai.com/index/testing-ads-in-chatgpt",
       "https://openai.com/index/our-approach-to-localization",
       "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
       "https://openai.com/index/trusted-access-for-cyber",
       "https://openai.com/index/introducing-openai-frontier",
-      "https://openai.com/index/navigating-health-questions",
       "https://openai.com/index/gpt-5-3-codex-system-card",
+      "https://openai.com/index/navigating-health-questions",
       "https://openai.com/index/introducing-gpt-5-3-codex",
       "https://openai.com/index/unlocking-the-codex-harness",
       "https://openai.com/index/vfl-wolfsburg",
@@ -75,6 +75,7 @@
       "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.38",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.37",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.36",
@@ -83,8 +84,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.32",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.31",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.30",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.29",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.27"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.29"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot",
@@ -138,6 +138,7 @@
       "https://www.youtube.com/watch?v=Uh98_aGhAuY"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
+      "https://www.youtube.com/watch?v=2gCqVb2lBwk",
       "https://www.youtube.com/watch?v=6OiE0jIY93c",
       "https://www.youtube.com/watch?v=2agJo3Jf_O4",
       "https://www.youtube.com/watch?v=aCN9iCXNJqQ",
@@ -151,10 +152,10 @@
       "https://www.youtube.com/watch?v=xHnlzAPD9QI",
       "https://www.youtube.com/watch?v=HFM3se4lNiw",
       "https://www.youtube.com/watch?v=NAcdcunPfJg",
-      "https://www.youtube.com/watch?v=0e-Brv-gS9Q",
-      "https://www.youtube.com/watch?v=xnInEsaaj9c"
+      "https://www.youtube.com/watch?v=0e-Brv-gS9Q"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
+      "https://www.youtube.com/shorts/nUVAY8IwU88",
       "https://www.youtube.com/shorts/wZ1QDXeYb6M",
       "https://www.youtube.com/shorts/wqATgTmPA8M",
       "https://www.youtube.com/shorts/uEv9OHv3pnw",
@@ -168,8 +169,7 @@
       "https://www.youtube.com/watch?v=rxYTx6aj96k",
       "https://www.youtube.com/shorts/kHtvEoCQM_Y",
       "https://www.youtube.com/shorts/3zke56cE4H4",
-      "https://www.youtube.com/shorts/X1oyhh5cS30",
-      "https://www.youtube.com/shorts/tqvdJBPmStg"
+      "https://www.youtube.com/shorts/X1oyhh5cS30"
     ]
   }
 }

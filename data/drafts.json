@@ -1,3 +1,55 @@
 {
-  "drafts": []
+  "drafts": [
+    {
+      "id": "43e2d92c-e170-40e9-917d-242f6b1c02a2",
+      "created_at": "2026-02-10T23:44:31.744446+00:00",
+      "item": {
+        "title": "Release v2.1.39 · anthropics/claude-code · GitHub",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
+        "source": "rss",
+        "published_at": "2026-02-10T23:44:31.744409+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Code v2.1.39がリリース。ターミナル性能とエラー処理を改善。\n\nAnthropicsのClaude Code統合開発環境の最新版が公開された。ターミナルレンダリングの高速化と、複数のバグ修正を実施。\n\nhttps://github.com/anthropics/claude-code/releases/tag/v2.1.39\n\n💡 主要ポイント\n・ターミナルのレンダリング性能を向上\n・致命的エラーの表示処理を修正\n・セッション終了後のプロセスハング解消\n\n1. パフォーマンス改善\n・ターミナルレンダリングの高速化を実現\n・より快適な開発体験を提供\n\n2. バグ修正\n・致命的エラーが非表示になる問題を解決\n・セッション終了後にプロセスがハングする不具合を修正\n・ターミナル画面の境界で文字が消失する問題に対応\n・詳細トランスクリプトビューの空行表示を改善\n\n3. 安定性向上\n・エラー処理の信頼性が向上\n・開発環境の安定動作を強化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8fde13fa-d4f7-44f2-ad5b-356e22f0bb02",
+      "created_at": "2026-02-10T23:44:31.744731+00:00",
+      "item": {
+        "title": "- YouTube",
+        "url": "https://www.youtube.com/watch?v=2gCqVb2lBwk",
+        "source": "rss",
+        "published_at": "2026-02-10T23:44:31.744716+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございません。提供いただいたURLはYouTube動画のようですが、動画の内容を確認することができません。\n\nX投稿を作成するには、以下の情報が必要です：\n\n1. **動画のタイトル**\n2. **動画の説明文**\n3. **動画の主な内容**（何について説明している動画か）\n4. **重要なポイント**（技術的な特徴、使い方、効果など）\n\n以下のいずれかの方法で情報をご提供いただけますか？\n\n**方法1: 動画情報を直接提供**\n- 動画タイトル\n- 動画の概要欄の内容\n- 動画で紹介されている内容の要約\n\n**方法2: 動画ページの情報をコピー**\n- YouTubeの動画ページを開き、タイトルと説明文をコピーして提供\n\n**方法3: 別の記事URL**\n- もし別の記事（ブログ記事やニュース記事など）があれば、そちらのURLを提供\n\n情報をいただければ、すぐに投稿案を作成いたします！",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9389d8b6-b996-42b7-a892-17cc7e329e96",
+      "created_at": "2026-02-10T23:44:31.745099+00:00",
+      "item": {
+        "title": "- YouTube",
+        "url": "https://www.youtube.com/shorts/nUVAY8IwU88",
+        "source": "rss",
+        "published_at": "2026-02-10T23:44:31.745086+00:00",
+        "metadata": {
+          "feed_name": "Tesla YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございませんが、提供されたURLはYouTube Shortsの動画ページで、記事本文として表示されているのはYouTubeのフッター情報のみです。\n\n動画の内容（タイトル、説明文、字幕など）が必要ですが、現在の情報からは以下が不足しています：\n\n**必要な情報：**\n- 動画のタイトル\n- 動画の説明文\n- 動画で紹介されている内容の要約\n- 誰が投稿した動画か\n- どのようなAI技術やツールについての動画か\n\n**対応方法：**\n1. YouTube動画ページを開いて、動画タイトルと説明文をコピーして提供していただく\n2. 動画の内容を要約して共有していただく\n3. 別の記事URLを提供していただく\n\n正確で有益なX投稿を作成するため、上記いずれかの方法で情報を補完していただけますでしょうか？",
+      "status": "pending",
+      "posted_at": null
+    }
+  ]
 }
