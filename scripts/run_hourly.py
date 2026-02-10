@@ -24,6 +24,7 @@ from state_manager import StateManager
 from draft_manager import DraftManager
 from article_fetcher import fetch_article_content_safe
 from post_prompt import get_system_prompt, create_user_prompt_from_article
+from ai_lint_checker import AILintChecker
 
 
 @dataclass
@@ -200,20 +201,37 @@ def generate_post_from_snapshot(old_snapshot: Optional[PageSnapshot], new_snapsh
             new_text
         )
 
-        # 5. API呼び出し
-        message = client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=1500,
-            system=system_prompt,
-            messages=[{"role": "user", "content": user_prompt}]
-        )
+        # 5. AI-lintチェッカー初期化
+        rules_path = os.path.join(os.path.dirname(__file__), "..", "ai-lint", ".claude", "skills", "ai-lint", "rules", "ai-lint-rules.yml")
+        checker = AILintChecker(rules_path) if os.path.exists(rules_path) else AILintChecker()
 
-        response_text = message.content[0].text.strip()
+        # 6. AI-lint自動修正（最大2回試行）
+        max_retries = 1
+        score_threshold = 15
+        response_text = None
+        detected_issues = None
 
-        # ★ NOCHANGEチェック
-        if response_text == "NOCHANGE" or response_text.startswith("NOCHANGE"):
-            print(f"   ℹ️ Claude APIが変更なしと判断: {new_snapshot.name}")
-            return None  # 投稿案なし
+        for attempt in range(max_retries + 1):
+            message = client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=1500,
+                system=system_prompt,
+                messages=[{"role": "user", "content": user_prompt if attempt == 0 else user_prompt + f"\n\n【重要：以下の表現が検出されたので必ず修正してください】\n" + "\n".join([f"❌ 「{issue.matched_text}」→ {issue.suggestion}" for issue in detected_issues[:5]])}]
+            )
+
+            response_text = message.content[0].text.strip()
+
+            # ★ NOCHANGEチェック
+            if response_text == "NOCHANGE" or response_text.startswith("NOCHANGE"):
+                print(f"   ℹ️ Claude APIが変更なしと判断: {new_snapshot.name}")
+                return None  # 投稿案なし
+
+            # AI-lintチェック
+            lint_result = checker.check(response_text)
+            if lint_result.score == 0 or lint_result.score < score_threshold:
+                break
+            elif attempt < max_retries:
+                detected_issues = lint_result.detections
 
         return response_text
 
@@ -317,6 +335,13 @@ def generate_post_from_article(article: Dict, config: Dict) -> Optional[str]:
 
         client = anthropic.Anthropic(api_key=api_key)
 
+        # AI-lintチェッカー初期化
+        rules_path = os.path.join(os.path.dirname(__file__), "..", "ai-lint", ".claude", "skills", "ai-lint", "rules", "ai-lint-rules.yml")
+        if os.path.exists(rules_path):
+            checker = AILintChecker(rules_path)
+        else:
+            checker = AILintChecker()  # デフォルトルールを使用
+
         # 3. システムプロンプト（ブログ記事用、changelogと同じフォーマット）
         system_prompt = """あなたはAI開発ツールのブログ記事を分析し、X投稿案を作成する専門家です。
 読者は生成AI活用に積極的なWebエンジニアです。
@@ -359,8 +384,15 @@ def generate_post_from_article(article: Dict, config: Dict) -> Optional[str]:
 - 記事にない情報は推測しない
 - カテゴリのプレフィックス（「新機能:」など）を必ず含める"""
 
-        # 4. ユーザープロンプト
-        user_prompt = f"""以下のブログ記事について、X投稿案を作成してください。
+        # 4. AI-lint自動修正（最大2回試行、自動フローなので遅延最小化）
+        max_retries = 1
+        score_threshold = 15
+        generated_text = None
+        lint_result = None
+
+        for attempt in range(max_retries + 1):
+            # ユーザープロンプト
+            user_prompt = f"""以下のブログ記事について、X投稿案を作成してください。
 
 【記事タイトル】
 {article["title"]}
@@ -376,15 +408,30 @@ def generate_post_from_article(article: Dict, config: Dict) -> Optional[str]:
 
 上記フォーマットに従って投稿案を作成してください。"""
 
-        # 5. API呼び出し
-        message = client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=1500,
-            system=system_prompt,
-            messages=[{"role": "user", "content": user_prompt}]
-        )
+            # 2回目以降は検出された問題を修正指示として追加
+            if attempt > 0 and lint_result and lint_result.detections:
+                fix_instructions = "\n\n【重要：以下の表現が検出されたので必ず修正してください】\n"
+                for issue in lint_result.detections[:5]:
+                    fix_instructions += f"❌ 「{issue.matched_text}」→ {issue.suggestion}\n"
+                user_prompt += fix_instructions
 
-        return message.content[0].text
+            # 5. API呼び出し
+            message = client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=1500,
+                system=system_prompt,
+                messages=[{"role": "user", "content": user_prompt}]
+            )
+
+            generated_text = message.content[0].text
+
+            # AI-lintチェック
+            lint_result = checker.check(generated_text)
+
+            if lint_result.score == 0 or lint_result.score < score_threshold:
+                break
+
+        return generated_text
 
     except Exception as e:
         print(f"❌ 投稿案生成エラー: {e}")
@@ -410,21 +457,51 @@ def generate_post_from_rss_article(url: str, title: str, content: str, config: D
 
         client = anthropic.Anthropic(api_key=api_key)
 
+        # AI-lintチェッカー初期化
+        rules_path = os.path.join(os.path.dirname(__file__), "..", "ai-lint", ".claude", "skills", "ai-lint", "rules", "ai-lint-rules.yml")
+        if os.path.exists(rules_path):
+            checker = AILintChecker(rules_path)
+        else:
+            checker = AILintChecker()  # デフォルトルールを使用
+
         # 共通プロンプトを使用
         system_prompt = get_system_prompt()
-        user_prompt = create_user_prompt_from_article(url, title, content)
 
-        message = client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=1500,
-            system=system_prompt,
-            messages=[{
-                "role": "user",
-                "content": user_prompt
-            }]
-        )
+        # AI-lint自動修正（最大2回試行、自動フローなので遅延最小化）
+        max_retries = 1
+        score_threshold = 15
+        generated_text = None
+        lint_result = None
 
-        return message.content[0].text
+        for attempt in range(max_retries + 1):
+            user_prompt = create_user_prompt_from_article(url, title, content)
+
+            # 2回目以降は検出された問題を修正指示として追加
+            if attempt > 0 and lint_result and lint_result.detections:
+                fix_instructions = "\n\n【重要：以下の表現が検出されたので必ず修正してください】\n"
+                for issue in lint_result.detections[:5]:
+                    fix_instructions += f"❌ 「{issue.matched_text}」→ {issue.suggestion}\n"
+                user_prompt += fix_instructions
+
+            message = client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=1500,
+                system=system_prompt,
+                messages=[{
+                    "role": "user",
+                    "content": user_prompt
+                }]
+            )
+
+            generated_text = message.content[0].text
+
+            # AI-lintチェック
+            lint_result = checker.check(generated_text)
+
+            if lint_result.score == 0 or lint_result.score < score_threshold:
+                break
+
+        return generated_text
 
     except Exception as e:
         print(f"❌ RSS投稿案生成エラー: {e}")

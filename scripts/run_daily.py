@@ -19,6 +19,7 @@ from content_validator import ContentValidator
 from post_prompt import get_system_prompt, create_user_prompt_from_tweet, create_user_prompt_from_article
 from article_fetcher import fetch_article_content_safe
 from state_manager import StateManager
+from ai_lint_checker import AILintChecker
 
 
 @dataclass
@@ -728,6 +729,12 @@ class SlackReporter:
         self.stats = stats
         # 検証器の初期化
         self.validator = ContentValidator(config)
+        # AI-lintチェッカーの初期化
+        rules_path = os.path.join(os.path.dirname(__file__), "..", "ai-lint", ".claude", "skills", "ai-lint", "rules", "ai-lint-rules.yml")
+        if os.path.exists(rules_path):
+            self.ai_lint_checker = AILintChecker(rules_path)
+        else:
+            self.ai_lint_checker = AILintChecker()  # デフォルトルール
 
     def _select_diverse_provider_items(self, sorted_items: List[Item], limit: int) -> List[Item]:
         """
@@ -1120,17 +1127,39 @@ class SlackReporter:
                     article_content
                 )
 
-            message = client.messages.create(
-                model="claude-sonnet-4-5-20250929",
-                max_tokens=1500,  # 800文字要求なので余裕を持たせる
-                system=system_prompt,  # システムプロンプト追加
-                messages=[{
-                    "role": "user",
-                    "content": user_prompt
-                }]
-            )
+            # AI-lint自動修正（最大2回試行、自動フローなので遅延最小化）
+            max_retries = 1
+            score_threshold = 15
+            generated_text = None
+            detected_issues = None
 
-            generated_text = message.content[0].text
+            for attempt in range(max_retries + 1):
+                message = client.messages.create(
+                    model="claude-sonnet-4-5-20250929",
+                    max_tokens=1500,  # 800文字要求なので余裕を持たせる
+                    system=system_prompt,  # システムプロンプト追加
+                    messages=[{
+                        "role": "user",
+                        "content": user_prompt if attempt == 0 else user_prompt + f"\n\n【重要：以下の表現が検出されたので必ず修正してください】\n" + "\n".join([f"❌ 「{issue.matched_text}」→ {issue.suggestion}" for issue in detected_issues[:5]])
+                    }]
+                )
+
+                generated_text = message.content[0].text
+
+                # AI-lintチェック
+                lint_result = self.ai_lint_checker.check(generated_text)
+
+                if lint_result.score == 0:
+                    break  # AI的表現なし
+                elif lint_result.score < score_threshold:
+                    break  # 許容範囲内
+                else:
+                    if attempt < max_retries:
+                        detected_issues = lint_result.detections
+                        # 再生成（次のループで修正指示を追加）
+                    else:
+                        # 最大試行回数到達、警告を出すが続行
+                        print(f"⚠️  AI-lint: スコア {lint_result.score} (閾値超過、続行)")
 
             # 検証フェーズ1: 正規表現ベース
             validation_result = self.validator.validate_post(generated_text, title)
