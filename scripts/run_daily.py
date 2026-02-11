@@ -1208,7 +1208,7 @@ def main():
         raise ValueError("環境変数 SLACK_WEBHOOK_URL が設定されていません")
 
     # 初期化
-    state = StateManager()
+    state = StateManager("data/state.json")
     x_client = XAPIClient(x_bearer_token)
     collector = DataCollector(config, state, x_client)
 
