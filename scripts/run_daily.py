@@ -198,95 +198,123 @@ class DataCollector:
         print(f"✅ 収集完了: {len(self.items)} 件")
 
     def _collect_x_accounts(self):
-        """Xアカウントからツイート収集（フォロワー数フィルタリング付き）"""
-        accounts = self.config["x"]["accounts"]
+        """Xアカウントからツイート収集（カテゴリ別フォロワー数フィルタリング付き）"""
+        accounts_config = self.config["x"]["accounts"]
         limit = self.config["x"]["limits"]["accounts"]
         fetched = 0
 
-        # フォロワー数フィルタ設定
-        follower_filter = self.config["x"].get("follower_filter", {})
-        filter_enabled = follower_filter.get("enabled", False)
-        min_followers = follower_filter.get("min_followers", 0)
+        # カテゴリ別フォロワー数フィルタ設定
+        follower_filters = self.config["x"].get("follower_filters", {})
 
-        print(f"📱 Xアカウント監視: {len(accounts)} アカウント")
-        if filter_enabled:
-            print(f"   フォロワー数フィルタ: {min_followers:,}人以上")
+        # 後方互換性：accountsがリストの場合は従来のロジック
+        if isinstance(accounts_config, list):
+            print("⚠️  旧形式のアカウントリスト検出。新形式（カテゴリ別）への移行を推奨します。")
+            accounts_list = accounts_config
+            tier = "unknown"
+            filter_config = self.config["x"].get("follower_filter", {})
+        else:
+            # 新形式：カテゴリ別処理
+            accounts_list = []
+            total_accounts = sum(len(accounts_config.get(tier, [])) for tier in ["official", "developers", "practitioners"])
+            print(f"📱 Xアカウント監視（カテゴリ別）: 合計 {total_accounts} アカウント")
 
-        for username in accounts:
-            if fetched >= limit:
-                print(f"⚠️  アカウント監視の上限 {limit} 件に到達")
-                self.stats["x_limit_reached"] = True
-                break
+            # カテゴリ順に処理（official → developers → practitioners）
+            for tier in ["official", "developers", "practitioners"]:
+                tier_accounts = accounts_config.get(tier, [])
+                if not tier_accounts:
+                    continue
 
-            user_id = self.x_client.get_user_id(username)
-            if not user_id:
-                continue
+                filter_config = follower_filters.get(tier, {})
+                filter_enabled = filter_config.get("enabled", False)
+                min_followers = filter_config.get("min_followers", 0)
 
-            since_id = self.state.get_x_account_since_id(username)
-            tweets, users = self.x_client.get_user_tweets(user_id, since_id, max_results=10)
+                print(f"  【{tier}】 {len(tier_accounts)} アカウント", end="")
+                if filter_enabled:
+                    print(f"（フォロワー {min_followers:,}人以上）")
+                else:
+                    print("（フィルタなし）")
 
-            if not tweets:
-                continue
+                for username in tier_accounts:
+                    if fetched >= limit:
+                        print(f"⚠️  アカウント監視の上限 {limit} 件に到達")
+                        self.stats["x_limit_reached"] = True
+                        break
 
-            # 最新のtweet_idを保存
-            max_id = max(int(t["id"]) for t in tweets)
-            self.state.set_x_account_since_id(username, user_id, str(max_id))
+                    user_id = self.x_client.get_user_id(username)
+                    if not user_id:
+                        print(f"  ⚠️  ユーザーID取得失敗: @{username}")
+                        continue
 
-            for tweet in tweets:
+                    since_id = self.state.get_x_account_since_id(username)
+                    tweets, users = self.x_client.get_user_tweets(user_id, since_id, max_results=10)
+
+                    if not tweets:
+                        continue
+
+                    # 最新のtweet_idを保存
+                    max_id = max(int(t["id"]) for t in tweets)
+                    self.state.set_x_account_since_id(username, user_id, str(max_id))
+
+                    for tweet in tweets:
+                        if fetched >= limit:
+                            break
+
+                        # カテゴリ別フォロワー数フィルタリング
+                        if filter_enabled:
+                            author_id = tweet.get("author_id")
+                            user = users.get(author_id, {})
+                            followers_count = user.get("public_metrics", {}).get("followers_count", 0)
+
+                            if followers_count < min_followers:
+                                tweet_text_short = tweet["text"][:50]
+                                print(f"    ⏭️  除外（フォロワー数: {followers_count:,}）: @{username}")
+                                self.stats["x_followers_filtered"] += 1
+                                continue
+
+                        # 言語・地域フィルタリング
+                        tweet_text = tweet["text"]
+                        tweet_url = f"https://twitter.com/{username}/status/{tweet['id']}"
+
+                        if self.classifier:
+                            # 総合的な分類（言語・地域チェックを含む）
+                            classification = self.classifier.classify(tweet_text, "", tweet_url)
+                            category = classification.category
+
+                            # 非英語コンテンツまたは日本由来のコンテンツは除外
+                            if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
+                                print(f"    ⏭️  除外（{category}）: @{username}")
+                                continue
+                        else:
+                            category = "UNKNOWN"
+
+                        # カテゴリ分類とスコア調整
+                        initial_score = self._calculate_engagement_score(tweet)
+                        if self.classifier:
+                            final_score = self.classifier.calculate_final_score(
+                                initial_score, category, "x_account"
+                            )
+                        else:
+                            final_score = initial_score
+
+                        item = Item(
+                            source="x_account",
+                            title=tweet_text[:100],
+                            url=tweet_url,
+                            published_at=tweet["created_at"],
+                            score=final_score,
+                            metadata={
+                                "username": username,
+                                "tier": tier,  # 著者tierを保存
+                                "tweet": tweet,
+                                "category": category
+                            }
+                        )
+                        self.items.append(item)
+                        fetched += 1
+                        print(f"    ✅ @{username} [{tier}] (スコア: {final_score})")
+
                 if fetched >= limit:
                     break
-
-                # フォロワー数フィルタリング
-                if filter_enabled:
-                    author_id = tweet.get("author_id")
-                    user = users.get(author_id, {})
-                    followers_count = user.get("public_metrics", {}).get("followers_count", 0)
-
-                    if followers_count < min_followers:
-                        tweet_text_short = tweet["text"][:50]
-                        print(f"  ⏭️  除外（フォロワー数: {followers_count:,}）: {tweet_text_short}...")
-                        self.stats["x_followers_filtered"] += 1
-                        continue
-
-                # 言語・地域フィルタリング
-                tweet_text = tweet["text"]
-                tweet_url = f"https://twitter.com/{username}/status/{tweet['id']}"
-
-                if self.classifier:
-                    # 総合的な分類（言語・地域チェックを含む）
-                    classification = self.classifier.classify(tweet_text, "", tweet_url)
-                    category = classification.category
-
-                    # 非英語コンテンツまたは日本由来のコンテンツは除外
-                    if category in ["NON_ENGLISH", "JAPAN_ORIGIN"]:
-                        print(f"  ⏭️  除外（{category}）: {tweet_text[:50]}...")
-                        continue
-                else:
-                    category = "UNKNOWN"
-
-                # カテゴリ分類とスコア調整
-                initial_score = self._calculate_engagement_score(tweet)
-                if self.classifier:
-                    final_score = self.classifier.calculate_final_score(
-                        initial_score, category, "x_account"
-                    )
-                else:
-                    final_score = initial_score
-
-                item = Item(
-                    source="x_account",
-                    title=tweet_text[:100],
-                    url=tweet_url,
-                    published_at=tweet["created_at"],
-                    score=final_score,
-                    metadata={
-                        "username": username,
-                        "tweet": tweet,
-                        "category": category
-                    }
-                )
-                self.items.append(item)
-                fetched += 1
 
         self.stats["x_accounts_fetched"] = fetched
         self.stats["x_total_fetched"] += fetched
@@ -790,16 +818,72 @@ class SlackReporter:
 
         return selected[:limit]
 
+    def _select_items_with_source_quotas(self, items: List[Item]) -> List[Item]:
+        """ソース別最低保証枠を考慮したアイテム選択"""
+        quotas_config = self.config["slack"].get("source_quotas", {})
+
+        if not quotas_config.get("enabled", False):
+            # 保証枠無効の場合は従来のスコア順
+            print("  📊 ソース別保証枠: 無効（スコア順のみ）")
+            return sorted(items, key=lambda x: (x.published_at, x.score), reverse=True)[:15]
+
+        print("  📊 ソース別保証枠: 有効")
+
+        # 1. 必須表示アイテムを抽出（must_include_feeds）
+        selected = []
+        if quotas_config.get("must_include", False):
+            must_include_items = [
+                item for item in items
+                if item.metadata.get("must_include", False)
+            ]
+            selected.extend(must_include_items)
+            print(f"    ✅ 必須表示: {len(must_include_items)}件")
+            # 必須アイテムを残りのプールから除外
+            items = [item for item in items if not item.metadata.get("must_include", False)]
+
+        # 2. ソース別にグループ化してスコア順にソート
+        by_source = defaultdict(list)
+        for item in items:
+            # x_account と x_search を "x" にまとめる
+            source = "x" if item.source in ["x_account", "x_search"] else item.source
+            by_source[source].append(item)
+
+        # 各ソースをスコア順にソート
+        for source in by_source:
+            by_source[source].sort(key=lambda x: (x.published_at, x.score), reverse=True)
+
+        # 3. ソース別保証枠を確保
+        for source in ["rss", "x"]:
+            quota = quotas_config.get(source, 0)
+            selected.extend(by_source[source][:quota])
+            print(f"    ✅ {source.upper()}保証枠: {len(by_source[source][:quota])}件 / {quota}件")
+
+        # 4. 残り枠をスコア順に埋める
+        remaining_quota = quotas_config.get("remaining", 7)
+
+        # 保証枠で使われなかったアイテムをプールに入れる
+        pool = []
+        for source in ["rss", "x"]:
+            quota = quotas_config.get(source, 0)
+            pool.extend(by_source[source][quota:])  # 保証枠以降
+
+        # プールをスコア順にソート
+        pool.sort(key=lambda x: (x.published_at, x.score), reverse=True)
+        selected.extend(pool[:remaining_quota])
+        print(f"    ✅ 残りスコア順: {len(pool[:remaining_quota])}件 / {remaining_quota}件")
+
+        # 最終的に日付×スコアでソート
+        selected.sort(key=lambda x: (x.published_at, x.score), reverse=True)
+
+        print(f"  📊 合計選択: {len(selected)}件")
+        return selected
+
     def send(self):
         """レポートを生成してSlackに投稿"""
         print("📤 Slackレポート生成中...")
 
-        # 日付×スコアの複合ソート（新しい記事を優先、同じ日付ならスコア順）
-        sorted_items = sorted(
-            self.items,
-            key=lambda x: (x.published_at, x.score),
-            reverse=True
-        )
+        # ソース別保証枠を考慮したアイテム選択
+        sorted_items = self._select_items_with_source_quotas(self.items)
 
         # セクション分け
         top_items = sorted_items[:self.config["slack"]["limits"]["top"]]

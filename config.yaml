@@ -4,27 +4,97 @@
 x:
   # 1日あたりの取得上限
   limits:
-    accounts: 100  # アカウント監視由来（200→100に削減）
-    search: 50     # 検索由来（120→50に削減）
-    total: 150     # 合計（320→150に削減）
+    accounts: 200  # 100 → 200（アカウント増加に対応）
+    search: 50     # 検索由来
+    total: 250     # 150 → 250（合計上限）
 
-  # フォロワー数フィルタリング
+  # フォロワー数フィルタリング（旧設定、後方互換性のため残す）
   follower_filter:
     enabled: true
-    min_followers: 5000  # この人数以上のアカウントのみ
+    min_followers: 5000
 
-  # 監視対象アカウント（主要なAI企業のみに絞る）
+  # カテゴリ別フォロワー数フィルタ（新規）
+  follower_filters:
+    official:
+      enabled: false  # 公式アカウントはフィルタなし
+    developers:
+      enabled: true
+      min_followers: 10000  # 開発者・研究者は10K以上
+    practitioners:
+      enabled: true
+      min_followers: 5000   # 実務者は5K以上
+
+  # 監視対象アカウント（カテゴリ別管理）
   accounts:
-    - openai
-    - anthropicai
-    - GoogleDeepMind
-    - MetaAI
-    - huggingface
-    - LangChainAI
-    - karpathy
-    - ylecun
-    # 以下、追加したいアカウントを記載
-    # - example_account
+    # === 公式アカウント（フォロワー数フィルタなし） ===
+    official:
+      # Claude & Anthropic
+      - anthropicai          # Anthropic公式
+      # - ClaudeAI_          # Claude公式（存在する場合）
+
+      # GitHub Copilot
+      - github               # GitHub公式
+      - GitHubNext           # GitHub Next（実験的機能）
+
+      # Cursor
+      - cursor_ai            # Cursor公式
+      - AmanSanger           # Cursor CEO
+
+      # OpenAI
+      - openai               # OpenAI公式
+      - ChatGPTapp           # ChatGPT公式
+
+    # === 開発者・研究者（フォロワー10K以上） ===
+    developers:
+      # Anthropic幹部
+      - danielgross          # Daniel Gross（Anthropic）
+      - amodei               # Dario Amodei（Anthropic CEO）
+
+      # Claude Code関連
+      - karpathy             # Andrej Karpathy（元OpenAI、Tesla AI director）
+      - simonw               # Simon Willison（Datasette、LLM enthusiast）
+      - swyx                 # Swyx（Developer educator）
+      - bcherny              # Boris Cherny（TypeScript expert、AI tools user）
+
+      # GitHub Copilot関連
+      - omarsar0             # Elvis Saravia（Prompt Engineering Guide）
+      - _philschmid          # Philipp Schmid（Hugging Face）
+
+      # Cursor関連
+      - sharifshameem        # Sharif Shameem（AI builder）
+      - skirano              # Amjad Masad（Replit CEO、Cursor enthusiast）
+
+      # AI研究者（ツール開発に影響力）
+      - ylecun               # Yann LeCun（Meta AI Chief）
+      - goodfeli             # Ian Goodfellow（元Google Brain）
+      - ilyasut              # Ilya Sutskever（OpenAI co-founder）
+
+    # === 実務者・インフルエンサー（フォロワー5K以上） ===
+    practitioners:
+      # Claude Code power users
+      - tom_doerr            # Tom Doerr（AI tools enthusiast）
+      - mckaywrigley         # Mckay Wrigley（AI tools builder）
+      - bentossell           # Ben Tossell（AI tools reviewer）
+
+      # GitHub Copilot power users
+      - cassidoo             # Cassidy Williams（Developer educator）
+      - Dayhaysoos           # Nick Taylor（GitHub）
+
+      # Cursor power users
+      - levelsio             # Pieter Levels（Indie maker）
+      - marc_louvion         # Marc Lou（Indie maker）
+
+      # LLM活用の実務者
+      - hwchase17            # Harrison Chase（LangChain founder）
+      - jerryjliu0           # Jerry Liu（LlamaIndex founder）
+      - eugeneyan            # Eugene Yan（Applied ML）
+      - bindureddy           # Bindu Reddy（Abacus.AI CEO）
+      - mattprd              # Matt（Prompt engineering）
+
+      # Developer tools enthusiasts
+      - rauchg               # Guillermo Rauch（Vercel CEO）
+      - dan_abramov          # Dan Abramov（React core team）
+      - housecor             # Cory House（React training）
 
   # 検索キーワード（誤検知を防ぐため具体的に）
   keywords:
@@ -93,8 +163,16 @@ slack:
     top: 3              # 5→3に削減（本当に重要なもののみ）
     provider_official: 5  # 10→5に削減
     github_updates: 5     # 10→5に削減
-    x_signals: 10         # 20→10に削減
-    practical: 7          # 実用的情報専用枠（新規追加）
+    x_signals: 15         # 10→15に拡大（X投稿枠を増やす）
+    practical: 7          # 実用的情報専用枠
+
+  # ソース別最低保証枠（新規）
+  source_quotas:
+    enabled: true        # ソース別保証を有効化
+    must_include: true   # must_include_feeds を最優先表示
+    rss: 3               # RSSから最低3件（公式ブログ）
+    x: 5                 # Xから最低5件
+    remaining: 7         # 残りスコア順
 
   # カテゴリ表示設定
   category_display:
