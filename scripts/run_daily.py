@@ -68,7 +68,7 @@ class XAPIClient:
         return None
 
     def get_user_tweets(self, user_id: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
-        """ユーザーのツイートを取得（新着のみ、フォロワー数情報付き）"""
+        """ユーザーのツイートを取得（過去24時間分）"""
         url = f"{self.base_url}/users/{user_id}/tweets"
         params = {
             "max_results": min(max_results, 100),
@@ -76,12 +76,12 @@ class XAPIClient:
             "expansions": "author_id",
             "user.fields": "public_metrics"
         }
+        # 常に過去24時間を対象とする（since_idがあっても）
+        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
+        params["start_time"] = start_time
+
         if since_id:
             params["since_id"] = since_id
-        else:
-            # 初回実行時は直近24時間
-            start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
-            params["start_time"] = start_time
 
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:
@@ -92,7 +92,7 @@ class XAPIClient:
         return [], {}
 
     def search_tweets(self, query: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
-        """キーワードでツイート検索（新着のみ、フォロワー数情報付き）"""
+        """キーワードでツイート検索（過去24時間分）"""
         url = f"{self.base_url}/tweets/search/recent"
         params = {
             "query": query,
@@ -101,12 +101,12 @@ class XAPIClient:
             "expansions": "author_id",
             "user.fields": "public_metrics"
         }
+        # 常に過去24時間を対象とする（since_idがあっても）
+        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
+        params["start_time"] = start_time
+
         if since_id:
             params["since_id"] = since_id
-        else:
-            # 初回実行時は直近24時間
-            start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
-            params["start_time"] = start_time
 
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:
@@ -287,8 +287,20 @@ class DataCollector:
                         else:
                             category = "UNKNOWN"
 
-                        # カテゴリ分類とスコア調整
+                        # エンゲージメントスコア計算
                         initial_score = self._calculate_engagement_score(tweet)
+
+                        # 最低エンゲージメント閾値チェック
+                        min_engagement_config = self.config["x"].get("min_engagement", {})
+                        if min_engagement_config.get("enabled", False):
+                            threshold = min_engagement_config.get("threshold", 10)
+                            if initial_score < threshold:
+                                tweet_text_short = tweet["text"][:50]
+                                print(f"    ⏭️  除外（エンゲージメント低: {initial_score}）: @{username}")
+                                self.stats["x_low_engagement_filtered"] = self.stats.get("x_low_engagement_filtered", 0) + 1
+                                continue
+
+                        # カテゴリ分類とスコア調整
                         if self.classifier:
                             final_score = self.classifier.calculate_final_score(
                                 initial_score, category, "x_account"
@@ -716,8 +728,17 @@ class DataCollector:
         return score
 
     def _deduplicate(self):
-        """重複排除（URL基準）"""
+        """重複排除（URL基準 + 過去3日分のdrafts.jsonチェック）"""
         seen_urls = set()
+
+        # 過去3日分のdrafts.jsonから既存URLを読み込む
+        dedup_config = self.config["slack"].get("deduplication", {})
+        if dedup_config.get("enabled", False):
+            lookback_days = dedup_config.get("lookback_days", 3)
+            past_urls = self._load_past_urls_from_drafts(lookback_days)
+            seen_urls.update(past_urls)
+            print(f"  🔍 過去{lookback_days}日分のURL: {len(past_urls)}件を除外対象に追加")
+
         unique_items = []
 
         for item in self.items:
@@ -728,6 +749,41 @@ class DataCollector:
                 self.stats["duplicates_removed"] += 1
 
         self.items = unique_items
+
+    def _load_past_urls_from_drafts(self, lookback_days: int) -> set:
+        """過去N日分のdrafts.jsonからURLを取得"""
+        import os
+        drafts_path = os.path.join(os.path.dirname(__file__), "..", "data", "drafts.json")
+
+        if not os.path.exists(drafts_path):
+            print(f"  ⚠️  drafts.jsonが見つかりません: {drafts_path}")
+            return set()
+
+        try:
+            with open(drafts_path, 'r', encoding='utf-8') as f:
+                drafts_data = json.load(f)
+
+            past_urls = set()
+            cutoff_date = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+
+            for draft in drafts_data.get("drafts", []):
+                created_at_str = draft.get("created_at", "")
+                if not created_at_str:
+                    continue
+
+                # ISO形式の日時をパース
+                created_at = datetime.fromisoformat(created_at_str.replace('Z', '+00:00'))
+
+                # 過去N日以内のURLを収集
+                if created_at >= cutoff_date:
+                    url = draft.get("item", {}).get("url")
+                    if url:
+                        past_urls.add(url)
+
+            return past_urls
+        except Exception as e:
+            print(f"  ⚠️  drafts.json読み込みエラー: {e}")
+            return set()
 
 
 class SlackReporter:
