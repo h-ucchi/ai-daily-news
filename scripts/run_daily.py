@@ -76,12 +76,10 @@ class XAPIClient:
             "expansions": "author_id",
             "user.fields": "public_metrics"
         }
-        # 常に過去24時間を対象とする（since_idがあっても）
+        # 常に過去24時間を対象とする
+        # since_idは使わない（start_timeと競合して0件になる問題を回避）
         start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
         params["start_time"] = start_time
-
-        if since_id:
-            params["since_id"] = since_id
 
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:
@@ -101,12 +99,10 @@ class XAPIClient:
             "expansions": "author_id",
             "user.fields": "public_metrics"
         }
-        # 常に過去24時間を対象とする（since_idがあっても）
+        # 常に過去24時間を対象とする
+        # since_idは使わない（start_timeと競合して0件になる問題を回避）
         start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
         params["start_time"] = start_time
-
-        if since_id:
-            params["since_id"] = since_id
 
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:
