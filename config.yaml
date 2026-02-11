@@ -109,7 +109,7 @@ x:
   # 最低エンゲージメント閾値（低品質な投稿を除外）
   min_engagement:
     enabled: true
-    threshold: 10  # いいね+RT×3+リプライ×2の合計が10以上
+    threshold: 5  # いいね+RT×3+リプライ×2の合計が5以上（10→5に緩和）
 
 # RSS監視対象（公式ブログ）
 rss:

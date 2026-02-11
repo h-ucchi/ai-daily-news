@@ -249,7 +249,10 @@ class DataCollector:
                     tweets, users = self.x_client.get_user_tweets(user_id, since_id, max_results=10)
 
                     if not tweets:
+                        print(f"    ℹ️  @{username}: ツイートなし（過去24時間）")
                         continue
+
+                    print(f"    📥 @{username}: {len(tweets)} 件取得")
 
                     # 最新のtweet_idを保存
                     max_id = max(int(t["id"]) for t in tweets)
@@ -294,11 +297,18 @@ class DataCollector:
                         min_engagement_config = self.config["x"].get("min_engagement", {})
                         if min_engagement_config.get("enabled", False):
                             threshold = min_engagement_config.get("threshold", 10)
+                            metrics = tweet.get("public_metrics", {})
+                            likes = metrics.get("like_count", 0)
+                            rts = metrics.get("retweet_count", 0)
+                            replies = metrics.get("reply_count", 0)
+
                             if initial_score < threshold:
-                                tweet_text_short = tweet["text"][:50]
-                                print(f"    ⏭️  除外（エンゲージメント低: {initial_score}）: @{username}")
+                                print(f"    ⏭️  除外（エンゲージメント低: {initial_score} < {threshold}）")
+                                print(f"       👍{likes} 🔄{rts} 💬{replies} | @{username}")
                                 self.stats["x_low_engagement_filtered"] = self.stats.get("x_low_engagement_filtered", 0) + 1
                                 continue
+                            else:
+                                print(f"    ✓ エンゲージメント OK: {initial_score} (👍{likes} 🔄{rts} 💬{replies})")
 
                         # カテゴリ分類とスコア調整
                         if self.classifier:
@@ -330,6 +340,14 @@ class DataCollector:
 
         self.stats["x_accounts_fetched"] = fetched
         self.stats["x_total_fetched"] += fetched
+
+        # フィルタリング統計を表示
+        print(f"\n📊 Xアカウント収集統計:")
+        print(f"  収集成功: {fetched} 件")
+        if self.stats.get("x_followers_filtered", 0) > 0:
+            print(f"  フォロワー数フィルタ除外: {self.stats['x_followers_filtered']} 件")
+        if self.stats.get("x_low_engagement_filtered", 0) > 0:
+            print(f"  低エンゲージメント除外: {self.stats['x_low_engagement_filtered']} 件")
 
     def _collect_x_search(self):
         """Xキーワード検索（フォロワー数フィルタリング付き）"""
