@@ -35,20 +35,21 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-11T06:58:36.562459+00:00",
+    "last_run_at": "2026-02-11T23:39:56.480643+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
   "rss_articles": {
     "https://openai.com/blog/rss.xml": [
+      "https://openai.com/index/harness-engineering",
       "https://openai.com/index/bringing-chatgpt-to-genaimil",
       "https://openai.com/index/testing-ads-in-chatgpt",
       "https://openai.com/index/our-approach-to-localization",
       "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
       "https://openai.com/index/trusted-access-for-cyber",
       "https://openai.com/index/introducing-openai-frontier",
-      "https://openai.com/index/gpt-5-3-codex-system-card",
       "https://openai.com/index/navigating-health-questions",
+      "https://openai.com/index/gpt-5-3-codex-system-card",
       "https://openai.com/index/introducing-gpt-5-3-codex",
       "https://openai.com/index/unlocking-the-codex-harness",
       "https://openai.com/index/vfl-wolfsburg",
@@ -56,13 +57,13 @@
       "https://openai.com/index/snowflake-partnership",
       "https://openai.com/index/introducing-the-codex-app",
       "https://openai.com/index/inside-our-in-house-data-agent",
-      "https://openai.com/index/retiring-gpt-4o-and-older-models",
       "https://openai.com/index/taisei",
+      "https://openai.com/index/retiring-gpt-4o-and-older-models",
       "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
-      "https://openai.com/index/emea-youth-and-wellbeing-grant",
-      "https://openai.com/index/ai-agent-link-safety"
+      "https://openai.com/index/emea-youth-and-wellbeing-grant"
     ],
     "https://github.blog/feed/": [
+      "https://github.blog/news-insights/company-news/github-availability-report-january-2026/",
       "https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/",
       "https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/",
       "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
@@ -71,8 +72,7 @@
       "https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/",
       "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/",
       "https://github.blog/news-insights/policy-news-and-insights/help-shape-the-future-of-open-source-in-europe/",
-      "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/",
-      "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/"
+      "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
@@ -138,6 +138,7 @@
       "https://www.youtube.com/watch?v=Uh98_aGhAuY"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
+      "https://www.youtube.com/watch?v=dHCNpcNyoFM",
       "https://www.youtube.com/watch?v=2gCqVb2lBwk",
       "https://www.youtube.com/watch?v=6OiE0jIY93c",
       "https://www.youtube.com/watch?v=2agJo3Jf_O4",
@@ -151,8 +152,7 @@
       "https://www.youtube.com/watch?v=P7HXxl14dCA",
       "https://www.youtube.com/watch?v=xHnlzAPD9QI",
       "https://www.youtube.com/watch?v=HFM3se4lNiw",
-      "https://www.youtube.com/watch?v=NAcdcunPfJg",
-      "https://www.youtube.com/watch?v=0e-Brv-gS9Q"
+      "https://www.youtube.com/watch?v=NAcdcunPfJg"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
       "https://www.youtube.com/shorts/nUVAY8IwU88",
