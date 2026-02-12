@@ -158,6 +158,9 @@ rss:
     - url: "https://github.blog/changelog/label/copilot/feed/"
       name: "GitHub Copilot"
       max_items: 3
+    - url: "https://openai.com/blog/rss.xml"
+      name: "OpenAI Blog"
+      max_items: 3
 
 # GitHub監視はRSS Atom Feedで実施（上記のGitHub Releases Atom Feed参照）
 

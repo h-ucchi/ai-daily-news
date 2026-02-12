@@ -22,7 +22,7 @@ import feedparser
 # 既存モジュールをインポート
 from state_manager import StateManager
 from draft_manager import DraftManager
-from article_fetcher import fetch_article_content_safe
+from article_fetcher import fetch_article_content_safe, fetch_rss_feed_safe
 from post_prompt import get_system_prompt, create_user_prompt_from_article
 from ai_lint_checker import AILintChecker
 
@@ -535,8 +535,8 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
         print(f"   URL: {feed_url}")
 
         try:
-            # フィード取得
-            feed = feedparser.parse(feed_url)
+            # フィード取得（Cloudflare回避対応）
+            feed = fetch_rss_feed_safe(feed_url)
 
             # エラーチェック
             if hasattr(feed, 'status') and feed.status >= 400:
@@ -651,13 +651,14 @@ def is_meta_message(post_text: str) -> bool:
         if keyword in post_text:
             return True
 
-    # 投稿案が短すぎる（100文字未満）
-    if len(post_text) < 100:
+    # 投稿案が短すぎる（50文字未満に緩和）
+    # 理由: 簡潔なリリースノート（バグフィックスのみ等）に対応
+    if len(post_text) < 50:
         return True
 
-    # 必須セクションがない（## 概要 または ## 詳細）
-    if "## " not in post_text:
-        return True
+    # セクション形式のチェックは削除
+    # 理由: 簡潔なリリースノートは箇条書きのみの場合があり、
+    #       セクション形式は推奨だが必須ではない
 
     return False
 

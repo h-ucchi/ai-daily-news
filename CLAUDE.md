@@ -42,7 +42,27 @@ python3 scripts/generate_post_manual.py https://blog.modelcontextprotocol.io/pos
 
 # Claude Code ドキュメント
 python3 scripts/generate_post_manual.py https://code.claude.com/docs/en/keybindings
+
+# OpenAI Blog記事（重要）
+python3 scripts/generate_post_manual.py https://openai.com/index/harness-engineering/
 ```
+
+### 💡 OpenAI Blogの特別な扱い
+
+OpenAIのウェブサイトは**Cloudflare Bot保護**が厳格で、自動収集（run_daily.py/run_hourly.py）では取得失敗する場合があります。
+
+**重要なOpenAI Blog記事が公開されたら、手動トリガーを活用してください：**
+
+```bash
+python3 scripts/generate_post_manual.py <OpenAI記事URL>
+```
+
+**例**:
+- GPTモデル更新: `https://openai.com/index/gpt-5-updates/`
+- 新機能発表: `https://openai.com/index/new-features/`
+- エンジニアリングブログ: `https://openai.com/index/harness-engineering/`
+
+生成された投稿案はチャット画面に表示されます。
 
 ### 注意事項
 - **ファイル保存はしない**。チャット画面に表示するだけ。

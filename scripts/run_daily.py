@@ -17,7 +17,7 @@ import time
 from content_classifier import ContentClassifier, ClassificationResult
 from content_validator import ContentValidator
 from post_prompt import get_system_prompt, create_user_prompt_from_tweet, create_user_prompt_from_article
-from article_fetcher import fetch_article_content_safe
+from article_fetcher import fetch_article_content_safe, fetch_rss_feed_safe
 from state_manager import StateManager
 from ai_lint_checker import AILintChecker
 
@@ -618,7 +618,7 @@ class DataCollector:
             feed_name = feed_config["name"]
             max_items = feed_config.get("max_items", 3)
 
-            feed = feedparser.parse(feed_url)
+            feed = fetch_rss_feed_safe(feed_url)
             count = 0
 
             for entry in feed.entries:

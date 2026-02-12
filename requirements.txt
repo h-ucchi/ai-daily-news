@@ -26,3 +26,6 @@ langdetect==1.0.9
 
 # HTML解析（手動投稿案生成用）
 beautifulsoup4>=4.12.0
+
+# Cloudflare回避（OpenAI Blog等のRSS取得用）
+cloudscraper>=1.2.71
