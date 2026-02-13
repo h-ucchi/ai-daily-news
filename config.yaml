@@ -43,6 +43,7 @@ x:
       # OpenAI
       - openai               # OpenAI公式
       - ChatGPTapp           # ChatGPT公式
+      - openaidevs           # OpenAI Developers
 
     # === 開発者・研究者（フォロワー10K以上） ===
     developers:

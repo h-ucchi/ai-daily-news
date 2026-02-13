@@ -134,3 +134,43 @@ class StateManager:
             for url, posted_at in posted_urls.items()
             if posted_at > cutoff
         }
+
+    def is_conversation_processed(self, conversation_id: str) -> bool:
+        """スレッドが処理済みかチェック
+
+        Args:
+            conversation_id: チェックするスレッドのID
+
+        Returns:
+            処理済みの場合True
+        """
+        if "processed_conversations" not in self.state:
+            self.state["processed_conversations"] = {}
+        return conversation_id in self.state["processed_conversations"]
+
+    def mark_conversation_processed(self, conversation_id: str):
+        """スレッドを処理済みにマーク
+
+        Args:
+            conversation_id: マークするスレッドのID
+        """
+        if "processed_conversations" not in self.state:
+            self.state["processed_conversations"] = {}
+        self.state["processed_conversations"][conversation_id] = datetime.now(timezone.utc).isoformat()
+
+    def cleanup_old_conversations(self, days: int = 7):
+        """古いスレッド履歴をクリーンアップ（7日以上前）
+
+        Args:
+            days: 保持する日数（デフォルト: 7日）
+        """
+        if "processed_conversations" not in self.state:
+            return
+
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+        processed = self.state["processed_conversations"]
+        self.state["processed_conversations"] = {
+            cid: ts
+            for cid, ts in processed.items()
+            if ts > cutoff
+        }

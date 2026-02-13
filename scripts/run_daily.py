@@ -16,7 +16,7 @@ from collections import defaultdict
 import time
 from content_classifier import ContentClassifier, ClassificationResult
 from content_validator import ContentValidator
-from post_prompt import get_system_prompt, create_user_prompt_from_tweet, create_user_prompt_from_article
+from post_prompt import get_system_prompt, create_user_prompt_from_tweet, create_user_prompt_from_article, create_user_prompt_from_thread
 from article_fetcher import fetch_article_content_safe, fetch_rss_feed_safe
 from state_manager import StateManager
 from ai_lint_checker import AILintChecker
@@ -68,12 +68,12 @@ class XAPIClient:
         return None
 
     def get_user_tweets(self, user_id: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
-        """ユーザーのツイートを取得（過去24時間分）"""
+        """ユーザーのツイートを取得（過去24時間分、conversation_id含む）"""
         url = f"{self.base_url}/users/{user_id}/tweets"
         params = {
             "max_results": min(max_results, 100),
-            "tweet.fields": "created_at,public_metrics",
-            "expansions": "author_id",
+            "tweet.fields": "created_at,public_metrics,conversation_id,referenced_tweets",
+            "expansions": "author_id,referenced_tweets.id",
             "user.fields": "public_metrics"
         }
         # 常に過去24時間を対象とする
@@ -128,6 +128,34 @@ class XAPIClient:
             raise Exception(
                 f"Failed to post tweet: {response.status_code} {response.text}"
             )
+
+    def get_conversation_thread(self, conversation_id: str, author_id: str, max_tweets: int = 10) -> List[Dict]:
+        """スレッド全体を取得（最大10ツイート）
+
+        Args:
+            conversation_id: スレッドのID（最初のツイートID）
+            author_id: 投稿者のユーザーID
+            max_tweets: 取得する最大ツイート数（デフォルト: 10）
+
+        Returns:
+            時系列順にソートされたツイートのリスト
+        """
+        url = f"{self.base_url}/tweets/search/recent"
+        params = {
+            "query": f"conversation_id:{conversation_id} from:{author_id}",
+            "max_results": min(max_tweets, 100),
+            "tweet.fields": "created_at,public_metrics,conversation_id",
+            "sort_order": "recency"
+        }
+
+        response = requests.get(url, headers=self.headers, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            tweets = data.get("data", [])
+            # 時系列順にソート（古い順）
+            tweets.sort(key=lambda t: t["created_at"])
+            return tweets
+        return []
 
 
 class DataCollector:
@@ -314,6 +342,57 @@ class DataCollector:
                         else:
                             final_score = initial_score
 
+                        # OpenAI関連アカウントのスレッド検出・取得
+                        OPENAI_ACCOUNTS = ["openai", "ChatGPTapp", "openaidevs"]
+                        is_openai_account = username in OPENAI_ACCOUNTS
+                        tweet_id = tweet["id"]
+                        conversation_id = tweet.get("conversation_id")
+                        is_thread = conversation_id and conversation_id != tweet_id
+
+                        # スレッド重複チェック
+                        if is_thread and self.state.is_conversation_processed(conversation_id):
+                            print(f"    ⏭️  スレッド処理済み: {conversation_id}")
+                            continue
+
+                        # スレッド取得（OpenAI関連のみ）
+                        if is_openai_account and is_thread:
+                            print(f"    🧵 スレッド検出: {tweet_id}")
+                            try:
+                                thread_tweets = self.x_client.get_conversation_thread(
+                                    conversation_id, user_id, max_tweets=10
+                                )
+
+                                if len(thread_tweets) > 1:
+                                    print(f"    ✅ スレッド取得: {len(thread_tweets)}ツイート")
+
+                                    # スレッド全体を1つのItemとして処理
+                                    item = Item(
+                                        source="x_account",
+                                        title=thread_tweets[0]["text"][:100],
+                                        url=f"https://twitter.com/{username}/status/{conversation_id}",
+                                        published_at=thread_tweets[0]["created_at"],
+                                        score=final_score,
+                                        metadata={
+                                            "username": username,
+                                            "tier": tier,
+                                            "tweet": thread_tweets[0],
+                                            "thread_tweets": thread_tweets,  # 全ツイートを保存
+                                            "is_thread": True,
+                                            "category": category
+                                        }
+                                    )
+                                    self.items.append(item)
+                                    self.state.mark_conversation_processed(conversation_id)
+                                    fetched += 1
+                                    print(f"    ✅ @{username} [{tier}] スレッド (スコア: {final_score})")
+                                    continue  # スレッド処理完了、単一ツイート処理をスキップ
+                                else:
+                                    print(f"    ⚠️  スレッド取得失敗、単一ツイートとして処理")
+                            except Exception as e:
+                                print(f"    ⚠️  スレッド取得エラー: {e}")
+                                print(f"    → 単一ツイートとして処理します")
+
+                        # 単一ツイート処理（既存ロジック）
                         item = Item(
                             source="x_account",
                             title=tweet_text[:100],
@@ -1216,17 +1295,25 @@ class SlackReporter:
 
         # X投稿の場合は全文も取得
         tweet_text = None
+        thread_tweets = None
+        is_thread = False
         if item.source in ["x_account", "x_search"]:
-            tweet_text = item.metadata.get("tweet", {}).get("text", "")
+            is_thread = item.metadata.get("is_thread", False)
+            if is_thread:
+                # スレッドの場合
+                thread_tweets = item.metadata.get("thread_tweets", [])
+            else:
+                # 単一ツイートの場合
+                tweet_text = item.metadata.get("tweet", {}).get("text", "")
 
         # Claude API でサマライズ生成
         summary = self._generate_summary_with_claude(
-            title, url, source_type, category, tweet_text=tweet_text
+            title, url, source_type, category, tweet_text=tweet_text, thread_tweets=thread_tweets
         )
 
         return summary
 
-    def _generate_summary_with_claude(self, title: str, url: str, source_type: str, category: str = "UNKNOWN", tweet_text: Optional[str] = None) -> str:
+    def _generate_summary_with_claude(self, title: str, url: str, source_type: str, category: str = "UNKNOWN", tweet_text: Optional[str] = None, thread_tweets: Optional[List[Dict]] = None) -> str:
         """Claude API で高品質なX投稿スレッドを生成"""
         try:
             import anthropic
@@ -1253,7 +1340,23 @@ class SlackReporter:
             system_prompt = get_system_prompt()
 
             # ユーザープロンプト
-            if tweet_text:
+            if thread_tweets:
+                # Xスレッドの場合：スレッド内のURLから記事本文を取得
+                import re
+                article_content = None
+
+                for tweet in thread_tweets:
+                    urls_in_tweet = re.findall(r'https?://[^\s]+', tweet["text"])
+                    for url_in_tweet in urls_in_tweet:
+                        _, content = fetch_article_content_safe(url_in_tweet)
+                        if content:
+                            article_content = content
+                            break
+                    if article_content:
+                        break
+
+                user_prompt = create_user_prompt_from_thread(url, thread_tweets, article_content)
+            elif tweet_text:
                 # X投稿の場合：ツイート内のURLから記事本文を取得（フェーズ3）
                 import re
                 urls_in_tweet = re.findall(r'https?://[^\s]+', tweet_text)

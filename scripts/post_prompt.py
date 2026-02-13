@@ -6,6 +6,8 @@ generate_post_manual.py のプロンプトをベースに、
 統一された高品質な投稿案を生成するためのプロンプト定義。
 """
 
+from typing import List, Dict
+
 
 def get_system_prompt() -> str:
     """投稿案生成用のシステムプロンプトを取得"""
@@ -137,6 +139,43 @@ def create_user_prompt_from_tweet(url: str, tweet_text: str, article_content: st
         prompt += f"""
 
 【記事本文（抜粋）】
+{article_content[:4000]}"""
+
+    prompt += """
+
+上記フォーマットに従って投稿案を作成してください。"""
+
+    return prompt
+
+
+def create_user_prompt_from_thread(url: str, thread_tweets: List[Dict], article_content: str = None) -> str:
+    """スレッドから投稿案を生成するユーザープロンプトを作成
+
+    Args:
+        url: スレッドの最初のツイートURL
+        thread_tweets: スレッドの全ツイート（時系列順）
+        article_content: スレッド内のURLから取得した記事本文（オプション）
+
+    Returns:
+        ユーザープロンプト
+    """
+    # スレッド全体を結合（番号付き）
+    thread_text = ""
+    for i, tweet in enumerate(thread_tweets, 1):
+        thread_text += f"[{i}/{len(thread_tweets)}] {tweet['text']}\n\n"
+
+    prompt = f"""以下のXスレッドについて、X投稿スレッドの素案を作成してください。
+
+【Xスレッド全文】
+{thread_text}
+
+【スレッドURL】
+{url}"""
+
+    if article_content:
+        prompt += f"""
+
+【参照記事本文（抜粋）】
 {article_content[:4000]}"""
 
     prompt += """
