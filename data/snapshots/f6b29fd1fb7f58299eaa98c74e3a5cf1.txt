@@ -1,7 +1,7 @@
 # GitHub Copilot Blog
 # URL: https://github.blog/ai-and-ml/github-copilot/
-# Timestamp: 2026-02-13T06:56:20.950182+00:00
-# Hash: ce77e224abe49a167df0bbc252e5efb856516a208edaf9304ff197035861a6ef
+# Timestamp: 2026-02-13T23:36:26.920002+00:00
+# Hash: 88e5b880105c8d42fafe77986b7e746105bc95d9840b715763a57b6006936950
 
 <!doctype html>
 <html lang="en-US" class="mt-0">
@@ -23,7 +23,7 @@
 	<meta property="og:url" content="https://github.blog/ai-and-ml/github-copilot/" />
 	<meta property="og:site_name" content="The GitHub Blog" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://github.blog/ai-and-ml/github-copilot/","url":"https://github.blog/ai-and-ml/github-copilot/","name":"The latest on GitHub Copilot - The GitHub Blog","isPartOf":{"@id":"https://github.blog/#website"},"primaryImageOfPage":{"@id":"https://github.blog/ai-and-ml/github-copilot/#primaryimage"},"image":{"@id":"https://github.blog/ai-and-ml/github-copilot/#primaryimage"},"thumbnailUrl":"https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-logo.png?fit=1920%2C1080","breadcrumb":{"@id":"https://github.blog/ai-and-ml/github-copilot/#breadcrumb"},"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://github.blog/ai-and-ml/github-copilot/#primaryimage","url":"https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-logo.png?fit=1920%2C1080","contentUrl":"https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-logo.png?fit=1920%2C1080","width":1920,"height":1080,"caption":"Copilot appears among floating cubes alongside a refresh icon, suggesting an update or automated workflow theme."},{"@type":"BreadcrumbList","@id":"https://github.blog/ai-and-ml/github-copilot/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://github.blog/"},{"@type":"ListItem","position":2,"name":"AI &amp; ML","item":"https://github.blog/ai-and-ml/"},{"@type":"ListItem","position":3,"name":"GitHub Copilot"}]},{"@type":"WebSite","@id":"https://github.blog/#website","url":"https://github.blog/","name":"The GitHub Blog","description":"Updates, ideas, and inspiration from GitHub to help developers build and design software.","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://github.blog/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://github.blog/ai-and-ml/github-copilot/","url":"https://github.blog/ai-and-ml/github-copilot/","name":"The latest on GitHub Copilot - The GitHub Blog","isPartOf":{"@id":"https://github.blog/#website"},"primaryImageOfPage":{"@id":"https://github.blog/ai-and-ml/github-copilot/#primaryimage"},"image":{"@id":"https://github.blog/ai-and-ml/github-copilot/#primaryimage"},"thumbnailUrl":"https://github.blog/wp-content/uploads/2026/01/SDK.jpg?fit=2400%2C1260","breadcrumb":{"@id":"https://github.blog/ai-and-ml/github-copilot/#breadcrumb"},"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://github.blog/ai-and-ml/github-copilot/#primaryimage","url":"https://github.blog/wp-content/uploads/2026/01/SDK.jpg?fit=2400%2C1260","contentUrl":"https://github.blog/wp-content/uploads/2026/01/SDK.jpg?fit=2400%2C1260","width":2400,"height":1260,"caption":"Decorative header image showing the GitHub Copilot logo and 'Copilot SDK.'"},{"@type":"BreadcrumbList","@id":"https://github.blog/ai-and-ml/github-copilot/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://github.blog/"},{"@type":"ListItem","position":2,"name":"AI &amp; ML","item":"https://github.blog/ai-and-ml/"},{"@type":"ListItem","position":3,"name":"GitHub Copilot"}]},{"@type":"WebSite","@id":"https://github.blog/#website","url":"https://github.blog/","name":"The GitHub Blog","description":"Updates, ideas, and inspiration from GitHub to help developers build and design software.","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://github.blog/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
 	<!-- / Yoast SEO Premium plugin. -->
 
 
@@ -424,24 +424,57 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<div class="d-lg-none mb-3">
 			<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
 				<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
-				<img width="800" height="425" src="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?resize=800%2C425" class="d-block tease-thumbnail__img cover-image wp-post-image" alt="Copilot moves toward floating green cubes displaying GitHub-related icons in a decorative tech-themed scene." decoding="async" srcset="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=1600 1600w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=800 800w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=400 400w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=1032 1032w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=516 516w" sizes="(max-width: 800px) 100vw, 800px" />			</div>
+				<img width="800" height="425" src="https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?resize=800%2C425" class="d-block tease-thumbnail__img cover-image wp-post-image" alt="A decorative header image showing agent - detection - safe_outputs and a GitHub Copilot logo." decoding="async" srcset="https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=300 300w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=1600 1600w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=800 800w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=400 400w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=1032 1032w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=516 516w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?zoom=3&amp;resize=800%2C425 2400w" sizes="(max-width: 800px) 100vw, 800px" />			</div>
 		</div>
 				<div class="">
 			<h3 class="h4-mktg mb-3">
-				<a href="https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/" class="Link--primary post-card__link">
-					How to maximize GitHub Copilot&#8217;s agentic capabilities				</a>
+				<a href="https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/" class="Link--primary post-card__link">
+					Automate repository tasks with GitHub Agentic Workflows  				</a>
 			</h3>
 			<div class="mb-2 f4-mktg color-fg-muted">
-				<p>A senior engineer&#8217;s guide to architecting and extending Copilot&#8217;s real-world applications.</p>
+				<p>Discover GitHub Agentic Workflows, now in technical preview. Build automations using coding agents in GitHub Actions to handle triage, documentation, code quality, and more.</p>
 			</div>
 		</div>
 
 		<footer>
 			<div class="d-flex flex-items-center mb-6px">
 			<div class="d-flex flex-items-center mr-3">
-							<a href="https://github.blog/author/arilivigni/" class="d-block post-author-avatar position-relative z-2">
-					<img alt='Posts by Ari LiVigni' src='https://avatars.githubusercontent.com/u/4140343?v=4&#038;s=40' srcset='https://avatars.githubusercontent.com/u/4140343?v=4&#038;s=80 2x' class='avatar avatar-40 photo d-block circle' height='40' width='40' decoding='async'/>				</a>
+							<a href="https://github.blog/author/dsyme/" class="d-block post-author-avatar position-relative z-2">
+					<img alt='Posts by Don Syme' src='https://avatars.githubusercontent.com/u/7204669?v=4&#038;s=40' srcset='https://avatars.githubusercontent.com/u/7204669?v=4&#038;s=80 2x' class='avatar avatar-40 photo d-block circle' height='40' width='40' decoding='async'/>				</a>
+							<a href="https://github.blog/author/pelikhan/" class="d-block post-author-avatar position-relative z-2">
+					<img alt='Posts by Peli de Halleux' src='https://avatars.githubusercontent.com/u/4175913?v=4&#038;s=40' srcset='https://avatars.githubusercontent.com/u/4175913?v=4&#038;s=80 2x' class='avatar avatar-40 photo d-block circle' height='40' width='40' decoding='async'/>				</a>
 					</div>
+		<span>
+					<span class="text-bold">
+				<a href="https://github.blog/author/dsyme/" title="Posts by Don Syme" class="author url fn Link--primary no-wrap position-relative z-2" rel="author">Don Syme</a> & <a href="https://github.blog/author/pelikhan/" title="Posts by Peli de Halleux" class="author url fn Link--primary no-wrap position-relative z-2" rel="author">Peli de Halleux</a>			</span>
+							<span class="mx-1 color-fg-muted">·</span>
+							<time datetime="2026-02-13" class="text-mono color-fg-muted no-wrap">February 13, 2026</time>
+			</span>
+</div>
+		</footer>
+	</div>
+	<div class="d-none d-lg-block col-lg-7">
+		<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
+			<img width="800" height="425" src="https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?resize=800%2C425" class="d-block tease-thumbnail__img cover-image wp-post-image" alt="A decorative header image showing agent - detection - safe_outputs and a GitHub Copilot logo." decoding="async" srcset="https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=300 300w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=1600 1600w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=800 800w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=400 400w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=1032 1032w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?w=516 516w, https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?zoom=3&amp;resize=800%2C425 2400w" sizes="(max-width: 800px) 100vw, 800px" />					</div>
+	</div>
+</article>
+<article class="color-border-muted post-card">
+	<div class="d-flex flex-column">
+		<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail" target="_self">
+			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
+			<img width="400" height="212" src="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?resize=400%2C212" class="d-block cover-image tease-thumbnail__img wp-post-image" alt="Copilot moves toward floating green cubes displaying GitHub-related icons in a decorative tech-themed scene." decoding="async" srcset="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=1600 1600w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=800 800w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=400 400w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=1032 1032w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=516 516w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?zoom=3&amp;resize=400%2C212 1200w" sizes="(max-width: 400px) 100vw, 400px" />					</div>
+				<div class="">
+			<h3 class="h6-mktg mb-2">
+				<a class="Link--primary post-card__link" href="https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/" target="_self">
+					How to maximize GitHub Copilot&#8217;s agentic capabilities				</a>
+			</h3>
+			<div class="f4-mktg color-fg-muted">
+				<p>A senior engineer&#8217;s guide to architecting and extending Copilot&#8217;s real-world applications.</p>
+			</div>
+		</div>
+		<footer>
+			<div class="d-flex flex-items-center mb-6px">
 		<span>
 					<span class="text-bold">
 				<a href="https://github.blog/author/arilivigni/" title="Posts by Ari LiVigni" class="author url fn Link--primary no-wrap position-relative z-2" rel="author">Ari LiVigni</a>			</span>
@@ -450,11 +483,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</span>
 </div>
 		</footer>
-	</div>
-	<div class="d-none d-lg-block col-lg-7">
-		<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
-			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
-			<img width="800" height="425" src="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?resize=800%2C425" class="d-block tease-thumbnail__img cover-image wp-post-image" alt="Copilot moves toward floating green cubes displaying GitHub-related icons in a decorative tech-themed scene." decoding="async" srcset="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=1600 1600w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=800 800w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=400 400w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=1032 1032w, https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-smiling-flying-logo.png?w=516 516w" sizes="(max-width: 800px) 100vw, 800px" />					</div>
 	</div>
 </article>
 <article class="color-border-muted post-card">
@@ -509,32 +537,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		</footer>
 	</div>
 </article>
-<article class="color-border-muted post-card">
-	<div class="d-flex flex-column">
-		<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail" target="_self">
-			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
-			<img width="400" height="212" src="https://github.blog/wp-content/uploads/2026/01/SDK.jpg?resize=400%2C212" class="d-block cover-image tease-thumbnail__img wp-post-image" alt="Decorative header image showing the GitHub Copilot logo and &#039;Copilot SDK.&#039;" decoding="async" srcset="https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=300 300w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=1600 1600w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=800 800w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=400 400w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=1032 1032w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=516 516w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?zoom=3&amp;resize=400%2C212 1200w" sizes="(max-width: 400px) 100vw, 400px" />					</div>
-				<div class="">
-			<h3 class="h6-mktg mb-2">
-				<a class="Link--primary post-card__link" href="https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/?utm_source=blog-announcement-cli-sdk&#038;utm_medium=&#038;utm_campaign=cli-sdk-jan-2026" target="_self">
-					Build an agent into any app with the GitHub Copilot SDK				</a>
-			</h3>
-			<div class="f4-mktg color-fg-muted">
-				<p>Now in technical preview, the GitHub Copilot SDK can plan, invoke tools, edit files, and run commands as a programmable layer you can use in any application. </p>
-			</div>
-		</div>
-		<footer>
-			<div class="d-flex flex-items-center mb-6px">
-		<span>
-					<span class="text-bold">
-				<a href="https://github.blog/author/mariorod/" title="Posts by Mario Rodriguez" class="author url fn Link--primary no-wrap position-relative z-2" rel="author">Mario Rodriguez</a>			</span>
-							<span class="mx-1 color-fg-muted">·</span>
-							<time datetime="2026-01-22" class="text-mono color-fg-muted no-wrap">January 22, 2026</time>
-			</span>
-</div>
-		</footer>
-	</div>
-</article>
 </div>
 </section>
 	<div class="mt-6 mt-lg-7 mb-8 mb-lg-10">
@@ -578,6 +580,32 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				Latest			</h2>
 			<div class="post-columns post-columns--3-3">
 	<article class="color-border-muted post-card">
+	<div class="d-flex flex-column">
+		<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail" target="_self">
+			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
+			<img width="400" height="212" src="https://github.blog/wp-content/uploads/2026/01/SDK.jpg?resize=400%2C212" class="d-block cover-image tease-thumbnail__img wp-post-image" alt="Decorative header image showing the GitHub Copilot logo and &#039;Copilot SDK.&#039;" decoding="async" loading="lazy" srcset="https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=300 300w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=1600 1600w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=800 800w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=400 400w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=1032 1032w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?w=516 516w, https://github.blog/wp-content/uploads/2026/01/SDK.jpg?zoom=3&amp;resize=400%2C212 1200w" sizes="auto, (max-width: 400px) 100vw, 400px" />					</div>
+				<div class="">
+			<h3 class="h6-mktg mb-2">
+				<a class="Link--primary post-card__link" href="https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/?utm_source=blog-announcement-cli-sdk&#038;utm_medium=&#038;utm_campaign=cli-sdk-jan-2026" target="_self">
+					Build an agent into any app with the GitHub Copilot SDK				</a>
+			</h3>
+			<div class="f4-mktg color-fg-muted">
+				<p>Now in technical preview, the GitHub Copilot SDK can plan, invoke tools, edit files, and run commands as a programmable layer you can use in any application. </p>
+			</div>
+		</div>
+		<footer>
+			<div class="d-flex flex-items-center mb-6px">
+		<span>
+					<span class="text-bold">
+				<a href="https://github.blog/author/mariorod/" title="Posts by Mario Rodriguez" class="author url fn Link--primary no-wrap position-relative z-2" rel="author">Mario Rodriguez</a>			</span>
+							<span class="mx-1 color-fg-muted">·</span>
+							<time datetime="2026-01-22" class="text-mono color-fg-muted no-wrap">January 22, 2026</time>
+			</span>
+</div>
+		</footer>
+	</div>
+</article>
+<article class="color-border-muted post-card">
 	<div class="d-flex flex-column">
 		<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail" target="_self">
 			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
@@ -941,32 +969,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		</footer>
 	</div>
 </article>
-<article class="color-border-muted post-card">
-	<div class="d-flex flex-column">
-		<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail" target="_self">
-			<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block" role="presentation"></svg>
-			<img width="400" height="212" src="https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?resize=400%2C212" class="d-block cover-image tease-thumbnail__img wp-post-image" alt="A visual of the Copilot logo against an abstracted background." decoding="async" loading="lazy" srcset="https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?w=1600 1600w, https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?w=800 800w, https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?w=400 400w, https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?w=1032 1032w, https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?w=516 516w, https://github.blog/wp-content/uploads/2025/09/copilot-embedding-model.png?zoom=3&amp;resize=400%2C212 1200w" sizes="auto, (max-width: 400px) 100vw, 400px" />					</div>
-				<div class="">
-			<h3 class="h6-mktg mb-2">
-				<a class="Link--primary post-card__link" href="https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/" target="_self">
-					GitHub Copilot tutorial: How to build, test, review, and ship code faster (with real prompts)				</a>
-			</h3>
-			<div class="f4-mktg color-fg-muted">
-				<p>How GitHub Copilot works today—including mission control—and how to get the most out of it. Here’s what you need to know.</p>
-			</div>
-		</div>
-		<footer>
-			<div class="d-flex flex-items-center mb-6px">
-		<span>
-					<span class="text-bold">
-				<a href="https://github.blog/author/aaronwinston/" title="Posts by Aaron Winston" class="author url fn Link--primary no-wrap position-relative z-2" rel="author">Aaron Winston</a>			</span>
-							<span class="mx-1 color-fg-muted">·</span>
-							<time datetime="2025-11-05" class="text-mono color-fg-muted no-wrap">November 5, 2025</time>
-			</span>
-</div>
-		</footer>
-	</div>
-</article>
 </div>
 			<div class="d-flex flex-justify-center flex-items-center flex-wrap paginate-container mt-6 mb-0 pt-5 border-top color-border-muted text-bold">
 	
@@ -1188,7 +1190,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script type="text/javascript" src="https://github.blog/wp-includes/js/dist/url.min.js?m=1770142567g" ></script><script src="https://github.blog/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://github.blog/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "8062e24170" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "8f82f58e98" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://github.blog/wp-admin/admin-ajax.php?action=rest-nonce";
