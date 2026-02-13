@@ -131,7 +131,9 @@ def main():
         print("生成された投稿案:")
         print("=" * 60)
         print()
+        print("```")
         print(post_text)
+        print("```")
         print()
         print("=" * 60)
 
