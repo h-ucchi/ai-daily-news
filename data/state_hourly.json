@@ -35,7 +35,7 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-13T01:11:43.636339+00:00",
+    "last_run_at": "2026-02-13T06:57:40.823522+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
@@ -75,6 +75,7 @@
       "https://github.blog/news-insights/policy-news-and-insights/help-shape-the-future-of-open-source-in-europe/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.41",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.38",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.37",
@@ -83,8 +84,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.33",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.32",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.31",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.30",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.29"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.30"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-02-11-github-mobile-model-picker-for-copilot-coding-agent",

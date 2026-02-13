@@ -169,6 +169,23 @@
       "post_text": "GitHub Mobile、モデル選択に対応。移動中も最適なAIを選べる\n\nCopilot Pro/Pro+ユーザーは、モバイルアプリでコーディングエージェント開始時にモデルを選択可能に。移動中は高速モデル、深い作業時は高性能モデルなど、状況に応じて使い分けられる。\n\nhttps://github.blog/changelog/2026-02-11-github-mobile-model-picker-for-copilot-coding-agent\n\n💡 主要ポイント\n・デスクトップに切り替えずモバイルで完結\n・6つのモデルから選択可能（Auto含む）\n・Autoモードは速度と性能を自動最適化\n\n1. 選択可能なモデル\n・Auto（自動最適化）\n・Claude Opus 4.5/4.6\n・Claude Sonnet 4.5\n・GPT-5.1-Codex-Max\n・GPT-5.2-Codex\n\n2. 利用方法\n・セッション開始時にモデルピッカーで選択\n・Autoは可用性に基づき自動選択\n・iOS/Android両対応\n\n現在はCopilot Pro/Pro+で利用可能。Business/Enterprise向けも近日提供予定。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "0810577d-da1e-4ea2-b3f3-d145561cd83f",
+      "created_at": "2026-02-13T06:57:40.497429+00:00",
+      "item": {
+        "title": "Release v2.1.41 · anthropics/claude-code · GitHub",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.41",
+        "source": "rss",
+        "published_at": "2026-02-13T06:57:40.497386+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Code、AWS認証のタイムアウト問題を修正\n\nv2.1.41で無限ハングを解消し、3分のタイムアウトを追加。CLI認証コマンドとWindows ARM64サポートも実装。\n\nhttps://github.com/anthropics/claude-code/releases/tag/v2.1.41\n\n💡 ポイント\n・AWS認証の無限ハングを3分タイムアウトで解消\n・CLI認証コマンドで操作性が向上\n・Windows ARM64ネイティブ対応\n\n1. 認証・システム改善\n・AWS認証リフレッシュに3分タイムアウト追加\n・`claude auth login/status/logout`コマンド実装\n・Windows ARM64ネイティブバイナリ対応\n\n2. 使い勝手の向上\n・`/rename`で会話内容から自動命名\n・狭いターミナルレイアウト改善\n・@メンションのアンカー対応（例: @README.md#installation）\n\n3. バグ修正\n・FIFOや大容量ファイルでのブロック解消\n・ストリーミングモードの通知配信修正\n・カーソル位置のジャンプ問題解決",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
