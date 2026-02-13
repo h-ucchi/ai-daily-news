@@ -65,6 +65,9 @@ class XAPIClient:
         if response.status_code == 200:
             data = response.json()
             return data.get("data", {}).get("id")
+        # エラーログ追加
+        print(f"  ⚠️  X API Error (get_user_id): @{username} - HTTP {response.status_code}")
+        print(f"      Response: {response.text[:200]}")
         return None
 
     def get_user_tweets(self, user_id: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
@@ -87,6 +90,9 @@ class XAPIClient:
             tweets = data.get("data", [])
             users = {u["id"]: u for u in data.get("includes", {}).get("users", [])}
             return tweets, users
+        # エラーログ追加
+        print(f"  ⚠️  X API Error (get_user_tweets): user_id={user_id} - HTTP {response.status_code}")
+        print(f"      Response: {response.text[:200]}")
         return [], {}
 
     def search_tweets(self, query: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
@@ -110,6 +116,9 @@ class XAPIClient:
             tweets = data.get("data", [])
             users = {u["id"]: u for u in data.get("includes", {}).get("users", [])}
             return tweets, users
+        # エラーログ追加
+        print(f"  ⚠️  X API Error (search_tweets): query='{query}' - HTTP {response.status_code}")
+        print(f"      Response: {response.text[:200]}")
         return [], {}
 
     def post_tweet(self, text: str) -> Dict:
