@@ -824,27 +824,9 @@ def main():
 
 
 def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_url: str, draft_map: Dict):
-    """スナップショット変更とRSS記事をSlackに送信（必見の更新）- ページネーション対応"""
+    """スナップショット変更とRSS記事をSlackに送信（必見の更新）- 投稿案ごとに個別送信"""
     import requests
-
-    # === 追加: 1回あたりの最大送信数を制限 ===
-    MAX_ITEMS_PER_RUN = 10  # 5-10件に制限
-
-    # 統合リストを作る前に件数をチェック
-    total_items = len(snapshots) + len(rss_articles)
-    if total_items > MAX_ITEMS_PER_RUN:
-        print(f"⚠️  送信対象が{total_items}件 → 上位{MAX_ITEMS_PER_RUN}件に制限")
-
-        # スナップショットを優先、残り枠をRSS記事に割り当て
-        snapshots_limited = snapshots[:MAX_ITEMS_PER_RUN]
-        remaining_slots = MAX_ITEMS_PER_RUN - len(snapshots_limited)
-        rss_articles_limited = rss_articles[:max(0, remaining_slots)]
-
-        snapshots = snapshots_limited
-        rss_articles = rss_articles_limited
-
-    # 1メッセージあたり最大10件（3ブロック/件 × 10 = 30ブロック < 50ブロック制限）
-    ITEMS_PER_PAGE = 10
+    import time
 
     # 更新なしの場合
     if not snapshots and not rss_articles:
@@ -881,144 +863,133 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
             traceback.print_exc()
         return
 
-    # スナップショットとRSS記事を統合リストに変換
-    all_items = []
-    for snapshot in snapshots:
-        all_items.append(("snapshot", snapshot))
-    for article in rss_articles:
-        all_items.append(("rss", article))
+    # ① ヘッダー + サマリー送信（1回のみ）
+    header_message = {
+        "text": f"⭐ 必見の更新: {len(snapshots) + len(rss_articles)}件",
+        "blocks": [
+            {
+                "type": "header",
+                "text": {
+                    "type": "plain_text",
+                    "text": "⭐ 必見の更新"
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"📊 全体: {len(snapshots) + len(rss_articles)}件（Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件）"
+                }
+            }
+        ]
+    }
 
-    # ページ分割
-    num_pages = (len(all_items) + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE
+    # ヘッダー送信
+    try:
+        response = requests.post(webhook_url, json=header_message)
+        response.raise_for_status()
+        print(f"✅ ヘッダー送信: Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件")
+    except Exception as e:
+        print(f"❌ ヘッダー送信エラー: {e}")
+        return
 
-    # 各ページを送信
-    for page_num in range(num_pages):
-        start_idx = page_num * ITEMS_PER_PAGE
-        end_idx = min(start_idx + ITEMS_PER_PAGE, len(all_items))
-        page_items = all_items[start_idx:end_idx]
+    # ② Changelog（スナップショット）を個別送信
+    for idx, snapshot in enumerate(snapshots):
+        draft_info = draft_map.get(snapshot.url)
 
-        # メッセージヘッダーにページ番号を追加
-        if num_pages > 1:
-            page_header = f"⭐ 必見の更新 ({page_num + 1}/{num_pages})"
+        # 投稿案取得
+        if not draft_info:
+            post_text = "❌ 投稿案生成失敗（不明なエラー）"
+        elif draft_info.get("failure_reason") == "NOCHANGE":
+            post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
+        elif draft_info.get("failure_reason") == "META_MESSAGE":
+            post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
+        elif draft_info.get("failure_reason") == "API_FAILURE":
+            post_text = "❌ API呼び出し失敗"
         else:
-            page_header = "⭐ 必見の更新"
+            post_text = draft_info["post_text"]
 
-        # メッセージを構築
+        # 個別メッセージ構築
         message = {
-            "text": f"{page_header}: {len(page_items)}件",
+            "text": f"📝 {snapshot.name}",
             "blocks": [
                 {
-                    "type": "header",
+                    "type": "section",
                     "text": {
-                        "type": "plain_text",
-                        "text": page_header
+                        "type": "mrkdwn",
+                        "text": f"📝 *{snapshot.name}*\n<{snapshot.url}|ソースを確認>"
                     }
                 },
                 {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": f"📊 全体: {len(all_items)}件（Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件）\nこのページ: {start_idx + 1}-{end_idx}件目"
+                        "text": f"```\n{post_text}\n```"
                     }
                 }
             ]
         }
 
-        # 各アイテムを追加
-        for item_idx, (item_type, item_data) in enumerate(page_items):
-            if item_type == "snapshot":
-                # スナップショット処理
-                snapshot = item_data
-                draft_info = draft_map.get(snapshot.url)
+        # 送信
+        try:
+            response = requests.post(webhook_url, json=message)
+            response.raise_for_status()
+            print(f"  ✅ Changelog送信 ({idx + 1}/{len(snapshots)}): {snapshot.name}")
+        except Exception as e:
+            print(f"  ❌ Changelog送信エラー: {snapshot.name} - {e}")
 
-                # 失敗理由を判定
-                if not draft_info:
-                    post_text = "❌ 投稿案生成失敗（不明なエラー）"
-                elif draft_info.get("failure_reason") == "NOCHANGE":
-                    post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
-                elif draft_info.get("failure_reason") == "META_MESSAGE":
-                    post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
-                elif draft_info.get("failure_reason") == "API_FAILURE":
-                    post_text = "❌ API呼び出し失敗"
-                else:
-                    post_text = draft_info["post_text"]
+        # ★ レート制限対策: 1秒待機（必須）
+        time.sleep(1)
 
-                # ページ名 + ソースリンク
-                message["blocks"].append({
-                    "type": "section",
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": f"📝 *{snapshot.name}*\n<{snapshot.url}|ソースを確認>"
-                    }
-                })
+    # ③ RSS記事を個別送信
+    for idx, article in enumerate(rss_articles):
+        draft_info = draft_map.get(article["url"])
 
-                # 投稿案（コードブロック）
-                message["blocks"].append({
-                    "type": "section",
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": f"```\n{post_text}\n```"
-                    }
-                })
+        # 投稿案取得
+        if not draft_info:
+            post_text = "❌ 投稿案生成失敗（不明なエラー）"
+        elif draft_info.get("failure_reason") == "NOCHANGE":
+            post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
+        elif draft_info.get("failure_reason") == "META_MESSAGE":
+            post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
+        elif draft_info.get("failure_reason") == "API_FAILURE":
+            post_text = "❌ API呼び出し失敗"
+        else:
+            post_text = draft_info["post_text"]
 
-                # 区切り線
-                message["blocks"].append({"type": "divider"})
-
-            else:
-                # RSS記事処理
-                article = item_data
-                draft_info = draft_map.get(article["url"])
-
-                # 失敗理由を判定
-                if not draft_info:
-                    post_text = "❌ 投稿案生成失敗（不明なエラー）"
-                elif draft_info.get("failure_reason") == "NOCHANGE":
-                    post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
-                elif draft_info.get("failure_reason") == "META_MESSAGE":
-                    post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
-                elif draft_info.get("failure_reason") == "API_FAILURE":
-                    post_text = "❌ API呼び出し失敗"
-                else:
-                    post_text = draft_info["post_text"]
-
-                # フィード名 + ソースリンク + 記事タイトル
-                message["blocks"].append({
+        # 個別メッセージ構築
+        message = {
+            "text": f"📝 {article['feed_name']}",
+            "blocks": [
+                {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
                         "text": f"📝 *{article['feed_name']}*\n<{article['url']}|ソースを確認>\n_{article['title']}_"
                     }
-                })
-
-                # 投稿案（コードブロック）
-                message["blocks"].append({
+                },
+                {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
                         "text": f"```\n{post_text}\n```"
                     }
-                })
+                }
+            ]
+        }
 
-                # 区切り線（最後のアイテム以外）
-                if item_idx < len(page_items) - 1:
-                    message["blocks"].append({"type": "divider"})
-
-        # Slack送信（ページごと）
+        # 送信
         try:
             response = requests.post(webhook_url, json=message)
-            if response.status_code == 200:
-                if num_pages > 1:
-                    print(f"✅ 必見の更新をSlackに送信しました（ページ {page_num + 1}/{num_pages}）")
-                else:
-                    print(f"✅ 必見の更新をSlackに送信しました（Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件）")
-            else:
-                print(f"⚠️  Slack送信失敗（ページ {page_num + 1}/{num_pages}）: {response.status_code}")
-                print(f"    レスポンス本文: {response.text}")
-                print(f"    リクエストサイズ: {len(str(message))}文字、{len(message['blocks'])}ブロック")
+            response.raise_for_status()
+            print(f"  ✅ RSS記事送信 ({idx + 1}/{len(rss_articles)}): {article['feed_name']} - {article['title'][:30]}...")
         except Exception as e:
-            print(f"⚠️  Slack送信エラー（ページ {page_num + 1}/{num_pages}）: {e}")
-            import traceback
-            traceback.print_exc()
+            print(f"  ❌ RSS記事送信エラー: {article['feed_name']} - {e}")
+
+        # ★ レート制限対策: 1秒待機（必須）
+        time.sleep(1)
+
+    print(f"\n✅ 全ての投稿案を送信完了: Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件")
 
 
 if __name__ == "__main__":

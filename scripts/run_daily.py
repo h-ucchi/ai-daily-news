@@ -1037,47 +1037,185 @@ class SlackReporter:
         return selected
 
     def send(self):
-        """レポートを生成してSlackに投稿"""
+        """レポートを生成してSlackに投稿（投稿案ごとに個別メッセージ）"""
         print("📤 Slackレポート生成中...")
 
         # ソース別保証枠を考慮したアイテム選択
         sorted_items = self._select_items_with_source_quotas(self.items)
 
         # セクション分け
-        top_items = sorted_items[:self.config["slack"]["limits"]["top"]]
         provider_items = self._select_diverse_provider_items(sorted_items, self.config["slack"]["limits"]["provider_official"])
-        github_items = [i for i in sorted_items if i.source == "github"][:self.config["slack"]["limits"]["github_updates"]]
 
-        # Slack Blocks構築
-        blocks = []
+        # ① ヘッダー + データソース集計メッセージ（1回のみ）
+        header_blocks = [
+            {
+                "type": "header",
+                "text": {"type": "plain_text", "text": f"🐦 X投稿素案 - {datetime.now().strftime('%Y-%m-%d')}"}
+            },
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": self._format_source_summary(self._count_sources())}
+            }
+        ]
+        self._send_blocks(header_blocks)
+        print("✅ ヘッダーを送信しました")
 
-        # ヘッダー
-        blocks.append({
-            "type": "header",
-            "text": {"type": "plain_text", "text": f"🐦 X投稿素案 - {datetime.now().strftime('%Y-%m-%d')}"}
-        })
+        # ② 投稿案を個別送信
+        # 必見の更新アイテムを抽出
+        must_include_items = [i for i in sorted_items if i.metadata.get("must_include")]
 
-        # 分析対象セクション
-        source_counts = self._count_sources()
-        source_summary = self._format_source_summary(source_counts)
-        blocks.append({
-            "type": "section",
-            "text": {"type": "mrkdwn", "text": source_summary}
-        })
+        # X由来のアイテムを抽出
+        x_items = [i for i in sorted_items if i.source in ["x_account", "x_search"]]
 
-        # X投稿素案を生成（個別のブロックとして追加）
-        draft_blocks = self._generate_x_post_draft_blocks(top_items, provider_items, github_items, sorted_items)
-        blocks.extend(draft_blocks)
+        # 投稿案を個別送信
+        self._send_individual_draft_posts(
+            must_include_items=must_include_items,
+            provider_items=provider_items,
+            x_items=x_items
+        )
 
-        # 送信
+        print("✅ 全ての投稿案をSlackに送信しました")
+
+    def _send_blocks(self, blocks: List[Dict]) -> None:
+        """
+        指定されたブロックをSlackに送信する汎用ヘルパー
+
+        Args:
+            blocks: Slack Block Kit形式のブロックリスト
+        """
+        if not blocks:
+            return
+
         payload = {"blocks": blocks}
-        response = requests.post(self.webhook_url, json=payload)
 
-        if response.status_code == 200:
-            print("✅ Slackに投稿しました")
-        else:
-            print(f"❌ Slack投稿失敗: {response.status_code} {response.text}")
-            raise Exception("Slack投稿に失敗しました")
+        try:
+            response = requests.post(
+                self.webhook_url,
+                json=payload,
+                headers={"Content-Type": "application/json"},
+                timeout=30
+            )
+            response.raise_for_status()
+        except Exception as e:
+            print(f"❌ Slack送信エラー: {e}")
+
+    def _send_single_draft_post(
+        self,
+        item: Item,
+        draft_number: int,
+        source_type: str
+    ) -> None:
+        """
+        1つの投稿案を生成してSlackに個別送信
+
+        Args:
+            item: 投稿案の元となるアイテム
+            draft_number: 投稿案番号（1, 2, 3...）
+            source_type: ソースタイプ（「必見の更新」「公式発表」「X注目投稿」）
+        """
+        today = datetime.now().strftime('%Y/%m/%d')
+
+        # X投稿の場合は短縮フォーマットを使用
+        use_shorter_format = (item.source in ["x_account", "x_search"])
+
+        # 投稿案生成
+        source_name = item.metadata.get("feed_name", "") or item.metadata.get("username", "") or item.metadata.get("keyword", "")
+        post = self._create_single_post(
+            title=item.title,
+            url=item.url,
+            source_type=source_type,
+            source_name=source_name,
+            date=today,
+            item=item
+        )
+
+        if not post:
+            return
+
+        # カテゴリラベル取得（存在する場合）
+        category = item.metadata.get("category", "")
+        category_label = f"📌 {category}" if category else ""
+
+        # ブロック構築
+        blocks = [
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": (
+                        f"*【投稿案 {draft_number}】{item.title}*\n"
+                        f"{category_label}\n"
+                        f"```{post}```\n"
+                        f"<{item.url}|元記事を見る>"
+                    )
+                }
+            }
+        ]
+
+        # Slack送信
+        self._send_blocks(blocks)
+        print(f"  ✅ 投稿案 {draft_number} を送信: {item.title[:50]}...")
+
+        # ★ レート制限対策: 1秒待機（必須）
+        import time
+        time.sleep(1)
+
+    def _send_individual_draft_posts(
+        self,
+        must_include_items: List[Item],
+        provider_items: List[Item],
+        x_items: List[Item]
+    ) -> None:
+        """
+        投稿案を1件ずつ生成して個別メッセージとして送信
+
+        処理順序:
+        1. 必見の更新（must_include_items）
+        2. 公式発表（RSS、provider_items）最大5件
+        3. X由来の投稿（x_items）最大2件
+        """
+        draft_count = 0
+
+        # ① 必見の更新セクション
+        if must_include_items:
+            section_header_blocks = [{
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": "*⭐ 必見の更新*"}
+            }]
+            self._send_blocks(section_header_blocks)
+            print("\n📌 必見の更新セクション")
+
+            for item in must_include_items:
+                draft_count += 1
+                self._send_single_draft_post(item, draft_count, "必見の更新")
+
+        # ② 公式発表（RSS）最大5件
+        if provider_items:
+            section_header_blocks = [{
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": "*📢 公式発表*"}
+            }]
+            self._send_blocks(section_header_blocks)
+            print("\n📌 公式発表セクション")
+
+            for item in provider_items[:5]:
+                draft_count += 1
+                self._send_single_draft_post(item, draft_count, "公式発表")
+
+        # ③ X由来の投稿 最大2件
+        if x_items:
+            section_header_blocks = [{
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": "*🐦 X投稿から*"}
+            }]
+            self._send_blocks(section_header_blocks)
+            print("\n📌 X投稿セクション")
+
+            for item in x_items[:2]:
+                draft_count += 1
+                self._send_single_draft_post(item, draft_count, "X注目投稿")
+
+        print(f"\n📊 合計 {draft_count} 件の投稿案を送信しました")
 
     def _count_sources(self) -> Dict[str, int]:
         """データソースごとのアイテム数を集計"""
