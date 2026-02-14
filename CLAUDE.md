@@ -17,11 +17,89 @@
 - ユーザーがClaude CodeでURLを提示して投稿案の作成を依頼
 - 例: 「https://example.com/article の投稿案作って」
 
+### ⚙️ 環境変数の設定（必須）
+
+このスクリプトを実行するには、`.claude/settings.local.json`に以下の環境変数を設定する必要があります：
+
+```json
+{
+  "env": {
+    "X_BEARER_TOKEN": "...",           // X (Twitter) API Bearer Token
+    "ANTHROPIC_API_KEY": "sk-ant-..."  // Anthropic API Key（必須）
+  }
+}
+```
+
+**ANTHROPIC_API_KEY取得方法**:
+1. [Anthropic Console](https://console.anthropic.com/)にアクセス
+2. 「API Keys」からAPI Keyを作成
+3. `.claude/settings.local.json`に追加
+
+---
+
 ### 重要：Claude Codeは必ず以下を実行
 
 ```bash
 python3 scripts/generate_post_manual.py <URL>
 ```
+
+### ❌ 絶対禁止：スクリプト失敗時の代替生成
+
+**スクリプトが失敗した場合、決して直接投稿案を生成してはいけません。**
+
+以下のような対応は**絶対禁止**です：
+- ❌ 「代わりに、リポジトリの内容を取得して、投稿案をここで直接生成します」
+- ❌ 「スクリプトが使えないので、私が直接投稿案を作成します」
+- ❌ Claude自身が投稿案を考えること
+
+**理由**:
+- スクリプトを使わないと、以下の厳格なルールが適用されない：
+  - 冒頭1文: 30-50文字（短く、インパクト重視）
+  - 全体: 600-800文字に厳格に制限
+  - 箇条書き: 「・」（全角中黒）のみ使用（半角中点「·」や「-」は不可）
+  - AI-lint: 最大3回のリトライで「AI的表現」を自動除去
+
+---
+
+### ✅ スクリプト失敗時の正しい対処
+
+スクリプトがエラーで失敗した場合は、以下の手順で対応してください：
+
+1. **エラーメッセージをユーザーに報告**
+   ```
+   ❌ エラー: スクリプトの実行に失敗しました
+
+   エラー内容: [エラーメッセージ]
+   ```
+
+2. **環境変数の確認を依頼**
+   ```
+   環境変数 ANTHROPIC_API_KEY が設定されていない可能性があります。
+
+   以下のコマンドで確認してください：
+   cat .claude/settings.local.json | grep ANTHROPIC_API_KEY
+   ```
+
+3. **設定方法を案内**
+   ```
+   .claude/settings.local.json に以下を追加してください：
+
+   {
+     "env": {
+       "ANTHROPIC_API_KEY": "sk-ant-..."
+     }
+   }
+
+   API Keyは Anthropic Console (https://console.anthropic.com/) から取得できます。
+   ```
+
+4. **スクリプトの再実行を促す**
+   ```
+   環境変数を設定後、以下のコマンドを再実行してください：
+   python3 scripts/generate_post_manual.py <URL>
+   ```
+
+**重要**: 代替手段として直接生成することは、品質保証ができないため絶対に行わないでください。
 
 ### 処理の流れ
 1. URLから記事を取得（requests + BeautifulSoup）

@@ -10,7 +10,7 @@
 import os
 import sys
 from draft_manager import DraftManager
-from run_daily import XAPIClient
+from x_api_client import XAPIClient
 
 
 def post_all_pending_drafts():
