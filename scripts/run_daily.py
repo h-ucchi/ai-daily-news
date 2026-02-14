@@ -1132,10 +1132,6 @@ class SlackReporter:
         if not post:
             return
 
-        # カテゴリラベル取得（存在する場合）
-        category = item.metadata.get("category", "")
-        category_label = f"📌 {category}" if category else ""
-
         # ブロック構築
         blocks = [
             {
@@ -1144,7 +1140,6 @@ class SlackReporter:
                     "type": "mrkdwn",
                     "text": (
                         f"*【投稿案 {draft_number}】{item.title}*\n"
-                        f"{category_label}\n"
                         f"```{post}```\n"
                         f"<{item.url}|元記事を見る>"
                     )

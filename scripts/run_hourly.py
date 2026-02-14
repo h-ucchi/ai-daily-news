@@ -897,20 +897,23 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
     for idx, snapshot in enumerate(snapshots):
         draft_info = draft_map.get(snapshot.url)
 
-        # 投稿案取得
+        # 投稿案とエラー情報を分離
+        post_text = None
+        error_message = None
+
         if not draft_info:
-            post_text = "❌ 投稿案生成失敗（不明なエラー）"
+            error_message = "❌ 投稿案生成失敗（不明なエラー）"
         elif draft_info.get("failure_reason") == "NOCHANGE":
-            post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
+            error_message = "ℹ️ 実質的な変更なし（Claude API判断）"
         elif draft_info.get("failure_reason") == "META_MESSAGE":
-            post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
+            error_message = "ℹ️ メタメッセージ検出（投稿案として不適切）"
         elif draft_info.get("failure_reason") == "API_FAILURE":
-            post_text = "❌ API呼び出し失敗"
+            error_message = "❌ API呼び出し失敗"
         else:
             post_text = draft_info["post_text"]
 
-        # 個別メッセージ構築
-        message = {
+        # ① タイトルメッセージ送信（常に）
+        title_message = {
             "text": f"📝 {snapshot.name}",
             "blocks": [
                 {
@@ -919,46 +922,81 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
                         "type": "mrkdwn",
                         "text": f"📝 *{snapshot.name}*\n<{snapshot.url}|ソースを確認>"
                     }
-                },
-                {
-                    "type": "section",
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": f"```\n{post_text}\n```"
-                    }
                 }
             ]
         }
-
-        # 送信
         try:
-            response = requests.post(webhook_url, json=message)
+            response = requests.post(webhook_url, json=title_message)
             response.raise_for_status()
-            print(f"  ✅ Changelog送信 ({idx + 1}/{len(snapshots)}): {snapshot.name}")
         except Exception as e:
-            print(f"  ❌ Changelog送信エラー: {snapshot.name} - {e}")
-
-        # ★ レート制限対策: 1秒待機（必須）
+            print(f"  ❌ タイトル送信エラー: {snapshot.name} - {e}")
         time.sleep(1)
+
+        # ② 投稿案テキスト送信（成功時のみ）
+        if post_text:
+            post_message = {
+                "text": "投稿案",
+                "blocks": [
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": f"```\n{post_text}\n```"
+                        }
+                    }
+                ]
+            }
+            try:
+                response = requests.post(webhook_url, json=post_message)
+                response.raise_for_status()
+                print(f"  ✅ Changelog送信 ({idx + 1}/{len(snapshots)}): {snapshot.name}")
+            except Exception as e:
+                print(f"  ❌ 投稿案送信エラー: {snapshot.name} - {e}")
+            time.sleep(1)
+
+        # ③ エラーメッセージ送信（失敗時のみ）
+        if error_message:
+            error_msg = {
+                "text": "エラー",
+                "blocks": [
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": f"⚠️ {error_message}"
+                        }
+                    }
+                ]
+            }
+            try:
+                response = requests.post(webhook_url, json=error_msg)
+                response.raise_for_status()
+                print(f"  ⚠️  Changelogエラー通知 ({idx + 1}/{len(snapshots)}): {snapshot.name}")
+            except Exception as e:
+                print(f"  ❌ エラー通知送信失敗: {snapshot.name} - {e}")
+            time.sleep(1)
 
     # ③ RSS記事を個別送信
     for idx, article in enumerate(rss_articles):
         draft_info = draft_map.get(article["url"])
 
-        # 投稿案取得
+        # 投稿案とエラー情報を分離
+        post_text = None
+        error_message = None
+
         if not draft_info:
-            post_text = "❌ 投稿案生成失敗（不明なエラー）"
+            error_message = "❌ 投稿案生成失敗（不明なエラー）"
         elif draft_info.get("failure_reason") == "NOCHANGE":
-            post_text = "ℹ️ 実質的な変更なし（Claude API判断）"
+            error_message = "ℹ️ 実質的な変更なし（Claude API判断）"
         elif draft_info.get("failure_reason") == "META_MESSAGE":
-            post_text = "ℹ️ メタメッセージ検出（投稿案として不適切）"
+            error_message = "ℹ️ メタメッセージ検出（投稿案として不適切）"
         elif draft_info.get("failure_reason") == "API_FAILURE":
-            post_text = "❌ API呼び出し失敗"
+            error_message = "❌ API呼び出し失敗"
         else:
             post_text = draft_info["post_text"]
 
-        # 個別メッセージ構築
-        message = {
+        # ① タイトルメッセージ送信（常に）
+        title_message = {
             "text": f"📝 {article['feed_name']}",
             "blocks": [
                 {
@@ -967,27 +1005,59 @@ def send_snapshot_updates_to_slack(snapshots: List, rss_articles: List, webhook_
                         "type": "mrkdwn",
                         "text": f"📝 *{article['feed_name']}*\n<{article['url']}|ソースを確認>\n_{article['title']}_"
                     }
-                },
-                {
-                    "type": "section",
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": f"```\n{post_text}\n```"
-                    }
                 }
             ]
         }
-
-        # 送信
         try:
-            response = requests.post(webhook_url, json=message)
+            response = requests.post(webhook_url, json=title_message)
             response.raise_for_status()
-            print(f"  ✅ RSS記事送信 ({idx + 1}/{len(rss_articles)}): {article['feed_name']} - {article['title'][:30]}...")
         except Exception as e:
-            print(f"  ❌ RSS記事送信エラー: {article['feed_name']} - {e}")
-
-        # ★ レート制限対策: 1秒待機（必須）
+            print(f"  ❌ タイトル送信エラー: {article['feed_name']} - {e}")
         time.sleep(1)
+
+        # ② 投稿案テキスト送信（成功時のみ）
+        if post_text:
+            post_message = {
+                "text": "投稿案",
+                "blocks": [
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": f"```\n{post_text}\n```"
+                        }
+                    }
+                ]
+            }
+            try:
+                response = requests.post(webhook_url, json=post_message)
+                response.raise_for_status()
+                print(f"  ✅ RSS記事送信 ({idx + 1}/{len(rss_articles)}): {article['feed_name']} - {article['title'][:30]}...")
+            except Exception as e:
+                print(f"  ❌ 投稿案送信エラー: {article['feed_name']} - {e}")
+            time.sleep(1)
+
+        # ③ エラーメッセージ送信（失敗時のみ）
+        if error_message:
+            error_msg = {
+                "text": "エラー",
+                "blocks": [
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": f"⚠️ {error_message}"
+                        }
+                    }
+                ]
+            }
+            try:
+                response = requests.post(webhook_url, json=error_msg)
+                response.raise_for_status()
+                print(f"  ⚠️  RSS記事エラー通知 ({idx + 1}/{len(rss_articles)}): {article['feed_name']}")
+            except Exception as e:
+                print(f"  ❌ エラー通知送信失敗: {article['feed_name']} - {e}")
+            time.sleep(1)
 
     print(f"\n✅ 全ての投稿案を送信完了: Changelog {len(snapshots)}件 + ブログ記事 {len(rss_articles)}件")
 
