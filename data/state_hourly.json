@@ -35,7 +35,7 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-13T23:39:04.599066+00:00",
+    "last_run_at": "2026-02-14T05:38:26.757758+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
@@ -47,15 +47,15 @@
       "https://openai.com/index/scaling-social-science-research",
       "https://openai.com/index/introducing-gpt-5-3-codex-spark",
       "https://openai.com/index/harness-engineering",
-      "https://openai.com/index/bringing-chatgpt-to-genaimil",
       "https://openai.com/index/testing-ads-in-chatgpt",
+      "https://openai.com/index/bringing-chatgpt-to-genaimil",
       "https://openai.com/index/our-approach-to-localization",
       "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
       "https://openai.com/index/trusted-access-for-cyber",
       "https://openai.com/index/introducing-openai-frontier",
+      "https://openai.com/index/introducing-gpt-5-3-codex",
       "https://openai.com/index/navigating-health-questions",
       "https://openai.com/index/gpt-5-3-codex-system-card",
-      "https://openai.com/index/introducing-gpt-5-3-codex",
       "https://openai.com/index/unlocking-the-codex-harness",
       "https://openai.com/index/vfl-wolfsburg",
       "https://openai.com/index/sora-feed-philosophy",
@@ -87,6 +87,8 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.31"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
+      "https://github.blog/changelog/2026-02-13-new-features-and-improvements-in-github-copilot-in-jetbrains-ides-2",
+      "https://github.blog/changelog/2026-02-13-updated-status-experience",
       "https://github.blog/changelog/2026-02-13-network-configuration-changes-for-copilot-coding-agent",
       "https://github.blog/changelog/2026-02-13-github-agentic-workflows-are-now-in-technical-preview",
       "https://github.blog/changelog/2026-02-11-github-mobile-model-picker-for-copilot-coding-agent",
@@ -94,9 +96,7 @@
       "https://github.blog/changelog/2026-02-07-claude-opus-4-6-fast-is-now-in-public-preview-for-github-copilot",
       "https://github.blog/changelog/2026-02-05-claude-opus-4-6-is-now-generally-available-for-github-copilot",
       "https://github.blog/changelog/2026-02-04-showing-tool-calls-and-other-improvements-to-copilot-chat-on-the-web",
-      "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-code-v1-109-january-release",
-      "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update",
-      "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github"
+      "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-code-v1-109-january-release"
     ],
     "https://feeds.simplecast.com/Hb_IuXOo": [
       "https://ai-a16z.simplecast.com/episodes/why-this-isnt-the-dot-com-bubble-martin-casado-on-wsjs-bold-names-u9crQXPt",
@@ -138,6 +138,8 @@
       "https://www.youtube.com/watch?v=Uh98_aGhAuY"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": [
+      "https://www.youtube.com/watch?v=B2GMI0UgN_U",
+      "https://www.youtube.com/watch?v=PHKpsVIdAcc",
       "https://www.youtube.com/watch?v=dHCNpcNyoFM",
       "https://www.youtube.com/watch?v=2gCqVb2lBwk",
       "https://www.youtube.com/watch?v=6OiE0jIY93c",
@@ -150,9 +152,7 @@
       "https://www.youtube.com/watch?v=W6c7XcB6HwM",
       "https://www.youtube.com/watch?v=4rzeW4dbvlQ",
       "https://www.youtube.com/watch?v=P7HXxl14dCA",
-      "https://www.youtube.com/watch?v=xHnlzAPD9QI",
-      "https://www.youtube.com/watch?v=HFM3se4lNiw",
-      "https://www.youtube.com/watch?v=NAcdcunPfJg"
+      "https://www.youtube.com/watch?v=xHnlzAPD9QI"
     ],
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": [
       "https://www.youtube.com/shorts/nUVAY8IwU88",
