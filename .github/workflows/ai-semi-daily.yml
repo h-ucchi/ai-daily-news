@@ -1,10 +1,10 @@
 name: AI Semi-Daily Report
 
 on:
-  # 8時と15時の2回実行（JST 8:00 = UTC 23:00, JST 15:00 = UTC 6:00）
+  # 7:05と16:00の2回実行（JST 7:05 = UTC 22:05, JST 16:00 = UTC 7:00）
   schedule:
-    - cron: '0 23 * * *'      # JST 8:00
-    - cron: '0 6 * * *'       # JST 15:00
+    - cron: '5 22 * * *'      # JST 7:05（dailyの後）
+    - cron: '0 7 * * *'       # JST 16:00（午後の更新）
 
   # 手動実行も可能
   workflow_dispatch:

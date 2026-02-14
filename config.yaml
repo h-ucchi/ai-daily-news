@@ -153,15 +153,10 @@ rss:
 
   # 必ず含めるフィード（当日に更新があれば必ず投稿案を作成）
   must_include_feeds:
-    - url: "https://github.com/anthropics/claude-code/releases.atom"
-      name: "Claude Code"
-      max_items: 3  # 1日に複数リリースがあった場合の上限
-    - url: "https://github.blog/changelog/label/copilot/feed/"
-      name: "GitHub Copilot"
-      max_items: 3
     - url: "https://openai.com/blog/rss.xml"
       name: "OpenAI Blog"
       max_items: 3
+    # Claude Code と GitHub Copilot は run_hourly.py の通常RSS監視で対応
 
 # GitHub監視はRSS Atom Feedで実施（上記のGitHub Releases Atom Feed参照）
 
