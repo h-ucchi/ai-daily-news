@@ -88,8 +88,7 @@ class DataCollector:
         self._collect_x_search()
 
         # RSS（GitHub Releases Atom Feedを含む）
-        # ★ RSS処理はrun_hourly.pyに移行したため無効化
-        # self._collect_rss()
+        self._collect_rss()
 
         # 必須フィード（当日の更新があれば必ず含める）
         must_include_items = self._collect_must_include_feeds()
