@@ -52,3 +52,4 @@ htmlcov/
 *.backup
 *.tmp
 ai-lint/
+temp_article.txt

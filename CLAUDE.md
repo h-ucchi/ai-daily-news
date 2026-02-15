@@ -14,8 +14,10 @@
 ## 📱 手動フロー（ユーザー依頼時）
 
 ### トリガー
-- ユーザーがClaude CodeでURLを提示して投稿案の作成を依頼
-- 例: 「https://example.com/article の投稿案作って」
+- **URL指定**: ユーザーがClaude CodeでURLを提示して投稿案の作成を依頼
+  - 例: 「https://example.com/article の投稿案作って」
+- **テキスト直接入力**: ユーザーがClaude Codeで記事テキストを貼り付けて投稿案の作成を依頼
+  - 例: 「以下の記事の投稿案を作って」+ [記事テキスト]
 
 ### ⚙️ 環境変数の設定（必須）
 
@@ -39,9 +41,74 @@
 
 ### 重要：Claude Codeは必ず以下を実行
 
+**URL入力の場合**:
 ```bash
 python3 scripts/generate_post_manual.py <URL>
 ```
+
+**テキスト入力の場合**:
+```bash
+python3 scripts/generate_post_manual.py --text-file <ファイルパス>
+```
+
+---
+
+### テキスト入力（URL無し）
+
+**トリガー**:
+- ユーザーがClaude Codeのチャットで記事テキストを貼り付けて投稿案の作成を依頼
+- 例: 「以下の記事の投稿案を作って」+ [記事テキスト]
+
+**Claude Codeの処理フロー**:
+
+1. **一時ファイルに保存**
+   ```bash
+   # ユーザーのメッセージ全体を一時ファイルに保存
+   cat > temp_article.txt << 'EOF'
+   [ユーザーのメッセージ全体]
+   EOF
+   ```
+
+   **重要**: ユーザーの指示部分（「以下の記事の投稿案を作って」など）も含めて保存してOK。Claude APIが適切に記事内容だけを抽出します。
+
+2. **スクリプト実行**
+   ```bash
+   python3 scripts/generate_post_manual.py --text-file temp_article.txt
+   ```
+
+3. **生成されたタイトルと投稿案をチャットに表示**
+   - 出力フォーマット：【タイトル】と【投稿案】がセットで表示される
+
+**使用例**:
+```
+ユーザー: 以下の記事の投稿案を作って
+
+GitHub Copilot Workspace が一般公開されました。
+開発速度が従来比3倍に向上。
+10万人のベータテスターが参加し、平均作業時間を60%削減することに成功しました。
+```
+
+**Claude Codeが実行するコマンド**:
+```bash
+# 1. 一時ファイル作成
+cat > temp_article.txt << 'EOF'
+以下の記事の投稿案を作って
+
+GitHub Copilot Workspace が一般公開されました。
+開発速度が従来比3倍に向上。
+10万人のベータテスターが参加し、平均作業時間を60%削減することに成功しました。
+EOF
+
+# 2. スクリプト実行
+python3 scripts/generate_post_manual.py --text-file temp_article.txt
+```
+
+**注意事項**:
+- 一時ファイルは`temp_article.txt`（プロジェクトルート）に保存
+- `.gitignore`に`temp_article.txt`を追加済み（コミットされない）
+- スクリプト失敗時の対処は、URL入力時と同じ（環境変数の確認など）
+
+---
 
 ### ❌ 絶対禁止：スクリプト失敗時の代替生成
 
