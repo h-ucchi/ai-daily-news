@@ -54,7 +54,7 @@ class XAPIClient:
         }
         # 常に過去24時間を対象とする
         # since_idは使わない（start_timeと競合して0件になる問題を回避）
-        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
+        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat(timespec='seconds')
         params["start_time"] = start_time
 
         response = requests.get(url, headers=self.headers, params=params)
@@ -80,7 +80,7 @@ class XAPIClient:
         }
         # 常に過去24時間を対象とする
         # since_idは使わない（start_timeと競合して0件になる問題を回避）
-        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat()
+        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat(timespec='seconds')
         params["start_time"] = start_time
 
         response = requests.get(url, headers=self.headers, params=params)
