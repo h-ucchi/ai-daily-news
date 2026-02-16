@@ -373,6 +373,74 @@
       "post_text": "申し訳ございません。提供されたURLはYouTubeの動画ページですが、記事本文として取得できたのは一般的なYouTubeのフッター情報のみで、動画の具体的な内容が含まれていません。\n\n適切な投稿を作成するには、以下の情報が必要です：\n\n1. 動画のタイトル\n2. 動画の説明文\n3. 動画で紹介されている内容（新機能、サービス、技術など）\n4. 具体的な特徴や効果\n\n以下のいずれかの方法で情報をご提供いただけますか？\n\n**方法1:** 動画の説明欄やタイトルをコピーして提供\n**方法2:** 動画の内容を簡単に要約して提供（例：「OpenAIの新機能○○について解説」）\n**方法3:** 動画が紹介している製品やサービスの公式ブログ記事のURLを提供\n\n正確で有益な投稿を作成するため、ご協力をお願いいたします。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "669ffc6b-bf83-4a96-b130-7fe3e5d21ae6",
+      "created_at": "2026-02-16T07:45:42.514298+00:00",
+      "item": {
+        "title": "Anthropic Research",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-16T07:45:31.001954+00:00",
+          "content_hash": "9e69cfbca0e8c83a3bcf859dd3fc169549da80053e00218f610b3c805604af77",
+          "old_hash": "f4f1d6c14805c7374b5c66d4f8d9453a7f2279154b30090ae2d2659fc5c4d68c"
+        }
+      },
+      "post_text": "# 変更点分析\n\nPublicationsリストに新しい記事が1件追加されています：\n\n**新規追加**\n- Feb 16, 2026: Economic Research「India Country Brief: The Anthropic Economic Index」\n\nインドにおけるAI活用状況を分析したレポートが公開されたようです。Anthropic Economic Indexのインド版カントリーブリーフという位置づけと推測されます。\n\n---\n\n# X投稿案\n\nAnthropic、インド市場のAI活用分析レポートを公開\n\nEconomic Indexシリーズの一環として、インド市場におけるAI活用状況を分析した「India Country Brief」を発表。\n\nhttps://www.anthropic.com/research\n\n💡 ポイント\n・Anthropic Economic Indexのインド版\n・インド市場でのAI活用実態を調査\n・経済的視点からAI導入を分析\n\n1. 背景\n・Economic Indexは1月15日に発表\n・AI活用の経済的影響を定量化する取り組み\n・国別分析の第一弾がインド\n\n2. 注目理由\n・インドは世界最大級のテック人材市場\n・AI導入による生産性変化を測定\n・今後の展開にも期待\n\n---\n\n**文字数確認**\n- 冒頭1文：22文字\n- 2文目：64文字\n- 冒頭部分合計：87文字（140文字以内 ✓）\n- 全体：約580文字",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8efad2a0-b7e0-446d-bbe0-49b7e99e27e4",
+      "created_at": "2026-02-16T07:47:18.443555+00:00",
+      "item": {
+        "title": "Chris Liddell appointed to Anthropic’s board of directors \\ Anthropic",
+        "url": "https://www.anthropic.com/news/chris-liddell-appointed-anthropic-board",
+        "source": "rss",
+        "published_at": "2026-02-16T07:47:18.443517+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Chris Liddellが取締役に就任\n\nMicrosoft・GM元CFO、ホワイトハウス元副首席補佐官として30年超の経験を持つLiddellが加わり、AI技術のガバナンスを強化。\n\nhttps://www.anthropic.com/news/chris-liddell-appointed-anthropic-board\n\n💡 ポイント\n・Microsoft、GM、International PaperでCFOを歴任\n・トランプ政権第1期でホワイトハウス副首席補佐官\n・技術、公共政策、ガバナンスの交差点での経験\n\n1. Liddellの経歴\n・Microsoft、GM、International PaperでCFO\n・ホワイトハウス副首席補佐官（トランプ政権第1期）\n・ホワイトハウスでAmerican Technology Council長官\n・複数の大統領政権移行チームに参加\n\n2. Anthropic取締役会の体制\n・Dario Amodei、Daniela Amodeiら6名体制\n・Public Benefit Corporationとして運営\n・株主とLong-Term Benefit Trustが選出\n\n3. 現在の活動\n・Commonwealth Fusion Systems取締役\n・外交問題評議会（CFR）取締役\n・NZ最大の環境財団会長\n・2016年にNZ功労勲章受章",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8a6a6d5a-2203-465b-944d-98fe874a9832",
+      "created_at": "2026-02-16T07:47:18.444560+00:00",
+      "item": {
+        "title": "Anthropic partners with CodePath to bring Claude to the US’s largest collegiate computer science program \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-codepath-partnership",
+        "source": "rss",
+        "published_at": "2026-02-16T07:47:18.444541+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国最大の大学向けCS教育プログラムCodePathと提携。2万人以上の学生がClaudeで学ぶ。\n\n低所得家庭出身の学生が40%以上を占めるCodePathに、Claude Codeを中心としたAIカリキュラムを導入。\n\nhttps://www.anthropic.com/news/anthropic-codepath-partnership\n\n💡 ポイント\n・コミュニティカレッジ、州立大、HBCUの学生が対象\n・GitLab、Puterなど実際のOSSプロジェクトで学習\n・ハワード大学では単位認定科目として開講\n\n1. カリキュラムの特徴\n・AI Engineering基礎から応用まで3コース\n・Claude Codeを使ったOSS開発を実践\n・TypeScript、Node.jsなど実務的な技術を習得\n・2025年秋に100名以上がパイロット参加\n\n2. 経済的機会の拡大\n・年収5万ドル未満の家庭出身が4割超\n・従来は裕福な大学に限られていたキャリアネットワークへのアクセス\n・エントリーレベルのエンジニア職に必要なスキルを習得\n・「4年かかっていた内容を2年で教えられる」（CodePath CEO）\n\n3. 教育分野での取り組み\n・米国教員連盟(AFT)180万人への無料AI研修\n・アイスランドで国家レベルのAI教育パイロット\n・ルワンダで数十万人の学生向け学習支援\n・ホワイトハウスの「若者へのAI教育投資」に署名",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "55b97baa-8bc6-435e-b68e-cba763b8fd5e",
+      "created_at": "2026-02-16T07:47:18.445647+00:00",
+      "item": {
+        "title": "Anthropic is donating $20 million to Public First Action \\ Anthropic",
+        "url": "https://www.anthropic.com/news/donate-public-first-action",
+        "source": "rss",
+        "published_at": "2026-02-16T07:47:18.445631+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI政策団体に2000万ドル寄付。\n\nAI開発企業自らが規制強化を支持する異例の動き。サイバー攻撃や生物兵器への悪用リスクに対し、透明性確保と輸出管理を求める超党派組織を支援。\n\nhttps://www.anthropic.com/news/donate-public-first-action\n\n💡 ポイント\n・AI開発企業が自社への規制強化を支持\n・超党派での政策提言（共和・民主両党）\n・米国のAI技術優位性の維持を重視\n\n1. 寄付の背景\n・AIモデルの進化速度が加速（2023年のチャットボット→現在の複雑タスク実行エージェント）\n・米国民の69%が「AI規制が不十分」と回答\n・連邦レベルでの規制枠組みが未整備\n\n2. Public First Actionの政策目標\n・最先端AIモデルの透明性確保\n・連邦レベルのAIガバナンス枠組み構築\n・AIチップの輸出規制強化\n・生物兵器・サイバー攻撃への悪用防止\n\n3. Anthropicの姿勢\n・「効果的なガバナンス = 企業への監視強化」を容認\n・規制対象は最も強力なモデル開発企業に限定\n・小規模開発者への過度な負担は回避",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }

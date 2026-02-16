@@ -35,7 +35,7 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-15T22:32:48.904371+00:00",
+    "last_run_at": "2026-02-16T07:47:26.176231+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
@@ -170,6 +170,11 @@
       "https://www.youtube.com/shorts/kHtvEoCQM_Y",
       "https://www.youtube.com/shorts/3zke56cE4H4",
       "https://www.youtube.com/shorts/X1oyhh5cS30"
+    ],
+    "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": [
+      "https://www.anthropic.com/news/chris-liddell-appointed-anthropic-board",
+      "https://www.anthropic.com/news/anthropic-codepath-partnership",
+      "https://www.anthropic.com/news/donate-public-first-action"
     ]
   }
 }
