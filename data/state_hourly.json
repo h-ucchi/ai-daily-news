@@ -35,7 +35,7 @@
   },
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-16T07:47:26.176231+00:00",
+    "last_run_at": "2026-02-16T23:18:14.160488+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
@@ -75,6 +75,7 @@
       "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.44",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.42",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.41",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
@@ -83,8 +84,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.36",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.34",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.33",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.32",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.31"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.32"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-02-13-new-features-and-improvements-in-github-copilot-in-jetbrains-ides-2",
@@ -172,9 +172,26 @@
       "https://www.youtube.com/shorts/X1oyhh5cS30"
     ],
     "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": [
+      "https://www.anthropic.com/news/bengaluru-office-partnerships-across-india",
       "https://www.anthropic.com/news/chris-liddell-appointed-anthropic-board",
       "https://www.anthropic.com/news/anthropic-codepath-partnership",
-      "https://www.anthropic.com/news/donate-public-first-action"
+      "https://www.anthropic.com/news/donate-public-first-action",
+      "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+      "https://www.anthropic.com/news/covering-electricity-price-increases",
+      "https://www.anthropic.com/news/claude-opus-4-6",
+      "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "https://www.anthropic.com/news/apple-xcode-claude-agent-sdk",
+      "https://www.anthropic.com/news/anthropic-partners-with-allen-institute-and-howard-hughes-medical-institute",
+      "https://www.anthropic.com/news/servicenow-anthropic-claude",
+      "https://www.anthropic.com/news/gov-UK-partnership",
+      "https://www.anthropic.com/news/claude-new-constitution",
+      "https://www.anthropic.com/news/anthropic-teach-for-all",
+      "https://www.anthropic.com/news/mariano-florentino-long-term-benefit-trust",
+      "https://www.anthropic.com/news/anthropic-appoints-irina-ghose-as-managing-director-of-india",
+      "https://www.anthropic.com/news/accelerating-scientific-research",
+      "https://www.anthropic.com/news/introducing-anthropic-labs",
+      "https://www.anthropic.com/news/healthcare-life-sciences",
+      "https://www.anthropic.com/news/compliance-framework-SB53"
     ]
   }
 }
