@@ -577,6 +577,17 @@ class DataCollector:
             max_items = feed_config.get("max_items", 3)
 
             feed = fetch_rss_feed_safe(feed_url)
+
+            # エラーチェック1: HTTPステータス
+            if hasattr(feed, 'status') and feed.status >= 400:
+                print(f"⚠️ RSS取得失敗: {feed_url} - HTTP {feed.status}")
+                continue
+
+            # エラーチェック2: エントリーが存在しない
+            if not hasattr(feed, 'entries') or not feed.entries:
+                print(f"⚠️ RSS取得失敗: {feed_url} - エントリーなし")
+                continue
+
             count = 0
 
             for entry in feed.entries:

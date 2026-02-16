@@ -30,7 +30,7 @@ x:
     official:
       # Claude & Anthropic
       - anthropicai          # Anthropic公式
-      # - ClaudeAI_          # Claude公式（存在する場合）
+      - claudeai             # Claude公式
 
       # GitHub Copilot
       - github               # GitHub公式
@@ -117,7 +117,7 @@ rss:
   feeds:
     - url: "https://openai.com/blog/rss.xml"
       name: "OpenAI Blog"
-    - url: "https://www.anthropic.com/news/rss.xml"
+    - url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml"
       name: "Anthropic News"
     - url: "https://github.blog/feed/"
       name: "GitHub Blog"
@@ -156,7 +156,7 @@ rss:
     - url: "https://openai.com/blog/rss.xml"
       name: "OpenAI Blog"
       max_items: 3
-    - url: "https://www.anthropic.com/news.rss"
+    - url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml"
       name: "Anthropic News"
       max_items: 3
     - url: "https://releases.claude.com/atom.xml"
