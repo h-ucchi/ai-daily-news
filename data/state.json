@@ -2,7 +2,15 @@
   "x_accounts": {
     "github": {
       "user_id": "13334762",
-      "since_id": "2023099075231367544"
+      "since_id": "2023441003802214828"
+    },
+    "anthropicai": {
+      "user_id": "1353836358901501952",
+      "since_id": "2023322514206957688"
+    },
+    "openai": {
+      "user_id": "4398626122",
+      "since_id": "2023250868066455718"
     }
   },
   "x_keywords": {
@@ -16,7 +24,7 @@
       "since_id": "2010714326014058498"
     },
     "Gemini": {
-      "since_id": "2023191976569688175"
+      "since_id": "2023524522088137096"
     },
     "LLM": {
       "since_id": "2010712742651699511"
@@ -58,10 +66,10 @@
       "since_id": "2017977336919113939"
     },
     "Anthropic": {
-      "since_id": "2023191916095914427"
+      "since_id": "2023524521442156895"
     },
     "Model Context Protocol": {
-      "since_id": "2023181414980796428"
+      "since_id": "2023524053420552450"
     },
     "GPT-4 Turbo": {
       "since_id": "2017970494633546121"
@@ -70,16 +78,16 @@
       "since_id": "2017832631027610024"
     },
     "ralph loop": {
-      "since_id": "2023190599516803176"
+      "since_id": "2023521231245557928"
     },
     "Claude": {
-      "since_id": "2023191970232009000"
+      "since_id": "2023524512617427083"
     },
     "Claude Code": {
-      "since_id": "2023191934744027457"
+      "since_id": "2023524495185821769"
     },
     "OpenAI": {
-      "since_id": "2023191975177097452"
+      "since_id": "2023524497366892962"
     }
   },
   "rss": {
@@ -88,17 +96,17 @@
     "https://github.blog/feed/": "2026-02-13T14:00:00+00:00",
     "https://code.visualstudio.com/updates/feed.xml": "2026-01-19T00:00:00+00:00",
     "https://ai.googleblog.com/feeds/posts/default": "2026-01-19T00:00:00+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-13T19:56:33+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-16T21:35:03+00:00",
     "https://github.blog/changelog/label/copilot/feed/": "2026-02-14T02:11:06+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-03T11:00:00+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-05T17:45:22+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-13T23:43:33+00:00",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-10T20:20:02+00:00",
     "https://cursor.com/blog/rss": "2026-01-19T00:00:00+00:00",
-    "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": "2026-02-13T00:00:00+00:00"
+    "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": "2026-02-16T00:00:00+00:00"
   },
   "meta": {
-    "last_run_at": "2026-02-16T00:26:05.190443+00:00",
+    "last_run_at": "2026-02-16T22:27:53.323793+00:00",
     "version": "1.0.0"
   },
   "rss_articles": {
@@ -137,6 +145,7 @@
       "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.44",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.42",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.41",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
@@ -145,8 +154,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.36",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.34",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.33",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.32",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.31"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.32"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-02-13-new-features-and-improvements-in-github-copilot-in-jetbrains-ides-2",
@@ -234,6 +242,7 @@
       "https://www.youtube.com/shorts/X1oyhh5cS30"
     ],
     "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": [
+      "https://www.anthropic.com/news/bengaluru-office-partnerships-across-india",
       "https://www.anthropic.com/news/chris-liddell-appointed-anthropic-board",
       "https://www.anthropic.com/news/anthropic-codepath-partnership",
       "https://www.anthropic.com/news/donate-public-first-action",
@@ -252,19 +261,18 @@
       "https://www.anthropic.com/news/accelerating-scientific-research",
       "https://www.anthropic.com/news/introducing-anthropic-labs",
       "https://www.anthropic.com/news/healthcare-life-sciences",
-      "https://www.anthropic.com/news/compliance-framework-SB53",
-      "https://www.anthropic.com/news/protecting-well-being-of-users"
+      "https://www.anthropic.com/news/compliance-framework-SB53"
     ]
   },
   "rss_last_checked": {
-    "https://openai.com/blog/rss.xml": "2026-02-16T00:25:42.879720+00:00",
-    "https://github.blog/feed/": "2026-02-16T00:25:43.127471+00:00",
-    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-16T00:25:43.863939+00:00",
-    "https://github.blog/changelog/label/copilot/feed/": "2026-02-16T00:25:44.002464+00:00",
+    "https://openai.com/blog/rss.xml": "2026-02-16T22:27:08.118626+00:00",
+    "https://github.blog/feed/": "2026-02-16T22:27:08.525314+00:00",
+    "https://github.com/anthropics/claude-code/releases.atom": "2026-02-16T22:27:09.464844+00:00",
+    "https://github.blog/changelog/label/copilot/feed/": "2026-02-16T22:27:09.576657+00:00",
     "https://feeds.simplecast.com/Hb_IuXOo": "2026-02-06T22:21:16.108868+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-16T00:25:44.286458+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-16T00:25:44.346857+00:00",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-16T00:25:44.602182+00:00",
-    "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": "2026-02-16T00:25:42.987866+00:00"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA": "2026-02-16T22:27:10.016597+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A": "2026-02-16T22:27:10.275287+00:00",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC5WjFrtBdufl6CZojX3D8dQ": "2026-02-16T22:27:10.670779+00:00",
+    "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": "2026-02-16T22:27:08.279957+00:00"
   }
 }
