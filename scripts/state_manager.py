@@ -79,10 +79,10 @@ class StateManager:
         return self.state["rss_articles"].get(feed_url)
 
     def set_rss_article_urls(self, feed_url: str, urls: List[str]):
-        """RSSフィードの記事URLリストを保存（最新20件）"""
+        """RSSフィードの記事URLリストを保存（全件）"""
         if "rss_articles" not in self.state:
             self.state["rss_articles"] = {}
-        self.state["rss_articles"][feed_url] = urls[:20]  # 最新20件のみ保存
+        self.state["rss_articles"][feed_url] = urls  # 全件保存
 
     def get_rss_last_checked(self, feed_url: str) -> Optional[str]:
         """RSSフィードの最終確認日時を取得"""

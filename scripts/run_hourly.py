@@ -551,18 +551,21 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
 
             # 前回取得した記事URLリストを取得
             previous_urls = state.get_rss_article_urls(feed_url)
+
+            # 全記事のURLリストを取得
+            current_urls_all = [entry.link for entry in feed.entries]
+
             if previous_urls is None:
                 # 初回取得時は最新3件のみ処理
                 INITIAL_FETCH_LIMIT = 3
                 previous_urls = []
                 print(f"   ℹ️  初回取得（最新{INITIAL_FETCH_LIMIT}件のみ処理）")
 
-                # current_urlsを取得してから制限を適用
-                current_urls_all = [entry.link for entry in feed.entries]
+                # 処理対象は最新3件のみに制限
                 current_urls = current_urls_all[:INITIAL_FETCH_LIMIT]
             else:
-                # 通常時は全記事を取得
-                current_urls = [entry.link for entry in feed.entries]
+                # 通常時は全記事を処理
+                current_urls = current_urls_all
 
             # 差分（新規記事）を抽出
             new_urls = set(current_urls) - set(previous_urls)
@@ -571,8 +574,9 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
                 print(f"   🆕 新規記事: {len(new_urls)}件")
             else:
                 print(f"   ℹ️  新規記事なし")
-                # 記事URLリストを更新
-                state.set_rss_article_urls(feed_url, current_urls)
+                # 記事URLリストを更新（全URLを記録）
+                state.set_rss_article_urls(feed_url, current_urls_all)
+                state.save()  # 即座に保存
                 continue
 
             # 新規記事を処理
@@ -610,9 +614,10 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
                 else:
                     print(f"      ⚠️  投稿案生成失敗")
 
-            # 記事URLリストを更新
-            state.set_rss_article_urls(feed_url, current_urls)
-            print(f"   💾 記事URLリスト保存: {len(current_urls[:20])}件")
+            # 記事URLリストを更新（初回でも全URLを記録）
+            state.set_rss_article_urls(feed_url, current_urls_all)
+            state.save()  # 即座に保存
+            print(f"   💾 記事URLリスト保存: {len(current_urls_all[:20])}件")
 
         except Exception as e:
             print(f"   ❌ エラー: {e}")
