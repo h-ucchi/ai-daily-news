@@ -626,15 +626,15 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
     return new_posts
 
 
-def is_meta_message(post_text: str) -> bool:
+def is_meta_message(post_text: str) -> tuple[bool, str]:
     """投稿案がメタメッセージかどうかを判定
 
     Args:
         post_text: 生成された投稿案
 
     Returns:
-        True: メタメッセージ（不正な内容）
-        False: 正常な投稿案
+        (True, reason): メタメッセージ（不正な内容）
+        (False, ""): 正常な投稿案
     """
     # メタメッセージを示すキーワード
     meta_keywords = [
@@ -654,18 +654,18 @@ def is_meta_message(post_text: str) -> bool:
     # いずれかのキーワードが含まれているか
     for keyword in meta_keywords:
         if keyword in post_text:
-            return True
+            return True, f"キーワード「{keyword}」を検出"
 
     # 投稿案が短すぎる（50文字未満に緩和）
     # 理由: 簡潔なリリースノート（バグフィックスのみ等）に対応
     if len(post_text) < 50:
-        return True
+        return True, f"投稿テキストが短すぎる（{len(post_text)}文字 < 50文字）"
 
     # セクション形式のチェックは削除
     # 理由: 簡潔なリリースノートは箇条書きのみの場合があり、
     #       セクション形式は推奨だが必須ではない
 
-    return False
+    return False, ""
 
 
 def main():
@@ -736,13 +736,18 @@ def main():
                 continue  # ★ フォールバックではなくスキップ
 
             # ★ メタメッセージ検証
-            if is_meta_message(post_text):
+            is_meta, meta_reason = is_meta_message(post_text)
+            if is_meta:
                 print(f"⚠️ メタメッセージ検出、スキップ: {new_snapshot.name}")
-                # 失敗理由をdraft_mapに保存
+                print(f"   理由: {meta_reason}")
+                print(f"   📝 投稿テキスト（最初の200文字）:")
+                print(f"   {post_text[:200]}")
+                # 失敗理由をdraft_mapに保存（デバッグ用に投稿テキストも保存）
                 draft_map[new_snapshot.url] = {
                     "id": None,
-                    "post_text": None,
-                    "failure_reason": "META_MESSAGE"
+                    "post_text": post_text,
+                    "failure_reason": "META_MESSAGE",
+                    "meta_reason": meta_reason
                 }
                 continue
 
