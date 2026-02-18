@@ -556,13 +556,13 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
             current_urls_all = [entry.link for entry in feed.entries]
 
             if previous_urls is None:
-                # 初回取得時は最新3件のみ処理
-                INITIAL_FETCH_LIMIT = 3
+                # 初回取得時は全URLを記録するが、投稿案は生成しない
                 previous_urls = []
-                print(f"   ℹ️  初回取得（最新{INITIAL_FETCH_LIMIT}件のみ処理）")
-
-                # 処理対象は最新3件のみに制限
-                current_urls = current_urls_all[:INITIAL_FETCH_LIMIT]
+                current_urls = current_urls_all
+                print(f"   ℹ️  初回取得（全{len(current_urls_all)}件のURLを記録、投稿案生成なし）")
+                state.set_rss_article_urls(feed_url, current_urls_all)
+                state.save()
+                continue
             else:
                 # 通常時は全記事を処理
                 current_urls = current_urls_all

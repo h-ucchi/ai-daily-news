@@ -44,7 +44,7 @@ class XAPIClient:
         return None
 
     def get_user_tweets(self, user_id: str, since_id: Optional[str] = None, max_results: int = 10) -> tuple:
-        """ユーザーのツイートを取得（過去24時間分、conversation_id含む）"""
+        """ユーザーのツイートを取得"""
         url = f"{self.base_url}/users/{user_id}/tweets"
         params = {
             "max_results": min(max_results, 100),
@@ -52,10 +52,14 @@ class XAPIClient:
             "expansions": "author_id,referenced_tweets.id",
             "user.fields": "public_metrics"
         }
-        # 常に過去24時間を対象とする
-        # since_idは使わない（start_timeと競合して0件になる問題を回避）
-        start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat(timespec='seconds')
-        params["start_time"] = start_time
+
+        if since_id:
+            # since_id がある場合は start_time を使わない
+            params["since_id"] = since_id
+        else:
+            # 初回実行時のみ start_time を使用
+            start_time = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat(timespec='seconds')
+            params["start_time"] = start_time
 
         response = requests.get(url, headers=self.headers, params=params)
         if response.status_code == 200:

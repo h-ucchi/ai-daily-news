@@ -187,7 +187,7 @@ slack:
   # 重複チェック設定
   deduplication:
     enabled: true
-    lookback_days: 3  # 過去3日分の投稿案と重複チェック
+    lookback_days: 7  # 過去7日分の投稿案と重複チェック
 
   # カテゴリ表示設定
   category_display:
