@@ -11950,6 +11950,23 @@
       "post_text": "Anthropicが創業時に1.24億ドル調達\n\nAI安全性研究に特化したAnthropicが、より信頼性の高い大規模AIシステムの開発に向けて資金調達を実施。元OpenAI研究者が設立。\n\nhttps://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems\n\n💡 ポイント\n・Skype共同創業者Jaan Tallinnがリード投資\n・解釈可能で制御しやすいAIシステムの構築が目標\n・GPT-3やスケーリング則などの研究実績を持つチーム\n\n1. 創業チーム\n・CEO Dario Amodeiと社長Daniela Amodei（兄妹）\n・GPT-3の研究に携わった経験\n・AI安全性の具体的な問題に取り組む\n・人間のフィードバックからの学習を研究\n\n2. 研究の焦点\n・大規模AIモデルの信頼性向上\n・AIシステムの解釈可能性を高める技術\n・人間のフィードバックをシステムに統合\n・計算集約的な研究への投資\n\n3. 投資家\n・Jaan Tallinn（リード投資家）\n・Dustin Moskovitz\n・Eric Schmidt\n・Center for Emerging Risk Research",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "554c5348-cddb-40a9-b519-737f97213c0e",
+      "created_at": "2026-02-18T07:44:16.242188+00:00",
+      "item": {
+        "title": "Cursor Changelog",
+        "url": "https://cursor.com/ja/changelog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-18T07:44:05.675163+00:00",
+          "content_hash": "efc45d84dab2fe9c4df34f333cbc5a900f66c8af6730aebcb2edb830e3677210",
+          "old_hash": "a9edc90880532c419ce2ca84bc04af285a82cba688cea2bc554d9dcc07ef9e75"
+        }
+      },
+      "post_text": "# 変更点の分析\n\n前回と今回のコンテンツを比較した結果、実質的な変更は検出されませんでした。\n\n## 確認された相違点\n- 改善点の数が「17」→「16」に減少（バグ修正は7で変わらず）\n\n## 判断\nこの微細な数値変更のみでは、新しい情報提供の価値が低いと判断します。前回既に以下の主要内容を投稿済みのため、重複投稿を避けることを推奨します：\n\n**既に投稿済みの内容（2.5リリース）:**\n- Cursor Marketplace（プラグイン機能）\n- サンドボックスのネットワークアクセス制御\n- 非同期サブエージェント\n\n## 推奨アクション\n新しい実質的な機能追加や重要な変更が確認されるまで、投稿を見送ることをお勧めします。\n\n---\n\nもし「改善点が1つ減った」という事実自体を投稿する必要がある場合は、別途ご指示ください。ただし、これは読者にとって有益な情報とは言えないため、推奨しません。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
