@@ -11967,6 +11967,125 @@
       "post_text": "# 変更点の分析\n\n前回と今回のコンテンツを比較した結果、実質的な変更は検出されませんでした。\n\n## 確認された相違点\n- 改善点の数が「17」→「16」に減少（バグ修正は7で変わらず）\n\n## 判断\nこの微細な数値変更のみでは、新しい情報提供の価値が低いと判断します。前回既に以下の主要内容を投稿済みのため、重複投稿を避けることを推奨します：\n\n**既に投稿済みの内容（2.5リリース）:**\n- Cursor Marketplace（プラグイン機能）\n- サンドボックスのネットワークアクセス制御\n- 非同期サブエージェント\n\n## 推奨アクション\n新しい実質的な機能追加や重要な変更が確認されるまで、投稿を見送ることをお勧めします。\n\n---\n\nもし「改善点が1つ減った」という事実自体を投稿する必要がある場合は、別途ご指示ください。ただし、これは読者にとって有益な情報とは言えないため、推奨しません。",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "6e2b4c54-4890-424f-b0b8-00e9695e935a",
+      "created_at": "2026-02-18T22:40:24.581817+00:00",
+      "item": {
+        "title": "Anthropic Research",
+        "url": "https://www.anthropic.com/research",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-18T22:40:13.785890+00:00",
+          "content_hash": "277e7ab4cbe6e57bd959dfd6b5339564800460f1bba8a094cc01eaa6fdfe0df8",
+          "old_hash": "9e69cfbca0e8c83a3bcf859dd3fc169549da80053e00218f610b3c805604af77"
+        }
+      },
+      "post_text": "# 変更分析\n\n前回と今回のコンテンツを比較した結果、以下の変更が確認できました：\n\n**新規追加された論文：**\n- 2026年2月18日: \"Measuring AI agent autonomy in practice\" (Societal Impacts)\n\nこの1件の新規論文追加のみが変更点です。\n\n---\n\n# X投稿案\n\nAnthropic、AIエージェントの自律性測定手法を公開\n\n実環境でのAIエージェントがどれだけ自律的に動作できるかを測定する新しい研究。Societal Impactsチームによる実践的なアプローチ。\n\nhttps://www.anthropic.com/research\n\n💡 ポイント\n・実環境でのAIエージェントの自律性を定量的に測定\n・理論ではなく実践的な測定手法を提案\n・AIの実世界での使われ方を技術的に分析\n\n1. 研究の背景\n・AIエージェントの自律性評価は課題\n・実環境での動作を測定する必要性\n・Societal Impactsチームの新たな取り組み\n\n2. 実用的な意義\n・開発者がエージェントの能力を把握可能\n・適切な監視レベルの設定に貢献\n・安全なAI活用の基盤構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2a8f57e8-9651-4cf6-a2df-f11c201b1d80",
+      "created_at": "2026-02-18T22:41:18.571071+00:00",
+      "item": {
+        "title": "What to expect for open source in 2026 - The GitHub Blog",
+        "url": "https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/",
+        "source": "rss",
+        "published_at": "2026-02-18T22:41:18.571036+00:00",
+        "metadata": {
+          "feed_name": "GitHub Blog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "GitHub、2026年のオープンソース動向を公開\n\nインド520万人など全世界で3600万人の開発者が新規参加。AIによる貢献加速と品質管理の両立が課題に。\n\nhttps://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/\n\n💡 ポイント\n・グローバル化で非同期コミュニケーションが必須に\n・AI活用で新規参加のハードルが大幅低下\n・低品質な自動生成コントリビューションへの対策が急務\n\n1. グローバル化の加速\n・2025年に3600万人の新規開発者が参加\n・インドで520万人、ブラジル、インドネシア、日本、ドイツでも大幅増加\n・プロジェクト発祥地域外からの貢献が過半数を占める状況に\n・明確なコントリビューションガイドラインとガバナンス文書が必須\n\n2. AIの功罪\n・新規開発者の参入障壁を劇的に低下\n・コードベースの理解やパッチ作成を支援し、初回貢献を加速\n・一方で低品質な「AI slop」が大量発生\n・メンテナーのレビュー負荷が急増\n・AIを使ったトリアージや重複検出など防衛的活用も進む",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "fde85629-24d5-4730-b9e5-f5753af28b76",
+      "created_at": "2026-02-18T22:41:18.588187+00:00",
+      "item": {
+        "title": "Release v2.1.47 · anthropics/claude-code · GitHub",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.47",
+        "source": "rss",
+        "published_at": "2026-02-18T22:41:18.588161+00:00",
+        "metadata": {
+          "feed_name": "Claude Code Releases",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Code v2.1.47がリリース。Windows対応が大幅改善。\n\nVSCodeのClaude統合開発環境に新バージョンが登場。Windows特有のバグ修正やメモリ使用量削減、起動速度500ms向上など、実用性が大きく向上。\n\nhttps://github.com/anthropics/claude-code/releases/tag/v2.1.47\n\n💡 ポイント\n・Windows環境でのターミナル表示バグを修正\n・長時間セッションのメモリ使用量を削減\n・ファイル検索が高速化（起動時のインデックス事前構築）\n\n1. Windows対応の改善\n・ターミナルの行数表示が正しく動作\n・マークダウン出力の文字ずれを修正\n・一時ファイルの自動クリーンアップを実装\n\n2. パフォーマンス向上\n・起動速度を約500ms短縮\n・@ファイルメンション時の候補表示が高速化\n・セッションベースのキャッシュで処理効率化\n\n3. 機能改善\n・VS Codeのプラン表示が自動更新\n・複数ファイル編集時、エラーがあっても他のファイルは処理継続\n・バックグラウンドエージェントの制御方法を変更（Ctrl+Fで停止）\n\n4. 安定性向上\n・長時間会話でのPDF処理エラーを修正\n・並行エージェント実行時のAPI 400エラーを解消\n・カスタムセッション名が保持されるように改善",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "16a1aa48-2bd3-48ad-aaf5-4fe784ac4661",
+      "created_at": "2026-02-18T22:41:18.605576+00:00",
+      "item": {
+        "title": "Use Copilot coding agent with Windows projects - GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects",
+        "source": "rss",
+        "published_at": "2026-02-18T22:41:18.605556+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "GitHub Copilot、Windowsプロジェクトに対応\n\nバックグラウンドで自律動作するCopilot coding agentが、Windows開発環境での実行をサポート。copilot-setup-steps.ymlで設定可能に。\n\nhttps://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects\n\n💡 ポイント\n・GitHub Actions上でWindows環境を利用可能\n・ビルドやテストの自動実行でグリーンなPRを生成\n・自己ホストランナーまたはAzureプライベートネットワーク推奨\n\n1. 主な機能\n・Copilot coding agentがWindows環境で動作\n・デフォルトのLinux環境からの切り替えが可能\n・copilot-setup-steps.ymlにruns-on設定を記述\n\n2. 利用時の注意点\n・統合ファイアウォールはWindows非対応\n・自己ホストランナーでの利用を推奨\n・Azureプライベートネットワークでネットワーク制御が必要\n\n3. 設定方法\n・リポジトリルートにcopilot-setup-steps.ymlを配置\n・runs-onにWindows環境を指定\n・GitHub Docsに詳細な手順を掲載",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "eb0a5b15-1825-4215-b166-959c9fc25692",
+      "created_at": "2026-02-18T22:41:18.622690+00:00",
+      "item": {
+        "title": "Copilot coding agent supports code referencing - GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-02-18-copilot-coding-agent-supports-code-referencing",
+        "source": "rss",
+        "published_at": "2026-02-18T22:41:18.622673+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "GitHub Copilot、コード参照元を表示へ\n\nバックグラウンド実行の「Copilot coding agent」が、公開リポジトリのコードと一致する場合、元コードとライセンスへのリンクを表示。\n\nhttps://github.blog/changelog/2026-02-18-copilot-coding-agent-supports-code-referencing\n\n💡 ポイント\n・生成コードの出典が分かる\n・ライセンス確認が容易に\n・透明性の高い開発を実現\n\n1. 主な機能\n・公開リポジトリとの一致を検出\n・セッションログに元コードをハイライト表示\n・ライセンス情報へのリンクを提供\n\n2. 注意点\n・「Block」モード設定時も検出は機能\n・一致コードのブロックは行わず表示のみ\n・Windows プロジェクトでも利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d8dda92b-c66d-4849-8be3-4b6d78eb9980",
+      "created_at": "2026-02-18T22:41:18.639745+00:00",
+      "item": {
+        "title": "Claude Opus 4.6 is now available in Visual Studio, JetBrains IDEs, Xcode, and Eclipse - GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse",
+        "source": "rss",
+        "published_at": "2026-02-18T22:41:18.639726+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Opus 4.6が主要IDE全対応\n\nGitHub Copilotで最上位モデルClaude Opus 4.6が利用可能に。VS Code、Visual Studio、JetBrains、Xcode、Eclipse全て対応。\n\nhttps://github.blog/changelog/2026-02-18-claude-opus-4-6-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse\n\n💡 ポイント\n・Enterprise、Business、Pro、Pro+全プランで利用可能\n・チャットのモデルピッカーから選択可能\n・github.com、モバイルアプリでも利用可能\n\n1. 対応環境\n・Visual Studio Code\n・Visual Studio\n・JetBrains IDEs\n・Xcode\n・Eclipse\n\n2. 利用開始方法\n・Business/Enterprise：管理者が設定でON\n・個人プラン：モデルピッカーから選択\n・agent、ask、editモード全対応",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "27e42338-655a-42e3-afea-71668ac248e3",
+      "created_at": "2026-02-18T22:41:18.657087+00:00",
+      "item": {
+        "title": "- YouTube",
+        "url": "https://www.youtube.com/watch?v=tECAkJAI_Vk",
+        "source": "rss",
+        "published_at": "2026-02-18T22:41:18.657069+00:00",
+        "metadata": {
+          "feed_name": "OpenAI YouTube",
+          "semi_daily": true
+        }
+      },
+      "post_text": "申し訳ございません。提供いただいた情報はYouTubeのフッター部分のみで、動画の具体的な内容が含まれていません。\n\n適切な投稿を作成するために、以下の情報が必要です：\n\n**必要な情報：**\n- 動画のタイトル\n- 動画の説明文\n- 動画の内容（何について語られているか）\n- 発表された製品/機能/サービスの詳細\n- 具体的な数値やデータ（あれば）\n\n**確認方法：**\n1. YouTubeの動画ページを開く\n2. 動画タイトル下の「...more」をクリック\n3. 説明文全体を確認\n4. 可能であれば動画の内容も確認\n\n上記の情報をご提供いただければ、適切なX投稿案を作成いたします。",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
