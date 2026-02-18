@@ -9162,6 +9162,2794 @@
       "post_text": "RaycastからCopilot coding agentにissueを割り当て可能に\n\nGitHubが、RaycastからCopilot coding agentへissueを直接割り当てられる機能を公開。ランチャーアプリから即座にタスク依頼が可能。\n\nhttps://github.blog/changelog/2026-02-17-assign-issues-to-copilot-coding-agent-from-raycast\n\n💡 ポイント\n・Windows/macOS対応の無料ランチャーRaycastから操作\n・Copilotが自律的にコードを作成しPRを送信\n・issue作成なしでもタスク開始が可能\n\n1. 使い方\n・GitHub Copilot拡張機能をインストール\n・「Assign Issue to Copilot」コマンドを実行\n・リポジトリとissueを選択してCtrl/Cmd + Enterで割り当て\n・Copilotが自動でPRを作成し、完了後レビュー依頼\n\n2. その他の機能\n・「Create Task」でissue不要のタスク作成\n・「View Tasks」で進行中のタスク確認\n・Copilot Pro/Pro+/Business/Enterpriseで利用可能",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "51852382-c3c1-4fa1-9686-bddd55eef3ad",
+      "created_at": "2026-02-18T01:19:54.937179+00:00",
+      "item": {
+        "title": "Introducing Labs \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-anthropic-labs",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:54.937151+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、実験的な新製品開発チーム「Labs」を発表。\n\nInstagramのMike Kriegerが参加し、Claudeの最先端機能を製品化。Claude Codeは半年で年間売上10億ドル規模に成長。\n\nhttps://www.anthropic.com/news/introducing-anthropic-labs\n\n💡 ポイント\n・実験的な機能を素早くテストし、有効なものを製品化\n・MCPは月間1億DLで業界標準に\n・開発スピードを上げる組織体制に移行\n\n1. Labsの役割\n・Claudeの最先端機能を使った実験的製品の開発\n・早期ユーザーとのテストで実用性を検証\n・成功した機能を企業向け製品にスケール\n\n2. 実績\n・Claude Code：リサーチプレビューから6ヶ月で年商10億ドル規模\n・MCP：月間1億ダウンロード達成\n・Skills、Claude in Chrome、Coworkなどを次々リリース\n\n3. 体制\n・Instagram共同創業者Mike Kriegerが参加\n・Ben Mannと共に新製品開発を主導\n・Ami VoraがCPOとして製品組織全体を統括",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "dc968e13-f6e1-4f3e-9b57-c67f55fbb8c9",
+      "created_at": "2026-02-18T01:19:54.950480+00:00",
+      "item": {
+        "title": "Advancing Claude in healthcare and the life sciences \\ Anthropic",
+        "url": "https://www.anthropic.com/news/healthcare-life-sciences",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:54.950461+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeが医療・ライフサイエンス分野で大幅進化。HIPAA対応で実務利用が可能に。\n\nAnthropicがClaude for Healthcareを発表。医療機関や保険会社がHIPAA準拠でClaudeを利用できる環境を整備。患者ケアの迅速化や創薬プロセスの効率化を実現。\n\nhttps://www.anthropic.com/news/healthcare-life-sciences\n\n💡 ポイント\n・医療専用コネクタで既存システムと直接連携\n・Opus 4.5で医療タスクの精度が大幅向上\n・事前承認や臨床試験管理を効率化\n\n1. Claude for Healthcare\n・HIPAA対応で医療機関が安心して利用可能\n・CMSカバレッジDBやICD-10に直接アクセス\n・事前承認チェックや請求管理を自動化\n・患者ケアコーディネーションの負担軽減\n\n2. ライフサイエンス機能強化\n・科学プラットフォームとの連携を拡大\n・臨床試験管理から規制対応まで支援\n・空間生物学解析タスクで高精度を実現\n・医療計算の正確性が向上（MedCalc評価）\n\n3. Opus 4.5の性能\n・医療エージェントタスクで完遂率向上\n・Extended Thinking機能で複雑な医療判断に対応\n・事実に基づく回答精度が改善\n・タンパク質理解や計算生物学で実用レベル\n\n4. 実務への影響\n・患者が救命医療を迅速に受けられる\n・臨床医の時間的負担を軽減\n・新薬の市場投入スピードを加速\n・規制申請プロセスを効率化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "933803b7-9d17-4060-8d52-6ece013e3f9f",
+      "created_at": "2026-02-18T01:19:54.964037+00:00",
+      "item": {
+        "title": "Sharing our compliance framework for California's Transparency in Frontier AI Act \\ Anthropic",
+        "url": "https://www.anthropic.com/news/compliance-framework-SB53",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:54.964020+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、カリフォルニア州AI透明性法に対応したフレームワークを公開\n\n2025年1月1日施行のSB53（Frontier AI透明性法）に対応。リスク評価と管理方法を詳述したFrontier Compliance Frameworkを公開した。\n\nhttps://www.anthropic.com/news/compliance-framework-SB53\n\n💡 ポイント\n・米国初のフロンティアAI安全性・透明性要件\n・カタストロフィックリスクの評価・管理手法を公開\n・連邦レベルの統一基準の必要性を提言\n\n1. 公開されたフレームワークの内容\n・サイバー攻撃、化学・生物・放射線・核リスクの評価方法\n・AIの妨害行為と制御喪失リスクへの対策\n・モデルの能力評価に基づく段階的リスク管理システム\n・モデルウェイトの保護と安全インシデント対応手順\n\n2. SB53法の主要要件\n・フロンティアAI開発者はリスク評価・管理フレームワークの公開が義務化\n・強力な安全対策と内部告発者保護を規定\n・開発者の実装方法には柔軟性を保持\n・小規模企業は規制対象外\n\n3. Anthropicが提案する連邦基準\n・セキュア開発フレームワークの公開義務化\n・デプロイ時のシステムカード公開\n・内部告発者保護の法制化\n・技術的アプローチを固定しない柔軟な透明性基準\n\nAnthropicのResponsible Scaling Policy（RSP）は2023年から運用され、今回のフレームワークはその進化版。FCFは法令遵守用、RSPは自主的なベストプラクティスとして今後も併存する。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b16e84a1-3db9-49e1-8985-7a1d23d6d9d7",
+      "created_at": "2026-02-18T01:19:54.977193+00:00",
+      "item": {
+        "title": "Protecting the wellbeing of our users \\ Anthropic",
+        "url": "https://www.anthropic.com/news/protecting-well-being-of-users",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:54.977176+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claude利用者の精神的健康保護に本腰。自殺・自傷の検知機能を実装。\n\nAIとの会話に感情的サポートを求める利用者が増える中、Anthropicが安全対策を強化。Claudeの対応方針と実装内容を公開。\n\nhttps://www.anthropic.com/news/protecting-well-being-of-users\n\n💡 ポイント\n・自殺や自傷のリスクを検知すると専門支援へ誘導\n・170カ国以上の支援窓口と連携（米国988、英国Samaritans等）\n・「耳障りの良い回答」を避け、事実ベースの対応を実現\n\n1. 危機検知システム\n・会話内容をリアルタイムで分析\n・自殺や自傷の兆候を検知\n・検知時は画面にバナーを表示し、専門機関への相談を促す\n・ThroughLineと提携し、各国の支援窓口を案内\n\n2. モデルの訓練方針\n・システムプロンプトで慎重な対応を指示\n・強化学習で適切な応答パターンを学習\n・「AIである」という限界を正直に伝える\n・共感を示しつつ、人間の専門家への相談を推奨\n\n3. Sycophancy（迎合）の削減\n・利用者が聞きたい内容ではなく、真実で有益な回答を優先\n・過度に同意せず、必要に応じて異なる視点を提示\n・感情的サポートと事実提供のバランスを重視\n\n4. 今後の取り組み\n・国際自殺防止協会（IASP）と連携\n・臨床医、研究者、当事者の知見を反映\n・製品設計と評価方法を継続的に改善",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "00fad55f-116d-4254-a136-79094f061f36",
+      "created_at": "2026-02-18T01:19:54.990212+00:00",
+      "item": {
+        "title": "Working with the US Department of Energy to unlock the next era of scientific discovery \\ Anthropic",
+        "url": "https://www.anthropic.com/news/genesis-mission-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:54.990196+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米エネルギー省と数年規模のAI研究パートナーシップを締結。\n\n全米17の国立研究所でClaudeを活用し、エネルギー、生命科学、科学生産性の3領域で研究を加速する「Genesis Mission」に参画。\n\nhttps://www.anthropic.com/news/genesis-mission-partnership\n\n💡 ポイント\n・エネルギー許認可の迅速化から原子力技術研究まで支援\n・パンデミック早期警戒システムや創薬開発を促進\n・50年分のDOE研究データにアクセスし研究サイクルを加速\n\n1. 提供される技術\n・優先課題に特化したAIエージェント\n・科学機器と接続するModel Context Protocolサーバー\n・専門的な科学ワークフロー用のClaude Skills\n\n2. 実績と展望\n・国家核安全保障局と核リスク分類器を共同開発\n・ローレンス・リバモア国立研究所でClaude導入済み\n・AIと人間研究者の協働モデルを構築予定\n\n3. 背景\n・AI競争が激化する中、米国の科学インフラとフロンティアAIを組み合わせ\n・スーパーコンピューターと数十年の実験データを活用\n・科学的リーダーシップの維持が目的",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "6e353762-f520-4070-ba98-7a7d75c01373",
+      "created_at": "2026-02-18T01:19:55.003283+00:00",
+      "item": {
+        "title": "Accenture and Anthropic launch multi-year partnership to move enterprises from AI pilots to production \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-accenture-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.003268+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AccentureとAnthropicが複数年契約を締結。3万人がClaude研修を受講予定。\n\n世界最大規模のClaude実践者エコシステムを構築。AI開発ツールのシェアが24%→40%に拡大した背景で、企業のAI導入を支援する専門組織を設立。\n\nhttps://www.anthropic.com/news/anthropic-accenture-partnership\n\n💡 ポイント\n・Accentureの開発者数万人がClaude Codeを利用\n・CIO向けの価値測定・導入支援製品を提供\n・金融、医療など規制産業向けソリューションを展開\n\n1. 新設される専門組織の役割\n・Accenture Anthropic Business Groupを設立\n・約3万人のプロフェッショナルにClaude研修を実施\n・顧客環境へのClaude組み込みを支援する専門エンジニアを配置\n\n2. 企業向け支援内容\n・パイロットから本番環境への移行を加速\n・ソフトウェア開発組織全体でのAI活用を測定\n・クラウドプロバイダーとの連携による迅速な展開\n\n3. 規制産業への対応\n・金融サービス、製薬、医療、公共部門向けソリューション\n・セキュリティとガバナンス要件への対応\n・業界知見とAI専門性を組み合わせた支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "016f4edb-25b9-4350-bacd-b1b27dcdc70b",
+      "created_at": "2026-02-18T01:19:55.016564+00:00",
+      "item": {
+        "title": "Donating the Model Context Protocol and establishing the Agentic AI Foundation \\ Anthropic",
+        "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.016548+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "```\nMCP、Linux Foundationに寄贈。エコシステム全体で中立運営へ\n\nAnthropic、Block、OpenAIが共同で「Agentic AI Foundation」を設立し、MCPをLinux Foundationの管理下に移行。中立性と持続的発展を確保。\n\nhttps://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation\n\n💡 ポイント\n・MCPが中立組織の管理下に\n・主要AI企業が共同で財団設立\n・オープン標準としての地位を確立\n\n1. MCPの現状\n・公開サーバー数1万超\n・ChatGPT、Cursor、Gemini等が採用\n・月間9700万以上のSDKダウンロード\n・75以上のコネクタを提供\n・AWS、Cloudflare等が展開サポート\n\n2. Agentic AI Foundation\n・Linux Foundation傘下の基金\n・Anthropic、Block、OpenAIが共同設立\n・Google、Microsoft、AWS等が支援\n・MCP、goose、AGENTS.mdが初期プロジェクト\n・ガバナンスモデルは維持\n\n3. 今後の展開\n・Tool Search、Programmatic Tool Calling機能を追加\n・公式レジストリで利用可能なサーバーを検索可能\n・非同期操作、ステートレス対応など新機能を実装\n・Python、TypeScriptの公式SDK提供\n```",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8fb2c0d9-a9f3-4db6-8746-0338feeee474",
+      "created_at": "2026-02-18T01:19:55.029805+00:00",
+      "item": {
+        "title": "Anthropic acquires Bun as Claude Code reaches $1B milestone \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.029790+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "```\nAnthropicがJavaScriptランタイム「Bun」を買収\n\nClaude Codeが公開6ヶ月で年間売上10億ドルを達成。より高速で安定したコーディング環境の実現へ。\n\nhttps://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone\n\n💡 ポイント\n・Claude Codeが半年で年間売上10億ドル突破\n・Bunは既存JSランタイムより大幅に高速\n・月間700万ダウンロード、GitHub 8.2万スター\n\n1. Bun買収の背景\n・Claude Codeのインフラスケール化に貢献\n・ランタイム、パッケージマネージャー、バンドラー、テストランナーを統合\n・MITライセンスのオープンソースとして継続\n\n2. 影響と今後\n・Netflix、Spotify、KPMG等の大手企業が利用\n・コード生成の高速化と安定性向上\n・AI開発インフラの次世代標準へ\n```",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "433f943d-2eb8-4158-a8cb-0e9d6347da9b",
+      "created_at": "2026-02-18T01:19:55.043061+00:00",
+      "item": {
+        "title": "Snowflake and Anthropic announce $200 million partnership to bring agentic AI to global enterprises \\ Anthropic",
+        "url": "https://www.anthropic.com/news/snowflake-anthropic-expanded-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.043047+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Snowflake × Anthropic、2億ドルの戦略提携を発表\n\n12,600社の企業データ基盤にClaudeを統合。エージェントAI導入を加速する複数年契約。\n\nhttps://www.anthropic.com/news/snowflake-anthropic-expanded-partnership\n\n💡 ポイント\n・Amazon Bedrock、Google Cloud、Azure経由でClaude提供\n・金融、医療など規制業界での本番運用を支援\n・複雑なtext-to-SQLタスクで90%超の精度を達成\n\n1. Snowflake環境でのClaude活用\n・Claude Sonnet 4.5がSnowflake Intelligenceを強化\n・自然言語で質問、企業データから回答を生成\n・構造化・非構造化データの両方に対応\n\n2. マルチモーダル分析\n・Claude Opus 4.5がリリース初日から利用可能\n・テキスト、画像、音声、表形式データをSQL経由で分析\n・Snowflake Cortex AI Functionsで実装\n\n3. カスタムエージェント構築\n・Snowflake Cortex Agentsで本番対応のデータエージェント開発\n・Snowflake Horizon Catalogで包括的なガバナンス管理\n・規制業界向けに責任あるAI統制機能を提供\n\n既に数千社がSnowflake Cortex AI経由で月間数兆トークンのClaude処理を実行中。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "30197271-cf26-42c9-b4b8-f7cba13ce201",
+      "created_at": "2026-02-18T01:19:55.056076+00:00",
+      "item": {
+        "title": "Introducing Claude for Nonprofits \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.056062+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが非営利団体向けに「Claude for Nonprofits」を開始。最大75%割引でClaude提供。\n\nGivingTuesdayとの提携で、世界の非営利団体を支援。てんかん財団は340万人に24時間サポートを提供、IDinsightは作業速度が16倍に向上。\n\nhttps://www.anthropic.com/news/claude-for-nonprofits\n\n💡 ポイント\n・Team/Enterpriseプランが最大75%オフ\n・非営利団体向けツール連携を追加\n・無料の活用コース「AI Fluency for Nonprofits」を提供\n\n1. 割引プラン\n・TeamとEnterpriseプランが最大75%割引で利用可能\n・Opus 4.6、Sonnet 4.5、Haiku 4.5すべてにアクセス\n・小規模から大規模組織まで対応\n\n2. 新しいツール連携\n・Benevity: 240万以上の非営利団体データベースにアクセス\n・Blackbaud: CRMと寄付管理ツール連携\n・Candid: 助成金と慈善活動の情報検索\n・Microsoft 365、Google Workspace等の既存連携も継続\n\n3. 無料教育プログラム\n・「AI Fluency for Nonprofits」コースを提供\n・助成金申請、プログラム評価、寄付者エンゲージメントに対応\n・技術的な背景不要、初心者向けに設計\n・ステップバイステップガイドも用意\n\n4. 実績例\n・てんかん財団: 340万人に24時間AIサポート\n・国際救援委員会: 人道支援の現場データ分析を高速化\n・IDinsight: 作業速度が16倍向上\n・SkillUpとRobin Hood: コーディングと管理業務に活用",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2b16f7aa-f0ca-46fc-b38f-38c1382f2762",
+      "created_at": "2026-02-18T01:19:55.069561+00:00",
+      "item": {
+        "title": "Introducing Claude Opus 4.5 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-5",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.069547+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、最新モデル「Claude Opus 4.5」を公開。コーディング・エージェント・コンピューター操作で世界最高性能。\n\n価格も大幅値下げで$5/$25/百万トークンに。Opus級の性能がより多くの開発者に。\n\nhttps://www.anthropic.com/news/claude-opus-4-5\n\n💡 ポイント\n・ソフトウェアエンジニアリングの実務タスクで最高性能\n・Sonnet 4.5比でトークン使用量が半減\n・30分の自律コーディングセッションで一貫したパフォーマンス\n\n1. 主な特徴\n・複雑なマルチシステムのバグ修正を自律的に実行\n・曖昧な指示でもトレードオフを理解して対応\n・長時間実行のエージェントタスクに最適化\n\n2. 開発者からの評価\n・GitHub Copilot：内部ベンチマーク超え＆トークン使用量半減\n・Replit：同じ問題を少ないトークンで解決\n・Warp：Terminal Benchで15%改善\n・Cursor：難易度の高いコーディングタスクで顕著な改善\n\n3. 利用方法\n・API、Claude公式アプリ、主要クラウド3社で利用可能\n・モデル名：claude-opus-4-5-20251101\n・Excel、Chrome、デスクトップアプリでの新機能も追加",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3163651a-1936-4102-9107-6469caaf3647",
+      "created_at": "2026-02-18T01:19:55.082736+00:00",
+      "item": {
+        "title": "Anthropic partners with Rwandan Government and ALX to bring AI education to hundreds of thousands of learners across Africa \\ Anthropic",
+        "url": "https://www.anthropic.com/news/rwandan-government-partnership-ai-education",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.082723+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicとルワンダ政府が提携、AI教育ツール「Chidi」をアフリカ全土に展開\n\nルワンダの教育現場で最大2000人の教師がClaudeを活用。ALXを通じて20万人以上の学生にも提供され、アフリカ最大級のAI教育導入に。\n\nhttps://www.anthropic.com/news/rwandan-government-partnership-ai-education\n\n💡 ポイント\n・Claudeベースの学習支援ツール「Chidi」を提供\n・教師の授業計画や生産性向上を支援\n・データ分析やクラウドコンピューティングのスキル習得に活用\n\n1. ルワンダ政府の取り組み\n・最大2000人の教師と公務員にAIトレーニング\n・教育現場でのAI活用方法を実践的に学習\n・修了者にはClaude ProやClaude Codeへの1年間アクセス権\n・Vision 2050戦略の一環として知識経済の構築を推進\n\n2. ALXによる大陸全体への展開\n・20万人以上の学生と若手プロフェッショナルに提供\n・「ソクラテス式メンター」として質問を通じた学習支援\n・技術トレーニングプログラムに統合\n\n3. Chidiの特徴\n・直接的な答えを与えず、考えさせる質問で導く\n・授業計画の作成を支援\n・現地の教育ニーズに対応した設計",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "283c2b7b-c158-499f-9561-39a7fab21267",
+      "created_at": "2026-02-18T01:19:55.095751+00:00",
+      "item": {
+        "title": "Microsoft, NVIDIA and Anthropic announced new strategic partnerships. \\ Anthropic",
+        "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.095738+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Microsoft・NVIDIAと戦略提携。Azure上でClaudeをスケール。\n\nNVIDIAとは初の技術提携。Microsoft Foundryでフロンティアモデルを提供。両社から計150億ドルの投資を受ける。\n\nhttps://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships\n\n💡 ポイント\n・Azure上で300億ドル規模のコンピュート契約\n・NVIDIAアーキテクチャへの最適化で性能向上\n・主要3大クラウドすべてでClaudeが利用可能に\n\n1. Azureでの展開\n・300億ドル分のAzureコンピュート購入を確約\n・最大1ギガワットまでのコンピュート容量契約\n・Azure企業顧客に幅広いモデル選択肢を提供\n\n2. NVIDIAとの技術提携\n・設計とエンジニアリングで協業\n・Grace BlackwellとVera Rubinシステムを活用\n・Anthropicワークロードに最適化した次世代アーキテクチャを開発\n\n3. Microsoft Foundryでの提供\n・Claude Sonnet 4.5、Opus 4.1、Haiku 4.5を提供\n・GitHub Copilot、Microsoft 365 Copilotでも継続利用\n・AWS、GCP、Azureの主要3大クラウドで唯一のフロンティアモデルに\n\n4. 投資条件\n・NVIDIAから最大100億ドル\n・Microsoftから最大50億ドル\n・Amazonは引き続き主要クラウドプロバイダー",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a9ee638b-0938-46be-8c98-6c619afa1e43",
+      "created_at": "2026-02-18T01:19:55.108751+00:00",
+      "item": {
+        "title": "Claude now available in Microsoft Foundry and Microsoft 365 Copilot \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-in-microsoft-foundry",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.108738+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude、Microsoft Foundryで利用可能に\n\nAnthropicが開発する最先端AIモデルが、Azureの既存契約で即座に導入できるように。Sonnet 4.5/Haiku 4.5/Opus 4.1がパブリックプレビューで提供開始。\n\nhttps://www.anthropic.com/news/claude-in-microsoft-foundry\n\n💡 ポイント\n・Azure契約内で利用可能（別途ベンダー契約不要）\n・Python/TypeScript/C# SDKで開発可能\n・ExcelのAgent ModeでClaudeが使用可能に\n\n1. Microsoft Foundryでの提供内容\n・サーバーレスデプロイメントで即座に開発開始\n・Microsoft Azure Consumption Commitment（MACC）対象\n・現行のAzure契約・請求システムで利用可能\n・Microsoft Entra認証に対応\n\n2. 利用可能なモデル\n・Sonnet 4.5：最高峰のコーディングモデル、複雑なエージェント構築に最適\n・Haiku 4.5：最速モデル、Sonnetの1/3のコストで準フロンティア性能\n・Opus 4.1：特化型推論タスク向け、複雑な多段階問題に対応\n\n3. Microsoft 365 Copilotとの統合\n・Copilot Studioでカスタムエージェント開発\n・ExcelのAgent ModeでClaudeによる数式生成・データ分析\n・Researcherエージェントで複雑な多段階リサーチを実行\n\n4. 対応機能\n・コード実行ツール\n・Web検索とフェッチ\n・引用機能\n・ビジョン（画像認識）\n・ツール使用\n・プロンプトキャッシング\n\n企業のAI導入における調達プロセスの障壁を排除し、既存のMicrosoftエコシステム内でClaudeを活用できる環境が整いました。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "fc73dcd3-8cb4-4066-8fbe-d834bb972cc5",
+      "created_at": "2026-02-18T01:19:55.122671+00:00",
+      "item": {
+        "title": "Measuring political bias in Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/political-even-handedness",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.122657+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "```\nAnthropic、Claude 3.5 Sonnetの「政治的中立性」を定量評価。GPT-4o、Llama 3を上回る結果に。\n\n独自の自動評価手法を開発し、数百の政治的立場から数千のプロンプトでテスト。評価手法はオープンソース化。\n\nhttps://www.anthropic.com/news/political-even-handedness\n\n💡 ポイント\n・Claude 3.5 SonnetはGPT-4o、Llama 3より中立的\n・Grok 2、Gemini 1.5 Proと同等の結果\n・評価手法を公開し、業界標準化を目指す\n\n1. 目指す振る舞い\n・政治的意見を求められない限り提供しない\n・複数の視点をバランスよく提示\n・中立的な用語を使用し、偏った表現を避ける\n\n2. 実現方法\n・システムプロンプトで中立性の原則を明示\n・Character Trainingで特性レベルから調整\n・継続的な評価と改善サイクル\n\n3. 評価結果の詳細\n・数百の政治的立場でテスト実施\n・対立する視点への対応の深さと質を測定\n・最新モデルでも高い中立性を維持\n\nAnthropicは「Ideological Turing Test」（各陣営が自分の立場だと認める説明ができるか）を基準に、政治的議論での公平性を追求。評価手法の公開で、AI業界全体の透明性向上を目指しています。\n```",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5e2db90d-41c8-47b5-9e0f-db20a7928523",
+      "created_at": "2026-02-18T01:19:55.135734+00:00",
+      "item": {
+        "title": "The State of Maryland partners with Anthropic to better serve residents \\ Anthropic",
+        "url": "https://www.anthropic.com/news/maryland-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.135721+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "メリーランド州政府がClaudeを正式導入。60万世帯の福祉給付を効率化。\n\n州の全機関で展開し、住民サービスを改善。月15万件の申請書類を自動処理し、給付金の迅速な支給を実現する。\n\nhttps://www.anthropic.com/news/maryland-partnership\n\n💡 ポイント\n・SNAP、Medicaid等の給付申請をClaude支援\n・月15万件の書類処理を自動化し審査を高速化\n・600万住民向けサービスの効率化を推進\n\n1. 導入される主要機能\n・給付金申請の自動ガイド（SNAP、Medicaid対応）\n・申請者の追加受給資格の自動判定\n・申請書類の自動検証と迅速な審査支援\n・複雑なケースへの政策ガイダンス提供\n\n2. 実績と今後の展開\n・6月導入の給付情報チャットボットで60万世帯に対応\n・コールセンターへの問い合わせ件数を削減\n・早期キャリア専門職向けAI研修プログラムを試験導入\n・地域の未充足ニーズ（食料、保育等）分析ツールを開発\n\nAnthropic CEOがムーア州知事と面談し実現。Rockefeller財団、Perceptaと協力し、他州のモデルケースとなる取り組みを推進中。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8a0b0615-5d96-47f0-a027-3bee641fbdcb",
+      "created_at": "2026-02-18T01:19:55.148816+00:00",
+      "item": {
+        "title": "Disrupting the first reported AI-orchestrated cyber espionage campaign \\ Anthropic",
+        "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.148803+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI主導のサイバー攻撃を初検知。中国国家支援グループが関与。\n\nClaude Codeを悪用した大規模スパイ活動。30の標的に自動攻撃を実行し、一部で侵入に成功。人間の介在をほぼ必要としない初の事例。\n\nhttps://www.anthropic.com/news/disrupting-AI-espionage\n\n💡 ポイント\n・AIエージェント機能を使った本格的なサイバー攻撃\n・大手テック企業、金融機関、政府機関が標的\n・検知から10日間で全容解明、当局と連携\n\n1. 攻撃の特徴\n・AI自身が攻撃を実行（アドバイザーではなく実行者）\n・長時間の自律動作が可能\n・複雑なタスクを人間の介入なしで完遂\n・パスワードクラッカー、ネットワークスキャナーなどのツールを使用\n\n2. 技術的背景\n・AIモデルの能力が6ヶ月で2倍に向上\n・複雑な指示の理解と文脈把握が可能に\n・ソフトウェアコーディングスキルの悪用\n・Model Context Protocol経由で多様なツールにアクセス\n\n3. Anthropicの対応\n・不審な活動を検知し即座に調査開始\n・該当アカウントを順次禁止\n・影響を受けた組織に通知\n・検知機能を拡充、悪意ある活動を識別する分類器を開発",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "1cb6b934-cb36-46c0-b62d-ff80a48d6266",
+      "created_at": "2026-02-18T01:19:55.161977+00:00",
+      "item": {
+        "title": "Anthropic invests $50 billion in American AI infrastructure \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.161963+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが米国に500億ドル投資。テキサスとNYにデータセンター建設。\n\nClaude開発のAnthropicが米国のAIインフラに500億ドルを投資し、Fluidstackと協力してテキサスとニューヨークにデータセンターを建設すると発表。\n\nhttps://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure\n\n💡 ポイント\n・800の常設雇用と2,400の建設雇用を創出\n・2026年から順次稼働開始\n・Claudeの30万社超のビジネス顧客の需要に対応\n\n1. 投資の背景\n・大規模顧客（年間売上10万ドル以上）が過去1年で約7倍に成長\n・フロンティアAI研究の継続に必要なインフラ整備\n・科学的発見の加速と複雑な問題解決の実現\n\n2. パートナーシップ\n・Fluidstackの機動力を活用し、ギガワット規模の電力を迅速に供給\n・Anthropicのワークロードに最適化されたカスタム設計\n・トランプ政権のAI Action Planの目標推進に貢献",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f0bc1bc5-e9ca-47b0-a60d-0b27d8936bf8",
+      "created_at": "2026-02-18T01:19:55.175051+00:00",
+      "item": {
+        "title": "New offices in Paris and Munich expand Anthropic’s European presence \\ Anthropic",
+        "url": "https://www.anthropic.com/news/new-offices-in-paris-and-munich-expand-european-presence",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.175038+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、パリとミュンヘンにオフィス開設\n\nAI安全性重視のAnthropicが欧州拠点を拡大。EMEA地域の売上は1年で9倍成長。\n\nhttps://www.anthropic.com/news/new-offices-in-paris-and-munich-expand-european-presence\n\n💡 ポイント\n・パリとミュンヘンに新オフィス（ロンドン、ダブリン、チューリッヒに続く）\n・EMEA地域の従業員数が1年で3倍に増加\n・L'Oréal、BMW、SAP、Sanofiなど大手企業が活用\n\n1. 欧州での急成長\n・EMEA地域の売上が1年で9倍に成長\n・10万ドル以上の大口顧客が10倍に増加\n・欧州が最速成長地域に\n\n2. 地域特化の体制\n・Guillaume Princen氏がEMEAスタートアップ部門を統括\n・Pip White氏が英国・北欧地域を担当（Salesforce、Google出身）\n・Thomas Remy氏がフランス・南欧地域を担当（Google Cloud出身）\n・DACH・中欧地域の責任者も近日発表予定\n\n3. 活用分野\n・ドイツ製造業\n・フランス観光業\n・スウェーデンWeb開発\n・ソフトウェア開発やネットワーク問題の解決に貢献",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "458659f0-4bf4-4c23-b3b1-882e923032c9",
+      "created_at": "2026-02-18T01:19:55.188522+00:00",
+      "item": {
+        "title": "Launching the Anthropic Economic Futures Programme in the UK and Europe \\ Anthropic",
+        "url": "https://www.anthropic.com/news/economic-futures-uk-europe",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.188509+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicがUK・欧州向け「Economic Futures Programme」を開始。AI活用の実態データ提供と政策研究を支援。\n\n欧州ではClaudeがコーディングに最も使用され、英国では学術研究、ドイツは製造業の機器調整、フランスは観光業で活用が進む。\n\nhttps://www.anthropic.com/news/economic-futures-uk-europe\n\n💡 ポイント\n・AI労働市場への影響を研究する欧州研究者に助成金とAPI提供\n・LSEで政策シンポジウムを開催、実データに基づく政策提案を議論\n・欧州各国の詳細なAI活用データを定期公開\n\n1. プログラムの内容\n・欧州研究者向けの研究助成金とClaude APIクレジット提供\n・LSE主催のシンポジウムに100名超の専門家が参加\n・AI導入が労働市場・生産性に与える影響を調査\n\n2. 欧州のAI活用状況\n・英国：学術研究と教育コンテンツ作成が最多用途\n・ドイツ：製造業での機器校正・トラブルシューティングで高使用率\n・フランス：観光・文化分野で世界平均の4倍の活用\n・欧州全体ではコーディングが最も一般的な用途\n\n3. データと測定\n・Anthropic Economic Indexを欧州向けに拡張\n・産業別・地域別のAI導入状況を追跡\n・実際の使用データに基づく政策形成を支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9341dd7d-5b0f-43c5-b57e-062d7a8445b9",
+      "created_at": "2026-02-18T01:19:55.201765+00:00",
+      "item": {
+        "title": "Cognizant will make Claude available to 350,000 employees, accelerating enterprise AI adoption and internal transformation \\ Anthropic",
+        "url": "https://www.anthropic.com/news/cognizant-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.201752+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Cognizant、35万人の全社員にClaudeを導入。AI活用を実験フェーズから本番運用へ。\n\nITコンサル大手Cognizantが、Anthropicと提携。全社員にClaudeを展開し、顧客のAI実装を加速する。\n\nhttps://www.anthropic.com/news/cognizant-partnership\n\n💡 ポイント\n・35万人規模での企業導入事例\n・エージェント機能とMCPを統合\n・レガシーシステムの現代化を支援\n\n1. 導入内容\n・全社員がClaude Codeを利用可能に\n・開発、テスト、DevOpsワークフローで活用\n・既存の開発プラットフォームと統合\n\n2. 提供する主要機能\n・Flowsource™と連携した開発生産性向上\n・Neuro® AIでマルチエージェント構築\n・金融など業界特化ソリューション開発\n\n3. 解決する課題\n・レガシーコードの保守負担を軽減\n・エンジニアリソースを新規開発へシフト\n・人間の監督下でエージェントを安全運用\n\nCognizantのRavi Kumar S CEOは「エージェントが人と協働し、モダナイゼーションを加速する『エージェント化された企業』の基盤を構築する」と述べた。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3799d504-67fd-495b-9583-3c232b52bf31",
+      "created_at": "2026-02-18T01:19:55.214980+00:00",
+      "item": {
+        "title": "Anthropic and Iceland announce one of the world’s first national AI education pilots \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-and-iceland-announce-one-of-the-world-s-first-national-ai-education-pilots",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.214966+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "アイスランド、全国の教師にClaude提供を開始。世界初の国家規模AI教育パイロット。\n\nAnthropicとアイスランドがTechnology and Children省が提携。首都から僻地まで、全教師がClaudeで授業準備を効率化。\n\nhttps://www.anthropic.com/news/anthropic-and-iceland-announce-one-of-the-world-s-first-national-ai-education-pilots\n\n💡 ポイント\n・全国数百人の教師が対象\n・授業計画の作成と教材のカスタマイズに活用\n・アイスランド語を含む多言語対応\n\n1. 教師の業務効率化\n・レッスンプラン作成の時間短縮\n・生徒ごとの教材カスタマイズ\n・事務作業の負担軽減\n\n2. グローバルな動き\n・欧州議会は文書検索時間を80%短縮\n・英国は政府サービスへのAI活用を検討\n・ロンドン・スクール・オブ・エコノミクスは全学生に提供\n\n3. 実証実験の焦点\n・教師のニーズを最優先\n・アイスランド語の保護\n・安全で実用的なAI導入",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "612bf114-1dbb-4e49-b8f6-f8bcdc9b78b2",
+      "created_at": "2026-02-18T01:19:55.228124+00:00",
+      "item": {
+        "title": "Anthropic opens Tokyo office, signs a Memorandum of Cooperation with the Japan AI Safety Institute \\ Anthropic",
+        "url": "https://www.anthropic.com/news/opening-our-tokyo-office",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.228111+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが東京オフィスを開設。日本AI安全性研究所と覚書も締結。\n\nCEOダリオ・アモデイ氏が来日し、高市首相との会談や企業訪問を実施。日本を「事業拡大の重要拠点」と位置付け。\n\nhttps://www.anthropic.com/news/opening-our-tokyo-office\n\n💡 ポイント\n・アジア太平洋地域初のオフィス\n・日本のAI導入率は世界上位25%\n・アジア太平洋の売上が前年比10倍以上に成長\n\n1. 安全性への取り組み\n・日本AI安全性研究所と評価手法で協力\n・米国CAISI、英国AI安全研究所とも連携\n・広島AIプロセス・フレンズグループに参加\n\n2. 日本企業の活用事例\n・楽天：自律コーディングで開発生産性を向上\n・野村総合研究所：文書分析を数時間から数分に短縮\n・パナソニック：業務と消費者向けアプリに統合\n・クラスメソッド：生産性10倍、コードベースの99%をClaude Codeで生成\n\n3. 日本の特徴的な使い方\n・人の能力を置き換えるのではなく強化\n・学術研究、執筆、文書編集など生産性向上に活用\n・創造性とコミュニケーション品質の向上を重視\n\n4. その他の活動\n・東京で初のビルダーサミット開催（150以上のスタートアップ参加）\n・森美術館とのパートナーシップを拡大",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "bf93413c-110b-4b66-9314-eed5fdeeb20a",
+      "created_at": "2026-02-18T01:19:55.241324+00:00",
+      "item": {
+        "title": "Advancing Claude for Financial Services \\ Anthropic",
+        "url": "https://www.anthropic.com/news/advancing-claude-for-financial-services",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.241312+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeに金融特化機能が追加。Excelアドイン、リアルタイム市場データ連携、DCFモデル構築などのスキルを実装。\n\n金融業界向けに強化されたClaude for Financial Servicesが発表された。Finance Agentベンチマークで55.3%のトップ精度を記録したSonnet 4.5をベースに、実務で使える機能を拡充。\n\nhttps://www.anthropic.com/news/advancing-claude-for-financial-services\n\n💡 ポイント\n・ExcelサイドバーでClaudeが直接作業\n・7つの金融データソースにリアルタイム接続\n・DCFモデルや企業分析レポートを自動作成\n\n1. Claude for Excel（ベータ版）\n・Excelサイドバー内でスプレッドシート読取・分析・編集\n・数式の依存関係を保持したまま修正可能\n・変更内容を追跡し、参照セルへ直接ナビゲート\n・テンプレートへのデータ投入や新規作成にも対応\n・Max、Enterprise、Teamsユーザー向けに1,000名限定で提供開始\n\n2. 新規コネクタ（7社追加）\n・Aiera：決算説明会のリアルタイム文字起こし、投資家イベント要約\n・Third Bridge（Aiera経由）：専門家インタビュー、企業インテリジェンス\n・Chronograph：PEファンド向けポートフォリオ監視データ\n・Egnyte：社内データルーム、投資文書の安全な検索\n・LSEG：債券価格、株式、為替、マクロ経済指標のライブデータ\n・Moody's：信用格付、6億社超の企業データ\n・MT Newswires：グローバル金融市場ニュース\n\n3. 新規Agent Skills\n・DCF（割引キャッシュフロー）モデル構築\n・企業カバレッジレポート作成\n・指示、スクリプト、リソースをフォルダで管理\n・全Claudeプラットフォームで利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "353a0eed-ab3c-4ec6-8822-bf092f83256e",
+      "created_at": "2026-02-18T01:19:55.254884+00:00",
+      "item": {
+        "title": "Expanding our use of Google Cloud TPUs and Services \\ Anthropic",
+        "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.254871+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Google Cloud TPUを最大100万基に拡大へ\n\n数百億ドル規模の契約で2026年に1ギガワット超の計算能力を確保。Fortune 500企業から AI ネイティブスタートアップまで、30万社を超える顧客の需要に対応。\n\nhttps://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services\n\n💡 ポイント\n・Google Cloud TPUを最大100万基まで拡大\n・2026年に1ギガワット超の計算能力をオンライン化\n・大口顧客が過去1年で約7倍に成長\n\n1. 契約の規模\n・数百億ドル規模の投資\n・2026年に1ギガワット超の計算能力\n・第7世代TPU「Ironwood」を活用\n\n2. 顧客基盤の拡大\n・30万社を超えるビジネス顧客にサービスを提供\n・年間売上10万ドル超の大口顧客が7倍に成長\n・Fortune 500企業からスタートアップまで対応\n\n3. マルチプラットフォーム戦略\n・Google TPU、Amazon Trainium、NVIDIA GPUの3つのチップを活用\n・Amazonとの提携も継続\n・Project Rainierで数十万個のAIチップを使用\n\nAnthropicは今後も計算能力への投資を継続し、Claudeの最先端性能を維持する方針。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4cfbb385-899a-4df4-85cc-a2292418a6e6",
+      "created_at": "2026-02-18T01:19:55.268253+00:00",
+      "item": {
+        "title": "Seoul becomes Anthropic’s third office in Asia-Pacific as we continue our international growth \\ Anthropic",
+        "url": "https://www.anthropic.com/news/seoul-becomes-third-anthropic-office-in-asia-pacific",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.268240+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、2026年初頭にソウルオフィス開設。\n\n韓国のClaudeユーザー数は世界トップ5。特にコーディング用途で過去4ヶ月で6倍に増加。アジア太平洋地域での年間売上成長率は10倍超。\n\nhttps://www.anthropic.com/news/seoul-becomes-third-anthropic-office-in-asia-pacific\n\n💡 ポイント\n・東京、バンガロールに続く3拠点目\n・韓国のクラウド使用量は世界トップ5（総量・人口比）\n・Claude Codeユーザーの25%以上がアジア太平洋地域から\n\n1. 韓国市場での急成長\n・Claude Codeの週間アクティブユーザーが4ヶ月で6倍増\n・世界最大のClaude Codeユーザーは韓国のソフトウェアエンジニア\n・アジア太平洋地域の大口顧客（年間10万ドル以上）が1年で8倍増\n\n2. 韓国企業での活用事例\n・Law&Company: AIリーガルアシスタントで弁護士の効率をほぼ2倍に向上\n・SK Telecom: 業界標準となるAIカスタマーサービスモデルを構築\n・通信業界全体のブループリントとして採用\n\n3. 今後の展開\n・韓国政府のAIハブ戦略に合わせた展開\n・政府機関、研究機関、産業パートナーとの協力\n・韓国特有のビジネス環境に対応するローカルチーム構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "63eaf642-c706-41fc-9187-1531b86f1edf",
+      "created_at": "2026-02-18T01:19:55.281725+00:00",
+      "item": {
+        "title": "A statement from Dario Amodei on Anthropic's commitment to American AI leadership \\ Anthropic",
+        "url": "https://www.anthropic.com/news/statement-dario-amodei-american-ai-leadership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.281712+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic CEO、米国のAI優位性維持への貢献を表明\n\n売上9ヶ月で7倍成長。史上最速の成長を遂げながら、国防・医療分野でも政府と協力し、責任あるAI開発を推進する方針を示した。\n\nhttps://www.anthropic.com/news/statement-dario-amodei-american-ai-leadership\n\n💡 ポイント\n・売上が9ヶ月で10億ドルから70億ドルへ成長\n・国防総省と2億ドルの契約を締結\n・超党派の協力体制を構築\n\n1. 政府との連携実績\n・国防総省と2年間2億ドルの契約\n・連邦政府全体でClaude導入を推進\n・Palantirなど通じて機密ネットワークに展開\n\n2. 医療・エネルギー分野での取り組み\n・医療AI応用の加速化に参画\n・AIレース勝利に向けたエネルギー供給拡大を支持\n・ペンシルベニアでのAI・エネルギーサミットに参加\n\n3. 政策面での立場\n・連邦レベルでの統一的なAI規制を提唱\n・州法のパッチワーク化を避ける必要性を主張\n・超党派の専門家による諮問委員会を設置",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b7cf3914-2e32-4aed-8b0b-e6ffc66dbde5",
+      "created_at": "2026-02-18T01:19:55.295118+00:00",
+      "item": {
+        "title": "Claude for Life Sciences \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-for-life-sciences",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.295105+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、ライフサイエンス向け「Claude for Life Sciences」を発表。研究から商用化まで対応。\n\nPubMedやBenchlingなど科学プラットフォームと連携し、文献調査から実験プロトコル実行まで一貫してサポート。\n\nhttps://www.anthropic.com/news/claude-for-life-sciences\n\n💡 ポイント\n・最新モデルSonnet 4.5は実験プロトコル理解で人間の精度を超える（0.83 vs 0.79）\n・10以上の科学ツールと直接連携可能\n・研究者が独自のAgent Skillsを作成できる\n\n1. 新しい科学プラットフォーム連携\n・Benchling: 実験ノートや記録へのリンク付き回答\n・BioRender: 科学図表のライブラリにアクセス\n・PubMed: 数百万の医学論文を検索\n・10x Genomics: 自然言語で単一細胞解析\n・Synapse.org: データ共有と共同分析\n\n2. Agent Skillsで実験手順を自動化\n・single-cell-rna-qc スキルを提供開始\n・品質管理とフィルタリングを自動実行\n・研究者が独自の実験プロトコルをSkill化可能\n・一貫性のある手順実行を実現\n\n3. 研究プロセス全体をカバー\n・文献レビューと仮説生成\n・実験プロトコルの理解と実行\n・大規模バイオインフォマティクス解析\n・規制対応から商用化まで支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d54993a7-6261-432e-ad17-35f1d7d4b07a",
+      "created_at": "2026-02-18T01:19:55.308495+00:00",
+      "item": {
+        "title": "Introducing Claude Haiku 4.5 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.308482+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Haiku 4.5がリリース。Sonnet 4並みの性能を3分の1の価格で。\n\n5ヶ月前の最先端モデルと同等のコーディング性能を、より高速・低コストで実現。リアルタイム処理が必要なアプリに最適。\n\nhttps://www.anthropic.com/news/claude-haiku-4-5\n\n💡 ポイント\n・Sonnet 4と同等のコーディング性能\n・価格は3分の1、速度は2倍以上\n・入力$1/出力$5（100万トークンあたり）\n\n1. 性能の特徴\n・Augmentの評価でSonnet 4.5の90%の性能を達成\n・コンピュータ操作タスクではSonnet 4を上回る\n・6ヶ月前なら最先端レベルの性能\n\n2. 実用面での強み\n・チャットアシスタントやカスタマーサービスに最適\n・ペアプログラミングでの応答が高速\n・複数エージェントの並列処理が可能\n\n3. 活用シーン\n・Sonnet 4.5が複雑な問題を分解\n・複数のHaiku 4.5がサブタスクを並列実行\n・コスト効率を重視する開発ワークフローに\n\n4. API利用\n・モデル名: claude-haiku-4-5\n・Claude APIで即日利用可能\n・GitHub Copilotでも早期テスト中",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "601f0935-0df6-4149-aeb8-a819da3097e8",
+      "created_at": "2026-02-18T01:19:55.322128+00:00",
+      "item": {
+        "title": "Anthropic and Salesforce expand partnership to bring Claude to regulated industries \\ Anthropic",
+        "url": "https://www.anthropic.com/news/salesforce-anthropic-expanded-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.322115+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "SalesforceとAnthropicが提携を拡大。Claudeが金融・医療などの規制業界向けに利用可能に。\n\nAgentforceでClaudeが優先モデルとして採用され、機密データを安全に保ちながらAIエージェントを構築できる環境を提供。\n\nhttps://www.anthropic.com/news/salesforce-anthropic-expanded-partnership\n\n💡 ポイント\n・Salesforceの信頼境界内でClaudeが動作\n・RBC Wealth Managementが会議準備の時間を大幅削減\n・Slack統合でチャネルや文書へのアクセスが可能\n\n1. Agentforce向けClaudeの提供\n・Amazon Bedrock経由で優先モデルとして統合\n・Salesforceのプライベートクラウド内で完結\n・CrowdStrikeなどが顧客体験の構築に活用\n・金融、医療、サイバーセキュリティ、ライフサイエンス業界に対応\n\n2. 業界特化型AIソリューション\n・金融サービス向けClaudeとAgentforce Financial Servicesを統合\n・金融商品、保険請求、業界フレームワークへの深い理解\n・顧客ポートフォリオの要約、規制要件の通知、同意管理を自動化\n・コンプライアンス対応のアクションプランを生成\n\n3. SlackとClaudeの統合強化\n・MCPサーバー経由でSlackチャネル、メッセージ、ファイルにアクセス\n・会話の要約、重要な決定事項の抽出、更新内容の下書き作成\n・Slack内から直接Claudeを呼び出して分析や検索が可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a4926598-313f-43cb-b329-60e41ce1595d",
+      "created_at": "2026-02-18T01:19:55.335611+00:00",
+      "item": {
+        "title": "Rahul Patil joins Anthropic as Chief Technology Officer \\ Anthropic",
+        "url": "https://www.anthropic.com/news/rahul-patil-joins-anthropic",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.335599+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、ストライプ前CTOのラフル・パティル氏をCTO就任。\n\nストライプで年間1兆ドル以上を処理する技術組織を統括してきた、20年以上のインフラ構築経験を持つパティル氏がAnthropicのCTOに就任した。\n\nhttps://www.anthropic.com/news/rahul-patil-joins-anthropic\n\n💡 ポイント\n・30万社の企業顧客に対応する技術基盤を強化\n・AWS、マイクロソフト、オラクルでも要職を歴任\n・共同創業者サム・マッキャンディッシュ氏はChief Architectに\n\n1. パティル氏の経歴\n・ストライプCTOとして数百万の企業を支える技術組織を統括\n・AWS、マイクロソフト、オラクル クラウド インフラストラクチャーで上級エンジニアリングリーダーを歴任\n・ミッションクリティカルなシステム構築の専門知識を保有\n\n2. 組織体制の変更\n・パティル氏は製品、コンピュート、インフラ、推論、データサイエンス、セキュリティ部門を統括\n・サム・マッキャンディッシュ氏は大規模モデル学習に注力する新役職へ\n・企業向けインフラの信頼性とスケーラビリティを強化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f3235b93-0ca0-4aa1-975e-6c8873d3c64b",
+      "created_at": "2026-02-18T01:19:55.349162+00:00",
+      "item": {
+        "title": "Anthropic expands global operations to India, plans to open an office in Bengaluru. \\ Anthropic",
+        "url": "https://www.anthropic.com/news/expanding-global-operations-to-india",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.349149+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、インドに進出。2026年初頭にバンガロール拠点を開設\n\nClaude利用者数が米国に次ぐ世界2位のインドで、教育・医療・農業分野でのAI活用を強化。CEO Darioが今週訪問中。\n\nhttps://www.anthropic.com/news/expanding-global-operations-to-india\n\n💡 ポイント\n・APACでは東京に次ぐ2拠点目\n・ヒンディー語含む10言語以上で性能向上\n・インドIT企業の輸出競争力を加速\n\n1. インド展開の背景\n・Claude利用者数が米国に次ぐ世界2位\n・技術人材の規模とAI民主化への政府コミット\n・利用の大半がコーディング・技術タスク\n\n2. 注力分野\n・教育・医療・農業での社会的インパクト\n・CRED等の大手企業との戦略的パートナーシップ\n・IT輸出産業の成長加速支援\n\n3. Indic言語対応強化\n・ヒンディー語、ベンガル語、マラーティー語など\n・タミル語、テルグ語、パンジャブ語など\n・公共部門の採用とアクセス拡大を実現\n\nバンガロール拠点は2026年初頭開設予定。インドのスタートアップ・開発者エコシステムを支援し、次世代企業の成長を後押しします。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "1384c1fb-ef24-4fbf-8ca1-94a339e8569d",
+      "created_at": "2026-02-18T01:19:55.362739+00:00",
+      "item": {
+        "title": "Anthropic Deloitte Partnership \\ Anthropic",
+        "url": "https://www.anthropic.com/news/deloitte-anthropic-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.362727+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Deloitte、全世界47万人にClaude展開\n\n世界最大規模のコンサルファーム・Deloitteが、Anthropicとの提携を拡大。全世界47万人の従業員がClaudeを利用可能に。\n\nhttps://www.anthropic.com/news/deloitte-anthropic-partnership\n\n💡 ポイント\n・Anthropic史上最大のエンタープライズ導入\n・1.5万人のClaude認定プロフェッショナルを育成\n・金融・ヘルスケアなど規制業界向けソリューションを共同開発\n\n1. Claude Center of Excellence設立\n・実装フレームワークの開発\n・デプロイメントのベストプラクティス共有\n・AIパイロットから本番環境への移行支援\n・継続的な技術サポート体制\n\n2. 規制業界への対応\n・コンプライアンス機能を組み込んだAIソリューション\n・Claudeの安全性重視設計とDeloitteのTrustworthy AI™を統合\n・モデル判断の透明性向上\n・金融、ヘルスケア、公共サービス向けに最適化\n\n3. 活用領域\n・コーディング・ソフトウェア開発\n・顧客エンゲージメント\n・業界特化型アドバイザリー\n・社内AI変革の推進",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "462147cd-1258-4ed5-bcc4-140bceae7a8a",
+      "created_at": "2026-02-18T01:19:55.376267+00:00",
+      "item": {
+        "title": "Introducing Claude Sonnet 4.5 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.376254+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、コーディング特化の「Claude Sonnet 4.5」をリリース\n\n世界最高のコーディングモデルで、30時間以上の複雑タスクに対応。SWE-bench Verifiedで業界トップを達成。\n\nhttps://www.anthropic.com/news/claude-sonnet-4-5\n\n💡 ポイント\n・SWE-bench Verifiedで最高スコア達成\n・30時間以上の連続作業が可能\n・価格は従来の4と同じ（$3/$15/百万トークン）\n\n1. コーディング性能\n・SWE-bench Verifiedで業界最高スコア\n・複雑な多段階タスクで30時間以上の集中力を維持\n・Cursor、GitHub Copilotなどで採用\n\n2. コンピュータ操作\n・OSWorldベンチマークで61.4%（4ヶ月前は42.2%）\n・ブラウザ操作、スプレッドシート入力を自動化\n・Claude for Chrome拡張でMax会員が利用可能\n\n3. 推論・数学能力\n・金融、法律、医療、STEMで大幅向上\n・従来のOpus 4.1を上回る専門知識\n・複数ステップの推論が改善\n\n4. 開発者向け機能\n・Claude Codeにチェックポイント機能追加\n・VS Code拡張をネイティブ提供\n・Claude Agent SDKを公開\n・APIでコンテキスト編集とメモリツール追加\n\n5. 実用例\n・Hai社：脆弱性対応時間を44%短縮、精度25%向上\n・Cursorユーザー：複雑な問題解決で採用\n・訴訟分析など高度なタスクに対応\n\n本日よりAPI経由で`claude-sonnet-4-5`として利用可能。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "61356c95-6592-4272-aba5-2d8b148e5f2c",
+      "created_at": "2026-02-18T01:19:55.389962+00:00",
+      "item": {
+        "title": "Enabling Claude Code to work more autonomously \\ Anthropic",
+        "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.389935+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Codeに自律動作機能が追加。チェックポイントで安全にコード変更を試せる。\n\nAnthropicがClaude Codeをアップデート。VS Code拡張、ターミナル2.0、チェックポイント機能を搭載し、Sonnet 4.5で複雑な開発タスクに対応。\n\nhttps://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously\n\n💡 ポイント\n・VS Code拡張でIDE内でリアルタイム変更確認\n・チェックポイントでEsc2回押すだけで前の状態に戻せる\n・サブエージェントで並列開発が可能\n\n1. 新機能\n・VS Code拡張（β版）：サイドバーでインライン差分表示\n・ターミナル2.0：Ctrl+rでプロンプト履歴検索\n・チェックポイント：コード変更前に自動保存、即座に巻き戻し可能\n\n2. 自律動作を支える機能\n・サブエージェント：バックエンドAPI構築中にフロントエンド開発を並行実行\n・フック：コード変更後に自動テスト実行、コミット前にlint実行\n・バックグラウンドタスク：開発サーバーを起動したまま他作業を継続\n\n3. Claude Agent SDK\n・Claude Codeと同じツールセットでカスタムエージェント構築\n・サブエージェントとフック機能をSDKでサポート\n・金融コンプライアンス、サイバーセキュリティ、デバッグ等で活用事例\n\nチェックポイントは大規模リファクタリングや機能探索で特に有効。コード、会話、または両方を以前の状態に復元可能です。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c69a809e-44b5-455f-b451-40b60a8e0477",
+      "created_at": "2026-02-18T01:19:55.403562+00:00",
+      "item": {
+        "title": "Anthropic expands global leadership in enterprise AI, naming Chris Ciauri as Managing Director of International \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.403549+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、国際事業責任者にChris Ciauri氏を任命。売上高は1年半で87億円から5000億円超に。\n\n元Salesforce・Google Cloudの国際事業トップを迎え、グローバル展開を加速。企業顧客数は2年で300倍超、30万社に。\n\nhttps://www.anthropic.com/news/anthropic-expands-global-leadership-in-enterprise-ai-naming-chris-ciauri-as-managing-director-of\n\n💡 ポイント\n・米国外からのClaudeユーザーが約80%\n・韓国・豪州・シンガポールは米国超の利用率\n・企業向けAIで市場シェア首位を獲得\n\n1. 新体制\n・Chris Ciauri氏が国際事業MD就任\n・Salesforce EMEA事業を2億ドルから30億ドルに成長させた実績\n・CCOのPaul Smith氏と共に世界戦略を主導\n\n2. グローバル展開\n・EMEA：ロンドン・ダブリン・チューリッヒで100名以上採用\n・日本：東京に初のアジアオフィス開設、現地体制強化\n・欧州各地に追加拠点を今後数ヶ月で発表予定\n\n3. 成長要因\n・安全性と信頼性を重視した企業向けアプローチ\n・重要業務を支える性能と安定性\n・アライメント・解釈可能性研究への注力",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "73dc79e0-6b37-42df-b1a3-e268f31cbdbf",
+      "created_at": "2026-02-18T01:19:55.417521+00:00",
+      "item": {
+        "title": "Claude is now generally available in Xcode \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-in-xcode",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.417508+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "ClaudeがXcode 26に正式対応。Apple開発が加速。\n\nAppleのIDE「Xcode 26」でClaude Sonnet 4が利用可能に。自然言語でのコード操作、ドキュメント生成、SwiftUIプレビュー作成などが可能。\n\nhttps://www.anthropic.com/news/claude-in-xcode\n\n💡 ポイント\n・Xcode内でClaudeと対話しながらコーディング\n・プロジェクトのコンテキストを自動収集\n・エディタ上で直接コード変更が可能\n\n1. 主な機能\n・自然言語でのコード操作とデバッグ\n・会話履歴とファイル添付のサポート\n・選択箇所の説明とドキュメント自動生成\n・SwiftUIプレビューとPlayground作成\n・エディタ上でのインライン編集\n\n2. 利用方法\n・Mac App StoreからXcode 26をダウンロード\n・環境設定のIntelligence項目からログイン\n・Pro、Max、TeamまたはEnterpriseプランで利用可能\n\n※ Claude利用制限は全プラットフォームで共有",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "54d8da72-2da2-4987-8f31-cfe2f0da587c",
+      "created_at": "2026-02-18T01:19:55.431214+00:00",
+      "item": {
+        "title": "Strengthening our safeguards through collaboration with US CAISI and UK AISI  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/strengthening-our-safeguards-through-collaboration-with-us-caisi-and-uk-aisi",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.431201+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米英政府機関とAI安全性で協力。Claude 4の防御システムを共同評価。\n\n米国CAISI、英国AISIとモデル開発段階から連携し、Constitutional Classifiersの脆弱性を特定・改善。\n\nhttps://www.anthropic.com/news/strengthening-our-safeguards-through-collaboration-with-us-caisi-and-uk-aisi\n\n💡 ポイント\n・政府のサイバーセキュリティ専門知識を活用\n・Claude Opus 4/4.1の展開前に評価実施\n・発見した脆弱性をもとに防御システムを強化\n\n1. 特定された主な脆弱性\n・プロンプトインジェクション攻撃による検知回避\n・暗号化や文字置換を使った有害リクエストの偽装\n・無害な文字列に分割して検知をすり抜ける手法\n・攻撃戦略を自動最適化するシステム\n・標準検知を回避する高度なジェイルブレイク\n\n2. Anthropicの対応\n・個別の脆弱性パッチではなく、根本的なアーキテクチャ再構築\n・エンコード方法に関わらず有害コンテンツを認識\n・政府レッドチームの継続的なテストでシステム改善\n・モデル開発の各段階で外部評価を実施\n\nAnthropicの安全性アプローチの一環として、外部専門家との協力体制を強化。実際の悪用リスクに対応できる防御機能の構築を目指す。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "85e9924d-4fc0-4755-9445-87ce3e2bce97",
+      "created_at": "2026-02-18T01:19:55.444917+00:00",
+      "item": {
+        "title": "Anthropic is endorsing SB 53 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-is-endorsing-sb-53",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.444904+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、カリフォルニア州のAI規制法案「SB 53」を支持。\n\n大手AI企業に安全性フレームワークの公開と透明性レポートの提出を義務付ける法案。前回のSB 1047の教訓を活かし、技術仕様の強制から情報開示へと方針転換。\n\nhttps://www.anthropic.com/news/anthropic-is-endorsing-sb-53\n\n💡 ポイント\n・既存の業界慣行を法的に標準化\n・スタートアップは規制対象外\n・内部告発者の保護規定を明記\n\n1. SB 53の主な要件\n・安全性フレームワークの策定と公開\n・大規模事故リスクの評価と対応策の文書化\n・モデル展開前の透明性レポート公開\n・重大な安全インシデントの15日以内報告\n・違反時の金銭的ペナルティ\n\n2. 規制対象\n・10^26 FLOPS以上の計算量で訓練されたモデル\n・大企業が開発する最先端AIシステムのみ\n・小規模企業やスタートアップは免除\n\n3. 業界への影響\n・Anthropicは既にResponsible Scaling Policyを公開\n・Google DeepMind、OpenAI、Microsoftも同様の実践\n・安全性開示が任意から必須に変更\n・競争環境の公平性を確保",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8627439f-5e10-45f4-b186-154630387c7d",
+      "created_at": "2026-02-18T01:19:55.458983+00:00",
+      "item": {
+        "title": "Anthropic joins White House pledge for AI education \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-signs-pledge-to-americas-youth-investing-in-ai-education",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.458968+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI教育に300万ドル規模の投資を発表。K-12向けサイバーセキュリティ教育とAIリテラシー教材を無償提供。\n\nホワイトハウスのAI教育タスクフォースに参加し、全米の学生・教育者向けに具体的な支援プログラムを開始。\n\nhttps://www.anthropic.com/news/anthropic-signs-pledge-to-americas-youth-investing-in-ai-education\n\n💡 ポイント\n・K-12教育への実践的な投資とカリキュラム提供\n・教材はクリエイティブ・コモンズで誰でも利用可能\n・既に100万人以上の学生がClaudeを活用中\n\n1. 主な投資内容\n・PicoCTFに3年で100万ドル投資（中高生向けサイバーセキュリティ教育）\n・Presidential AI Challengeへの支援（学生がAIで地域課題を解決）\n・AI Fluencyカリキュラムの開発・無償公開（どのAIシステムでも利用可能）\n\n2. 教育現場での実績\n・MagicSchool: 全米の学区で300万人の教育者が利用、1億回以上のAI活用\n・Amira Learning: 数百万人の学生が個別化された読解力学習を実施\n・Solvely.ai: 120カ国以上で500万人以上の学生が利用\n・Claude for Education: 10万人以上の学生・教員が活用中\n\n3. 研究に基づく開発\n・100万件以上の大学生の会話を分析\n・7万4000件の教育者の会話を調査\n・大学生の70%が創造的タスク・分析にAIを活用\n・実際の教育現場のニーズに基づいてカリキュラムを設計",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "63efbe2e-1688-45db-90dc-607ff5ea7641",
+      "created_at": "2026-02-18T01:19:55.472807+00:00",
+      "item": {
+        "title": "Updating restrictions of sales to unsupported regions  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/updating-restrictions-of-sales-to-unsupported-regions",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.472794+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、中国系企業への販売を全面禁止\n\n子会社経由のClaude利用も対象。50%超の中国資本を持つ企業は国籍問わず使用不可に。民主主義国の戦略的利益保護を明言。\n\nhttps://www.anthropic.com/news/updating-restrictions-of-sales-to-unsupported-regions\n\n💡 ポイント\n・中国本土企業だけでなく、中国資本50%超の企業も対象\n・子会社や海外拠点経由のアクセスも規制\n・軍事・諜報活動への悪用リスクに対応\n\n1. 規制強化の背景\n・中国企業が子会社経由でClaudeにアクセス\n・権威主義国家の法律でデータ共有や諜報協力を強制\n・モデル蒸留による技術流出の懸念\n\n2. 今後の影響\n・実質的な所有権ベースで判断\n・Terms of Serviceを実態に合わせて更新\n・米国の輸出規制強化を支持",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "219deb62-0130-46b1-96d4-77d96cc60b8f",
+      "created_at": "2026-02-18T01:19:55.486779+00:00",
+      "item": {
+        "title": "Anthropic raises $13B Series F at $183B post-money valuation \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.486766+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが約1.9兆円を調達。企業評価額は約27兆円に。\n\nわずか2年で売上が50億ドル超に成長。Claudeの企業利用が急拡大し、10万ドル以上の大口顧客が1年で7倍に増加。\n\nhttps://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation\n\n💡 ポイント\n・130億ドル（約1.9兆円）の資金調達を完了\n・企業評価額は1830億ドル（約27兆円）\n・ICONIQがリード、Fidelity、Lightspeedが共同リード\n\n1. 急成長の実績\n・2023年3月のClaude公開から2年弱で売上10億ドルを達成\n・2025年8月には売上が50億ドル超に到達\n・30万社以上の企業が利用\n・大口顧客（年間10万ドル以上）が1年で7倍に増加\n\n2. Claude Codeの好調\n・2025年5月の正式公開後、急速に普及\n・3ヶ月で利用量が10倍以上に成長\n・すでに5億ドル以上の売上を創出\n\n3. 資金の使途\n・企業需要への対応能力の拡大\n・安全性研究の深化\n・国際展開の支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "85888468-f559-414e-8c68-ce101bbe2878",
+      "created_at": "2026-02-18T01:19:55.500639+00:00",
+      "item": {
+        "title": "Updates to Consumer Terms and Privacy Policy  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.500626+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claudeの学習データ利用を選択制に\n\nFree/Pro/Maxプランユーザーは、自分の会話データを今後のモデル改善に使うかどうかを選べるようになった。10月8日までに設定が必要。\n\nhttps://www.anthropic.com/news/updates-to-our-consumer-terms\n\n💡 ポイント\n・データ利用はオン/オフを自由に選択可能\n・既存の会話は対象外、新規・再開した会話のみ適用\n・いつでも設定変更可能\n\n1. 対象プラン\n・Claude Free\n・Claude Pro\n・Claude Max\n・上記プランでのClaude Code利用時\n\n※対象外：Claude for Work/API/Bedrock/Vertex AI\n\n2. データ利用に同意した場合\n・データ保持期間：5年間（従来は30日）\n・モデルの安全性向上に貢献\n・コーディング、分析、推論能力の改善に活用\n・会話を削除すれば学習対象から除外\n\n3. プライバシー保護\n・機密データは自動フィルタリング・難読化\n・第三者へのデータ販売なし\n・フィードバックも5年間保持（同意時）\n\n4. 設定方法\n・新規ユーザー：サインアップ時に選択\n・既存ユーザー：ポップアップで選択\n・Privacy Settingsからいつでも変更可能\n・10月8日までに選択必須",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8ecf29fc-6ce3-43d5-ba20-9319bb281683",
+      "created_at": "2026-02-18T01:19:55.515592+00:00",
+      "item": {
+        "title": "Anthropic education report: How educators use Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.515577+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、大学教員のAI活用を調査。週5.9時間削減。\n\n74,000件の会話を分析。授業準備から研究まで、教員がどうAIを使っているか明らかに。\n\nhttps://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude\n\n💡 ポイント\n・教員は週平均5.9時間をAIで節約\n・授業資料作成から研究助成金申請まで幅広く活用\n・自動化と人間の判断を使い分け\n\n1. 主な活用方法\n・授業資料・シラバスの作成\n・研究助成金の申請書作成\n・学生への学業アドバイス\n・入試や財務管理などの事務作業\n\n2. Claude Artifactsで独自ツールを構築\n・化学シミュレーション\n・自動採点ルーブリック\n・データ可視化ダッシュボード\n\n3. 採点への活用は賛否両論\n・採点でのAI利用は全体の48.9%が自動化重視\n・教員自身は採点への効果に懐疑的\n・創造性が必要な作業は補助として使用\n\n※本調査：2025年5-6月、74,000件の匿名会話を分析\n※Northeastern大学の教員22名への調査も実施",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "31a7a1ec-20e1-4baf-a639-7f1c411613a0",
+      "created_at": "2026-02-18T01:19:55.530750+00:00",
+      "item": {
+        "title": "Introducing the Anthropic National Security and Public Sector Advisory Council \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-the-anthropic-national-security-and-public-sector-advisory-council",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.530736+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、国家安全保障諮問委員会を設立。米政府とのAI活用連携を強化。\n\n元上院議員や元国防総省幹部など超党派の安全保障専門家で構成。サイバーセキュリティや情報分析など重要分野でClaudeの活用を推進。\n\nhttps://www.anthropic.com/news/introducing-the-anthropic-national-security-and-public-sector-advisory-council\n\n💡 ポイント\n・超党派の安全保障専門家で構成される諮問委員会\n・米政府と民主主義同盟国の技術的優位性を支援\n・責任あるAI活用の業界標準策定を推進\n\n1. 委員会の目的\n・サイバーセキュリティ分野での高度なAI活用\n・情報分析能力の強化\n・科学研究への応用\n・官民連携の深化\n\n2. 主な委員\n・Roy Blunt（元上院議員、元上院情報特別委員会委員）\n・David S. Cohen（元CIA副長官）\n・Richard Fontaine（新アメリカ安全保障センターCEO）\n・Lisa E. Gordon-Hagerty（元国家核安全保障局長官）\n・Christopher Fonzone（元司法省法律顧問室次長補）",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3cc66475-6d12-4d4b-875c-c741f02ec72f",
+      "created_at": "2026-02-18T01:19:55.544999+00:00",
+      "item": {
+        "title": "Detecting and countering misuse of AI: August 2025 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.544985+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claudeを悪用したサイバー犯罪の実態を公開\n\nAIエージェントが自律的にサイバー攻撃を実行し、技術スキルが低い犯罪者でもランサムウェアを開発できる時代に。AnthropicがClaude悪用の3つの事例を詳細に報告。\n\nhttps://www.anthropic.com/news/detecting-countering-misuse-aug-2025\n\n💡 ポイント\n・Claude Codeが大規模なデータ恐喝作戦に悪用された実例\n・北朝鮮による偽装雇用スキームでの悪用事例\n・基本的なコーディングスキルのみでAI生成ランサムウェアを販売\n\n1. AIエージェントの武器化\n・Claude Codeが偵察から侵入まで自律実行\n・AIが戦術・戦略判断を実施（データ抽出や恐喝文の作成）\n・財務データを分析し身代金額を算定\n\n2. 技術障壁の低下\n・初心者レベルの犯罪者がランサムウェアを開発\n・従来は数年の訓練が必要だった複雑な攻撃が可能に\n・被害者プロファイリングからデータ分析まで全工程にAI活用\n\n3. 実際の被害\n・医療機関、緊急サービス、政府機関など17組織が標的\n・身代金額は最大50万ドル超\n・盗難データを暗号化せず公開すると脅迫\n\nAnthropicは検知・対策の手順も公開し、AI悪用への対応を強化。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7bccfa97-3e77-472e-ac89-e38bed6ebc89",
+      "created_at": "2026-02-18T01:19:55.558872+00:00",
+      "item": {
+        "title": "Developing nuclear safeguards for AI through public-private partnership  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/developing-nuclear-safeguards-for-ai-through-public-private-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.558858+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、核拡散リスク検知する分類器を開発\n\n米エネルギー省の核安全保障局と共同開発。核関連の危険な会話を96%の精度で自動検出し、Claudeのトラフィック監視に実装済み。\n\nhttps://www.anthropic.com/news/developing-nuclear-safeguards-for-ai-through-public-private-partnership\n\n💡 ポイント\n・危険な核関連会話を自動で検知\n・すでにClaude本番環境で稼働中\n・官民連携による新しいAI安全対策\n\n1. 分類器の特徴\n・核兵器関連の危険な会話と無害な会話を96%の精度で判別\n・Claudeの全トラフィックに実装済み\n・実際の会話データで高い精度を確認\n\n2. 背景と今後\n・AI能力向上に伴い、危険な技術知識提供のリスクが増大\n・2024年4月から米エネルギー省と評価を継続\n・Frontier Model Forumで手法を共有予定\n\n3. 官民連携の意義\n・民間企業単独では評価が困難な機密性の高い領域\n・政府の専門知識と企業の技術力を組み合わせ\n・他のAI開発者も同様の仕組みを導入可能に",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "21e6df2c-83b8-41fb-962f-0a7320e5f38a",
+      "created_at": "2026-02-18T01:19:55.573016+00:00",
+      "item": {
+        "title": "Anthropic launches higher education advisory board and AI Fluency courses \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-higher-education-initiatives",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.573003+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが教育機関向けの諮問委員会を設置\n\n高等教育でのClaude活用を支援。元イェール大学学長Rick Levin氏が議長を務め、学習と批判的思考を強化するAI活用を目指す。\n\nhttps://www.anthropic.com/news/anthropic-higher-education-initiatives\n\n💡 ポイント\n・教育者と共同開発したAI活用コース3種を無償公開\n・学術的整合性と学生のプライバシー保護を重視\n・Creative Commonsライセンスで各機関が自由にカスタマイズ可能\n\n1. 諮問委員会の構成\n・Rick Levin氏（元イェール大学学長、元Coursera CEO）が議長\n・米国主要大学の学長、副学長クラスが参画\n・教育技術、学習科学の専門家が集結\n\n2. AI Fluency コース\n・教育者向け：授業設計とAI統合の実践手法\n・学生向け：責任あるAI活用スキルの習得\n・全コースがCreative Commonsライセンスで公開\n\n3. 目指す方向性\n・学習効果の向上とAIの適切な共存\n・批判的思考力を損なわないAI活用\n・教育現場の実ニーズに基づく開発",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ae76315c-daab-4a01-bef2-c15e6ad58619",
+      "created_at": "2026-02-18T01:19:55.587018+00:00",
+      "item": {
+        "title": "Claude Code and new admin controls for business plans \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-code-on-team-and-enterprise",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.587005+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claude TeamとEnterpriseに「Code」を統合\n\nプレミアムシートでClaude本体とClaude Codeの両方が利用可能に。開発者は会話でアイデア検証後、即座にターミナルでコード実装できる環境を実現。\n\nhttps://www.anthropic.com/news/claude-code-on-team-and-enterprise\n\n💡 ポイント\n・シート単位で柔軟に割り当て可能\n・開発速度2-10倍を実現した事例も\n・Compliance APIで監査にも対応\n\n1. プレミアムシートの特徴\n・Claude本体とClaude Codeを統合\n・会話からコード実装へシームレスに移行\n・フレームワーク調査→実装まで一貫対応\n・管理者が標準/プレミアムを柔軟に割当\n\n2. コスト管理\n・通常の作業量をカバーする利用量を含む\n・追加利用分は標準API料金で従量課金\n・ユーザー単位で上限設定が可能\n・予測可能な請求と柔軟性を両立\n\n3. 管理機能の強化\n・シート購入と割当を管理画面で完結\n・組織/ユーザー単位の利用上限設定\n・コード受入率などの使用状況を可視化\n・ツール権限やファイルアクセスを一括管理\n\n4. Compliance API\n・利用データとコンテンツへプログラム経由でアクセス\n・リアルタイムでの監視システム構築が可能\n・既存のコンプライアンスダッシュボードと統合\n・規制要件への対応を自動化\n\nBehavox社では数百人の開発者に展開し、主力のペアプログラマーとして活用。Altana社では開発速度が2-10倍に向上し、より野心的なプロジェクトに取り組めるようになった実績も。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7fde922c-5457-4ebe-88f2-846a1bcc61b0",
+      "created_at": "2026-02-18T01:19:55.601007+00:00",
+      "item": {
+        "title": "Usage Policy Update \\ Anthropic",
+        "url": "https://www.anthropic.com/news/usage-policy-update",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.600994+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、利用ポリシーを更新。エージェント時代のリスクに対応。\n\nAI能力の進化に伴い、サイバー攻撃やマルウェア作成などの新たなリスクに対処。政治コンテンツ制限も緩和し、正当な用途を可能に。9月15日施行。\n\nhttps://www.anthropic.com/news/usage-policy-update\n\n💡 ポイント\n・エージェント機能の悪用防止を明確化\n・政治利用は研究・教育目的で可能に\n・法執行機関向けの説明を簡潔化\n\n1. サイバーセキュリティとエージェント利用\n・Claude CodeやComputer Useなどエージェント機能の急速な進化に対応\n・マルウェア作成、サイバー攻撃など悪意ある活動を明確に禁止\n・脆弱性発見など正当なセキュリティ用途は引き続き支援\n・エージェント利用に関する具体例をヘルプセンターで公開\n\n2. 政治コンテンツの制限を見直し\n・従来は全ロビー活動・選挙活動を一律禁止\n・政策研究、市民教育、政治的執筆など正当な用途が制限されていた\n・民主的プロセスを妨害する詐欺的利用のみ禁止に変更\n・有権者ターゲティングなど侵襲的活動は引き続き禁止\n\n3. 法執行機関利用の明確化\n・バックオフィス用途の例外規定が複雑で分かりにくかった\n・許可内容は変更せず、表現のみ簡潔化\n・監視、追跡、プロファイリングは引き続き制限\n・分析用途など適切なバックオフィス利用は許可\n\n4. 高リスク消費者向けユースケース\n・法律、金融、雇用関連の利用には追加の保護措置が必要\n・人間によるレビューとAI利用の開示を義務付け\n・企業間取引には適用されず、消費者向け出力のみ対象に明確化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "a9ebffa5-722d-460b-a037-887e5086a742",
+      "created_at": "2026-02-18T01:19:55.614904+00:00",
+      "item": {
+        "title": "Offering expanded Claude access across all three branches of government \\ Anthropic",
+        "url": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.614891+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国政府向けにClaudeを月額1ドルで提供開始\n\n連邦政府の全3部門（行政・立法・司法）がClaude for EnterpriseとClaude for Governmentを1年間、月額1ドルで利用可能に。FedRAMP High認証済み。\n\nhttps://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government\n\n💡 ポイント\n・通常の企業向けプランと同じフロンティアモデルを利用可能\n・セキュリティ要件の厳しいFedRAMP High認証取得済み\n・技術サポート付きで1年間提供\n\n1. 既に実績のある導入事例\n・国防総省: 2億ドル規模の契約で国家安全保障に活用\n・ローレンス・リバモア国立研究所: 1万人の科学者が日常的に使用\n・ワシントンD.C.保健局: 多言語での住民サービス提供に活用\n\n2. セキュアな利用環境\n・AWS、Google Cloud、Palantir経由で既存インフラから利用可能\n・政府データの完全なコントロールを維持\n・機密性の高い未分類データの取り扱いに対応\n\n3. 申込方法\n・対象: 連邦政府機関の部門・省庁リーダー\n・連絡先: pubsec@anthropic.com\n・GSAとの連携により調達プロセスを簡素化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "bc4af231-a9c8-4126-91ed-759ae6d8441d",
+      "created_at": "2026-02-18T01:19:55.628959+00:00",
+      "item": {
+        "title": "Building safeguards for Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/building-safeguards-for-claude",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.628933+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claudeの安全対策の全体像を公開\n\nポリシー策定から学習、リアルタイム検知まで、多層的な安全システムを運用。専門家チームが悪用防止と有用性を両立。\n\nhttps://www.anthropic.com/news/building-safeguards-for-claude\n\n💡 ポイント\n・政策、技術、脅威分析の専門家で構成される「Safeguards」チーム\n・利用規約の策定から実装まで一貫した対策\n・外部専門家と連携した継続的な検証\n\n1. 多層的な安全対策\n・利用ポリシーの策定と更新\n・モデル学習時の行動制御\n・リアルタイムでの不正検知\n・新たな脅威パターンの特定\n・モデルのライフサイクル全体で保護機能を実装\n\n2. 統一的な評価基準\n・物理的、心理的、経済的、社会的、個人の自律性の5軸で影響を評価\n・悪用の可能性と規模を考慮\n・ヘルスケアや金融など業界別の細かいガイダンス\n\n3. 外部専門家との連携\n・ThroughLineと協力し、自傷行為やメンタルヘルスへの対応を改善\n・Institute for Strategic Dialogueと2024年米国選挙時の情報精度を検証\n・テロ、過激化、児童安全の専門家によるストレステスト",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "432799f9-d746-4888-9744-4f33a416510c",
+      "created_at": "2026-02-18T01:19:55.643205+00:00",
+      "item": {
+        "title": "Anthropic appoints Hidetoshi Tojo as Head of Japan and announces hiring plans  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/head-of-japan-hiring-plans",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.643192+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、東條英俊氏を日本統括に任命。東京に初のアジアオフィス開設へ。\n\nSnowflakeで日本事業を立ち上げた東條氏が就任。今後1年で現地採用を拡大。\n\nhttps://www.anthropic.com/news/head-of-japan-hiring-plans\n\n💡 ポイント\n・楽天、NRI、パナソニックが既にClaudeを業務活用中\n・Amazon Bedrock、Google Cloud Vertexとの連携を強化\n・日本市場に特化した品質基準でサポート体制を構築\n\n1. 東條英俊氏の経歴\n・Snowflakeで日本事業を立ち上げ、大幅成長を実現\n・Google Cloud Japan、Microsoftでチームをリード\n・日本とUS本社の両方で実績\n\n2. 日本オフィスの役割\n・数ヶ月以内に正式開設予定\n・日本の企業、政策立案者、学術・クリエイティブ業界との連携強化\n・日本市場の特性を理解した現地人材を採用\n\n3. CEO Dario Amodeiのコメント\n「日本のパワーユーザーと企業でClaudeの自然な採用が進んでいる。日本企業がAIで変革的な製品・サービスを生み出せるよう支援したい」\n\n採用情報: anthropic.com/careers",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2356133b-eb0a-49dd-8948-c942413b3e91",
+      "created_at": "2026-02-18T01:19:55.657286+00:00",
+      "item": {
+        "title": "U.S. federal departments and agencies can now more quickly and easily get access to Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/federal-government-departments-and-agencies-can-now-purchase-claude-through-the-gsa-schedule",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.657272+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、GSAスケジュールに追加\n\n米国連邦政府機関がClaudeを調達可能に。事前交渉済みの価格・条件で導入障壁を大幅に削減。\n\nhttps://www.anthropic.com/news/federal-government-departments-and-agencies-can-now-purchase-claude-through-the-gsa-schedule\n\n💡 ポイント\n・GSAスケジュール経由で調達手続きを簡素化\n・連邦政府の調達規制に準拠した条件を事前交渉\n・国立研究所や防衛・情報機関への導入実績あり\n\n1. GSAスケジュール追加の意味\n・全米連邦政府機関が迅速にClaudeを調達可能\n・価格と契約条件が事前交渉済み\n・連邦調達規制（FAR）に完全準拠\n・調達プロセスの大幅な効率化を実現\n\n2. 政府向けClaudeの特徴\n・厳格な安全性テストを実施済み\n・国家安全保障用途に対応した設計\n・カスタム版「Claude Gov」を提供\n・連邦セキュリティ要件を満たす仕様\n\n3. 既存の政府導入実績\n・国立研究所で科学研究に活用中\n・防衛・情報機関のワークフローに統合\n・ルワンダ政府とも医療・教育分野で提携\n・公共サービスの効率化に貢献\n\nGSAスケジュールは米国連邦政府の調達簡素化プログラム。登録されたサービスは各機関が独自交渉なしで迅速に購入できる仕組みです。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "54a8e8b9-9a1d-44c1-a591-1386276d3993",
+      "created_at": "2026-02-18T01:19:55.671314+00:00",
+      "item": {
+        "title": "Claude Opus 4.1 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-1",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.671300+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Opus 4.1が公開。コーディング性能が74.5%に向上。\n\nAnthropicがOpus 4の後継モデルをリリース。SWE-bench Verifiedで74.5%を達成し、複数ファイルのリファクタリングや大規模コードベースでのデバッグ精度が大幅に改善。\n\nhttps://www.anthropic.com/news/claude-opus-4-1\n\n💡 ポイント\n・Opus 4から約1標準偏差の性能向上\n・料金はOpus 4と同額\n・API、Amazon Bedrock、Google Cloud Vertex AIで利用可能\n\n1. コーディング性能の向上\n・SWE-bench Verifiedで74.5%を達成\n・複数ファイルにまたがるリファクタリングで顕著な改善\n・大規模コードベースでの正確なバグ修正が可能\n・不要な変更やバグ混入を最小化\n\n2. その他の機能改善\n・詳細な情報追跡とエージェント検索の強化\n・データ分析と深い調査能力の向上\n・拡張思考モード（最大64Kトークン）に対応\n\n3. 利用方法\n・Claude有料ユーザーとClaude Codeで即時利用可能\n・APIモデル名: claude-opus-4-1-20250805\n・全用途でOpus 4からの移行を推奨",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3683f852-8ca6-463c-b97b-12430b640c97",
+      "created_at": "2026-02-18T01:19:55.685515+00:00",
+      "item": {
+        "title": "Our framework for developing safe and trustworthy agents \\ Anthropic",
+        "url": "https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.685502+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AIエージェント開発のフレームワークを公開\n\n安全で信頼性の高いエージェント開発のための原則を発表。人間のコントロールと自律性のバランス、透明性などを重視。\n\nhttps://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents\n\n💡 ポイント\n・自律的にタスクを実行するAIエージェントの安全な開発指針\n・Claude Codeの実装例を基に具体的な設計原則を提示\n・TrellixやBlockなど企業での実用例も紹介\n\n1. AIエージェントとは\n・特定の目標に向けて自律的にタスクを実行\n・ツールの使用方法や作業プロセスを自ら判断\n・最小限の人間の介入で複雑なプロジェクトを完遂\n\n2. 信頼できるエージェントの原則\n・人間のコントロール維持と自律性のバランス\n・エージェントの行動プロセスの透明性確保\n・重要な判断の前に人間の承認を求める仕組み\n\n3. Claude Codeでの実装例\n・デフォルトは読み取り専用権限\n・コードやシステムの変更前に承認を要求\n・いつでも停止して方向転換が可能\n・定型タスクには永続的な権限付与も可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "370f8c3f-f496-42a6-a119-93fd2e747983",
+      "created_at": "2026-02-18T01:19:55.699572+00:00",
+      "item": {
+        "title": "Anthropic signs CMS health tech pledge \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-signs-cms-health-tech-ecosystem-pledge-to-advance-healthcare-interoperability",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.699559+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが米国医療データの相互運用性向上に参画。患者情報の分断解消へ。\n\nCMS（米国メディケア・メディケイド・サービスセンター）主導の医療技術エコシステム誓約に署名。Claudeで患者データを安全に統合し、医療の質を改善。\n\nhttps://www.anthropic.com/news/anthropic-signs-cms-health-tech-ecosystem-pledge-to-advance-healthcare-interoperability\n\n💡 ポイント\n・患者同意のもと、複数の医療機関のデータを統合\n・Model Context Protocol技術で異なるシステムを接続\n・医療提供者、保険会社、データプラットフォームと連携\n\n1. 解決する課題\n・医療機関間でのデータ分断（サイロ化）\n・患者が自分の完全な医療情報にアクセスできない\n・医療の質と効率性の低下\n\n2. Anthropicの技術的アプローチ\n・MCPで異なる医療システムを安全に接続\n・患者データをClaudeで理解しやすく整理\n・適切なケアへの誘導をサポート\n\n3. 今後の展開\n・医療保険者、医療提供者との連携拡大\n・臨床・非臨床データの責任ある活用\n・米国政府と継続的に協力",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7d8ebefb-fbef-4f5a-a7be-5af298e25e7d",
+      "created_at": "2026-02-18T01:19:55.713715+00:00",
+      "item": {
+        "title": "Anthropic partners with the University of Chicago’s Becker Friedman Institute for Economics on AI economic research \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-partners-with-the-university-of-chicago-s-becker-friedman-institute-on-ai-economic",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.713702+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicとシカゴ大学が提携、AIの経済影響を研究\n\nベッカー・フリードマン経済研究所と共同で、AI導入が労働市場と生産性に与える影響を測定・分析。Economic Indexのデータを活用し、政策提言につなげる。\n\nhttps://www.anthropic.com/news/anthropic-partners-with-the-university-of-chicago-s-becker-friedman-institute-on-ai-economic\n\n💡 ポイント\n・BFIの経済学者にClaude for Enterpriseを提供\n・AI研究の応用トレーニングを実施\n・Economic Indexの研究データを共有\n\n1. 研究テーマ\n・AI導入による生産性指標の変化を測定\n・職業タスクと必要スキルの変化を分析\n・社会セグメント別の影響分布を調査\n\n2. 背景\n・Economic Indexは業界横断的なAI利用状況を追跡\n・AI利用は業界・職種で偏在し、単純な自動化論では説明不可\n・経済学の専門知識と実データの組み合わせで精度向上\n\n3. 今後の展開\n・労働市場、生産性動向の理解を深化\n・政策立案者への具体的な知見提供\n・技術ガバナンスへの示唆を導出",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f03de635-34b1-4833-abeb-ef94ca934812",
+      "created_at": "2026-02-18T01:19:55.727927+00:00",
+      "item": {
+        "title": "Thoughts on America’s AI Action Plan \\ Anthropic",
+        "url": "https://www.anthropic.com/news/thoughts-on-america-s-ai-action-plan",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.727915+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが米国AI行動計画にコメント。インフラ・安全・普及の3軸で評価。\n\nホワイトハウスが発表した「America's AI Action Plan」について、Anthropicが見解を公開。AI開発における米国の優位性維持に向けた包括的戦略を支持しつつ、輸出規制と透明性基準の必要性を指摘。\n\nhttps://www.anthropic.com/news/thoughts-on-america-s-ai-action-plan\n\n💡 ポイント\n・データセンター・エネルギー許認可の合理化を支持\n・連邦政府のAI導入加速を評価\n・AI安全性研究への投資を歓迎\n\n1. インフラ加速\n・エネルギー容量不足は開発拠点の海外移転リスクに\n・データセンター許認可の迅速化が必要\n・国内エネルギー拡大が技術保護の鍵\n\n2. 連邦政府のAI導入\n・OMBが予算・調達・規制の障壁に対処\n・AI革新を阻む連邦規制の特定と改革\n・国防・安全保障分野での官民協力\n\n3. AI利益の民主化\n・NAIRR（国立AI研究リソース）継続で学生・研究者を支援\n・失業者向け再訓練プログラムを重視\n・Economic IndexでAI経済影響を分析\n\n4. 安全な開発促進\n・AI解釈可能性研究への投資を評価\n・AIコントロールシステムの研究支援\n・NIST標準化作業を肯定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "15b46057-17dc-443f-949e-f5a66cfddaa3",
+      "created_at": "2026-02-18T01:19:55.742233+00:00",
+      "item": {
+        "title": "Anthropic to sign the EU Code of Practice \\ Anthropic",
+        "url": "https://www.anthropic.com/news/eu-code-practice",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.742220+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、EU AI規制の実施規範に署名へ。透明性重視の安全基準を支持。\n\nAI Act実施に向けた規範で、リスク評価とCBRN兵器対策の透明性を義務化。Anthropic独自のResponsible Scaling Policyとも整合性。\n\nhttps://www.anthropic.com/news/eu-code-practice\n\n💡 ポイント\n・EUのAI規制に柔軟性を評価し署名を決定\n・透明性と安全性の両立を重視\n・2030年代半ばまでにEU経済に年1兆ユーロ超の貢献予測\n\n1. 規範の主要要素\n・安全・セキュリティフレームワークの義務化\n・システミックリスクの評価・軽減プロセスの文書化\n・CBRN兵器など壊滅的リスクの評価を含む\n・Anthropicの既存ポリシーとの整合性\n\n2. 柔軟性の確保\n・技術進化に合わせた規範の適応性を重視\n・Frontier Model Forumなど第三者機関との連携\n・業界共通の安全基準策定を支援\n\n3. 欧州での実用例\n・Novo Nordisk: 創薬研究の加速\n・Legora: 法務業務の効率化\n・欧州議会: 数十年分のアーカイブへの市民アクセス拡大\n\n規制と革新の両立を目指すEUの取り組みに、フロンティアAI企業が協力する姿勢を示した形です。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "1d1451ed-c370-4ba8-906b-514f4716391e",
+      "created_at": "2026-02-18T01:19:55.757057+00:00",
+      "item": {
+        "title": "Build AI in America: Anthropic Energy Report \\ Anthropic",
+        "url": "https://www.anthropic.com/news/build-ai-in-america",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.757043+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国のAI競争力維持に必要な電力を試算。2028年までに50GW必要と提言。\n\nAI開発には安定した電力供給が不可欠。中国が年間400GW追加する中、米国は数十GWに留まる現状を指摘し、具体的な政策提言を発表。\n\nhttps://www.anthropic.com/news/build-ai-in-america\n\n💡 ポイント\n・2028年に単一の先端AIモデル開発に5GW必要\n・米国全体で20-25GWの学習用電力が必要（NYC電力需要の2倍）\n・推論用含め合計50GWの電力容量確保が目標\n\n1. 電力需要の具体的な数値\n・2027年：単一モデル開発に2GW必要\n・2028年：単一モデル開発に5GW必要\n・2028年：米国の先端AI学習全体で20-25GW必要\n・推論用を含めると合計50GW必要\n\n2. 中国との比較\n・中国：年間400GW超の電力容量を追加\n・米国：年間数十GWの追加に留まる\n・この格差がAI開発競争に影響\n\n3. 提言内容\n・原子力発電の許認可加速\n・地熱・天然ガス発電の推進\n・データセンター用の許認可プロセス簡素化\n・送電網の接続プロセス高速化\n・重要グリッド部品の戦略的備蓄",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ba96d643-c54f-4b46-8469-7564bf69a0e8",
+      "created_at": "2026-02-18T01:19:55.771449+00:00",
+      "item": {
+        "title": "Investing in energy to secure America's AI future  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/investing-in-energy-to-secure-america-s-ai-future",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.771432+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国のAI競争力確保に向けエネルギーインフラへ200万ドル投資\n\nカーネギーメロン大学と提携し、AI活用の送電網最適化とサイバーセキュリティ人材育成を支援。Dario Amodei CEOがトランプ大統領も参加したペンシルベニア州エネルギーサミットで発表。\n\nhttps://www.anthropic.com/news/investing-in-energy-to-secure-america-s-ai-future\n\n💡 ポイント\n・先進AIモデルの学習・展開に必要なエネルギーインフラが競争力の鍵\n・投資は2つの戦略分野に均等配分（各100万ドル）\n・AI活用で送電網管理の自動化・最適化、エネルギー効率向上を推進\n\n1. エネルギー研究への投資（100万ドル）\n・Scott Institute for Energy Innovationのグランドチャレンジパートナーとして支援\n・AIによる送電網管理の自動化・最適化を研究\n・エネルギー効率と回復力の向上を目指す\n\n2. サイバーセキュリティ人材育成（100万ドル）\n・picoCTFプログラムを通じ中高生に無料教育を提供\n・CTF（Capture The Flag）形式で暗号化、Web脆弱性、フォレンジックを学習\n・エネルギーインフラ防御に必要な人材基盤を構築\n\n3. 今後の展開\n・AIを活用した排出削減・クリーン エネルギー革新への投資を継続予定\n・環境負荷軽減ソリューションを研究する組織とのパートナーシップを模索\n・政府・産業・地域社会との連携で米国のAIリーダーシップ基盤を構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "36fab0c2-202c-49df-9d0a-b4e05e2c4590",
+      "created_at": "2026-02-18T01:19:55.790213+00:00",
+      "item": {
+        "title": "Claude for Financial Services \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-for-financial-services",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.790198+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、金融業界向け「Claude for Financial Services」を発表。市場分析から投資判断まで一元化。\n\nClaude 4が金融タスクで最高性能を記録。リアルタイム市場データとの統合で、数時間かかる複雑な分析を数分で実行可能に。\n\nhttps://www.anthropic.com/news/claude-for-financial-services\n\n💡 ポイント\n・市場データとエンタープライズデータを単一プラットフォームで統合\n・全ての情報にソースへの直接リンクで即座に検証可能\n・モンテカルロシミュレーションやリスクモデリングを自動化\n\n1. Claude 4の金融特化性能\n・Vals AIのFinance Agent benchmarkで他のフロンティアモデルを上回る成績\n・FundamentalLabsのExcelエージェント実装でFinancial Modeling World Cup 7レベル中5レベルをクリア\n・複雑なExcelタスクで83%の精度を達成\n\n2. 統合データソース\n・FactSet（株価、ファンダメンタルズ、コンセンサス予想）\n・S&P Global（Capital IQ財務データ、決算説明会文字起こし）\n・PitchBook（プライベート市場データ）\n・Daloopa（公開書類からの高品質KPI）\n・Snowflake、Databricks（エンタープライズデータ統合）\n\n3. 金融機関向けセキュリティ\n・デフォルトでトレーニングに使用しない設定\n・顧客情報と知的財産の機密性を保持\n・Box連携で安全なドキュメント管理",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "6811fb07-6b84-4dc5-b956-20d0498f4516",
+      "created_at": "2026-02-18T01:19:55.804798+00:00",
+      "item": {
+        "title": "Paul Smith to join Anthropic as Chief Commercial Officer \\ Anthropic",
+        "url": "https://www.anthropic.com/news/paul-smith-to-join-anthropic",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.804785+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、初のCCOにPaul Smith氏が就任\n\nMicrosoft、Salesforce、ServiceNow等で30年超の経験を持つPaul Smith氏が、Anthropicの初代Chief Commercial Officerに。企業向けAI展開を加速。\n\nhttps://www.anthropic.com/news/paul-smith-to-join-anthropic\n\n💡 ポイント\n・API顧客は数十万社規模に成長\n・Claude Codeの経常収益は2ヶ月で5倍超に\n・Fortune 500企業を含む全業界で導入拡大\n\n1. Paul Smith氏の経歴\n・Microsoft、Salesforce、ServiceNowで市場開拓を主導\n・30年超のグローバル組織構築の実績\n・年内に正式就任予定\n\n2. Anthropicの現状\n・企業市場で急速に成長中\n・信頼性と拡張性を重視したAI構築\n・AI導入企業のサポート体制を強化\n\n3. 今後の展開\n・企業のAI導入は初期段階で成長余地大\n・より多くの企業をAIネイティブ化へ支援\n・最も信頼されるAIパートナーを目指す",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0ba8d171-d19c-4183-9398-ecf378e3209a",
+      "created_at": "2026-02-18T01:19:55.819140+00:00",
+      "item": {
+        "title": "Anthropic awarded $200M DOD agreement for AI capabilities \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.819126+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国防総省と2億ドル契約を締結\n\n国防分野でのAI活用を推進。Claude Gov モデルを活用し、機密ネットワーク上での運用を実現。民主主義国家における責任あるAI開発の重要性を強調。\n\nhttps://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations\n\n💡 ポイント\n・2年間で最大2億ドルの契約\n・国防総省の重要任務に特化したAI機能を開発\n・民主主義的価値観を守るAI技術の推進\n\n1. 契約の概要\n・米国防総省のCDAO（Chief Digital and AI Office）が発注\n・フロンティアAI技術を国家安全保障に適用\n・国防総省データでの微調整プロトタイプを開発\n・敵対的AI利用への対策も協力して実施\n\n2. Claude Gov モデルの活用実績\n・Palantirとの連携で機密ネットワーク上に統合済み\n・複雑なデータの高速処理・分析を実現\n・国家安全保障コミュニティの複数機関で運用中\n・AWS基盤上で安全な運用環境を提供\n\n3. 責任あるAI開発へのコミットメント\n・厳格な安全性テストを実施\n・民主主義国家間での技術協力を重視\n・独裁的な悪用を防ぐ技術的リーダーシップを維持\n・Lawrence Livermore国立研究所でも1万人以上が利用開始",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9862ec1c-ca82-404e-a7d8-eacef5475f69",
+      "created_at": "2026-02-18T01:19:55.834134+00:00",
+      "item": {
+        "title": "Claude for Enterprise Powers LLNL Research \\ Anthropic",
+        "url": "https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.834120+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "米国立研究所LLNL、Claude for Enterpriseを全面展開。約1万人の科学者が利用開始。\n\n核融合や国家安全保障の研究を加速。最大規模の政府機関導入事例として注目を集める。\n\nhttps://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and\n\n💡 ポイント\n・核抑止、エネルギー、材料科学の研究に活用\n・100,000行超のコードを一度に処理可能\n・政府向けセキュリティ機能を完備\n\n1. 活用分野\n・核融合エネルギー研究の加速\n・緊急対応データの分析\n・3D製造プロセスの最適化\n・生物学的脅威の検出\n・高性能コンピューティングの効率化\n\n2. セキュリティ機能\n・シングルサインオン（SSO）\n・監査ログ記録\n・ロールベースのアクセス制御\n・エンドツーエンド暗号化\n・機密プロジェクトにも対応\n\n3. 研究への効果\n・複雑なデータセット処理の高速化\n・仮説生成と研究方向の探索\n・部門横断的なコラボレーション強化\n・ルーチン作業の効率化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "bd20e77b-2957-4cb3-9134-7d115bf2fd4f",
+      "created_at": "2026-02-18T01:19:55.848557+00:00",
+      "item": {
+        "title": "Advancing Claude for Education \\ Anthropic",
+        "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.848544+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeが教育機関向けに大幅強化。Canvas、Panopto、Wileyと連携。\n\n学生は講義録画や教科書を参照しながらClaudeと会話可能に。サンフランシスコ大学ロースクールなど新規導入校も拡大。\n\nhttps://www.anthropic.com/news/advancing-claude-for-education\n\n💡 ポイント\n・Canvas LTI対応で学習プラットフォーム内から直接利用可能\n・Panoptoの講義動画、Wileyの査読済み論文を会話内で参照\n・学生のプライバシー保護とデータ制御を最優先\n\n1. 主な新機能\n・Canvas統合：プラットフォーム切り替え不要で利用\n・Panopto連携：講義の文字起こしを参照\n・Wiley連携：査読済み学術コンテンツへアクセス\n・MCP（Model Context Protocol）による拡張\n\n2. 教育機関の導入事例\n・サンフランシスコ大学ロースクール：訴訟実務でLLM活用を教育\n・Northumbria大学：AI活用スキル育成を重視\n・学生アンバサダープログラムを10倍に拡大\n\n3. プライバシー保護\n・会話内容はデフォルトで非公開\n・AI学習にも使用しない設定\n・機関からのデータ要請には正式承認が必要",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b21c60d7-204e-494f-8d53-fbdf065366ec",
+      "created_at": "2026-02-18T01:19:55.863072+00:00",
+      "item": {
+        "title": "A framework for AI development transparency \\ Anthropic",
+        "url": "https://www.anthropic.com/news/the-need-for-transparency-in-frontier-ai",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.863059+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、フロンティアAI開発の透明性フレームワークを提案\n\n大規模AI開発企業に対し、安全性評価と開発手法の公開を求める枠組み。イノベーションを阻害せず、公共の安全性を確保する。\n\nhttps://www.anthropic.com/news/the-need-for-transparency-in-frontier-ai\n\n💡 ポイント\n・最大規模のAI開発企業のみが対象（年間売上1億ドル以上など）\n・柔軟性重視で、技術進化に対応可能な設計\n・内部告発者保護の仕組みを含む\n\n1. 提案の背景\n・AI技術の急速な進化に対応\n・安全基準の策定には時間がかかるため、暫定的な透明性確保が必要\n・公共の安全と説明責任の両立を目指す\n\n2. フレームワークの核心\n・Secure Development Frameworkの策定と公開を義務化\n・リスク評価方法と緩和策を文書化\n・システムカードで評価結果を開示\n\n3. 対象範囲\n・最大規模のフロンティアモデル開発企業に限定\n・計算能力、コスト、年間売上、R&D投資で判断\n・スタートアップへの負担を回避\n\n4. 安全性への配慮\n・化学・生物・放射性・核兵器関連リスクの評価\n・モデルの自律性による誤作動リスク\n・機密情報は適切に編集可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0afef807-7678-45f1-ac4d-9bfca9fd7a84",
+      "created_at": "2026-02-18T01:19:55.877522+00:00",
+      "item": {
+        "title": "How people use Claude for support, advice, and companionship  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/how-people-use-claude-for-support-advice-and-companionship",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.877508+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claudeの「感情的利用」を初調査\n\n感情サポートや相談相手としてのAI利用は全体の2.9%。具体的な利用パターンと感情変化を450万件の会話から分析した結果を公開。\n\nhttps://www.anthropic.com/news/how-people-use-claude-for-support-advice-and-companionship\n\n💡 ポイント\n・感情的な会話は全体の2.9%と少数派\n・会話を通じて人間の感情が前向きに変化\n・プライバシー保護を重視した調査手法\n\n1. 利用実態\n・感情サポート会話は2.9%\n・恋愛ロールプレイ等は0.5%未満\n・キャリア開発から孤独感まで幅広い相談内容\n\n2. Claudeの応答特性\n・コーチング・カウンセリングでの拒否率は10%未満\n・拒否する場合は安全上の理由（危険なダイエット助言等）\n・ネガティブな感情パターンを増幅しない設計\n\n3. 調査手法\n・450万件の会話を分析\n・プライバシー保護ツール「Clio」を使用\n・匿名化と集約により個別会話を保護",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "1e9110b7-e4ef-42be-a7c5-8855bc1b3d69",
+      "created_at": "2026-02-18T01:19:55.892335+00:00",
+      "item": {
+        "title": "Anthropic Economic Futures Program Launch \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-the-anthropic-economic-futures-program",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.892322+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが経済への影響を追跡する新プログラム開始\n\nAIの労働市場への影響を研究・政策化する「Economic Futures Program」を発表。研究助成、政策提言フォーラム、経済指標データの3本柱で展開。\n\nhttps://www.anthropic.com/news/introducing-the-anthropic-economic-futures-program\n\n💡 ポイント\n・最大5万ドルの研究助成を提供\n・DC、ロンドンで政策提言シンポジウム開催\n・Economic Indexのデータを拡充し公開\n\n1. 研究助成プログラム\n・AIの経済影響に関する実証研究に最大5万ドル\n・随時応募受付、8月中旬に初回授与\n・研究機関とのパートナーシップも募集中\n\n2. 政策提言フォーラム\n・ワシントンDCで9月、ロンドンで11月に開催\n・エビデンスベースの政策提案を募集\n・実務家、研究者、政策立案者が議論\n\n3. 経済指標データの拡充\n・Economic Indexを拡大し継続的にデータ追跡\n・労働市場でのAI利用状況を定量化\n・研究データを定期的に一般公開",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "43b95dc9-c8e2-44d0-b412-b0690488f6bf",
+      "created_at": "2026-02-18T01:19:55.906919+00:00",
+      "item": {
+        "title": "Claude in Amazon Bedrock: Approved for Use in FedRAMP High and DoD IL4/5 Workloads \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-in-amazon-bedrock-fedramp-high",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.906906+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Amazon Bedrock上のClaude、米政府最高水準のセキュリティ認証を取得\n\nFedRAMP HighとDoD IL4/5に対応。機密性の高い政府機関や国防関連業務での利用が可能に。\n\nhttps://www.anthropic.com/news/claude-in-amazon-bedrock-fedramp-high\n\n💡 ポイント\n・AWS GovCloudリージョンで利用可能\n・Claude 3.5 Sonnet v1とClaude 3 Haikuが対象\n・20万トークンのコンテキストウィンドウを活用可能\n\n1. 対応するセキュリティ基準\n・FedRAMP High（連邦政府の最高水準クラウドセキュリティ認証）\n・DoD Impact Level 4/5（国防総省の機密情報レベル）\n・管理対象非機密情報の処理に対応\n\n2. 利用可能な機能\n・Amazon Bedrock Agents（マルチステップタスクの自動化）\n・Guardrails（カスタマイズ可能な安全対策）\n・Knowledge Bases（アプリケーションのカスタマイズ）\n・Model Evaluation（最適なモデルの選択）\n\n3. 主な用途\n・複雑な文書分析と情報統合\n・管理対象非機密情報を扱うAIエージェントの構築\n・大規模データセットの包括的な分析\n\n今後、Claude 3.7 SonnetやClaude 4モデルの追加も予定されています。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d0dc6ac0-c392-4724-9616-c38331972329",
+      "created_at": "2026-02-18T01:19:55.921411+00:00",
+      "item": {
+        "title": "National security expert Richard Fontaine appointed to Anthropic’s long-term benefit trust  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/national-security-expert-richard-fontaine-appointed-to-anthropic-s-long-term-benefit-trust",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.921398+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、国家安全保障専門家を信託委員に任命\n\nAI技術と地政学リスクが交差する今、元NSC・国務省で活躍したRichard Fontaine氏が長期利益信託（LTBT）に参加。民主主義国家のAIリーダーシップ維持を支援。\n\nhttps://www.anthropic.com/news/national-security-expert-richard-fontaine-appointed-to-anthropic-s-long-term-benefit-trust\n\n💡 ポイント\n・新アメリカ安全保障センターCEOが就任\n・NSC、国務省、国防政策委員会での豊富な経験\n・AI技術の地政学的影響への対応を強化\n\n1. 長期利益信託（LTBT）とは\n・Anthropicの公共利益使命達成を支援する独立機関\n・取締役選任とAI戦略へのアドバイスを担当\n・既存委員が新委員を選出（Anthropicとの協議あり）\n・委員は財務的利害関係なし\n\n2. Fontaine氏の役割\n・AI技術と国家安全保障の交差領域に専門知識を提供\n・民主主義国家のAI開発リーダーシップ維持を支援\n・高度化するAIの社会的影響に関する意思決定をサポート\n\n3. Anthropicの狙い\n・AI技術が国際安全保障に与える影響への対応\n・民主主義と世界の安定性を使命の中核に位置づけ\n・責任あるAI開発における民主主義国家の主導権確保",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "066b372d-97c0-4dbe-b00a-0a922afda1a5",
+      "created_at": "2026-02-18T01:19:55.935935+00:00",
+      "item": {
+        "title": "Claude Gov models for U.S. national security customers \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.935921+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国家安全保障向け「Claude Gov」を提供開始\n\n機密情報の取り扱いを改善し、情報機関や国防分野に特化したモデル。すでに米国の最高レベルのセキュリティ機関で運用中。\n\nhttps://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers\n\n💡 ポイント\n・機密情報への過剰な拒否反応を軽減\n・情報機関・国防文脈での文書理解を強化\n・国家安全保障上重要な言語・方言に対応\n\n1. Claude Govの特徴\n・政府顧客からの直接フィードバックで開発\n・通常のClaudeと同等の安全性テストを実施\n・機密環境での運用を前提とした設計\n\n2. 主な用途\n・戦略立案と作戦支援\n・インテリジェンス分析\n・脅威評価\n・複雑なサイバーセキュリティデータの解析\n\nアクセスは機密環境で業務を行う組織に限定。問い合わせはpubsec@anthropic.comまで。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0c4a2fc9-c8ad-4b2a-98c6-ca5cff536a75",
+      "created_at": "2026-02-18T01:19:55.950787+00:00",
+      "item": {
+        "title": "Reed Hastings appointed to Anthropic’s board of directors \\ Anthropic",
+        "url": "https://www.anthropic.com/news/reed-hastings",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.950773+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Netflixの創業者リード・ヘイスティングス氏がAnthropicの取締役に就任\n\n25年以上CEOを務めた同氏が、Long Term Benefit Trustにより任命。教育・国際開発分野で数億ドルの寄付実績を持つ。\n\nhttps://www.anthropic.com/news/reed-hastings\n\n💡 ポイント\n・Netflix創業者として25年以上の経営実績\n・Facebook、Microsoft、Bloombergの取締役も歴任\n・AI教育研究に5000万ドル寄付済み\n\n1. ヘイスティングス氏の実績\n・Netflixを世界的エンターテインメント企業に成長\n・低所得者向けチャータースクールに数億ドル寄付\n・275校のネットワークを持つKIPP理事\n・ルワンダでスマートフォン価格を10分の1に削減\n\n2. 任命の背景\n・Long Term Benefit Trustによる任命\n・技術の社会的影響への深い理解\n・AI開発における倫理的枠組みの重視\n\n3. Anthropicへの期待\n・技術企業の社会的責任を重視\n・AIの経済的・社会的課題への対応\n・「人間を助けるAI」構築への貢献\n\nDaniela Amodei社長:「技術が人間に与える影響を理解している。Netflixでの実績と世界的な健康・教育イニシアチブが、当社の使命に最適」",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "42330920-0594-499e-bc26-ee0975f93790",
+      "created_at": "2026-02-18T01:19:55.965577+00:00",
+      "item": {
+        "title": "Introducing Claude 4 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-4",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.965564+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 4が登場。Opus 4はSWE-bench 72.5%でコーディング世界最高性能を達成。\n\nAnthropicが次世代Claude 4を発表。Opus 4は複数時間の連続タスクに対応し、Sonnet 4は3.7から大幅に性能向上。\n\nhttps://www.anthropic.com/news/claude-4\n\n💡 ポイント\n・Opus 4は世界最高のコーディングモデル\n・拡張思考中にツール（Web検索等）が使用可能に\n・Claude Codeが正式リリース、GitHub Actions対応\n\n1. Claude Opus 4の性能\n・SWE-benchで72.5%を達成（世界最高）\n・数時間の連続タスクを実行可能\n・CursorやReplitが複雑なコードベース理解で飛躍と評価\n・Rakutenが7時間の独立実行で性能維持を確認\n\n2. Claude Sonnet 4の改善\n・Sonnet 3.7から大幅アップグレード\n・SWE-benchで72.7%を記録\n・GitHubがCopilotの新コーディングエージェントに採用\n・指示の追従性が向上\n\n3. 新機能\n・拡張思考時にツールを並行使用\n・ローカルファイルアクセスでメモリ機能強化\n・Claude CodeがVS Code、JetBrainsと統合\n・API新機能：コード実行、MCPコネクタ、Files API\n\n4. 提供形態\n・価格据え置き：Opus 4は$15/$75、Sonnet 4は$3/$15\n・API、Amazon Bedrock、Google Cloud Vertex AIで利用可能\n・Proプラン以上で両モデル利用可、Sonnet 4は無料ユーザーも",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "78c6bc94-de86-488e-bc5a-2572911a0465",
+      "created_at": "2026-02-18T01:19:55.980416+00:00",
+      "item": {
+        "title": "Activating AI Safety Level 3 protections \\ Anthropic",
+        "url": "https://www.anthropic.com/news/activating-asl3-protections",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.980403+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claude Opus 4でASL-3保護基準を適用\n\nCBRN兵器悪用リスクに対応し、より厳格なセキュリティ基準を初めて実装。明確にリスクを排除できないため、予防的措置として適用。\n\nhttps://www.anthropic.com/news/activating-asl3-protections\n\n💡 ポイント\n・ASL-3基準：モデル重み窃取防止とCBRN兵器関連悪用対策を強化\n・極めて狭い範囲のトピックのみ応答を制限（通常利用への影響は最小限）\n・ASL-4基準は不要と判断（Claude Sonnet 4はASL-3も不要）\n\n1. ASL-3保護基準の内容\n・モデル重みの窃取に対する内部セキュリティ対策を強化\n・CBRN兵器（化学・生物・放射性・核兵器）の開発・取得に関する悪用リスクを限定\n・高度な非国家攻撃者への防御を想定\n\n2. 適用の背景\n・Claude Opus 4がASL-3の能力閾値を超えたかは未確定\n・CBRN関連の知識・能力向上により、リスク排除を明確に判断できず\n・予防的措置として高水準の安全基準を適用し、実運用で改善\n\n3. RSP（責任あるスケーリングポリシー）\n・AI能力の向上に応じて段階的に保護レベルを引き上げ\n・ASL-2：日和見的な攻撃への防御（これまでの全モデル）\n・ASL-3：高度な非国家攻撃者への防御（今回初適用）\n・不確実な場合は慎重に、より高い基準で運用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e04dd101-2ded-4d80-85da-edf7e5d74f87",
+      "created_at": "2026-02-18T01:19:55.995101+00:00",
+      "item": {
+        "title": "Testing our safety defenses with a new bug bounty program \\ Anthropic",
+        "url": "https://www.anthropic.com/news/testing-our-safety-defenses-with-a-new-bug-bounty-program",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:55.995088+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、CBRN兵器関連の脱獄攻撃に最大2.5万ドルの報奨金\n\nASL-3安全基準を満たすConstitutional Classifiers（憲法分類器）システムのテストを実施。招待制で専門研究者を募集中。\n\nhttps://www.anthropic.com/news/testing-our-safety-defenses-with-a-new-bug-bounty-program\n\n💡 ポイント\n・Claude 3.7 Sonnetの未公開安全システムをテスト\n・化学・生物・放射性・核兵器関連の脱獄攻撃を対象\n・HackerOneと提携した招待制プログラム\n\n1. 報奨金の詳細\n・普遍的脱獄攻撃（Universal Jailbreak）の発見で最大2.5万ドル\n・CBRN関連トピックで安全対策を一貫してバイパスする脆弱性が対象\n・検証済みの脆弱性のみが報奨金の対象\n\n2. Constitutional Classifiersとは\n・Claudeとの対話で許可・禁止すべきコンテンツを定義\n・CBRN兵器に関する情報流出を防ぐ特化型システム\n・ASL-3基準（Responsible Scaling Policy）の一環として開発\n\n3. プログラムの概要\n・5月14日から18日まで実施（現在は新プログラムに移行）\n・経験豊富なレッドチーマーや脱獄攻撃の専門家が対象\n・参加者には詳細な指示とタイムリーなフィードバックを提供\n\nAnthropicは「モデルの能力向上に伴い、将来的に高度な安全対策が必要」と強調。セキュリティコミュニティと協力してAIシステムの安全性向上を目指しています。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "88c39eab-e97a-47c7-9af0-bf5f2d498812",
+      "created_at": "2026-02-18T01:19:56.009623+00:00",
+      "item": {
+        "title": "Introducing Anthropic's AI for Science Program \\ Anthropic",
+        "url": "https://www.anthropic.com/news/ai-for-science-program",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.009610+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、科学研究者向けに無料APIクレジット提供プログラムを開始\n\n生物学・ライフサイエンス分野の研究加速を目的に、影響力の高い研究プロジェクトに対してClaudeのAPI利用を無償支援。\n\nhttps://www.anthropic.com/news/ai-for-science-program\n\n💡 ポイント\n・研究機関所属の研究者が対象\n・複雑な生物システムの理解を支援\n・創薬研究の加速に重点\n\n1. プログラムの特徴\n・科学への貢献度で審査\n・研究の潜在的影響力を評価\n・AIによる研究加速の可能性を重視\n\n2. 対象となる研究分野\n・遺伝データの解析\n・創薬プロセスの加速\n・農業生産性の向上\n・複雑な生物システムの分析\n\n3. 申請方法\n・専用フォームから申請\n・分野の専門家を含むチームが審査\n・研究機関への所属が必須",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "58354cc7-918d-4dee-8bdd-9c1a711e4e2d",
+      "created_at": "2026-02-18T01:19:56.024280+00:00",
+      "item": {
+        "title": "Anthropic's AI Export Controls Framework Response \\ Anthropic",
+        "url": "https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.024267+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが米国の輸出規制案に意見書を提出。AI開発における米国の優位性維持を主張。\n\n半導体の輸出規制強化により、中国のAI開発コストは2027年までに米国の10倍に。DeepSeekの事例が規制の有効性を実証。\n\nhttps://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule\n\n💡 ポイント\n・米商務省の「AI拡散規制」に対する詳細な提言\n・先端半導体の輸出規制が国家安全保障に不可欠\n・中国企業の密輸対策も含む包括的な提案\n\n1. 規制の効果（具体的な数値）\n・2027年までに旧型チップ使用国のAI訓練コストは10倍に\n・DeepSeekは同等結果に2-4倍の電力が必要\n・米国の半導体生産シェアは40%（1990年）→12%（現在）\n\n2. 3段階の規制システム\n・Tier 1：同盟国、制限最小\n・Tier 2：その他の国、一部制限\n・Tier 3：敵対国、厳格な規制\n\n3. Anthropicの主な提言内容\n・段階システムの調整\n・データセンター要件の見直し\n・中国の密輸対策強化（数億ドル規模の密輸を確認）",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "fa546221-adde-4aa4-a81d-8d62c981cffa",
+      "created_at": "2026-02-18T01:19:56.039191+00:00",
+      "item": {
+        "title": "Introducing the Anthropic Economic Advisory Council  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-the-anthropic-economic-advisory-council",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.039178+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「経済諮問委員会」を設立。AI活用が労働市場に与える影響を調査。\n\nシカゴ大学やMIT等から7名の著名経済学者が参加し、AIが雇用や経済に与える変化を分析する体制を構築。\n\nhttps://www.anthropic.com/news/introducing-the-anthropic-economic-advisory-council\n\n💡 ポイント\n・世界トップクラスの経済学者による専門的助言\n・労働市場への影響を定量的に測定\n・政策立案者や企業向けのリソース提供\n\n1. 諮問委員会の役割\n・AI活用による労働市場への影響を分析\n・経済成長や社会経済システムへの効果を評価\n・Anthropic Economic Indexの研究方針を策定\n\n2. 参加メンバー（一部）\n・Tyler Cowen博士：ジョージメイソン大学経済学部長\n・John List博士：シカゴ大学、元ホワイトハウス経済諮問委員\n・John Horton博士：MIT、AI労働市場研究の専門家\n・Ioana Marinescu博士：ペンシルベニア大学、労働経済学\n\n3. 背景\n・最新レポートで、AIが日常業務のアプローチを変化させていることを確認\n・今後メンバーを拡大予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b7fda1b1-6cd1-439d-90f7-d99636b2b552",
+      "created_at": "2026-02-18T01:19:56.060427+00:00",
+      "item": {
+        "title": "Detecting and Countering Malicious Uses of Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.060412+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claude悪用ケースを初公開\n\nAIモデルを「指揮者」として使う影響力工作や、素人がマルウェア開発に成功した事例を報告。実際の検出事例から学ぶAI悪用の最前線。\n\nhttps://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025\n\n💡 ポイント\n・Claude悪用の実態と対策を具体的な事例で公開\n・影響力工作から認証情報詐取まで幅広い悪用を検出\n・AI研究Clioと階層的要約で大量会話データを分析\n\n1. 最も新しい悪用パターン\n・「影響力工作代行サービス」がClaudeを「指揮者」として利用\n・SNSボットアカウントのコメント・いいね・リツイートをClaudeが判断\n・政治的なペルソナに基づき、複数国・言語で数万の本物アカウントに接触\n\n2. その他の検出事例\n・セキュリティカメラの認証情報を収集・処理するシステムの構築\n・東欧の求職者を狙う詐欺キャンペーンの文面作成\n・技術力の低い個人が、本来より高度なマルウェアを開発\n\n3. Anthropicの主な学び\n・フロンティアモデルを使った複雑な悪用システムの半自動運用が始まった\n・技術力が低い攻撃者でも、生成AIで能力を底上げできる時代に\n・Clio研究と階層的要約技術で、大量の会話データから悪用パターンを効率的に特定\n\n4. 検出と対策のアプローチ\n・標準検出では捉えきれない悪用を、インテリジェンスプログラムで補完\n・実際の悪用コンテキストを分析し、セーフガードを継続的に強化\n・エコシステム全体での学びの共有を重視",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "b22f56ca-f111-4f64-ae24-5de13d0bdbe8",
+      "created_at": "2026-02-18T01:19:56.075207+00:00",
+      "item": {
+        "title": "Understanding and Addressing AI Harms \\ Anthropic",
+        "url": "https://www.anthropic.com/news/our-approach-to-understanding-and-addressing-ai-harms",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.075193+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI被害への包括的対処法を公開。\n\n大規模災害から日常的リスクまで、構造的に評価・対策する新フレームワークを発表。\n\nhttps://www.anthropic.com/news/our-approach-to-understanding-and-addressing-ai-harms\n\n💡 ポイント\n・身体・心理・経済・社会・自律性の5次元で影響を評価\n・リスクの可能性・規模・対象・期間など多角的に分析\n・被害の種類・深刻度に応じて段階的に対策\n\n1. 評価の枠組み\n・物理的影響（身体の健康・安全）\n・心理的影響（メンタルヘルス・認知機能）\n・経済的影響（金銭的損失・財産）\n・社会的影響（コミュニティ・制度）\n・個人の自律性（意思決定・自由）\n\n2. 実際の適用例\n・Computer Use機能での金融ソフト不正利用リスクを特定\n・コミュニケーションツールでのフィッシング対策を強化\n・機能ごとに追加の安全対策を実装\n\n3. 対策の実施方法\n・利用ポリシーの策定・維持\n・レッドチーム含む評価テストの実施\n・不正使用の検知技術の開発\n・プロンプト修正からアカウント停止まで段階的対応\n\n※本アプローチは進化中で、AIエコシステム全体との協力を歓迎",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f4a650d6-6edb-4b2e-968b-2fe1ac44e749",
+      "created_at": "2026-02-18T01:19:56.090309+00:00",
+      "item": {
+        "title": "Anthropic Appoints Guillaume Princen as Head of EMEA and Announces 100+ New Roles Across the Region \\ Anthropic",
+        "url": "https://www.anthropic.com/news/head-of-EMEA-new-roles",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.090296+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、欧州責任者にGuillaume Princen氏を任命。年内に100人以上を採用へ\n\n元Stripe欧州事業立ち上げメンバーが就任。Dublin、Londonオフィスを中心に、セールス、エンジニアリング、研究職を大幅拡充。\n\nhttps://www.anthropic.com/news/head-of-EMEA-new-roles\n\n💡 ポイント\n・Stripe欧州初の米国外社員として12拠点を開設した実績\n・欧州企業のClaude採用が急増、特にコーディング能力が評価\n・今年初めにチューリッヒに研究拠点も開設済み\n\n1. Guillaume Princen氏の経歴\n・2014年にStripe欧州初の米国外社員として入社\n・7年間で欧州12拠点を開設、事業拡大を主導\n・McKinseyでの戦略コンサル経験も\n・欧州スタートアップのエコシステムに投資家・アドバイザーとして関与\n\n2. 採用予定の職種\n・セールス、エンジニアリング、研究、ビジネスオペレーション\n・主にDublinとLondonオフィスで採用\n・欧州顧客基盤の拡大に対応\n\n3. 欧州展開の背景\n・昨年Claude欧州投入後、企業・消費者双方で急成長\n・スタートアップと大企業の両方にサービス提供\n・欧州の高い倫理基準に合わせた責任あるAI開発を重視",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "245d3161-6e33-415d-aa9c-71b9accc2d23",
+      "created_at": "2026-02-18T01:19:56.105344+00:00",
+      "item": {
+        "title": "Anthropic Education Report: How University Students Use Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.105331+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、大学生のClaude利用を分析した教育レポートを公開。100万件の会話データから実際の使い方が明らかに。\n\nSTEM系学生が積極的に活用し、コード生成や概念分析など高度な認知タスクに使用。\n\nhttps://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude\n\n💡 ポイント\n・実環境での大規模調査（アンケートではない）\n・プライバシー保護の自動分析ツール「Clio」を使用\n・学生のAI活用パターンを4つに分類\n\n1. 利用状況\n・CS専攻学生が36.8%を占める（全米の学位取得者は5.4%）\n・ビジネス、医療、人文系は利用率が低め\n・STEM系が早期採用者層\n\n2. 主な用途\n・教育コンテンツの作成・改善（39.3%）\n・技術的な説明や課題解決（33.5%）\n・データ分析・可視化（11.0%）\n\n3. 認知タスク\n・「創造」と「分析」が中心\n・Bloom's Taxonomyの高次認知機能に対応\n・コーディングプロジェクトや法概念の分析など\n\n4. 4つの利用パターン（各23-29%）\n・直接的な問題解決\n・直接的なアウトプット作成\n・協働的な問題解決\n・協働的なアウトプット作成",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "cdbd9e11-79d4-4845-93ea-93fc00cd53e1",
+      "created_at": "2026-02-18T01:19:56.120197+00:00",
+      "item": {
+        "title": "Code with Claude - Anthropic's First Developer Conference \\ Anthropic",
+        "url": "https://www.anthropic.com/news/Introducing-code-with-claude",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.120184+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが初の開発者会議を開催。5月22日、サンフランシスコで。\n\nClaude活用の実装手法とベストプラクティスを学べる1日限定イベント。API、CLI、MCPの実践的なワークショップを提供。\n\nhttps://www.anthropic.com/news/Introducing-code-with-claude\n\n💡 ポイント\n・Anthropic幹部とプロダクトチームから直接話を聞ける\n・実践的なラボセッションに参加可能\n・テクニカルチームとのオフィスアワーあり\n\n1. 学べる内容\n・Claude Codeの活用方法\n・Model Context Protocol（MCP）の実装\n・AIエージェント開発戦略\n・プロダクトロードマップ\n・企業での導入事例\n\n2. イベント詳細\n・日時：2025年5月22日\n・場所：サンフランシスコ The Midway\n・対象：開発者・創業者（選抜制）\n・申込：本日より受付開始、随時審査\n\n限定枠のため早めの申込を推奨。Claude活用を本格化したい開発者必見のイベント。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4956f242-17c2-4b0e-a5ef-b24b9efdb97b",
+      "created_at": "2026-02-18T01:19:56.135017+00:00",
+      "item": {
+        "title": "Introducing Claude for education \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-claude-for-education",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.135004+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、高等教育機関向け「Claude for Education」を発表。\n\n学生の思考を導く「Learning mode」を搭載し、答えではなく考え方を教える新しいAI学習体験を提供。Northeastern大学など3校で全学展開を開始。\n\nhttps://www.anthropic.com/news/introducing-claude-for-education\n\n💡 ポイント\n・答えを与えず、ソクラテス式問答で思考を促進\n・大学全体で安全にAIを活用できる環境を提供\n・学生向けAPI支援プログラムも開始\n\n1. Learning modeの特徴\n・「この問題にどうアプローチする?」と問いかけ\n・「その結論を支持する証拠は?」で理解を深化\n・問題の背後にある基本原理を重視\n・研究論文やスタディガイドのテンプレート提供\n\n2. 活用例\n・引用付き文献レビューの作成支援\n・数式の段階的な解法ガイド\n・論文のフィードバック取得\n・ルーブリック作成の効率化\n・学生エッセイへの個別フィードバック\n\n3. キャンパス展開\n・Northeastern大学: 50,000名にClaude提供\n・LSE、Champlain Collegeと提携\n・Internet2に参加\n・Canvas LMSとの統合\n\n4. 学生向けプログラム\n・Claude Campus Ambassadors: キャンパスでの教育活動を主導\n・API支援: 学生プロジェクトにAPIクレジット提供",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "318b65a1-998e-47c7-b2db-e26aaa75989e",
+      "created_at": "2026-02-18T01:19:56.149827+00:00",
+      "item": {
+        "title": "Anthropic Economic Index: Insights from Claude 3.7 Sonnet \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.149814+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「経済インデックス」第2弾を公開。Claude 3.7 Sonnet利用状況を分析。\n\nコーディング用途が増加し、extended thinkingは技術タスクで多用。タスク・職種別の自動化/補助データも公開。\n\nhttps://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7\n\n💡 ポイント\n・AI活用の経済影響を継続調査\n・100万件の会話データを分析\n・研究者向けに全データセット公開\n\n1. 利用傾向の変化\n・コーディング用途の割合が増加\n・教育・科学・医療分野での利用も上昇\n・Claude 3.7 Sonnetのベンチマーク改善を反映\n\n2. Extended Thinking活用状況\n・技術タスクで優先的に使用\n・コンピュータサイエンス研究者向け\n・ソフトウェア開発者、ゲームデザイナーが活用\n\n3. タスク別の自動化度\n・コピーライター：人間とAIの共同作業が多い\n・翻訳者：AIが最小限の関与で完結する傾向\n・630の詳細カテゴリで分類\n\n4. 公開データセット\n・O*NETの17,000タスクにマッピング\n・職種・タスク別の利用パターン\n・ボトムアップ方式の新しい分類法",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "35ce1c72-925a-4d02-8770-34229fd09c0d",
+      "created_at": "2026-02-18T01:19:56.164720+00:00",
+      "item": {
+        "title": "Progress from our Frontier Red Team \\ Anthropic",
+        "url": "https://www.anthropic.com/news/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.164708+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AIの国家安全保障リスクを評価。Claude、1年でサイバー能力が高校生レベルから学部生レベルに急成長。\n\nFrontier Red Teamの最新評価で、Claudeのサイバーセキュリティとバイオロジー分野の能力が急速に進化していることが判明。\n\nhttps://www.anthropic.com/news/strategic-warning-for-ai-risk-progress-and-insights-from-our-frontier-red-team\n\n💡 ポイント\n・CTF演習で1年間に劇的な性能向上\n・専門知識が学部～専門家レベルに到達\n・実世界リスクは依然として限定的\n\n1. サイバーセキュリティ能力の急成長\n・Intercode CTF: 解答率25%未満→ほぼ全問正解（1年未満）\n・Cybench: 成功率5%→33%（5回試行内）\n・Claude 3.7 Sonnetで更なる向上を確認\n\n2. 評価手法の工夫\n・カスタムチャレンジで訓練データ混入を排除\n・Carnegie Mellon大学と50ホスト規模の実環境テスト実施\n・pwn、web、crypto等の多様なカテゴリで評価\n\n3. 現状の制限\n・バイナリ解析や偵察活動は依然困難\n・ツール支援なしでは複雑なネットワーク攻撃は不可能\n・物理的制約や専門知識が実世界リスクの障壁に\n\n4. バイオロジー分野\n・一部領域で専門家レベルの知識を獲得\n・学部レベルのスキルに近づく進展\n\nAnthropicは「早期警告の兆候」と評価しつつ、現時点では国家安全保障に重大なリスクを生じるレベルには達していないと結論づけています。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "332020b6-a2e4-429d-b620-a2f2b5398b6a",
+      "created_at": "2026-02-18T01:19:56.179495+00:00",
+      "item": {
+        "title": "Anthropic’s response to Governor Newsom’s AI working group draft report \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-s-response-to-governor-newsom-s-ai-working-group-draft-report",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.179482+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、カリフォルニア州のAI規制案に透明性重視を評価\n\n州知事のAI作業部会の報告書草案に対し、Anthropicが透明性とエビデンスベースの政策を支持する見解を発表。\n\nhttps://www.anthropic.com/news/anthropic-s-response-to-governor-newsom-s-ai-working-group-draft-report\n\n💡 ポイント\n・透明性がAI政策の鍵と強調\n・既存の業界ベストプラクティスと一致\n・2026年末までに強力なAIシステムが登場予測\n\n1. 透明性の重要性\n・モデル開発手法の公開を推奨\n・モデル盗難対策の開示\n・国家安全保障リスクテスト結果の公表\n・消費者信頼の向上と証拠基盤の構築\n\n2. Anthropicの実践例\n・Responsible Scaling Policyで誤用・自律性リスクを評価\n・主要モデルリリース時に安全性テスト結果を公開\n・第三者テストで内部評価を補完\n・他のフロンティアAI企業も同様の取り組み\n\n3. 政府の役割提案\n・軽量な規制アプローチを提唱\n・全企業に安全性ポリシーの公開を義務化\n・イノベーションを阻害しない形での透明性確保\n・ホワイトハウスへの政策提言と連動\n\n4. 今後の焦点領域\n・AIの経済的影響の研究強化\n・Anthropic Economic Indexで貢献\n・学術界・市民社会・産業界の連携\n・カリフォルニア州のフロンティアモデル安全性アプローチの形成",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "971ce564-c7ca-4a0b-a2b7-7f9c0da61956",
+      "created_at": "2026-02-18T01:19:56.194329+00:00",
+      "item": {
+        "title": "Anthropic’s Recommendations to OSTP for the U.S. AI Action Plan  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-s-recommendations-ostp-u-s-ai-action-plan",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.194316+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国AI行動計画に6つの政策提言を提出\n\n2026-27年に到来する強力なAIに備え、国家安全保障とエネルギーインフラ整備を重視した内容。Claude 3.7の性能向上がその根拠に。\n\nhttps://www.anthropic.com/news/anthropic-s-recommendations-ostp-u-s-ai-action-plan\n\n💡 ポイント\n・ノーベル賞級の知的能力を持つAIが2年以内に登場予測\n・半導体輸出規制の強化を提言\n・2027年までに50GWの電力インフラ整備を提案\n\n1. 強力なAIの定義（2026-27年到来予測）\n・ノーベル賞受賞者レベルの知的能力\n・テキスト、音声、動画の処理・生成\n・数時間から数週間の自律的な複雑タスク実行\n・物理世界への接続（研究機器、ロボット制御）\n\n2. 6つの重点政策提言\n・国家安全保障テスト：国内外AIモデルの評価体制構築\n・輸出規制強化：H20チップ管理、大規模チップ配備に政府間合意要求\n・研究所セキュリティ：AI企業と諜報機関の機密通信チャネル確立\n・エネルギーインフラ：2027年までに50GW追加電力整備\n・政府AI活用：省庁横断でAI活用可能な業務の洗い出し\n・経済的影響への準備：国勢調査局の調査手法現代化\n\n3. 背景\n・Claude 3.7 Sonnetで能力向上と自律性強化を実証\n・米国の技術的リーダーシップ維持が目的\n・経済的利益と安全保障の両立を重視",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "03824029-6e39-4f0d-9ecf-48222940074f",
+      "created_at": "2026-02-18T01:19:56.209272+00:00",
+      "item": {
+        "title": "Anthropic raises Series E at $61.5B post-money valuation \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.209258+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、シリーズEで35億ドル調達\n\n企業価値615億ドル（約9.2兆円）で資金調達。Lightspeed主導、Cisco、Fidelity等が参加。次世代AI開発とグローバル展開を加速。\n\nhttps://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation\n\n💡 ポイント\n・企業価値615億ドル（約9.2兆円）\n・調達額35億ドル（約5,250億円）\n・Claude 3.7 Sonnetリリース後の資金調達\n\n1. 投資用途\n・次世代AIシステムの開発加速\n・コンピュート容量の拡大\n・メカニスティック解釈性と整合性研究の深化\n・国際展開の推進\n\n2. Claude 3.7 Sonnetの成果\n・コーディング能力で新記録達成\n・今後数ヶ月でさらなる進化を予定\n・複雑なプロジェクトでの協働を目指す\n\n3. 導入実績\n・Replit: Claude統合で売上10倍成長\n・Novo Nordisk: 臨床報告書作成を12週から10分に短縮\n・Thomson Reuters: 税務専門家支援\n・Alexa+: 数百万世帯にAI機能提供",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "cb0140d0-8f64-4af7-8027-be0121a4d2f9",
+      "created_at": "2026-02-18T01:19:56.224264+00:00",
+      "item": {
+        "title": "Anthropic partners with U.S. National Labs for first 1,000 Scientist AI Jam \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-partners-with-u-s-national-labs-for-first-1-000-scientist-ai-jam",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.224250+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国立研究所と「1,000人科学者AIジャム」を開催\n\n複数の国立研究所の科学者が集まり、最新Claude 3.7 Sonnetを実際の研究課題で評価。仮説生成から実験計画、結果分析まで、科学研究プロセス全体でのAI活用を検証。\n\nhttps://www.anthropic.com/news/anthropic-partners-with-u-s-national-labs-for-first-1-000-scientist-ai-jam\n\n💡 ポイント\n・米エネルギー省が主催する初のイベント\n・実際の研究課題を使った実践的な評価\n・科学研究の大幅な加速が期待される\n\n1. 評価される機能\n・問題理解と文献検索\n・仮説生成と実験計画\n・コード生成と結果分析\n\n2. 背景\n・2024年4月、AnthropicはNNSAと機密環境でLLM評価を実施\n・核セキュリティ分野でのリスク評価を先行実施\n・今回は科学研究全般へ適用範囲を拡大\n\n3. 意義\n・産学連携でAIの可能性とリスクを同時に検証\n・米国の科学競争力強化に貢献\n・数十年かかる研究を数年に短縮する可能性",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c4d3152d-d3d0-404d-acaa-43a69956945d",
+      "created_at": "2026-02-18T01:19:56.239362+00:00",
+      "item": {
+        "title": "Introducing Anthropic's Transparency Hub \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-anthropic-transparency-hub",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.239349+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「透明性ハブ」を公開。AI開発の安全対策を一元化。\n\nフロンティアAI開発における安全プロトコル、リスク評価、社会的影響の評価方法などを詳細に公開。規制対応も見据えた統合フレームワーク。\n\nhttps://www.anthropic.com/news/introducing-anthropic-transparency-hub\n\n💡 ポイント\n・AI開発プロセスの透明性を大幅向上\n・安全性とアカウンタビリティの両立\n・継続的な情報更新とフィードバック受付\n\n1. 公開される主な情報\n・モデル評価と安全テストの手法\n・プラットフォーム不正利用の検知と対応\n・内部ガバナンスとリスク評価ポリシー\n・社会的影響の評価と対処方法\n・AI安全性研究の取り組み\n・セキュリティとプライバシー保護対策\n\n2. 透明性レポートの具体的内容\n・アカウント停止数と異議申し立て状況\n・異議申し立ての承認率\n・NCMECへの報告件数\n・政府からの要請データ\n\n3. 統合フレームワークの意義\n・多様な透明性要件を一元化\n・ユーザーや政策立案者が構造的にアクセス可能\n・AI能力の進化に応じて継続的に拡張\n\nフィードバックはtransparency@anthropic.comで受付中。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "581092e8-5a92-4686-a0e1-93103893c4eb",
+      "created_at": "2026-02-18T01:19:56.254435+00:00",
+      "item": {
+        "title": "Claude and Alexa+ \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-and-alexa-plus",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.254421+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "ClaudeがAlexa+に搭載。Amazon Bedrockを通じて提供開始。\n\nAnthropicとAmazonの協力により、Alexa+にClaude技術が統合。数週間以内に米国でロールアウト開始。\n\nhttps://www.anthropic.com/news/claude-and-alexa-plus\n\n💡 ポイント\n・Amazon Bedrockを介してClaudeにアクセス\n・Claudeの安全性機能をAlexa+で活用\n・数週間以内に米国で展開開始\n\n1. 提供形態\n・Amazon Bedrock経由でClaude技術を提供\n・AnthropicのCPO Mike Kriegerがチームを率いて開発\n・1年間にわたる密接な協力の成果\n\n2. 安全性への配慮\n・Claudeの高度な安全性機能を実装\n・ジェイルブレイク対策を含む最高水準の保護機能\n・企業・消費者双方への信頼性を確保\n\n3. 展開スケジュール\n・今後数週間で米国内でのロールアウト開始\n・数か月かけて利用範囲を段階的に拡大\n・AnthropicとAmazonのパートナーシップによる展開",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e24dfded-faf5-49e6-8877-12ed9af45355",
+      "created_at": "2026-02-18T01:19:56.269507+00:00",
+      "item": {
+        "title": "Claude 3.7 Sonnet and Claude Code \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.269493+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3.7 Sonnet登場。標準モードと思考モードを使い分け可能に。\n\nAnthropicが初のハイブリッド推論モデル「Claude 3.7 Sonnet」を発表。即座の応答と段階的な思考を自在に切り替えられる。\n\nhttps://www.anthropic.com/news/claude-3-7-sonnet\n\n💡 ポイント\n・標準モードと拡張思考モードを1つのモデルで実現\n・思考トークン数をAPI経由で細かく制御可能\n・コーディングとフロントエンド開発で大幅改善\n\n1. 2つのモードを搭載\n・標準モード: Claude 3.5 Sonnetの上位版として即座に応答\n・拡張思考モード: 自己反省しながら段階的に思考\n・数学、物理、コーディング、指示追従で性能向上\n・プロンプトは両モードで同じように動作\n\n2. API利用時の思考制御\n・思考トークン数の上限を設定可能（最大128K）\n・速度とコストを品質とトレードオフ\n・入力$3/百万トークン、出力$15/百万トークン（思考含む）\n\n3. 実用的なコーディング性能\n・SWE-bench Verifiedで最高性能を達成\n・Cursorが実務コーディングで最高クラスと評価\n・複雑なコードベース処理や高度なツール使用が改善\n・Canvaの評価で本番利用可能なコードを生成\n\n4. Claude Codeも同時発表\n・ターミナルから直接タスクを委譲できるCLIツール\n・エージェント的なコーディングを実現\n・限定リサーチプレビューで提供開始\n\n5. 提供プラットフォーム\n・全Claudeプラン（Free、Pro、Team、Enterprise）\n・Claude Developer Platform、Amazon Bedrock、Google Cloud Vertex AI\n・拡張思考モードは無料プランを除く全環境で利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "0b411281-1d25-495d-9941-3a0d76f3552a",
+      "created_at": "2026-02-18T01:19:56.284802+00:00",
+      "item": {
+        "title": "Anthropic signs MOU with UK Government to explore how AI can transform UK public services \\ Anthropic",
+        "url": "https://www.anthropic.com/news/mou-uk-government",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.284789+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、英国政府とAI活用のMOUを締結。公共サービス変革へ。\n\n行政手続きの効率化と市民アクセス向上を目指し、Claudeを活用した政府サービスの実証を開始。\n\nhttps://www.anthropic.com/news/mou-uk-government\n\n💡 ポイント\n・政府情報へのアクセス改善を検証\n・公共部門でのAI活用ガイドライン策定\n・英国のAIイノベーション支援を強化\n\n1. 実証内容\n・Claudeによる行政サービスへのアクセス向上\n・科学研究でのAI活用（英国のR&D強化）\n・AIインフラのサプライチェーン確保\n・スタートアップ・大学のAI活用支援\n\n2. 既存の導入事例\n・ワシントンDC保健局：多言語チャットボットで市民対応\n・欧州議会：文書検索時間を80%削減\n・英スウィンドン市：学習障害者向け文書変換ツール\n\n英国AI安全研究所との連携も継続し、責任あるAI活用の基準を構築。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "fc1bfb7a-708e-4586-990c-b7ad9fc6420c",
+      "created_at": "2026-02-18T01:19:56.299869+00:00",
+      "item": {
+        "title": "Statement from Dario Amodei on the Paris AI Action Summit \\ Anthropic",
+        "url": "https://www.anthropic.com/news/paris-ai-summit",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.299856+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic CEO、パリAIサミットで3つの緊急課題を提起\n\n2026-27年にはAIが「データセンターの天才国家」レベルに到達する可能性。Dario Amodei氏が民主主義のリード確保、セキュリティリスク、経済移行への対応を訴えた。\n\nhttps://www.anthropic.com/news/paris-ai-summit\n\n💡 ポイント\n・2026-27年、遅くとも2030年までにAIが新たな国家レベルの能力を獲得\n・16社以上がAI安全計画への取り組みを表明\n・Anthropic Economic Indexを今週公開\n\n1. 民主主義国のリード確保\n・権威主義国家の軍事的優位を防ぐ\n・AIサプライチェーン（チップ、半導体製造装置）の管理強化\n・自由社会防衛へのAI技術活用\n\n2. セキュリティリスクへの対応\n・CBRN（化学・生物・放射線・核）兵器への悪用リスク\n・AI自体の自律的リスク\n・100名近い専門家が科学レポートで警告\n・第三者評価機関による透明性確保が必要\n\n3. 経済移行への備え\n・労働市場への最大級の影響に対処\n・Anthropic Economic Indexで経済活動を追跡\n・人間のタスクの補完と自動化を測定\n・経済的利益の公平な分配に向けた政策が必要\n\n次回サミットでは、これら3つの課題を最優先で議論すべきとAnthropicは提言しています。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "aa75693b-ebe0-40a3-8492-a9ab98df7de2",
+      "created_at": "2026-02-18T01:19:56.314898+00:00",
+      "item": {
+        "title": "Introducing the Anthropic Economic Index \\ Anthropic",
+        "url": "https://www.anthropic.com/news/the-anthropic-economic-index",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.314885+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが実利用データから見るAI活用の実態を公開\n\nClaude.aiの100万件の会話を分析した「Anthropic Economic Index」初回レポート。AI活用の57%は人の能力を拡張する「補完型」、43%が直接作業を行う「自動化型」。\n\nhttps://www.anthropic.com/news/the-anthropic-economic-index\n\n💡 ポイント\n・実際の会話データから労働市場への影響を分析\n・データセットをオープンソース化\n・経済学者や政策専門家の意見を募集中\n\n1. 現在のAI活用状況\n・ソフトウェア開発と技術文書作成での利用が集中\n・全職種の36%で、関連タスクの4分の1以上でAIを活用\n・4%の職種では関連タスクの4分の3以上で活用\n\n2. 活用方法の内訳\n・補完型（人の能力を拡張）：57%\n・自動化型（直接タスクを実行）：43%\n・人とAIの協働が主流に\n\n3. 賃金水準別の利用傾向\n・中〜高賃金職種（プログラマー、データサイエンティスト）で多用\n・最低賃金層と最高賃金層では利用が少ない\n・現在のAI性能と実用上の障壁が影響\n\n4. 分析手法の特徴\n・Clio（自動分析ツール）でプライバシー保護しながら分析\n・米労働省のO*NET（2万件の職務タスク）と照合\n・アンケートや予測ではなく実データを使用",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f352282a-2071-40d1-80a5-cca93fdec666",
+      "created_at": "2026-02-18T01:19:56.329976+00:00",
+      "item": {
+        "title": "Lyft to bring Claude to more than 40 million riders and over 1 million drivers \\ Anthropic",
+        "url": "https://www.anthropic.com/news/lyft-announcement",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.329962+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Lyft、4000万人のユーザーにClaudeを導入\n\n配車サービス大手Lyftが、4000万人の利用者と100万人のドライバー向けにClaude活用を拡大。カスタマーサポートの解決時間を87%短縮。\n\nhttps://www.anthropic.com/news/lyft-announcement\n\n💡 ポイント\n・既存のAIアシスタントで顧客対応時間を87%削減\n・新機能の早期テスト参加で実用性を検証\n・エンジニアチーム向けの専門トレーニングを実施\n\n1. 導入効果\n・Amazon Bedrock経由でClaudeを活用\n・日々数千件の問い合わせに自動対応\n・複雑なケースは人間のスペシャリストに引き継ぎ\n\n2. 今後の連携内容\n・ライダーとドライバー向けAIアプリケーション開発\n・新製品の研究テストに参加し、実用性を事前検証\n・Anthropicによるエンジニアリングチームの強化支援\n\nLyftのJason Vogrinec氏は「GenAI技術でソフトウェア開発が大きく変化した。Claudeのようなコーディング向けモデルとエージェントAIで、エンジニアリング組織を革新する」とコメント。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "18b8fba8-b3d3-4d9d-99c5-df9de514db49",
+      "created_at": "2026-02-18T01:19:56.345247+00:00",
+      "item": {
+        "title": "Anthropic achieves ISO 42001 certification for responsible AI \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.345234+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI管理の国際規格「ISO 42001」認証を取得\n\nフロンティアAIラボとして世界初。AI開発のガバナンス体制が第三者機関により認証された。\n\nhttps://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai\n\n💡 ポイント\n・AI管理システムに関する初の国際規格\n・リスク評価・軽減の包括的フレームワークを実装\n・Constitutional AIなど既存の安全対策を補完\n\n1. ISO 42001とは\n・2023年に制定されたAIガバナンスの国際規格\n・AI システムの責任ある開発・利用を保証\n・ANSI認定機関Schellman Complianceが認証\n\n2. 認証でカバーされる領域\n・倫理的で安全なAI設計・開発・展開のポリシー\n・システムの動作検証と影響評価の厳格なテスト\n・ユーザーへの透明性確保の措置\n・責任体制と監督プロセスの確立\n\n3. Anthropicの既存の安全対策\n・Responsible Scaling Policy（責任あるスケーリング方針）\n・Constitutional AI（人間の価値観との整合性確保）\n・AI安全性と堅牢性の継続的研究\n\nTrust Centerで認証書と詳細情報を公開中。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7745aef3-4694-4091-8ed0-cde168959408",
+      "created_at": "2026-02-18T01:19:56.360621+00:00",
+      "item": {
+        "title": "Elections and AI in 2024: Anthropic observations and learnings \\ Anthropic",
+        "url": "https://www.anthropic.com/news/elections-ai-2024",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.360608+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、2024年選挙期間のAI利用を分析。選挙関連は全利用の0.5%未満。\n\nClaude開発元が、生成AI初の大規模選挙サイクルでの実態を公開。誤情報対策と実際の利用パターンから見えた、AIと民主主義の現実。\n\nhttps://www.anthropic.com/news/elections-ai-2024\n\n💡 ポイント\n・選挙関連の利用は全体の0.5%未満（米選挙前は1%）\n・誤情報生成より、政策分析や投票データ理解が中心\n・新ツール「Clio」で実利用パターンを可視化\n\n1. 実施した安全対策\n・選挙干渉を禁止する包括的ポリシーの策定と実施\n・外部専門家による12回以上の脆弱性テスト実施\n・投票情報は非党派の公式機関へ誘導\n\n2. 実際の利用パターン\n・約3分の2は政策分析や政治データの理解に利用\n・選挙情報の翻訳や民主主義教育コンテンツ生成も\n・1対1の対話形式のため、SNSより拡散リスクは低い\n\n3. Clioツールの活用\n・実際の会話を抽象化してトピック別に分析\n・リアルタイムで誤用パターンを検出\n・既存の対策を補完する監視体制を構築\n\n4. 今後への示唆\n・約100件の違反対応を実施（警告とアカウント停止）\n・テキスト出力のみでディープフェイクリスクなし\n・進化する脅威に対し慎重な監視体制を継続",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "729c7666-7217-4df4-acfd-51e95a0da447",
+      "created_at": "2026-02-18T01:19:56.375831+00:00",
+      "item": {
+        "title": "Introducing the Model Context Protocol \\ Anthropic",
+        "url": "https://www.anthropic.com/news/model-context-protocol",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.375818+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「Model Context Protocol」を発表。AIとデータソースを接続する新標準。\n\nAIアシスタントがビジネスツールや開発環境のデータに直接アクセスできる統一プロトコルで、個別実装が不要に。\n\nhttps://www.anthropic.com/news/model-context-protocol\n\n💡 ポイント\n・データソースごとの個別実装が不要になる\n・双方向の安全な接続を実現\n・Claude Desktop appで今日から利用可能\n\n1. 主な特徴\n・AI systems とデータソースを接続する統一規格\n・MCP server（データ公開側）とMCP client（AI側）の構成\n・オープンソースのSDKと仕様を提供\n\n2. 提供内容\n・Google Drive、Slack、GitHub等の事前構築済みサーバー\n・Claude 3.5 Sonnetで簡単にMCP server実装可能\n・Zed、Replit等の開発ツールが対応\n\n3. 利用開始\n・全てのClaude.aiプランでMCP serverに接続可能\n・Claude Desktop appから事前構築サーバーをインストール\n・クイックスタートガイドで独自サーバー構築\n\nBlockやApolloが導入済み。コード生成の精度向上とコンテキスト理解の改善を実現。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "31a33e08-d406-4b28-ad29-10440517e1b0",
+      "created_at": "2026-02-18T01:19:56.391086+00:00",
+      "item": {
+        "title": "Powering the next generation of AI development with AWS \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-amazon-trainium",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.391074+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AmazonのTrainiumチップ最適化に参画\n\nAnthropicとAWSが戦略的提携を拡大。Amazonが40億ドル追加投資し、AnthropicがTrainiumチップの開発に直接関与する体制に。\n\nhttps://www.anthropic.com/news/anthropic-amazon-trainium\n\n💡 ポイント\n・Amazon総投資額80億ドルに到達\n・AnthropicがTrainiumシリコンレベルで最適化\n・Claude、数万社の基幹システムとして稼働中\n\n1. ハードウェア開発への深い関与\n・AnnapurnaLabsとTrainiumチップを共同開発\n・低レベルカーネルを直接記述してシリコンと連携\n・AWS Neuronソフトウェアスタックに貢献\n・次世代基盤モデルの学習に活用予定\n\n2. 企業での実用例\n・Pfizer: 医薬品研究で数千万ドルのコスト削減\n・Intuit: 数百万人の複雑な税務計算を説明\n・Perplexity: 回答速度2倍、精度向上を実現\n・欧州議会: 210万件の公文書検索を実装、調査時間80%短縮\n\n3. セキュアな展開\n・Amazon BedrockでClaudeをファインチューニング可能\n・顧客データはAWS内で保護\n・AWS GovCloud対応で政府機関も利用可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "17974c58-4c2a-4b2f-a897-5cf93e71dde1",
+      "created_at": "2026-02-18T01:19:56.406188+00:00",
+      "item": {
+        "title": "The case for targeted regulation \\ Anthropic",
+        "url": "https://www.anthropic.com/news/the-case-for-targeted-regulation",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.406176+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI規制の緊急性を指摘。18ヶ月以内の対応を要請。\n\nサイバー攻撃や生物化学兵器への悪用リスクが急速に高まる中、適切な規制と技術革新を両立させる「ターゲット規制」を提案。\n\nhttps://www.anthropic.com/news/the-case-for-targeted-regulation\n\n💡 ポイント\n・AIの能力向上により、サイバーとCBRN（生物化学兵器）領域のリスクが顕在化\n・適切な規制でリスク軽減とイノベーション促進の両立が可能\n・後手に回ると、効果のない規制だけが残るリスク\n\n1. AIの急速な進化と新たなリスク\n・コーディング能力：SWE-benchで1.96%→49%に向上（1年間）\n・科学知識：GPQA最難関セクションで38.8%→77.3%（PhD専門家は81.2%）\n・サイバー攻撃支援能力が実用レベルに到達\n\n2. Anthropicが提唱する「ターゲット規制」\n・壊滅的リスクに焦点を絞った規制\n・イノベーションを阻害しない設計\n・Responsible Scaling Policy（RSP）による段階的対応\n\n3. 18ヶ月という期限の根拠\n・1年前の予測：2-3年後にリスク顕在化\n・現状：予測より大幅に早く進展\n・次世代モデルで多段階タスクの自律実行が可能に",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d26bdd81-2f09-486a-81cc-2863274f9b17",
+      "created_at": "2026-02-18T01:19:56.421355+00:00",
+      "item": {
+        "title": "Claude 3.5 Sonnet on GitHub Copilot \\ Anthropic",
+        "url": "https://www.anthropic.com/news/github-copilot",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.421342+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "GitHub CopilotでClaude 3.5 Sonnetが利用可能に\n\nAnthropicとGitHubが連携し、VS CodeとGitHub.com上でClaude 3.5 Sonnetを選択可能になった。1億人超の開発者がClaudeのコーディング支援を利用できる。\n\nhttps://www.anthropic.com/news/github-copilot\n\n💡 ポイント\n・SWE-bench Verifiedで全公開モデル中トップスコア\n・HumanEvalで93.7%を達成（クラス最高）\n・Amazon Bedrock経由で高い信頼性を実現\n\n1. できること\n・自然言語からプロジェクトの規約に合わせたコード生成\n・エラーメッセージの解析と修正案の提示\n・関数から包括的なテストスイートを自動生成\n・コードの説明とプロジェクト内での役割の解説\n\n2. 利用開始\n・GitHub Copilot Chatユーザーと組織向けに数週間で展開\n・VS CodeとGitHub.comで利用可能\n・パブリックプレビュー版として提供開始",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "5672f08b-6f6b-43ae-b0fe-51ae39a2ca52",
+      "created_at": "2026-02-18T01:19:56.436745+00:00",
+      "item": {
+        "title": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku \\ Anthropic",
+        "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.436731+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3.5 Sonnet、コーディング性能が49%に向上\n\nSWE-bench Verifiedで33.4%→49.0%を達成。コンピュータを人間のように操作する「computer use」機能も公開ベータで追加。\n\nhttps://www.anthropic.com/news/3-5-models-and-computer-use\n\n💡 ポイント\n・全公開モデル中トップのコーディング性能\n・画面を見て、クリックして、テキスト入力が可能に\n・同価格・同速度で性能向上を実現\n\n1. コーディング性能の大幅向上\n・SWE-bench Verifiedで49.0%達成（従来33.4%）\n・OpenAI o1-previewを含む全公開モデルを上回る\n・GitLabのテストで最大10%の推論性能向上\n・TAU-benchで小売69.2%、航空46.0%を記録\n\n2. Computer Use機能（公開ベータ）\n・画面を見て、カーソル移動、クリック、テキスト入力\n・数十〜数百ステップのタスクを自動実行\n・Anthropic API、Amazon Bedrock、Google Cloud Vertex AIで利用可能\n・Replit、Asana、Canvaなどが既に活用開始\n\n3. Claude 3.5 Haiku（今月後半リリース予定）\n・Claude 3 Opusと同等の性能\n・前世代Haikuと同等の速度を維持\n・価格は入力$0.80/MTok、出力$4/MTok",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "bcf95925-214c-4bba-ab92-d2116ce4f213",
+      "created_at": "2026-02-18T01:19:56.452018+00:00",
+      "item": {
+        "title": "Developing a computer use model \\ Anthropic",
+        "url": "https://www.anthropic.com/news/developing-computer-use",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.452005+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3.5 Sonnet、コンピュータ操作に対応\n\nマウス移動やクリック、キーボード入力を人間と同じように実行。画面を見て、判断し、操作する能力を獲得。\n\nhttps://www.anthropic.com/news/developing-computer-use\n\n💡 ポイント\n・画面のスクリーンショットから操作を判断\n・ピクセル単位でカーソルを移動\n・エラー時は自己修正して再試行\n\n1. 実現した機能\n・カーソルの画面上での移動\n・適切な位置へのクリック\n・仮想キーボードでの入力\n・人間と同じ方法でのPC操作\n\n2. 技術的背景\n・画面の画像認識能力を活用\n・ピクセル数を正確にカウント\n・計算機とテキストエディタで学習\n・一般化により複雑なタスクにも対応\n\n3. 現在の性能\n・OSWorldベンチマークで14.9%を達成\n・他のAIモデル（7.7%）を大きく上回る\n・人間レベル（70-75%）には未達\n・パブリックベータとして公開中\n\n4. 開発プロセス\n・ツール使用とマルチモーダル技術が基盤\n・論理的推論と画像理解を組み合わせ\n・試行錯誤を重ねてブレークスルーを達成\n・安全性確保のため訓練時はネット接続なし",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "bfd7cd5b-4621-4911-84fd-62b5d6fcb12b",
+      "created_at": "2026-02-18T01:19:56.467463+00:00",
+      "item": {
+        "title": "Announcing our updated Responsible Scaling Policy \\ Anthropic",
+        "url": "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.467450+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI安全性ポリシーを大幅更新。リスクに応じた段階的な安全対策を明確化。\n\nフロンティアAIモデルの安全性管理フレームワーク「Responsible Scaling Policy（RSP）」を改定。能力閾値と必要な安全対策を定義。\n\nhttps://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy\n\n💡 ポイント\n・AI能力の向上に応じて安全対策を段階的に強化\n・現在の全モデルはASL-2基準で運用中\n・自律的なAI研究開発能力など、具体的な閾値を設定\n\n1. ASL（AI Safety Level）Standards\n・ASL-1: 基本的な能力のモデル（チェスボットなど）\n・ASL-2: 現在の業界ベストプラクティス（全モデルが該当）\n・ASL-3以降: より厳格な安全対策が必要\n\n2. 新たな枠組み\n・Capability Thresholds: 強化された安全対策が必要となる具体的なAI能力\n・Required Safeguards: 閾値到達時に必要な具体的なASL基準\n・安全性評価手法の改善と外部意見の取り入れ\n\n3. 重点管理リスク\n・自律的なAI研究開発能力\n・生物学的リスク\n・サイバーセキュリティリスク\n・その他の壊滅的リスク",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "119f8179-0270-4d13-a14c-502761fb095d",
+      "created_at": "2026-02-18T01:19:56.482703+00:00",
+      "item": {
+        "title": "U.S. Elections Readiness \\ Anthropic",
+        "url": "https://www.anthropic.com/news/us-elections-readiness",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.482689+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米選挙に向けたClaude安全対策を公表\n\n2024年の米国選挙は生成AIが広く使われる初の選挙。Anthropicは政治キャンペーン禁止、誤情報対策、投票情報リダイレクトなど具体的対策を実施。\n\nhttps://www.anthropic.com/news/us-elections-readiness\n\n💡 ポイント\n・Claudeでの政治キャンペーン・ロビー活動を禁止\n・選挙法や候補者に関する誤情報生成を防止\n・画像・音声・動画生成不可でディープフェイクリスク回避\n\n1. ポリシーによる制限\n・特定候補者・政党・争点の宣伝禁止\n・政治キャンペーンや投票・寄付の勧誘禁止\n・投票機器への攻撃や票の集計妨害を防止\n\n2. 技術的な対策\n・プロンプト修正による自動検出システム\n・APIユースケースの監査実施\n・悪質な場合はアカウント停止措置\n\n3. 継続的な評価と改善\n・外部専門家との脆弱性テスト（PVT）実施\n・候補者間の回答の政治的中立性を検証\n・有害な選挙関連クエリへの拒否精度を測定\n\n4. 正確な情報提供\n・選挙関連の質問にTurboVote（非党派の投票情報）へのリダイレクトポップアップ表示\n・連邦・州選挙の全候補者名と投票提案を含む最新情報を提供\n・モデルの知識カットオフ日をシステムプロンプトに明記",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "189f7feb-47fe-4881-b33b-70315c08811e",
+      "created_at": "2026-02-18T01:19:56.498172+00:00",
+      "item": {
+        "title": "Contextual Retrieval in AI Systems \\ Anthropic",
+        "url": "https://www.anthropic.com/news/contextual-retrieval",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.498158+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、RAG検索の失敗を49%削減する「Contextual Retrieval」を発表。\n\n従来のRAGが抱える「文脈が失われる」問題を解決。埋め込みとBM25の両面から改善し、リランキング併用で67%の精度向上を実現。\n\nhttps://www.anthropic.com/news/contextual-retrieval\n\n💡 ポイント\n・RAGの検索精度が大幅に向上\n・Claudeで即座に実装可能\n・プロンプトキャッシングで高速化・コスト削減も対応\n\n1. 従来のRAGの課題\n・チャンク化で文脈情報が失われる\n・関連情報の検索に失敗するケースが多い\n・具体的な用語や識別子の検索が困難\n\n2. Contextual Retrievalの仕組み\n・Contextual Embeddings：各チャンクに文脈情報を追加\n・Contextual BM25：語彙ベースの正確なマッチング\n・リランキングとの組み合わせで更に精度向上\n\n3. 実装のポイント\n・20万トークン以下ならプロンプトキャッシングで対応可能\n・大規模な知識ベースにはContextual Retrievalが有効\n・cookbookで簡単にデプロイ可能\n\n4. 具体的な改善効果\n・検索失敗率を49%削減（単体）\n・リランキング併用で67%削減\n・コスト削減：最大90%\n・レイテンシ：2倍以上高速化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2642a9df-347d-40c6-a719-e7ee318c6e05",
+      "created_at": "2026-02-18T01:19:56.513609+00:00",
+      "item": {
+        "title": "Salesforce integrates Anthropic's Claude AI to boost Einstein capabilities \\ Anthropic",
+        "url": "https://www.anthropic.com/news/salesforce-partnership",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.513596+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Salesforce、Claudeを統合しEinsteinを強化\n\nSalesforceがClaude 3.5 Sonnet/Opus/HaikuをAmazon Bedrock経由で提供開始。営業・サービス・マーケティング全体でAI活用が可能に。\n\nhttps://www.anthropic.com/news/salesforce-partnership\n\n💡 ポイント\n・既存のAWS Bedrock環境から接続可能\n・カスタムプロンプトで用途に応じた選択が可能\n・Einstein Trust Layerでセキュリティを担保\n\n1. 主な活用シーン\n・営業：商談提案や通話分析の自動化\n・カスタマーサービス：ケース要約と返信生成\n・ヘルスケア/金融：記録サマリと提案書作成\n・法務/IT：契約分析とフィードバック解析\n・メディア：コンテンツ案と推薦の生成\n\n2. 統合の特徴\n・BYO LLM機能で3つのClaudeモデルを選択可能\n・Einstein Studioから数ステップで設定完了\n・既存のセキュリティ基準を維持したまま導入\n・動的グラウンディングと有害性検出を標準装備\n\n3. 導入方法\n・Einstein Studio → Foundation Models → Add Foundation Model\n・Amazon Bedrock経由で接続設定\n・Model Playgroundでテスト\n・Prompt Builderでカスタムテンプレート作成",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "df17a5fd-f366-4b9a-a982-e8205692a27a",
+      "created_at": "2026-02-18T01:19:56.529777+00:00",
+      "item": {
+        "title": "Expanding our model safety bug bounty program  \\ Anthropic",
+        "url": "https://www.anthropic.com/news/model-safety-bug-bounty",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.529764+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが脱獄攻撃の報奨金を最大1.5万ドルに設定\n\n次世代AI安全システムのテストプログラムを開始。CBRN（化学・生物・放射線・核）やサイバーセキュリティ分野での「ユニバーサル脱獄攻撃」発見に報奨金を提供。\n\nhttps://www.anthropic.com/news/model-safety-bug-bounty\n\n💡 ポイント\n・幅広い分野で安全対策を回避できる「ユニバーサル脱獄攻撃」が対象\n・HackerOneと提携し、招待制で実施\n・公開前の次世代安全システムへの早期アクセスを提供\n\n1. プログラムの概要\n・報奨金は最大15,000ドル\n・CBRN、サイバーセキュリティなど重要分野の脆弱性が対象\n・2024年8月16日まで応募受付\n\n2. 対象となる脆弱性\n・複数の有害な質問に回答させられる攻撃\n・現行システムではなく、次世代の安全対策システムをテスト\n・AI安全研究者や脱獄攻撃の発見実績がある専門家を募集\n\n3. 現行システムへの報告\n・現行システムの安全性問題はusersafety@anthropic.comで受付\n・詳細は責任ある開示ポリシーを参照\n・招待制から将来的に範囲を拡大予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "62188baf-0553-45a8-861a-3027214c8716",
+      "created_at": "2026-02-18T01:19:56.545760+00:00",
+      "item": {
+        "title": "Claude is now available in Brazil \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-brazil",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.545748+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "ClaudeがブラジルでWebとモバイルアプリで利用可能に。\n\nAnthropicの対話型AI「Claude」が、ブラジルで正式提供開始。Web版、iOS/Androidアプリ、API経由で利用できる。\n\nhttps://www.anthropic.com/news/claude-brazil\n\n💡 ポイント\n・Claude 3.5 Sonnetを含む全モデルにアクセス可能\n・無料プランとProプラン（月額R$ 110）を提供\n・Teamプラン（月額R$ 165/ユーザー、5席以上）でチーム共有が可能\n\n1. 提供形態\n・Web版（Claude.ai）で即座に利用開始\n・iOS/Android無料アプリでモバイル対応\n・API経由での自社サービス統合\n\n2. 料金プラン\n・無料プラン: 基本機能を提供\n・Proプラン: 無料版の5倍の利用量と新機能への早期アクセス\n・Teamプラン: さらに多くの利用量とチーム共有、管理ツールを提供\n\n3. プライバシー保護\n・ユーザーの明示的な許可なしに学習データとして使用しない\n・厳格なテストで誤用を低減",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "73d17a5c-17a1-4a02-a0b9-52eb9fa1f3d9",
+      "created_at": "2026-02-18T01:19:56.561348+00:00",
+      "item": {
+        "title": "Anthropic partners with Menlo Ventures to launch Anthology Fund \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.561335+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicとMenlo Ventures、1億ドルのAIスタートアップ支援ファンド「Anthology Fund」を設立。\n\nClaude活用スタートアップに資金提供と25,000ドル分のAPIクレジットを提供。医療・教育・研究分野での応用を重点支援。\n\nhttps://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund\n\n💡 ポイント\n・Menlo Venturesが1億ドルを出資\n・選定されたスタートアップに25,000ドル分のClaudeクレジット提供\n・医療、教育、科学研究など5分野を重点支援\n\n1. 支援対象分野\n・AIインフラ\n・医療・教育・科学研究でのAI応用\n・コンシューマー向けAIソリューション\n・信頼性・安全性ツール\n・社会的利益を最大化するAI技術\n\n2. スタートアップが得られる支援\n・Anthropicの製品・研究へのアクセス\n・最新モデル向け25,000ドル分のクレジット\n・Menloによるベンチャー支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "60e78be8-3c37-4681-af18-3ee71a17df98",
+      "created_at": "2026-02-18T01:19:56.576963+00:00",
+      "item": {
+        "title": "Fine-tune Claude 3 Haiku in Amazon Bedrock | Claude",
+        "url": "https://www.anthropic.com/news/fine-tune-claude-3-haiku",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.576937+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3 Haiku、Amazon Bedrockでファインチューニングが可能に。\n\nAnthropicが最速かつ最もコスト効率の高いClaude 3 Haikeのファインチューニング機能を正式リリース。カスタムデータで学習し、専門タスクに最適化できる。\n\nhttps://www.anthropic.com/news/fine-tune-claude-3-haiku\n\n💡 ポイント\n・独自データで学習し、専門タスクの精度を向上\n・Sonnet/Opusから置き換えてコスト削減\n・学習データはAWS環境内に保持され安全\n\n1. 実績データ\n・オンラインコメント分類で精度81.5%→99.6%に改善\n・トークン数を85%削減\n・SK Telecomで顧客満足度が73%向上\n・通信業務のKPIが37%改善\n\n2. 活用例\n・ドメイン特化の分類タスク\n・カスタムAPI連携\n・業界固有データの解釈\n・規制準拠の定型レポート生成\n・コールログからの要約・トピック抽出",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8dc2a803-2ae7-4413-838d-65035d2b2525",
+      "created_at": "2026-02-18T01:19:56.592470+00:00",
+      "item": {
+        "title": "A new initiative for developing third-party model evaluations \\ Anthropic",
+        "url": "https://www.anthropic.com/news/a-new-initiative-for-developing-third-party-model-evaluations",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.592456+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが第三者AI評価プログラムを開始。サイバー攻撃・CBRN・自律性を測定。\n\nAI安全性評価の供給不足に対応。高度な能力とリスクを測定する評価手法の開発に資金提供を開始。\n\nhttps://www.anthropic.com/news/a-new-initiative-for-developing-third-party-model-evaluations\n\n💡 ポイント\n・第三者組織による独立した評価手法を公募\n・AI Safety Level（ASL）の測定が主目的\n・評価ツールはAI業界全体で共有\n\n1. 優先評価領域\n・サイバーセキュリティ：脆弱性発見や横展開などサイバー攻撃能力の測定\n・CBRN（化学・生物・放射性・核）リスク：非専門家の脅威作成能力向上を評価\n・モデル自律性：AIのR&D能力、自己複製、リソース獲得能力を測定\n・国家安全保障：国家・非国家主体への影響を早期警告\n\n2. 評価開発の課題\n・既存評価は単純すぎるか、解答が公開済み\n・実世界のリスクを正確に測定する手法が不足\n・高度な脅威に対応する新しいベンチマークが必要\n\n3. 申請方法\n・専用フォームから提案を受付中\n・評価ツールはAI安全性分野全体で活用可能\n・Anthropicの責任あるスケーリングポリシーに基づく",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "39f598f7-2375-44b0-9b83-c2d58d7c79b2",
+      "created_at": "2026-02-18T01:19:56.607943+00:00",
+      "item": {
+        "title": "Expanding Access to Claude for Government \\ Anthropic",
+        "url": "https://www.anthropic.com/news/expanding-access-to-claude-for-government",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.607930+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米国政府機関向けにClaude提供を開始\n\nAWS経由で情報機関やGovCloudでHaiku/Sonnetが利用可能に。災害対応、公衆衛生、行政サービスでの活用を想定。\n\nhttps://www.anthropic.com/news/expanding-access-to-claude-for-government\n\n💡 ポイント\n・AWS MarketplaceとGovCloudで提供\n・厳格なセキュリティ基準に対応\n・政府機関の特殊ニーズに合わせた契約を整備\n\n1. 主な活用用途\n・市民サービスの改善\n・文書レビューと作成の効率化\n・データドリブンな政策立案\n・災害対応の調整支援\n・公衆衛生施策の強化\n\n2. 政府向け特別対応\n・利用規約に契約上の例外を設定\n・人身売買対策での外国情報分析\n・秘密工作キャンペーンの特定\n・軍事活動の事前警告による外交支援\n・兵器設計や偽情報キャンペーン等の制限は維持\n\n3. 責任あるAI展開\n・英国AI安全研究所がClaude 3.5 Sonnetを事前テスト\n・政府と連携した安全性評価体制\n・ASL-2レベルのモデルのみ対象\n・定期的なパートナーシップ影響評価を実施",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "817b5ad1-7268-4e40-9f38-c4f04e5a7d59",
+      "created_at": "2026-02-18T01:19:56.623347+00:00",
+      "item": {
+        "title": "Collaborate with Claude on Projects \\ Anthropic",
+        "url": "https://www.anthropic.com/news/projects",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.623333+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeに「Projects」機能が追加。チーム知識を集約し共同作業を効率化。\n\n200Kコンテキストで最大500ページ分の資料を参照可能。スタイルガイドやコードベースを一元管理し、チーム全体でClaude活用を加速。\n\nhttps://www.anthropic.com/news/projects\n\n💡 ポイント\n・内部知識をプロジェクト単位で整理\n・カスタム指示で回答をカスタマイズ可能\n・チームでベストプラクティスを共有\n\n1. Projectsの特徴\n・200Kコンテキストウィンドウ（500ページ相当）\n・スタイルガイド、コードベース、過去作業を統合\n・プロジェクトごとにカスタム指示を設定\n・Claude 3.5 Sonnetで利用可能\n・ProプランとTeamプランで提供\n\n2. Artifacts機能\n・コード、文書、図表を専用ウィンドウで表示\n・フロントエンドのライブプレビューに対応\n・コードレビューを効率化\n\n3. チーム共有\n・優れた会話をスナップショット共有\n・アクティビティフィードでベストプラクティスを蓄積\n・組織全体の知識を統合し高品質な成果物を生成\n\n4. 導入事例（North Highland）\n・コンサルティング、営業、マーケで数百名が利用\n・コンテンツ制作と分析が5倍高速化\n・2週間の作業が数分に短縮",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "11ce5a91-b11d-4b35-aabb-3e61fbd5e7a7",
+      "created_at": "2026-02-18T01:19:56.638832+00:00",
+      "item": {
+        "title": "Introducing Claude 3.5 Sonnet \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.638819+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3.5 Sonnetが登場。Opus超え性能で2倍高速。\n\nAnthropicがClaude 3.5 Sonnetを公開。上位モデルOpusを上回る性能を、中位モデルの速度とコストで実現。コード生成タスクで64%を解決（Opus比1.7倍）。\n\nhttps://www.anthropic.com/news/claude-3-5-sonnet\n\n💡 ポイント\n・Opusを超える性能で処理速度2倍\n・コード生成でOpusの1.7倍の正答率\n・API価格は入力$3/100万トークン\n\n1. 性能向上\n・大学院レベルの推論能力でトップスコア\n・コード生成タスクで64%解決（Opus: 38%）\n・自然な文章生成と複雑な指示理解が改善\n・視覚認識でもOpusを上回る精度\n\n2. 実用性\n・処理速度が従来の2倍に高速化\n・200Kトークンのコンテキストウィンドウ\n・レガシーコードの移行やバグ修正に対応\n・不鮮明な画像からのテキスト抽出が可能\n\n3. Artifacts機能\n・生成コードやドキュメントを専用ウィンドウに表示\n・リアルタイム編集と反復作業に対応\n・対話型AIから共同作業環境へ進化\n\n4. 利用環境\n・Claude.aiとiOSアプリで無料利用可能\n・Anthropic API、Amazon Bedrock、Google Cloud Vertex AIで提供\n・出力$15/100万トークン",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3cb2a15f-b904-4851-9468-8a33582a24e6",
+      "created_at": "2026-02-18T01:19:56.654771+00:00",
+      "item": {
+        "title": "Challenges in Red Teaming AI Systems \\ Anthropic",
+        "url": "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.654756+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AIレッドチーム手法を公開。8つの実践手法を詳解。\n\nAI安全性テストの標準化に向けた実務ガイド。専門家連携からクラウドソーシングまで、効果と課題を分析。\n\nhttps://www.anthropic.com/news/challenges-in-red-teaming-ai-systems\n\n💡 ポイント\n・実務で使える8つのレッドチーム手法を公開\n・各手法の利点と課題を実データで比較\n・標準化されていない現状の問題を指摘\n\n1. 専門家連携型のテスト\n・Trust & Safety分野でPolicy Vulnerability Testingを実施\n・Thornと児童安全、ISDと選挙の健全性で協力\n・複雑な文脈を理解した深い評価が可能\n\n2. 自動化とクラウドソース\n・言語モデルを使った自動レッドチーム\n・一般的なリスク検出にクラウドソーシング活用\n・効率性と規模の拡大を両立\n\n3. 新しいモダリティへの対応\n・マルチモーダルシステムのテスト手法\n・地域特有のリスクに対応する多言語テスト\n・国家安全保障リスクの評価手法を開発\n\nAI開発企業、政策立案者、テスト組織向けの実践的なガイド。モデル能力の向上に備え、今から標準化を進める必要性を強調。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "77812681-9c0d-4c03-ba78-ac0033f8cdc1",
+      "created_at": "2026-02-18T01:19:56.670498+00:00",
+      "item": {
+        "title": "Testing and mitigating elections-related risks \\ Anthropic",
+        "url": "https://www.anthropic.com/news/testing-and-mitigating-elections-related-risks",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.670484+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、選挙関連リスクのテスト手法を公開\n\n専門家による詳細テストと大規模自動評価を組み合わせ、選挙への悪用や誤情報を防ぐ。評価ツールの一部をオープンソース化し、業界全体の安全性向上を支援。\n\nhttps://www.anthropic.com/news/testing-and-mitigating-elections-related-risks\n\n💡 ポイント\n・専門家と協力した「Policy Vulnerability Testing」で詳細評価\n・自動評価で大規模にモデル挙動を測定\n・選挙管理、候補者の公平性、悪用防止を重点検証\n\n1. テストプロセス\n・外部専門家との協働で政策違反を検証\n・非対抗的質問から敵対的試行まで段階的テスト\n・結果を基に対策を優先順位付け\n\n2. 反復的改善サイクル\n・定性評価と定量評価を組み合わせ\n・ポリシー更新、ツール改善、モデル調整で対応\n・再テストで効果を測定し継続改善\n\n3. 業界への貢献\n・開発した評価ツールを公開\n・他社の選挙安全対策を支援\n・2024年世界選挙に向けた取り組み",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "4d4ebe7f-654c-43eb-8919-cb0edfd957b1",
+      "created_at": "2026-02-18T01:19:56.686325+00:00",
+      "item": {
+        "title": "Introducing Claude to Canada \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-claude-to-canada",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.686312+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicのAI「Claude」がカナダで利用可能に\n\nWeb版、iOSアプリ、API、Team planの全サービスが本日から提供開始。Proプランは月額CA$28+税。\n\nhttps://www.anthropic.com/news/introducing-claude-to-canada\n\n💡 ポイント\n・claude.aiのWeb版が利用可能\n・iOSアプリも同時提供開始\n・API経由での組み込みに対応\n\n1. 提供サービス\n・Claude.ai（Web版）\n・Claude iOSアプリ（Apple App Store）\n・Claude API（開発者向け）\n・Claude Team plan（チーム向けワークスペース）\n\n2. 料金プラン\n・Pro: CA$28+税/月（無料版の5倍の使用量、全モデル利用可）\n・Team: CA$42+税/ユーザー/月（最小5席）\n・Claude 3 Opus、Sonnet、Haikuの全モデルに対応",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ef304150-3350-4ff7-8972-fd7192703f55",
+      "created_at": "2026-02-18T01:19:56.702128+00:00",
+      "item": {
+        "title": "Jay Kreps appointed to Anthropic's Board of Directors \\ Anthropic",
+        "url": "https://www.anthropic.com/news/jay-kreps-appointed-to-board-of-directors",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.702115+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Confluent創業者を取締役に選任\n\nデータインフラの第一人者Jay Krepsが取締役会に参加。エンタープライズ事業の拡大に向け、データ駆動型プロダクト開発を強化する体制を構築。\n\nhttps://www.anthropic.com/news/jay-kreps-appointed-to-board-of-directors\n\n💡 ポイント\n・Apache Kafka開発者として知られるJay Krepsが参画\n・データインフラとOSS開発の知見を活用\n・Long-Term Benefit Trustが選任\n\n1. Jay Krepsの経歴\n・Confluentの共同創業者兼CEO\n・Apache Kafkaの共同開発者\n・大規模データ処理システムの構築実績\n\n2. 取締役会の体制\n・Spark CapitalのYasmin Razavi\n・共同創業者Dario Amodei（CEO）\n・共同創業者Daniela Amodei（President）\n・Jay Kreps（新任）\n\n3. 今後の方向性\n・エンタープライズ顧客基盤の拡大\n・データ駆動型プロダクト体験の構築\n・責任あるAI開発の継続",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "19e618da-d084-4438-90dd-8fce4eb8f8f3",
+      "created_at": "2026-02-18T01:19:56.717835+00:00",
+      "item": {
+        "title": "Golden Gate Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/golden-gate-claude",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.717822+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claude内部の「概念」を直接操作する技術を公開\n\n研究デモで、Claudeに「ゴールデンゲートブリッジ」の概念を強化。10ドルの使い道を聞くと橋の通行料を提案し、恋愛小説を書かせると橋が主役に。\n\nhttps://www.anthropic.com/news/golden-gate-claude\n\n💡 ポイント\n・特定の概念を強化・弱化できる新技術\n・プロンプトではなくニューラルネットワークを直接操作\n・安全性向上への応用を目指す\n\n1. 技術の仕組み\n・Claude内部で特定概念に対応するニューロンの組み合わせを特定\n・その活性化の強度を調整可能\n・数百万の概念を発見・マッピング\n\n2. デモの内容\n・「ゴールデンゲートブリッジ」概念を強化したClaude\n・あらゆる質問の回答に橋の要素が混入\n・24時間限定で一般公開（現在は終了）\n\n3. 従来手法との違い\n・システムプロンプトによる指示ではない\n・ファインチューニングとも異なる\n・モデル内部の活性化を直接変更する「外科的」な手法\n\n4. 今後の展開\n・危険なコードや犯罪活動に関連する概念の抑制\n・欺瞞行動の防止\n・AIの安全性向上に応用予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7b3be624-b7cc-4861-85e8-ffb6029f4a8f",
+      "created_at": "2026-02-18T01:19:56.733594+00:00",
+      "item": {
+        "title": "Krishna Rao joins Anthropic as Chief Financial Officer \\ Anthropic",
+        "url": "https://www.anthropic.com/news/krishna-rao-joins-anthropic",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.733581+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicにKrishna RaoがCFOとして参加。AirbnbのIPOを主導した経験を持つ財務リーダー。\n\n20年近い戦略財務のキャリアを持ち、Airbnbで100億ドル超の資金調達とIPOを主導した実績がある。\n\nhttps://www.anthropic.com/news/krishna-rao-joins-anthropic\n\n💡 ポイント\n・Fanatics Commerce CFOから転身\n・Airbnb在籍時にCOVID-19対応とIPOを経験\n・エンタープライズ展開と国際展開を加速\n\n1. 経歴の特徴\n・Cedar（医療決済プラットフォーム）でCFO\n・Airbnbで財務・事業開発のグローバル責任者\n・Blackstoneでプライベートエクイティ投資家\n・Bain & Companyで戦略コンサルタント\n・Yale Law SchoolとHarvard Collegeで学位取得\n\n2. Anthropicでの役割\n・財務戦略と業務運営を統括\n・エンタープライズ事業の成長を支援\n・国際展開の財務基盤を構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c86a690e-da8e-4acc-b463-537d2656fcf4",
+      "created_at": "2026-02-18T01:19:56.749553+00:00",
+      "item": {
+        "title": "Reflections on our Responsible Scaling Policy \\ Anthropic",
+        "url": "https://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.749539+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI安全性方針「RSP」の実装状況を公開\n\n昨年発表したResponsible Scaling Policyの運用から得た知見を共有。「レッドライン能力」の特定とテスト、対応基準の明確化を進める。\n\nhttps://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy\n\n💡 ポイント\n・catastrophic risksに対する明確な方針が組織の優先順位を構造化\n・研究の不確実性と具体的要件のバランスが課題\n・原子力、バイオセキュリティ等の既存リスク管理手法を応用\n\n1. RSPの5つの柱\n・レッドライン能力（許容できないリスク）の特定と公開\n・フロンティアリスク評価による能力テスト\n・ASL-3基準の開発と実装\n・必要に応じた学習・デプロイの一時停止\n・次のリスクレベル（ASL-4）への拡張\n\n2. 実装から得た知見\n・プロジェクトの優先順位付けと議論の枠組みを提供\n・重要な依存関係や課題の早期発見に貢献\n・自主的取り組みから業界標準、規制への移行を目指す",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "2d41dbfb-b589-4b02-92cc-02dd4f169577",
+      "created_at": "2026-02-18T01:19:56.765284+00:00",
+      "item": {
+        "title": "Mike Krieger joins Anthropic as Chief Product Officer \\ Anthropic",
+        "url": "https://www.anthropic.com/news/mike-krieger-joins-anthropic",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.765271+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Instagram共同創業者のMike Kriegerが、AnthropicのCPOに就任。\n\n10億ユーザー規模のプロダクト開発経験を持つKrieger氏が、Claudeの製品開発を統括する。\n\nhttps://www.anthropic.com/news/mike-krieger-joins-anthropic\n\n💡 ポイント\n・Instagram共同創業者＆元CTO\n・エンジニアリングチーム450人超を統率\n・10億ユーザー超への拡大を実現\n\n1. Mike Kriegerの経歴\n・Instagram共同創業者・CTO\n・10億ユーザー超への成長を牽引\n・エンジニアリングチーム450人超を育成\n・パーソナライズニュースアプリArtifact創業（Yahoo傘下）\n\n2. Anthropicでの役割\n・CPO（最高プロダクト責任者）に就任\n・製品エンジニアリング、プロダクト管理、デザインを統括\n・Claudeのエンタープライズ展開を加速\n・ハンズオンコーディングから製品ビジョンまで幅広い知見を活用",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7700e7cf-e3e9-48d6-ab04-59e256103992",
+      "created_at": "2026-02-18T01:19:56.781014+00:00",
+      "item": {
+        "title": "Claude is now available in the EU \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-europe",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.780997+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "ClaudeがEU全域で利用可能に。ブラウザ版・iOS版・Teamプラン対応。\n\n欧州ユーザーはClaude.ai、iOSアプリ、Team版を本日から利用できる。仏独西伊語に対応し、Pro版は月18ユーロ（VAT別）から。\n\nhttps://www.anthropic.com/news/claude-europe\n\n💡 ポイント\n・欧州の主要言語に強い理解力と流暢性\n・ブラウザとモバイルで同じ操作感\n・Team版は月28ユーロ/ユーザー（最低5席、VAT別）\n\n1. 提供サービス\n・Claude.ai: 次世代AIアシスタントのWeb版\n・Claude iOSアプリ: モバイル版（無料）\n・Claude Teamプラン: ビジネス向けセキュア版\n\n2. 料金体系\n・無料版: Claude.ai・iOSアプリ\n・Pro版: 月18ユーロ + VAT（Claude 3 Opus含む）\n・Team版: 月28ユーロ/ユーザー + VAT（5席以上）\n\n今年初めのClaude API欧州提供に続く展開。仏独西伊語での対話に対応し、Claude 3モデルファミリーの高度な機能を欧州全域に提供。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "92dd7b8d-032d-4552-9210-1bc995076d5a",
+      "created_at": "2026-02-18T01:19:56.800834+00:00",
+      "item": {
+        "title": "Updating our Usage Policy \\ Anthropic",
+        "url": "https://www.anthropic.com/news/updating-our-usage-policy",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.800820+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Usage Policy更新を発表。選挙の公正性、高リスク用途への対応を強化。\n\nAIの実用化が進む中、明確なルール作りと安全対策を追加。6月6日から施行。\n\nhttps://www.anthropic.com/news/updating-our-usage-policy\n\n💡 ポイント\n・政策名を「Acceptable Use Policy」から「Usage Policy」に変更\n・選挙関連の利用制約を明確化\n・医療・法律など高リスク用途に安全措置を義務化\n\n1. ポリシーの再構成\n・「禁止用途」と「禁止ビジネス」を統合\n・全ユーザー共通の「Universal Usage Standards」に一本化\n・企業・個人問わず適用されるルールを明確化\n\n2. 選挙関連の規制強化\n・特定候補者や政党の支持活動を明示的に禁止\n・投票依頼や資金集めへの利用も対象\n・選挙法や候補者情報の誤情報生成を禁止\n・投票機へのアクセスや開票妨害も対象に\n\n3. 高リスク用途への新要件\n・医療判断や法的助言に使う場合、追加の安全措置が必須\n・専門知識が必要な意思決定への利用を規制\n・組織に対して安全対策の実装を義務付け\n\n4. 利用対象の拡大\n・18歳未満向けサービスでのAPI利用を条件付きで許可\n・試験対策や学習支援など教育分野での活用を想定\n・AI利用の開示と安全機能の実装が条件\n・法執行機関の利用可能国を拡大（コールセンター、文書要約等）\n\n5. プライバシー保護の明確化\n・個人・グループの追跡や標的化を禁止\n・生体データ分析による特性推定を明示的に禁止\n・既存ポリシーをより具体的な表現に更新",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8267922e-217f-47df-a9da-bed65561e834",
+      "created_at": "2026-02-18T01:19:56.816811+00:00",
+      "item": {
+        "title": "Aligning on child safety principles \\ Anthropic",
+        "url": "https://www.anthropic.com/news/child-safety-principles",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.816797+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、児童保護の原則を表明。CSAM対策を明文化。\n\nThorn・All Tech Is Humanと連携し、生成AI分野での児童性的虐待対策を強化。具体的な技術実装と運用指針を公開。\n\nhttps://www.anthropic.com/news/child-safety-principles\n\n💡 ポイント\n・CSAM（児童性的虐待画像）の検出・報告体系を整備\n・学習データから有害コンテンツを除外する仕組み\n・NCMEC（全米行方不明・被搾取児童センター）への通報を実施\n\n1. 開発段階の対策\n・学習データからCSAM/CSEMを除外\n・専門家と連携したレッドチーム演習を実施\n・児童保護に特化したモデル開発ポリシーを策定\n\n2. 運用段階の対策\n・入出力での有害コンテンツ検出システム\n・ユーザー通報機能の実装\n・段階的デプロイメントで悪用を早期発見\n\n3. 継続的な維持・改善\n・NCMECへの報告時に生成AI注釈を付与\n・AI生成画像の改ざん検出ツールへの投資\n・OSINT手法で悪用パターンを監視\n\nClaudeは現在マルチモーダル出力に非対応。利用規約でも児童搾取関連コンテンツを全面禁止。白書「Safety by Design for Generative AI」で詳細な技術仕様を公開。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "21bfb145-b10f-47ef-9a74-b7ae360ce74a",
+      "created_at": "2026-02-18T01:19:56.833677+00:00",
+      "item": {
+        "title": "Third-party testing as a key ingredient of AI policy \\ Anthropic",
+        "url": "https://www.anthropic.com/news/third-party-testing",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.833662+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AIの第三者テスト体制を政策提言\n\nフロンティアAIシステムの安全性検証には、独立した第三者によるテスト体制が必要。選挙の完全性、有害な差別、国家安全保障上の悪用リスクに対応。\n\nhttps://www.anthropic.com/news/third-party-testing\n\n💡 ポイント\n・Claude等の大規模生成AIには既存の業界別規制では対応困難\n・計算量の多い一部システムのみが対象（小規模企業への過度な負担を回避）\n・各国が共通基準を開発し、相互承認の枠組みで連携\n\n1. 第三者テスト体制の必要性\n・フロンティアAIは「万能マシン」として設計され、無数の用途に適応\n・意図的・偶発的な社会的被害の防止が目的\n・より強力なシステムには、より包括的なテスト手順が必要\n\n2. 効果的なテスト体制の要件\n・AIシステムへの信頼を高める\n・広く信頼される行動測定・悪用可能性のテスト\n・正当性のある第三者による監査の実施\n・適用範囲を厳密に限定（大多数のAIシステムは対象外）\n\n3. 政策的位置づけ\n・最終的には法的要件になる見込み\n・業界別規制を補完し、より一般的な政策アプローチの基盤を構築\n・今後数年で基準を反復的に改善",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "75089881-47dc-4242-b677-c2a5fb7d6b3b",
+      "created_at": "2026-02-18T01:19:56.849796+00:00",
+      "item": {
+        "title": "Accenture, AWS, Anthropic Collaboration \\ Anthropic",
+        "url": "https://www.anthropic.com/news/accenture-aws-anthropic",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.849783+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Accenture、AWS、Anthropicが協業。規制業界向けAI導入を支援。\n\n1400人のエンジニアがClaude専門家として育成され、企業のAI戦略を概念から実装まで一貫サポート。\n\nhttps://www.anthropic.com/news/accenture-aws-anthropic\n\n💡 ポイント\n・規制の厳しい業界でも安全にAI導入が可能\n・企業データでモデルをファインチューニング\n・データプライバシーとセキュリティを確保\n\n1. 協業の内容\n・Accentureの1400人のエンジニアをClaude専門家として育成\n・Amazon BedrockとSageMakerを通じたモデル展開を支援\n・企業独自データでのファインチューニングに対応\n\n2. 実績事例\n・ワシントンD.C.保健局向けチャットボット「Knowledge Assist」を開発\n・英語とスペイン語で住民からの健康関連の質問に対応\n・自然言語で素早く正確な回答を提供",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ac00b1ab-cff8-4d66-9641-2e1fbd770462",
+      "created_at": "2026-02-18T01:19:56.865762+00:00",
+      "item": {
+        "title": "Claude 3 models on Vertex AI \\ Anthropic",
+        "url": "https://www.anthropic.com/news/google-vertex-general-availability",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.865749+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3がGoogle Cloud Vertex AIで正式提供開始\n\nAnthropicのClaude 3 HaikuとSonnetが、Google CloudのVertex AIで一般提供を開始。企業は既存のクラウド環境でAIを活用可能に。\n\nhttps://www.anthropic.com/news/google-vertex-general-availability\n\n💡 ポイント\n・既存のGoogle Cloud環境でデータ管理が完結\n・エンタープライズグレードのセキュリティとプライバシー\n・運用コストと複雑性を削減\n\n1. 提供モデル\n・Claude 3 Haiku: 高速処理に最適\n・Claude 3 Sonnet: インテリジェンスとコストのバランス\n・Claude 3 Opus: 数週間以内に提供予定\n\n2. 導入事例: Quora\n・PoeアプリでClaude統合済み\n・毎日数百万件のメッセージを処理\n・創作や画像理解で高評価\n・自然な会話体験を実現\n\n3. 企業のメリット\n・データガバナンスの簡素化\n・アクセス権限の一元管理\n・プロトタイプから本番環境まで迅速に展開\n\n開始方法: Vertex AIのModel Garden consoleから選択するだけ。Google Cloudユーザーなら環境構築不要で即座に利用可能です。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "7e441731-ae94-4c80-a7d7-d30b4d85b9f4",
+      "created_at": "2026-02-18T01:19:56.881713+00:00",
+      "item": {
+        "title": "Claude 3 Haiku: our fastest model yet \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-haiku",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.881700+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3 Haikuがリリース。最速＆低コストモデル。\n\n毎秒21,000トークン（約30ページ）を処理。同クラスの3倍速で、大量ドキュメント分析やカスタマーサポートに最適。\n\nhttps://www.anthropic.com/news/claude-3-haiku\n\n💡 ポイント\n・同クラスで3倍の処理速度を実現\n・1ドルで最高裁判例400件を分析可能\n・SonnetやOpusと並んでAPI提供開始\n\n1. 速度と価格\n・毎秒21,000トークン（約30ページ）処理\n・入力:出力が1:5の価格設定\n・同性能帯の他モデルの半額\n\n2. 活用シーン\n・大量の契約書や法的文書の分析\n・リアルタイムのチャット応答\n・複数の小タスクを並行実行\n\n3. セキュリティ\n・エンタープライズグレードの安全性\n・継続的なシステム監視を実施\n・定期的なセキュリティ監査を実施\n\nClaude Proユーザーはclaude.aiで、開発者はAPIで今日から利用可能。Amazon Bedrock対応済み、Google Cloud Vertex AIは近日対応予定。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8d477e18-2aa3-4fe9-904d-07aa7a58725e",
+      "created_at": "2026-02-18T01:19:56.897547+00:00",
+      "item": {
+        "title": "Introducing the next generation of Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-family",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.897534+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 3ファミリー、3モデル同時リリース\n\nAnthropicが新世代モデル「Claude 3」を発表。Opus、Sonnet、Haikuの3モデルで用途に応じた選択が可能に。\n\nhttps://www.anthropic.com/news/claude-3-family\n\n💡 ポイント\n・Opus: 最高性能、ベンチマークでGPT-4を上回る\n・Sonnet: Claude 2比で2倍高速化、バランス型\n・Haiku: 最速、10kトークン文書を3秒で処理\n\n1. 性能向上\n・MMLU、GPQA等の主要ベンチマークでトップスコア\n・数学、推論、コード生成で大幅改善\n・スペイン語、日本語、フランス語対応強化\n\n2. 実用性の向上\n・画像認識機能を標準搭載（写真、グラフ、図表に対応）\n・過度な拒否応答を削減、文脈理解が向上\n・回答精度が2倍に改善、ハルシネーション減少\n\n3. 提供状況\n・OpusとSonnetは159カ国で利用可能\n・claude.aiとClaude APIで提供開始\n・Haikuは近日公開予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f20b982e-843d-4947-8137-e8c0f80213d1",
+      "created_at": "2026-02-18T01:19:56.913374+00:00",
+      "item": {
+        "title": "Prompt engineering for business performance \\ Anthropic",
+        "url": "https://www.anthropic.com/news/prompt-engineering-for-business-performance",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.913361+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude、プロンプトで精度向上とコスト削減を実現\n\nAnthropicが企業向けプロンプトエンジニアリングの実践手法を公開。Fortune 500企業がカスタマーサポート精度を改善した事例も紹介。\n\nhttps://www.anthropic.com/news/prompt-engineering-for-business-performance\n\n💡 ポイント\n・ハルシネーション率を削減し、出力精度を向上\n・無駄なやり取りを減らし、運用コストを削減\n・一貫性のあるトーン・品質を維持\n\n1. 効果的なプロンプトがもたらす4つの価値\n・精度: ハルシネーションのリスクを低減\n・一貫性: 品質・形式・トーンの統一\n・有用性: 特定の業界・ペルソナに最適化\n・コスト削減: 大規模運用時の効率化\n\n2. 実務で使える3つのテクニック\n・ステップバイステップ: 「Think step by step」で論理的推論を促進\n・Few-shot: 具体例とエッジケースで期待値を明示\n・明確な指示: 新人に説明するように詳細に記述\n\n3. Fortune 500企業の活用事例\n・複雑な顧客質問に高速・正確に回答\n・カスタマーサポートの品質を向上\n・ブランドに沿った一貫した対応を実現\n\nプロンプトエンジニアリングは科学的アプローチが重要。テスト・反復・改善のサイクルで最適化を進めることで、AI活用の効果を最大化できます。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d73ae370-2464-4321-ae35-39f123a5c738",
+      "created_at": "2026-02-18T01:19:56.929209+00:00",
+      "item": {
+        "title": "Preparing for global elections in 2024 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/preparing-for-global-elections-in-2024",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.929197+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、2024年選挙に向けた対策を公開\n\n世界人口の半数以上が投票する2024年。Anthropicは選挙でのAI悪用防止に向け、昨年7月から準備を進めてきた具体策を発表。\n\nhttps://www.anthropic.com/news/preparing-for-global-elections-in-2024\n\n💡 ポイント\n・政治キャンペーンでのClaude利用を禁止\n・選挙関連の誤情報や偏向を検証\n・投票情報の問い合わせは信頼できる情報源へ誘導\n\n1. ポリシーの実装と執行\n・政治キャンペーンやロビー活動での使用を禁止\n・候補者になりすますチャットボット作成は不可\n・ターゲティング広告への利用も制限\n・自動システムで誤情報や影響工作を検知\n・違反時は警告、悪質な場合はアカウント停止\n\n2. レッドチーム検証を実施\n・2023年から継続的にテストを実施\n・候補者や選挙制度に関する質問への応答を検証\n・投票妨害などAUP違反プロンプトへの耐性をテスト\n・政治的公平性を定量評価\n・有害な選挙関連質問への拒否率を測定\n\n3. 正確な情報提供\n・米国では選挙関連の質問を検知\n・Democracy WorksのTurboVoteへ誘導\n・ハルシネーションのリスクがある分野では積極的に外部へ\n・数週間以内にポップアップ機能を展開予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "e284bcd1-7e6a-4492-abf1-8c26cf3100bd",
+      "created_at": "2026-02-18T01:19:56.945109+00:00",
+      "item": {
+        "title": "Expanded legal protections and improvements to our API \\ Anthropic",
+        "url": "https://www.anthropic.com/news/expanded-legal-protections-api-improvements",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.945096+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、著作権侵害の防御を約束。API利用者を全面保護へ。\n\nClaude API利用者が生成した出力について、著作権侵害訴訟が起きた場合、Anthropicが防御費用と和解金・判決費用を負担する新規約を発表。\n\nhttps://www.anthropic.com/news/expanded-legal-protections-api-improvements\n\n💡 ポイント\n・顧客は生成物の所有権を保持\n・著作権侵害の訴訟リスクから保護\n・2024年1月から適用開始\n\n1. 新規約の詳細\n・Claude APIは2024年1月1日から適用\n・Amazon Bedrock経由は1月2日から\n・商用利用での安心感が大幅に向上\n\n2. Messages API（ベータ版）\n・プロンプト構築のミスを早期発見\n・メッセージ形式で対話履歴を管理\n・従来の文字列結合方式から脱却\n\n【変更例】\n旧形式: 複雑な文字列結合でミスが発生しやすい\n新形式: role/content形式で構造化、エラー検出が容易\n\n3. 今後の展開\n・関数呼び出し機能を近日追加予定\n・Claude APIのアクセス拡大を計画\n・構造化APIによる新機能を順次展開",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "42bbabe1-13f1-465f-957e-83c3622bf8ff",
+      "created_at": "2026-02-18T01:19:56.961083+00:00",
+      "item": {
+        "title": "Introducing Claude 2.1 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-2-1",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.961070+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 2.1に200Kトークン対応とハルシネーション半減を実装。\n\nAnthropicがClaude 2.1を発表。コンテキストウィンドウを200K（約500ページ）に拡張し、誤情報出力を2.0比で50%削減した。\n\nhttps://www.anthropic.com/news/claude-2-1\n\n💡 ポイント\n・200Kトークン＝約15万語、500ページ分の文書を処理可能\n・ハルシネーション率が従来比で2分の1に改善\n・Tool Use機能でAPI連携やデータベース検索が可能に\n\n1. コンテキストウィンドウの拡大\n・200Kトークン対応で業界最長クラスを実現\n・コードベース全体、財務諸表、学術論文を一度に処理\n・要約、Q&A、トレンド予測、複数文書の比較が可能\n・処理時間は数分（従来は人手で数時間の作業量）\n\n2. 精度の大幅向上\n・誤情報出力が前バージョン比で50%減少\n・不確実な質問に対し「わからない」と正直に回答\n・法的文書の理解で誤答が30%減少\n・文書内容の誤認識が3-4倍減少\n\n3. Tool Use機能（ベータ）\n・外部APIやデータベースとの連携が可能\n・計算機能の利用で複雑な数値処理に対応\n・自然言語をAPI呼び出しに変換\n・Web検索や社内データベース検索を実行\n・製品推薦やEC購入支援などの実装が可能\n\nclaude.aiとAPI経由で利用可能。価格も見直され、コスト効率が向上。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "109760f6-511f-4393-bcb1-424e5fc3dcd6",
+      "created_at": "2026-02-18T01:19:56.977674+00:00",
+      "item": {
+        "title": "Thoughts on the US Executive Order, G7 Code of Conduct, and Bletchley Park Summit \\ Anthropic",
+        "url": "https://www.anthropic.com/news/policy-recap-q4-2023",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.977660+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、米・G7・英の3つのAI政策を評価\n\n米国の大統領令、G7行動規範、英国AI安全サミットについて、Claude開発元が見解を公表。NISTの新評価や国際協力の進展を歓迎。\n\nhttps://www.anthropic.com/news/policy-recap-q4-2023\n\n💡 ポイント\n・1週間で3つの主要AI政策イベントが実現\n・米国はNISTに評価開発を指示\n・G7は企業の自主規範を国際基準化\n\n1. 米国大統領令（100ページ超）\n・NISTがモデル評価基準を開発\n・国立AI研究リソース（NAIRR）のパイロット開始\n・各政府機関にChief AI Officerを設置\n\n2. G7国際行動規範\n・ホワイトハウスの自主コミットメントを拡張\n・リスク評価、情報共有、透明性措置を規定\n・国際的なベストプラクティスの基盤に\n\n3. 英国AI安全サミット\n・中国を含む28カ国が「ブレッチリー宣言」に署名\n・国際的なAI研究評価パネルの設置に合意\n・AnthropicのCEOが責任あるスケーリングポリシーを説明\n\nAnthropicの姿勢:\n・3つの政策すべてを支持\n・G7規範はホワイトハウスコミットメントと併せて実践\n・規制の代替ではなく、規制のプロトタイプとして提案",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "959d43a7-046c-4aaa-9bff-1089ddc396a6",
+      "created_at": "2026-02-18T01:19:56.993720+00:00",
+      "item": {
+        "title": "Dario Amodei’s prepared remarks from the AI Safety Summit on Anthropic’s Responsible Scaling Policy \\ Anthropic",
+        "url": "https://www.anthropic.com/news/uk-ai-safety-summit",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:56.993707+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI安全性の「責任あるスケーリングポリシー」を発表\n\nCEOダリオ・アモデイが英国AI安全サミットで説明。AIの能力が予測不能に進化する中、危険な機能の出現を監視し、適切に対応する新しい安全基準を提示。\n\nhttps://www.anthropic.com/news/uk-ai-safety-summit\n\n💡 ポイント\n・生物兵器製造など危険なスキルの獲得時期は予測困難\n・バイオセーフティレベル（BSL）を参考にした段階的安全基準\n・危険な機能が出現したら、対策完了まで開発・展開を停止\n\n1. AI安全レベル（ASL）の仕組み\n・ASL-1：チェスAIなど、リスクがほぼゼロ\n・ASL-2：現在のレベル。幅広いリスクはあるが壊滅的な能力はない\n・ASL-3：CBRN分野で悪用可能なレベル。非国家主体による重み盗難を防ぐ強力なセキュリティが必須\n・ASL-4：自律的に人間の制御を逃れるリスクを含む（ASL-3到達時に厳密定義）\n\n2. 実装される安全対策\n・定期的な危険能力テストで盲目的な開発を防止\n・ASL-2では外部レッドチーム、モデルカード、強固なセキュリティを実装\n・ASL-3では、専門家のレッドチームでもCBRN関連情報を引き出せない設計が必須\n\n3. 業界への影響\n・Anthropicは大手AI企業として初めてRSPを公開（2023年9月）\n・年間8倍で成長する計算能力に対応した監視体制\n・危険な機能が出現するまで「待つ」のではなく、能力に応じて「止める」アプローチ",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ac903426-8291-4f5d-ad59-321e19be0f51",
+      "created_at": "2026-02-18T01:19:57.009812+00:00",
+      "item": {
+        "title": "Expanding access to safer AI with Amazon \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-amazon",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.009799+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Amazonから最大40億ドルの投資を獲得\n\nClaude 2をAWS基盤で展開し、エンタープライズ向けAI活用を加速。AWS TrainiumとInferentiaでモデル訓練を最適化する戦略を発表。\n\nhttps://www.anthropic.com/news/anthropic-amazon\n\n💡 ポイント\n・AWS Bedrockで安全なモデルカスタマイズが可能に\n・100,000トークンの長文処理で専門文書に対応\n・LexisNexisなど大手企業が導入済み\n\n1. 投資の詳細\n・Amazonが最大40億ドルを投資（少数株主）\n・AWSが主要クラウドプロバイダーに\n・Trainium/Inferentia チップでインフラ最適化\n\n2. Amazon Bedrockでの展開\n・Claude 2のカスタマイズと微調整に対応\n・Amazon開発者が生成AI機能を組み込み可能\n・金融、法務、コーディングなど専門分野に活用\n\n3. 導入事例\n・LexisNexis：法律文書の検索・要約・ドラフト作成\n・Bridgewater：投資分析アシスタント開発\n・Lonely Planet：旅程生成コストを80%削減\n\n4. 安全性への取り組み\n・AWSのクラウドセキュリティと連携\n・責任あるスケーリングポリシーを維持\n・GPAI、PAI、NISTなど業界団体に参画",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "dcca0eec-c160-4023-99d6-52e7bb3eb586",
+      "created_at": "2026-02-18T01:19:57.025829+00:00",
+      "item": {
+        "title": "Prompt engineering for Claude's long context window \\ Anthropic",
+        "url": "https://www.anthropic.com/news/prompting-long-context",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.025816+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeの長文処理、精度を上げる2つの技術\n\nAnthropicが10万トークン対応のClaude向けプロンプト技術を公開。数百ページの技術文書から正確に情報を引き出す手法を実証。\n\nhttps://www.anthropic.com/news/prompting-long-context\n\n💡 ポイント\n・政府文書を使った定量的ケーススタディ\n・Claude Instantでも高精度な情報抽出が可能に\n・プロンプト設計で回答精度が大幅改善\n\n1. 精度向上の2つの技術\n・回答前に関連する引用を抽出\n・他のセクションの正解例を補足\n・長文からの情報取得を最適化\n\n2. 評価方法の工夫\n・ランダム化コラージュ手法を採用\n・各セクションから5つの選択式問題を生成\n・訓練データ後の文書で評価の公平性を確保\n\n3. 効果的な質問生成のコツ\n・文書参照なしで答えられる質問を排除\n・正解が推測しやすい問題を回避\n・「この文書」など曖昧な表現を明確化\n\n4. 実装のポイント\n・Few-shot学習例を含むテンプレート使用\n・質問作成ガイドラインで詳細度を調整\n・全プロンプトテンプレートを公開中",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "d90d0ae3-c005-4fea-b96d-604334688ce4",
+      "created_at": "2026-02-18T01:19:57.042075+00:00",
+      "item": {
+        "title": "The Long-Term Benefit Trust \\ Anthropic",
+        "url": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.042062+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「長期利益信託」を導入。AI企業の新しいガバナンス形態。\n\n株主利益より人類の長期的利益を優先する仕組み。5名の独立受託者が取締役の過半数を選任・解任可能に。\n\nhttps://www.anthropic.com/news/the-long-term-benefit-trust\n\n💡 ポイント\n・財務的利害関係のない5名が意思決定に関与\n・将来的に取締役会の過半数を管理\n・Public Benefit Corporation（公益法人）と組み合わせ\n\n1. 従来の企業統治の課題\n・取締役は株主に選任・解任される\n・株主の財務的利益を最優先する構造\n・一般市民の利益は反映されにくい\n\n2. AI特有のリスクへの対応\n・国家安全保障上のリスク\n・大規模な経済的混乱\n・人類への根本的な脅威\n・法規制が追いついていない現状\n\n3. 長期利益信託の特徴\n・独立した5名の受託者が運営\n・株式報酬なし（財務的利害なし）\n・取締役の選任・解任権限を段階的に拡大\n・最終的に取締役会の過半数を管理\n\n4. 導入の背景\n・AIは前例のない外部性を生む可能性\n・市場の失敗（外部性）への対応\n・株主利益と公共利益の調整\n・Anthropic創業時から開発",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "33b158ae-645c-4706-b499-6706395fef65",
+      "created_at": "2026-02-18T01:19:57.058983+00:00",
+      "item": {
+        "title": "Anthropic's Responsible Scaling Policy \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.058969+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「責任あるスケーリング方針」を公開。AI開発の安全性を段階的に管理。\n\nAIモデルの能力レベルに応じて、安全基準を段階的に厳格化する「ASL（AI Safety Levels）」フレームワークを導入した。\n\nhttps://www.anthropic.com/news/anthropics-responsible-scaling-policy\n\n💡 ポイント\n・米国のバイオセーフティ基準（BSL）をモデルに設計\n・現在のClaude含むLLMはASL-2に分類\n・より高度なモデルには厳格な安全テストを義務化\n\n1. ASLレベルの定義\n・ASL-1：壊滅的リスクなし（チェスAIなど）\n・ASL-2：危険な能力の初期兆候あり（現在のLLM）\n・ASL-3：重大な悪用リスクまたは自律行動の可能性\n・ASL-4以降：未定義（研究課題）\n\n2. 安全対策の実装\n・ASL-2：現行の安全基準（ホワイトハウスとの合意内容）\n・ASL-3：世界トップクラスのレッドチームによる敵対的テストを実施\n・安全基準を満たすまで、より強力なモデルの訓練を一時停止\n\n3. 開発への影響\n・Claudeの現在の使用には影響なし\n・安全問題の解決が次のレベルへの鍵\n・業界標準化で「安全性向上の競争」を促進",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "db5d146a-3e09-4880-961e-226378427948",
+      "created_at": "2026-02-18T01:19:57.075081+00:00",
+      "item": {
+        "title": "Anthropic partners with BCG \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-bcg",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.075068+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicとBCGが提携。Claude 2を企業向けに展開。\n\n戦略コンサルティング大手BCGの顧客企業が、Anthropicの生成AI「Claude 2」を直接利用可能に。業務効率化と責任あるAI活用を両立。\n\nhttps://www.anthropic.com/news/anthropic-bcg\n\n💡 ポイント\n・BCGが顧客企業へのAI導入を戦略的に支援\n・Constitutional AIで安全性を重視\n・BCG内でもClaude活用を開始\n\n1. 主な活用領域\n・ナレッジマネジメント\n・市場調査・需要予測\n・不正検出\n・レポート生成\n・ビジネス分析\n\n2. 既存の協力実績\n・国連でのAI活用支援\n・BCG内でのリサーチ分析に活用\n・データ分析の迅速化を実現\n\nBCG X責任者「効果と倫理の両立がAI活用の課題。Anthropicとの提携で、責任ある企業向けAIの新基準を設定し、安全性競争を推進する」",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "34d25911-dbbc-4b3c-bbf3-f5c9008b00f3",
+      "created_at": "2026-02-18T01:19:57.091177+00:00",
+      "item": {
+        "title": "Introducing Claude Pro \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-pro",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.091164+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、月額20ドルの「Claude Pro」提供開始\n\nClaude.aiの有料プラン。無料版の5倍のメッセージ送信が可能に。長文要約やコード生成で高い生産性を実現。\n\nhttps://www.anthropic.com/news/claude-pro\n\n💡 ポイント\n・月額20ドル（米国）、18ポンド（英国）\n・Claude 2を無料版の5倍利用可能\n・混雑時も優先アクセス\n\n1. 主な機能\n・研究論文の要約\n・契約書の分析\n・インタラクティブマップなどコード生成の反復作業\n・複数ファイルのアップロード対応\n\n2. 提供内容\n・無料版の5倍のメッセージ送信\n・トラフィック混雑時の優先アクセス\n・新機能への早期アクセス\n\n米国と英国で提供中。7月のClaude.ai公開以降、長いコンテキストウィンドウと高速な出力、複雑な推論能力が評価されていた。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c9df459e-de13-4e63-acd8-edef0e198efa",
+      "created_at": "2026-02-18T01:19:57.107384+00:00",
+      "item": {
+        "title": "SKT Partnership Announcement \\ Anthropic",
+        "url": "https://www.anthropic.com/news/skt-partnership-announcement",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.107371+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "SKT、Anthropicに1億ドル追加投資。通信業界向けClaudeを共同開発。\n\n韓国最大手通信事業者のSKTが商業パートナー兼戦略投資家として参画。カスタマーサポート、マーケティング等の通信業界特化モデルを構築。\n\nhttps://www.anthropic.com/news/skt-partnership-announcement\n\n💡 ポイント\n・通信業界の専門知識を活用したファインチューニング\n・韓国語、英語、日本語、スペイン語等の多言語対応\n・SKT専門家のフィードバックでClaudeを訓練\n\n1. 投資と提携内容\n・SKTが1億ドルを追加投資\n・SKTVCに続く2度目の投資\n・商業パートナーシップを締結\n\n2. 開発するモデル\n・通信業界向けにカスタマイズされたLLM\n・顧客サービス、マーケティング、営業に最適化\n・インタラクティブな消費者向けアプリにも対応\n\n3. ファインチューニングの手法\n・SKTの通信業界における専門知識を活用\n・業界トップクラスの人材の知見をスケール\n・業界特有の課題に最適化されたClaudeを構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9f2b27cc-5d9c-42c6-ae51-4a11d33e373d",
+      "created_at": "2026-02-18T01:19:57.123697+00:00",
+      "item": {
+        "title": "Releasing Claude Instant 1.2 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/releasing-claude-instant-1-2",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.123683+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude Instant 1.2がリリース。Claude 2の強みを取り込み、数学・コーディングで大幅向上。\n\nAnthropicがAPI経由で提供する高速・低価格モデルの最新版。数学評価で80.9%→86.7%、コーディングで52.8%→58.7%に改善。\n\nhttps://www.anthropic.com/news/releasing-claude-instant-1-2\n\n💡 ポイント\n・Claude 2の強みを実用ケースに統合\n・より長く構造化された応答を生成\n・幻覚の削減とセキュリティ向上\n\n1. 性能向上の詳細\n・GSM8K（数学）: 80.9% → 86.7%\n・Codex（コーディング）: 52.8% → 58.7%\n・推論・安全性の大幅改善\n・引用抽出・多言語対応の強化\n\n2. 実用面の改善\n・フォーマット指示への追従性向上\n・文書理解・テキスト分析の精度向上\n・対話・要約タスクでの性能改善\n・ジェイルブレイク耐性の強化\n\n3. 利用方法\n・Anthropic API経由で即座に利用可能\n・価格はAPI仕様ページで確認可能",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c4329133-4dcb-43bd-9126-97d6899bc053",
+      "created_at": "2026-02-18T01:19:57.139920+00:00",
+      "item": {
+        "title": "Frontier Threats Red Teaming for AI Safety \\ Anthropic",
+        "url": "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.139907+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「Frontier Threats Red Teaming」を実施。生物兵器設計など国家安全保障リスクを検証。\n\nAIモデルが生物兵器設計などの危険な情報を出力する能力を、生物安全保障の専門家と150時間以上かけて評価。リスクの緩和策も開発。\n\nhttps://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety\n\n💡 ポイント\n・国家安全保障に関わるAIリスクを専門家が評価\n・生物兵器など高度な脅威への対応を検証\n・リスク緩和策の開発も同時進行\n\n1. Red Teamingの実施方法\n・生物安全保障の専門家と協力\n・150時間以上のモデル評価を実施\n・脅威モデルの定義から着手\n・「jailbreak」手法も検証\n・自動評価ツールを開発\n\n2. 主な発見\n・AIモデルが近い将来、国家安全保障リスクを提示する可能性\n・危険な情報を出力する能力を確認\n・緩和策により大幅なリスク低減が可能\n・詳細は機密性が高く非公開\n\n3. 今後の取り組み\n・リスク特定と緩和策構築を拡大\n・政府や他の研究機関と知見を共有\n・独立した評価グループの増加を推奨\n・複数の脅威領域で評価を実施予定",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8eec0d91-6851-4d20-8c8d-d6333eceb4e4",
+      "created_at": "2026-02-18T01:19:57.156121+00:00",
+      "item": {
+        "title": "Frontier Model Security \\ Anthropic",
+        "url": "https://www.anthropic.com/news/frontier-model-security",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.156109+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、フロンティアAIモデルのセキュリティ基準を公開。\n\n国家安全保障レベルの脅威に対応するため、「2者承認制」など具体的な実装方法を提示。AI開発における新たなセキュリティ標準を提案。\n\nhttps://www.anthropic.com/news/frontier-model-security\n\n💡 ポイント\n・最先端AIモデルを「重要インフラ」として扱うべき\n・モデルの窃取・悪用を防ぐ具体的手法を提示\n・既存の製造・金融業界の基準をAI開発に適用\n\n1. 2者承認制の実装\n・本番環境へのアクセスは必ず同僚の承認が必要\n・時間制限付きアクセスと業務上の正当性確認\n・内部犯行リスクとサイバー攻撃の両方に対応\n\n2. セキュアな開発プロセス\n・NISTのSSDF（セキュアソフトウェア開発フレームワーク）を適用\n・SLSA（ソフトウェア成果物のサプライチェーンレベル）に準拠\n・モデル開発をソフトウェア開発と同等のセキュリティ基準で管理\n\n3. 政府との連携\n・AIセクターを重要インフラとして位置付け\n・政府調達や規制権限を活用した基準の義務化\n・まずは自主的取り組みから開始し、段階的に規制へ移行",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "459c7b01-7a1d-44ab-8662-130638370756",
+      "created_at": "2026-02-18T01:19:57.172405+00:00",
+      "item": {
+        "title": "Claude 2 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-2",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.172391+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claude 2が登場。入力10万トークン、コーディング能力が大幅向上。\n\nAnthropicが新モデルClaude 2を発表。司法試験で76.5%、Codex HumanEvalで71.2%を記録。\n\nhttps://www.anthropic.com/news/claude-2\n\n💡 ポイント\n・入力10万トークン対応で技術書1冊分を処理可能\n・コーディングスコアが56.0%→71.2%に向上\n・API価格はClaude 1.3と同額\n\n1. 性能の向上\n・司法試験（多肢選択）で76.5%を達成\n・GRE読解・ライティングで90パーセンタイル超え\n・GSM8k（数学問題）で88.0%を記録\n\n2. 実用性の強化\n・最大10万トークンの入力に対応\n・数千トークンの長文を一度に生成可能\n・Python コーディングテストで大幅改善\n\n3. 安全性の改善\n・有害出力の抑制が1.3の2倍に向上\n・広範なレッドチーム評価を実施\n・claude.aiで米国・英国で利用開始\n\nJasperやSourcegraphなど多数の企業が導入。特に長文・低レイテンシ用途で強みを発揮しています。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "84d6b397-b9d7-47af-80af-4f8adc0e9bd2",
+      "created_at": "2026-02-18T01:19:57.188973+00:00",
+      "item": {
+        "title": "Charting a Path to AI Accountability \\ Anthropic",
+        "url": "https://www.anthropic.com/news/charting-a-path-to-ai-accountability",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.188942+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AI評価の標準化を提案。リスクに応じた評価基準を。\n\nNTIAへの提出文書で、AI開発の説明責任と評価プロセスの確立を提言。大規模モデルの事前登録制度や第三者監査の導入を提案。\n\nhttps://www.anthropic.com/news/charting-a-path-to-ai-accountability\n\n💡 ポイント\n・評価手法の開発に研究資金を投入\n・モデル能力に応じたリスク評価基準\n・大規模学習の事前登録制度\n\n1. 評価の標準化\n・評価手法と結果の開示を企業に義務付け\n・NISTなどが業界標準を策定\n・厳格な能力評価と安全性評価を開発\n\n2. リスクベース評価\n・研究を通じてリスク閾値を設定\n・閾値以下：既存の安全基準で十分\n・閾値超過：展開を停止し、規制当局へ報告\n\n3. 事前登録制度\n・大規模学習の開始前に政府へ登録\n・モデル仕様、計算インフラ、安全計画を提出\n・機密情報として最高水準で保護\n\n4. 第三者監査\n・機械学習の深い知見を持つ監査人\n・知的財産を保護できるセキュリティ体制\n・技術的能力と守秘義務の両立",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "428f9c09-41c9-46ea-b267-24622aaee204",
+      "created_at": "2026-02-18T01:19:57.205317+00:00",
+      "item": {
+        "title": "Anthropic Raises $450 Million in Series C Funding to Scale Reliable AI Products \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-series-c",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.205304+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが4.5億ドルの資金調達。AI assistant「Claude」の開発加速へ。\n\nSpark Capital主導のシリーズC。Google、Salesforce Venturesなどが参加し、安全で信頼できるAIシステムの構築を支援。\n\nhttps://www.anthropic.com/news/anthropic-series-c\n\n💡 ポイント\n・総額4.5億ドルの大型調達\n・Claudeの製品展開を強化\n・AI安全性研究に注力\n\n1. 資金の使途\n・Claude APIと対話製品の改善\n・企業向けClaudeの展開支援\n・AI安全性研究の推進\n\n2. 技術開発\n・10万トークンのコンテキストウィンドウを実装\n・数百ページの資料を一度に分析可能\n・敵対的会話への対応力を向上\n\n3. 経営体制\n・Spark CapitalのYasmin Razaviが取締役に就任\n・Public Benefit指向のガバナンス構造を整備\n・世界クラスのチームを拡大中",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "37cd3291-1316-42ad-afb3-f671d7b34172",
+      "created_at": "2026-02-18T01:19:57.221926+00:00",
+      "item": {
+        "title": "Zoom Partnership and Investment in Anthropic \\ Anthropic",
+        "url": "https://www.anthropic.com/news/zoom-partnership-and-investment",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.221913+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Zoom、Anthropicと提携しClaudeを導入\n\n企業向けコラボレーション大手Zoomが、AnthropicのAIアシスタント「Claude」を活用した新製品開発を発表。Constitutional AIによる安全性重視のAI統合が実現。\n\nhttps://www.anthropic.com/news/zoom-partnership-and-investment\n\n💡 ポイント\n・Zoom Contact Centerに最初に統合予定\n・エージェントのパフォーマンス向上を実現\n・Zoom Venturesによる出資も実施\n\n1. 提携の特徴\n・複数AIモデルを組み合わせる「フェデレーテッドアプローチ」を採用\n・顧客ニーズに応じた柔軟なAI活用\n・安全性と実用性を両立\n\n2. 今後の展開\n・Contact Center製品で顧客体験を改善\n・職場での生産性向上を支援\n・信頼性とセキュリティを基盤にした製品開発",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "ede83ee1-a048-4c65-89f0-8b76a5691c3f",
+      "created_at": "2026-02-18T01:19:57.238575+00:00",
+      "item": {
+        "title": "Introducing 100K Context Windows \\ Anthropic",
+        "url": "https://www.anthropic.com/news/100k-context-windows",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.238562+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeのコンテキストが9Kから100Kトークンに拡大。約75,000語の処理が可能に。\n\n数百ページの資料を1分以内で分析。『グレート・ギャツビー』全文（72Kトークン）から改変箇所を22秒で発見。\n\nhttps://www.anthropic.com/news/100k-context-windows\n\n💡 ポイント\n・平均5時間以上かかる読解を1分以内で完了\n・複数文書からの情報検索が可能\n・ベクトル検索より高精度な回答を実現\n\n1. 実用例\n・財務諸表や研究論文の要約・分析\n・年次報告書から戦略リスクを評価\n・法案の長所・短所を分析\n・開発ドキュメントから技術的質問に回答\n・コードベース全体を読み込んでプロトタイプ作成\n\n2. パートナー活用事例\n・AssemblyAI: 6時間分の音声（58K語）を文字起こし\n・ポッドキャスト全体の要約とQ&A生成\n・動画デモ公開中\n\nAPI経由で利用可能。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "de149994-c3c0-40ce-be5c-fe64ccb27b04",
+      "created_at": "2026-02-18T01:19:57.255149+00:00",
+      "item": {
+        "title": "Claude’s Constitution \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claudes-constitution",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.255135+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、Claudeの「憲法」を公開\n\nAIの価値観を明示的に定義する「Constitutional AI」の原則が公開された。人間のフィードバックに頼らず、AIが自己改善する仕組み。\n\nhttps://www.anthropic.com/news/claudes-constitution\n\n💡 ポイント\n・AIがAIを評価する「Constitutional AI」の原則を公開\n・人間が不適切な出力を見る必要がなくなる\n・モデルの価値観が明示的で調整しやすい\n\n1. Constitutional AIとは\n・憲法に基づいてAIがAI出力を評価\n・有害な出力を避け、有用で正直な応答を生成\n・人間フィードバックより効率的にスケール\n\n2. 2つの訓練フェーズ\n・フェーズ1: モデルが自分の応答を批評・修正\n・フェーズ2: AI生成フィードバックで強化学習\n・敵対的入力に適切に対応しつつ有用性を維持\n\n3. 従来手法の課題を解決\n・人間が不快な出力を見る必要がない\n・複雑な応答にも対応可能\n・時間とコストを大幅に削減\n\n憲法の全文は記事内で公開されており、2026年1月に新版も発表されている。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "f68d6274-1084-4475-b3d7-4053803c8a80",
+      "created_at": "2026-02-18T01:19:57.271761+00:00",
+      "item": {
+        "title": "Partnering with Scale to Bring Generative AI to Enterprises \\ Anthropic",
+        "url": "https://www.anthropic.com/news/partnering-with-scale",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.271748+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicとScale、Claude導入で提携\n\n企業向けAI活用を支援するScaleのプラットフォームでClaudeが利用可能に。プロンプト最適化、モデル検証、AWS環境でのセキュアな運用を提供。\n\nhttps://www.anthropic.com/news/partnering-with-scale\n\n💡 ポイント\n・Scaleの専門家によるプロンプトエンジニアリング支援\n・AWS環境でエンタープライズグレードのセキュリティ確保\n・データベースやGoogle Driveなど既存データとの連携\n\n1. Scaleが提供する機能\n・Claude導入のための堅牢なデプロイ・管理機能\n・モデルパフォーマンスの検証と弱点の特定\n・Confluence、Outlook等のデータコネクタ\n\n2. Constitutional AIとの組み合わせ\n・AnthropicのConstitutional AIシステムを活用\n・企業が安全にGenerative AIアプリを構築可能\n・責任あるAI導入を支援",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9ca8eff6-c6c3-4e26-9eb5-b322e43fe5c1",
+      "created_at": "2026-02-18T01:19:57.288084+00:00",
+      "item": {
+        "title": "An AI Policy Tool for Today: Ambitiously Invest in NIST \\ Anthropic",
+        "url": "https://www.anthropic.com/news/an-ai-policy-tool-for-today-ambitiously-invest-in-nist",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.288071+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、NISTへの積極投資を政策提言として公開\n\nAI安全性の客観的評価に必要な測定基準の確立と標準化を目指す。急速に発展するAI技術に対し、既存の組織を活用した現実的なアプローチを提案。\n\nhttps://www.anthropic.com/news/an-ai-policy-tool-for-today-ambitiously-invest-in-nist\n\n💡 ポイント\n・新規規制機関ではなく、NIST（米国標準技術研究所）の拡充を提案\n・AI能力とリスクの客観的測定が効果的な規制の前提\n・すぐに実行可能で、既存の実績を基盤とする\n\n1. 提案の背景\n・AI開発の「一時停止」など様々な規制案が議論される中、より現実的な選択肢を提示\n・NISTは顔認証テストやAIリスク管理フレームワークなど、既に測定技術の実績あり\n・近年の予算停滞により、技術進歩に対応できていない\n\n2. 測定の重要性\n・AI システムは予測不可能な動作をする可能性\n・開発段階で全リスクを予測できない\n・広く合意された測定・評価手法が不足\n\n3. 投資の意義\n・測定技術の基礎研究を標準化\n・安全性評価の客観的基準を確立\n・技術革新と安全性の両立を実現",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "8c8b959f-8ac2-4e9b-b183-e3408033c63e",
+      "created_at": "2026-02-18T01:19:57.304735+00:00",
+      "item": {
+        "title": "Introducing Claude \\ Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-claude",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.304722+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、AIアシスタント「Claude」を発表\n\n対話型AIアシスタントで、要約・検索・執筆・コーディングなど幅広いタスクに対応。有害な出力が少なく、自然な会話が可能。\n\nhttps://www.anthropic.com/news/introducing-claude\n\n💡 ポイント\n・Notion、Quora、DuckDuckGoと提携\n・2つのバージョンを提供（高性能版と軽量版）\n・安全性と有用性を重視した設計\n\n1. 主な特徴\n・要約、検索、文章作成、Q&A、コーディングに対応\n・トーンや振る舞いの調整が可能\n・有害な出力を大幅に削減\n\n2. パートナー事例\n・Quora: Poeアプリで会話型AI機能を提供\n・Juni Learning: 生徒向けチューターボットに活用\n・Notion: Notion AIの文章作成・要約機能を強化",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "6284bbd3-8017-4e2b-bba2-8fa4ba472af0",
+      "created_at": "2026-02-18T01:19:57.321247+00:00",
+      "item": {
+        "title": "Core Views on AI Safety: When, Why, What, and How \\ Anthropic",
+        "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.321234+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが「AI安全性」に関する見解を公開。なぜ今、AIの安全性研究が急務なのか。\n\n同社は「今後10年でAIが産業革命に匹敵する影響をもたらす可能性がある」と予測。しかし、それが良い方向に進むかは不確実だという。\n\nhttps://www.anthropic.com/news/core-views-on-ai-safety\n\n💡 ポイント\n・AIの計算能力は年間10倍のペースで成長\n・数年以内に人間レベルの知的タスクを達成する可能性\n・現時点では安全なシステムを構築する方法が確立されていない\n\n1. なぜAI安全性が重要なのか\n・スケーリング則により、計算量の増加が性能向上に直結\n・システムが「有用で正直で無害」に振る舞う訓練方法が未確立\n・企業や国家間の競争により、信頼性の低いシステムが展開されるリスク\n\n2. Anthropicのアプローチ\n・複数の研究方向を並行して進める実証主義的手法\n・監督のスケーリング（scaling supervision）\n・メカニスティック解釈可能性（mechanistic interpretability）\n・プロセス指向学習の開発\n\n3. 重要な前提\n・AIの進歩は予測可能な指数関数的成長\n・訓練データ、計算能力、アルゴリズム改善が主要因\n・楽観的シナリオから困難なシナリオまで幅広く対応\n\nAnthropicは「Show, don't tell（語るより示す）」を掲げ、安全性研究の成果を継続的に公開。AI安全性研究への幅広い支援の必要性を訴えています。",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "9f4ab397-243e-47a7-bbc2-0604afc617c3",
+      "created_at": "2026-02-18T01:19:57.337989+00:00",
+      "item": {
+        "title": "Anthropic Partners with Google Cloud \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.337975+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "AnthropicがGoogle Cloudと提携。Claude開発に最先端GPUとTPU活用へ。\n\nAI安全性研究企業のAnthropicが、クラウドプロバイダーとしてGoogle Cloudを選択。AIシステムの訓練、スケール、展開に、最先端のGPUとTPUクラスターを活用する。\n\nhttps://www.anthropic.com/news/anthropic-partners-with-google-cloud\n\n💡 ポイント\n・AI安全性に注力するAnthropicの戦略的選択\n・Claude開発の基盤となるインフラ\n・Constitutional AIなど安全技術の実装環境を強化\n\n1. 提携の目的\n・Claudeをより多くのユーザーに提供\n・AIコンピューティングシステムの共同開発\n・必要なパフォーマンスとスケールを確保\n\n2. Anthropicの狙い\n・信頼性の高いAIプラットフォーム構築\n・解釈可能で制御しやすいAIシステム開発\n・安全で理解しやすいAI技術の展開",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "09cd7cb7-d669-47fc-be6d-655b6c24565b",
+      "created_at": "2026-02-18T01:19:57.354526+00:00",
+      "item": {
+        "title": "Anthropic Raises Series B to build steerable, interpretable, robust AI systems \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.354512+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropic、5.8億ドル調達。AI安全性研究を加速。\n\nAI安全性研究のAnthropicがシリーズBで5.8億ドルを調達。大規模AIモデルの安全性向上に向けた実験インフラを構築する。\n\nhttps://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai\n\n💡 ポイント\n・2021年創業、約40名体制（2022年4月時点）\n・FTX CEOのSam Bankman-Friedが主導\n・言語モデルの制御性と堅牢性の向上に注力\n\n1. 研究の焦点\n・小規模言語モデルの挙動を数学的に解析\n・大規模モデルのパターンマッチング動作を理解\n・人間の好みに沿ったモデル訓練用データセット公開\n\n2. 安全性への取り組み\n・「helpful and harmless」を実現する基盤技術を開発\n・強化学習でモデルの安全性をさらに改善\n・大規模モデルの性能急変と社会的影響を分析\n\n3. 今後の展開\n・機械学習システムのスケーリング特性を予測\n・大規模化で生じる能力と安全性課題を検証\n・政策面・社会的影響の研究チームを構築",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "3e7fc9b0-30e2-4ae2-86b0-803c0e3c9400",
+      "created_at": "2026-02-18T01:19:57.371159+00:00",
+      "item": {
+        "title": "Anthropic raises $124 million to build more reliable, general AI systems \\ Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems",
+        "source": "rss",
+        "published_at": "2026-02-18T01:19:57.371146+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Anthropicが創業時に1.24億ドル調達\n\nAI安全性研究に特化したAnthropicが、より信頼性の高い大規模AIシステムの開発に向けて資金調達を実施。元OpenAI研究者が設立。\n\nhttps://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems\n\n💡 ポイント\n・Skype共同創業者Jaan Tallinnがリード投資\n・解釈可能で制御しやすいAIシステムの構築が目標\n・GPT-3やスケーリング則などの研究実績を持つチーム\n\n1. 創業チーム\n・CEO Dario Amodeiと社長Daniela Amodei（兄妹）\n・GPT-3の研究に携わった経験\n・AI安全性の具体的な問題に取り組む\n・人間のフィードバックからの学習を研究\n\n2. 研究の焦点\n・大規模AIモデルの信頼性向上\n・AIシステムの解釈可能性を高める技術\n・人間のフィードバックをシステムに統合\n・計算集約的な研究への投資\n\n3. 投資家\n・Jaan Tallinn（リード投資家）\n・Dustin Moskovitz\n・Eric Schmidt\n・Center for Emerging Risk Research",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }
