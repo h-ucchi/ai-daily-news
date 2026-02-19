@@ -626,6 +626,89 @@ def process_rss_feeds(state: StateManager, config: Dict) -> List[Dict]:
     return new_posts
 
 
+def check_anthropic_research_new_articles(state: StateManager, config: Dict) -> List[Dict]:
+    """Anthropicリサーチページの新着記事を検出して投稿案を生成
+
+    Args:
+        state: 状態管理
+        config: 設定
+
+    Returns:
+        新着記事の投稿案リスト [{"url": str, "post_text": str, "title": str, "feed_name": str}, ...]
+    """
+    research_index_url = "https://www.anthropic.com/research"
+    feed_name = "Anthropic Research"
+
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+        }
+        response = requests.get(research_index_url, headers=headers, timeout=30)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"   ⚠️ Anthropicリサーチページ取得失敗: {e}")
+        return []
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # /research/xxx パターンの個別記事URLを抽出（クエリパラメータ付きURLを除外）
+    article_urls = list(set([
+        "https://www.anthropic.com" + a["href"]
+        for a in soup.find_all("a", href=True)
+        if (a["href"].startswith("/research/")
+            and a["href"] != "/research"
+            and "?" not in a["href"])
+    ]))
+
+    # state から既知URLを読み込み
+    known_urls = state.state.get("anthropic_research_known_urls", [])
+    new_urls = [u for u in article_urls if u not in known_urls]
+
+    # 既知URLリストを更新（先に保存して重複処理を防ぐ）
+    state.state["anthropic_research_known_urls"] = list(set(known_urls + article_urls))
+    state.save()
+
+    if not new_urls:
+        print(f"   ℹ️ Anthropic Research: 新着記事なし（既知: {len(known_urls)}件）")
+        return []
+
+    print(f"   🆕 Anthropic Research: {len(new_urls)}件の新着記事を検出")
+
+    # 初回取得時は全URLを記録するが、投稿案は生成しない
+    if not known_urls:
+        print(f"   ℹ️ 初回取得（全{len(article_urls)}件のURLを記録、投稿案生成なし）")
+        return []
+
+    new_posts = []
+    for article_url in new_urls:
+        print(f"\n   📄 新着記事: {article_url}")
+
+        # 記事本文を取得
+        title, content = fetch_article_content_safe(article_url)
+
+        if not content:
+            print(f"      ⚠️ 記事本文取得失敗: {article_url}")
+            continue
+
+        print(f"      ✅ 記事本文取得成功: {len(content)}文字 / タイトル: {(title or '')[:50]}")
+
+        # 投稿案生成（RSS記事と同じ関数を再利用）
+        post_text = generate_post_from_rss_article(article_url, title or "", content, config)
+
+        if post_text:
+            print(f"      ✅ 投稿案生成成功")
+            new_posts.append({
+                "url": article_url,
+                "post_text": post_text,
+                "title": title or article_url.split("/")[-1],
+                "feed_name": feed_name
+            })
+        else:
+            print(f"      ⚠️ 投稿案生成失敗")
+
+    return new_posts
+
+
 def is_meta_message(post_text: str) -> tuple[bool, str]:
     """投稿案がメタメッセージかどうかを判定
 
@@ -800,6 +883,40 @@ def main():
             }
 
             # Slack通知用のリストに追加
+            rss_articles.append({
+                "title": post_data["title"],
+                "url": post_data["url"],
+                "feed_name": post_data["feed_name"],
+                "published_at": datetime.now(timezone.utc).isoformat()
+            })
+
+        # Anthropicリサーチ新着記事チェック
+        print("\n🔬 Anthropicリサーチ新着記事チェック")
+        new_research_posts = check_anthropic_research_new_articles(state, config)
+
+        for post_data in new_research_posts:
+            # 下書き保存
+            draft_id = draft_manager.save_draft(
+                {
+                    "title": post_data["title"],
+                    "url": post_data["url"],
+                    "source": "research_scraper",
+                    "published_at": datetime.now(timezone.utc).isoformat(),
+                    "metadata": {
+                        "feed_name": post_data["feed_name"],
+                        "semi_daily": True
+                    }
+                },
+                post_data["post_text"]
+            )
+            print(f"📝 リサーチ記事を下書き保存: {draft_id} - {post_data['title'][:50]}...")
+            draft_map[post_data["url"]] = {
+                "id": draft_id,
+                "post_text": post_data["post_text"],
+                "failure_reason": None
+            }
+
+            # Slack通知用のリストに追加（RSS記事と同じチャンネルで通知）
             rss_articles.append({
                 "title": post_data["title"],
                 "url": post_data["url"],
