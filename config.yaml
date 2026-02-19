@@ -413,7 +413,7 @@ page_monitoring:
       must_include: false
     - url: "https://www.anthropic.com/research"
       name: "Anthropic Research"
-      must_include: false
+      must_include: true
     - url: "https://github.blog/ai-and-ml/github-copilot/"
       name: "GitHub Copilot Blog"
       must_include: false
