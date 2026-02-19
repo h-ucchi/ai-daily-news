@@ -30,6 +30,10 @@ wheels/
 *.pem
 secrets.yaml
 
+# Claude Code ローカル設定（APIキーを含む）
+.claude/settings.local.json
+.claude/*.local.json
+
 # IDE
 .vscode/
 .idea/
