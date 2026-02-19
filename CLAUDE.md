@@ -276,3 +276,37 @@ python3 scripts/generate_post_manual.py <OpenAI記事URL>
 | スクリプト | generate_post_manual.py | run_daily.py, run_hourly.py |
 | 出力先 | チャット画面 | Slack |
 | データソース | ユーザー指定URL | X/RSS/GitHub（自動収集） |
+
+---
+
+## 🔀 コード変更後のGitワークフロー
+
+コードの実装が完了したら（Planモードでの計画を実行し終えた後）、以下を**自動で**実行すること：
+
+1. **ブランチ作成**: 変更内容を表す名前でfeatureブランチを作成
+   ```bash
+   git checkout -b feat/<変更内容を表す名前>
+   ```
+
+2. **コミット**: 変更ファイルをステージングしてコミット
+   ```bash
+   git add <変更ファイル>
+   git commit -m "..."
+   ```
+
+3. **PRの作成**: `gh pr create` でPRを作成してURLをユーザーに表示
+   ```bash
+   git push -u origin <ブランチ名>
+   gh pr create --title "..." --body "..."
+   ```
+
+4. **マージの提案**: PR作成後、以下の提案を必ずユーザーに出す
+   ```
+   PRを作成しました: <PR URL>
+   このままマージしますか？
+   ```
+
+### 注意事項
+- ブランチ名は `feat/` プレフィックス + 変更内容の英語スネークケース
+- コミットメッセージは日本語で変更内容を簡潔に説明
+- マージは**ユーザーが承認した場合のみ**実行する（自動マージ禁止）
