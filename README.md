@@ -597,8 +597,6 @@ content_validation:
 
 ## 今後の拡張案
 
-- [x] Claude API による高品質X投稿素案生成
-- [x] URL重複チェックで同一記事の複数検出を防止
 - [ ] 記事本文取得の改善（RSS description、HTML パース、GitHub Release body）
 - [ ] Slackスレッド分割対応
 - [ ] LLMによる影響度分類（Breaking / Info等）
