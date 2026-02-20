@@ -1,3 +1,38 @@
 {
-  "drafts": []
+  "drafts": [
+    {
+      "id": "d06e1750-bc98-41e7-91ea-89d83a2b8aff",
+      "created_at": "2026-02-20T22:34:50.943715+00:00",
+      "item": {
+        "title": "Making frontier cybersecurity capabilities available to defenders \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-code-security",
+        "source": "rss",
+        "published_at": "2026-02-20T22:34:50.943673+00:00",
+        "metadata": {
+          "feed_name": "Anthropic News",
+          "semi_daily": true
+        }
+      },
+      "post_text": "Claudeに「Code Security」機能が追加。コードの脆弱性を自動検出しパッチを提案。\n\n従来ツールが見逃す複雑な脆弱性も、人間のセキュリティ研究者のように推論して発見。Enterprise/Team向けに限定プレビュー開始。\n\nhttps://www.anthropic.com/news/claude-code-security\n\n💡 ポイント\n・既知パターンだけでなく、文脈依存の脆弱性も検出\n・誤検知を減らす多段階検証プロセスを搭載\n・OSSメンテナ向けに優先アクセスを提供\n\n1. 従来ツールとの違い\n・ルールベースではなく、コードを「理解」して推論\n・コンポーネント間の相互作用を追跡\n・ビジネスロジックの欠陥やアクセス制御の破綻を検出\n・重要度評価で優先順位付け\n\n2. 実績と信頼性\n・Claude Opus 4.6で本番OSSから500件以上の脆弱性を発見\n・数十年見逃されていたバグを検出\n・Anthropic自身のシステム防御にも使用中\n・人間承認なしでパッチは適用されない設計\n\n3. 利用方法\n・Claude Code上のダッシュボードで確認\n・各検出に信頼度評価を表示\n・パッチ提案をレビュー後、開発者が適用判断",
+      "status": "pending",
+      "posted_at": null
+    },
+    {
+      "id": "c48ab26c-3bd3-4441-9838-d4db54ca3904",
+      "created_at": "2026-02-20T22:34:50.943893+00:00",
+      "item": {
+        "title": "Organization-level Copilot usage metrics dashboard available in public preview - GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-02-20-organization-level-copilot-usage-metrics-dashboard-available-in-public-preview",
+        "source": "rss",
+        "published_at": "2026-02-20T22:34:50.943876+00:00",
+        "metadata": {
+          "feed_name": "GitHub Copilot Changelog",
+          "semi_daily": true
+        }
+      },
+      "post_text": "GitHub Copilot、組織レベルの利用状況ダッシュボードを公開\n\n従来はエンタープライズ管理者のみが確認できたCopilot利用状況を、組織オーナーが直接UIで確認可能に。組織単位での導入状況と利用傾向を把握できる。\n\nhttps://github.blog/changelog/2026-02-20-organization-level-copilot-usage-metrics-dashboard-available-in-public-preview\n\n💡 ポイント\n・組織オーナーがGitHub UIから直接確認可能\n・エンタープライズレポートへの依存を削減\n・最小権限でアクセス権を付与できる\n\n1. 主な機能\n・組織メンバーのCopilot利用状況を表示\n・採用と利用トレンドを組織レベルで把握\n・organization usage APIと同等の情報を提供\n\n2. 利用可能な組織\n・エンタープライズ所属組織\n・スタンドアロンのFree/Team組織\n・組織オーナーまたはカスタムロール保有者がアクセス可能\n\n3. 注意点\n・エンタープライズ所属組織の場合、組織レベル合計とエンタープライズ合計は一致しない\n・ユーザーが複数組織に所属する場合、各組織レポートに重複カウント",
+      "status": "pending",
+      "posted_at": null
+    }
+  ]
 }
