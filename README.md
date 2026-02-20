@@ -8,7 +8,7 @@ AI関連情報を毎日自動で収集・整理し、Slackに読みやすいレ�
 
 - **X公式API Basic ($200/月) に最適化**
   - 新着のみ取得 (`since_id` 利用)
-  - 1日あたり150投稿の上限管理
+  - 1日あたり250投稿の上限管理
   - 無駄なAPI消費を防止
   - URL重複チェックで同一記事の複数検出を防止
 
@@ -159,9 +159,15 @@ GitHub Actions タブで `AI Daily Report` ワークフローを手動実行:
 ├── scripts/
 │   ├── run_daily.py               # デイリーレポート メインスクリプト
 │   ├── run_hourly.py              # セミデイリーレポート メインスクリプト
+│   ├── generate_post_manual.py    # 手動投稿案生成（URL / テキスト対応）
+│   ├── article_fetcher.py         # 記事取得ユーティリティ
 │   ├── content_classifier.py      # コンテンツ分類・スコアリング
 │   ├── content_validator.py       # コンテンツ検証（メタメッセージ検出・Claude APIレビュー）
+│   ├── ai_lint_checker.py         # AI的表現の自動除去
+│   ├── x_api_client.py            # X API クライアント
 │   ├── draft_manager.py           # 下書き管理
+│   ├── state_manager.py           # 状態管理
+│   ├── post_prompt.py             # 投稿案生成プロンプトテンプレート
 │   └── post_drafts.py             # 手動投稿スクリプト
 ├── requirements.txt               # Python依存パッケージ
 └── README.md                      # このファイル
@@ -218,7 +224,7 @@ graph LR
 #### デイリーレポート
 
 1. **データ収集** (run_daily.py)
-   - X API: アカウント監視 (100件/日) + キーワード検索 (50件/日)
+   - X API: アカウント監視 (200件/日) + キーワード検索 (50件/日)
    - RSS: 公式ブログの新着記事
    - GitHub: リポジトリの新着リリース
 
@@ -304,7 +310,7 @@ graph LR
    - AI企業公式ブログの更新
 3. **GitHub Updates** (上位5件)
    - リポジトリのリリース情報
-4. **X (Twitter) Signals** (上位10件)
+4. **X (Twitter) Signals** (上位15件)
    - アカウント監視・キーワード検索結果
 5. **X投稿素案** (最大7件)
    - Claude API で生成された構造化要約
@@ -421,7 +427,7 @@ python scripts/post_drafts.py <draft_id>
 
 #### フェーズ2: Claude APIレビュー（高精度）
 
-Claude API（claude-sonnet-4-5-20250929）で以下をチェック:
+Claude API（claude-sonnet-4-6）で以下をチェック:
 
 1. **固有名詞の正確性**
    - 記事タイトルに含まれない製品名・機能名を使っていないか
@@ -449,9 +455,9 @@ Claude API（claude-sonnet-4-5-20250929）で以下をチェック:
 
 X API Basic ($200/月) に収まるよう、以下の上限を設定:
 
-- **アカウント監視**: 100投稿/日
+- **アカウント監視**: 200投稿/日
 - **キーワード検索**: 50投稿/日
-- **合計**: 150投稿/日
+- **合計**: 250投稿/日
 
 上限に到達した場合、Slackレポートに警告が表示されます。
 
