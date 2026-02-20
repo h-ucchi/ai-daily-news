@@ -603,6 +603,6 @@ content_validation:
 
 MIT License
 
-## 作成者
+## Contributing
 
-あなたの名前
+Contributions are welcome! Please feel free to submit a Pull Request.
