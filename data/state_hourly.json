@@ -4,7 +4,7 @@
   "rss": {},
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-20T22:35:01.653748+00:00",
+    "last_run_at": "2026-02-21T07:25:57.420908+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
@@ -1061,6 +1061,7 @@
       "https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/"
     ],
     "https://github.com/anthropics/claude-code/releases.atom": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.50",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.49",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.47",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.45",
@@ -1069,8 +1070,7 @@
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.41",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.39",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.38",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.37",
-      "https://github.com/anthropics/claude-code/releases/tag/v2.1.36"
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.37"
     ],
     "https://github.blog/changelog/label/copilot/feed/": [
       "https://github.blog/changelog/2026-02-20-organization-level-copilot-usage-metrics-dashboard-available-in-public-preview",
@@ -1137,23 +1137,23 @@
     ]
   },
   "anthropic_research_known_urls": [
-    "https://www.anthropic.com/research/assistant-axis",
+    "https://www.anthropic.com/research/measuring-agent-autonomy",
+    "https://www.anthropic.com/research/team/interpretability",
+    "https://www.anthropic.com/research/team/economic-research",
+    "https://www.anthropic.com/research/team/societal-impacts",
+    "https://www.anthropic.com/research/india-brief-economic-index",
+    "https://www.anthropic.com/research/project-vend-2",
+    "https://www.anthropic.com/research/introspection",
+    "https://www.anthropic.com/research/disempowerment-patterns",
+    "https://www.anthropic.com/research/constitutional-classifiers",
+    "https://www.anthropic.com/research/team/alignment",
+    "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
+    "https://www.anthropic.com/research/alignment-faking",
     "https://www.anthropic.com/research/AI-assistance-coding-skills",
     "https://www.anthropic.com/research/bloom",
-    "https://www.anthropic.com/research/team/alignment",
-    "https://www.anthropic.com/research/tracing-thoughts-language-model",
-    "https://www.anthropic.com/research/alignment-faking",
-    "https://www.anthropic.com/research/introspection",
-    "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
-    "https://www.anthropic.com/research/team/interpretability",
-    "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
-    "https://www.anthropic.com/research/project-vend-2",
-    "https://www.anthropic.com/research/india-brief-economic-index",
-    "https://www.anthropic.com/research/disempowerment-patterns",
     "https://www.anthropic.com/research/economic-index-primitives",
-    "https://www.anthropic.com/research/team/economic-research",
-    "https://www.anthropic.com/research/measuring-agent-autonomy",
-    "https://www.anthropic.com/research/team/societal-impacts",
-    "https://www.anthropic.com/research/constitutional-classifiers"
+    "https://www.anthropic.com/research/assistant-axis",
+    "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+    "https://www.anthropic.com/research/tracing-thoughts-language-model"
   ]
 }
