@@ -4,7 +4,7 @@
   "rss": {},
   "github": {},
   "meta": {
-    "last_run_at": "2026-02-21T22:31:46.946355+00:00",
+    "last_run_at": "2026-02-22T07:30:26.951500+00:00",
     "version": "1.0.0"
   },
   "recently_posted_urls": {},
@@ -1137,23 +1137,23 @@
     ]
   },
   "anthropic_research_known_urls": [
-    "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
-    "https://www.anthropic.com/research/bloom",
-    "https://www.anthropic.com/research/team/interpretability",
-    "https://www.anthropic.com/research/india-brief-economic-index",
+    "https://www.anthropic.com/research/economic-index-primitives",
     "https://www.anthropic.com/research/constitutional-classifiers",
-    "https://www.anthropic.com/research/team/societal-impacts",
-    "https://www.anthropic.com/research/measuring-agent-autonomy",
-    "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
-    "https://www.anthropic.com/research/disempowerment-patterns",
     "https://www.anthropic.com/research/tracing-thoughts-language-model",
-    "https://www.anthropic.com/research/introspection",
-    "https://www.anthropic.com/research/alignment-faking",
-    "https://www.anthropic.com/research/team/economic-research",
     "https://www.anthropic.com/research/assistant-axis",
+    "https://www.anthropic.com/research/project-vend-2",
+    "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+    "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
+    "https://www.anthropic.com/research/bloom",
+    "https://www.anthropic.com/research/team/economic-research",
+    "https://www.anthropic.com/research/team/societal-impacts",
+    "https://www.anthropic.com/research/team/interpretability",
+    "https://www.anthropic.com/research/introspection",
     "https://www.anthropic.com/research/team/alignment",
     "https://www.anthropic.com/research/AI-assistance-coding-skills",
-    "https://www.anthropic.com/research/economic-index-primitives",
-    "https://www.anthropic.com/research/project-vend-2"
+    "https://www.anthropic.com/research/disempowerment-patterns",
+    "https://www.anthropic.com/research/alignment-faking",
+    "https://www.anthropic.com/research/measuring-agent-autonomy",
+    "https://www.anthropic.com/research/india-brief-economic-index"
   ]
 }

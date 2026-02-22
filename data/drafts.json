@@ -50,6 +50,23 @@
       "post_text": "Claude Code v2.1.50がリリース。メモリリーク修正で長時間セッションが安定化。\n\n複数のメモリリーク問題を修正し、長時間の作業セッションでのパフォーマンスと安定性が向上。エージェント機能の強化やLSPサーバー設定の柔軟性も追加された。\n\nhttps://github.com/anthropics/claude-code/releases/tag/v2.1.50\n\n💡 主な改善点\n・長時間セッションでのメモリ使用量を大幅削減\n・worktree分離によるエージェント実行環境の改善\n・起動パフォーマンスの向上\n\n1. メモリリーク修正\n・完了タスクの状態オブジェクトが削除されず残る問題を解決\n・LSP診断データが蓄積し続ける問題を修正\n・TaskOutputの最近の行が保持され続ける問題を解消\n・CircularBufferでクリア済みアイテムが残る問題を修正\n・シェルコマンド実行時のプロセス参照が残る問題を解決\n\n2. 機能追加・改善\n・LSPサーバーの`startupTimeout`設定に対応\n・`isolation: worktree`でエージェントを分離実行可能に\n・`claude agents`コマンドで設定済みエージェント一覧を表示\n・Opus 4.6（高速モード）が1Mコンテキストウィンドウに対応\n・`CLAUDE_CODE_SIMPLE`モードでMCPツールなどを完全無効化\n\n3. バグ修正\n・シンボリックリンク環境での再開セッションが非表示になる問題\n・SSH切断時のセッションデータ損失を防止\n・RHEL 8などglibc 2.30未満でネイティブモジュールが読み込めない問題\n・存在しないサーバー名で`/mcp reconnect`がフリーズする問題",
       "status": "pending",
       "posted_at": null
+    },
+    {
+      "id": "8600ab12-faf4-4283-a377-e75a3dbaaeda",
+      "created_at": "2026-02-22T07:30:19.651734+00:00",
+      "item": {
+        "title": "Cursor Changelog",
+        "url": "https://cursor.com/ja/changelog",
+        "source": "snapshot",
+        "metadata": {
+          "snapshot_timestamp": "2026-02-22T07:30:12.568222+00:00",
+          "content_hash": "32090e4aff27881f39dc4a2f270c2912c1317e43d4c5eb362a28e3c705d93ae7",
+          "old_hash": "8cf3bc0d4c6ef2a8c967359ed20ed2da04c3f2bbf2a19c6990745395c3e387b0"
+        }
+      },
+      "post_text": "前回と今回のコンテンツを比較した結果、変更が検出されませんでした。\n\n【確認した内容】\n- 2026年2月18日のCLI改善（プランモード、Mermaid図）\n- 2026年2月17日のプラグイン機能（Cursor Marketplace）\n- 2026年2月17日のサンドボックス制御\n- 2026年2月17日の非同期サブエージェント\n- 2026年2月12日の長時間稼働エージェント\n- 2026年1月22日のサブエージェントとスキル\n\nすべての項目が前回のコンテンツと一致しているため、新規投稿を作成する必要はありません。\n\n**次回の確認時に新しい変更ログが追加された場合は、その内容を基に投稿案を作成します。**",
+      "status": "pending",
+      "posted_at": null
     }
   ]
 }

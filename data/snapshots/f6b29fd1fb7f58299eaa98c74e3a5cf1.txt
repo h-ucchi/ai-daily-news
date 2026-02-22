@@ -1,6 +1,6 @@
 # GitHub Copilot Blog
 # URL: https://github.blog/ai-and-ml/github-copilot/
-# Timestamp: 2026-02-21T22:31:43.763994+00:00
+# Timestamp: 2026-02-22T07:30:12.121153+00:00
 # Hash: 43feb79b2e5049ba155f264fd6e5ebc6e8f193bd57dc9a390e68c1caee8c2ff7
 
 <!doctype html>
@@ -1188,7 +1188,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script type="text/javascript" src="https://github.blog/wp-includes/js/dist/url.min.js?m=1770142567g" ></script><script src="https://github.blog/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://github.blog/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "2c96d0c1a2" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "b72a964c71" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://github.blog/wp-admin/admin-ajax.php?action=rest-nonce";
